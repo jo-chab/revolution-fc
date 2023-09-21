@@ -1,0 +1,109 @@
+/*
+*
+* LOCATION: [core]
+* FOLDER: [scss]
+* FILE NAME: [mixins.scss]
+* DESCRIPTION: css properties reused
+*
+*/
+
+
+/*******************************************************
+MIXINS -
+*******************************************************/
+
+
+/* DARK AND DEFAULT MODE */
+@mixin dark-mode {
+  @media screen and (prefers-color-scheme: dark) {
+    @content;
+  }
+}
+@mixin light-mode {
+  @media screen and (prefers-color-scheme: light) {
+    @content;
+  }
+}
+
+
+
+
+
+
+@mixin font-family-reading(){
+  font-family: 'Roboto', sans-serif;
+}
+
+@mixin font-family-heading(){
+  font-family: 'Roboto Condensed', sans-serif;
+}
+
+@mixin font-style($weight, $size, $height, $color){
+  font-weight: $weight;
+  font-size: $size;
+  line-height: $height;
+  color: $color;
+}
+
+@mixin transition($property, $time){
+  -webkit-transition: $property $time ease;
+  -moz-transition: $property $time ease;
+  transition: $property $time ease;
+}
+
+@mixin translate-x($value) {
+  -webkit-transform: translateX($value);
+  -moz-transform: translateX($value);
+  transform: translateX($value);
+}
+
+@mixin translate-y($value) {
+  -webkit-transform: translateY($value);
+  -moz-transform: translateY($value);
+  transform: translateY($value);
+}
+
+@mixin box-shadow() {
+  -webkit-box-shadow: 0 5px 20px -6px $web-grey-3;
+  -moz-box-shadow: 0 5px 20px -6px $web-grey-3;
+  box-shadow: 0 5px 20px -6px $web-grey-3;
+}
+@mixin box-shadow-dark() {
+  -webkit-box-shadow: 0 5px 20px -6px darken($web-grey-6,10%);
+  -moz-box-shadow: 0 5px 20px -6px darken($web-grey-6,10%);
+  box-shadow: 0 5px 20px -6px darken($web-grey-6,10%);
+}
+
+@mixin box-shadow-top() {
+  -webkit-box-shadow: 0 -5px 20px $web-grey-5;
+  -moz-box-shadow: 0 -5px 20px $web-grey-5;
+  box-shadow: 0 -5px 20px $web-grey-5;
+}
+
+
+
+
+@mixin border-radius-uniform($radius) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  border-radius: $radius;
+}
+@mixin border-radius($top_left, $top_right, $bottom_right, $bottom_left){
+  -webkit-border-radius: $top_left $top_right $bottom_right $bottom_left;
+  -moz-border-radius: $top_left $top_right $bottom_right $bottom_left;
+  border-radius: $top_left $top_right $bottom_right $bottom_left;
+}
+
+
+
+
+
+
+
+@mixin line-clamp($line-number) {
+  display: -webkit-box;
+  -webkit-line-clamp: $line-number;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

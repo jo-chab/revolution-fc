@@ -1,0 +1,133 @@
+/*
+*
+* LOCATION: [admin]
+* FOLDER: [scss]
+* FILE NAME: [admin-menu.scss]
+* DESCRIPTION: header and sidebar elements
+*
+*/
+
+
+/*************************************
+HEADER - DONE
+*************************************/
+header {
+    width:100%;
+}
+.top-header {
+    background-color: $web-grey-2;
+    padding: 16px 8px;
+    @include tablet {
+        padding: 8px 40px;
+    }
+    ul {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: center;
+        align-items: center;
+        @include tablet {
+            justify-content: flex-end;
+        }
+
+        li {
+            @include font-family-reading;
+            @include font-style(400, 14px, 1.5em, $web-grey-4);
+            padding: 0;
+            .is-hide-mobile {
+                @include mobile-max {
+                    display: none;
+                }
+            }
+            &:after {
+                content: '|';
+                padding: 0 16px;
+            }
+            &:last-of-type:after {
+                content:none;
+                padding: 0 0 0 8px;
+            }
+            &:hover {
+                color: $web-grey-6;
+                cursor: pointer;
+            }
+            &.menu-toggle {
+                @include tablet {
+                    display: none;
+                }
+            }
+            &.is-hide-mobile {
+                @include mobile-max {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+
+
+
+/*************************************
+SIDEBAR - IN PROGRESS
+*************************************/
+.sidebar {
+    position: fixed; top: 0; left: 0;
+    z-index: 10;
+
+    display: flex;
+    flex-flow: column nowrap;
+    width: $sidemenu-width;
+    height: 100vh;
+    overflow-x: scroll;
+    padding: 32px 16px;
+
+    background-color: $web-grey-5;
+    @include dark-mode {
+        background-color: $web-grey-6;
+    }
+    @include mobile-max {
+        width: 100%;
+        //margin: -16px 0 0 -16px;
+        transform: translateX(-1000px);
+        transition:  all .5s ease;
+        &.open {
+            transform: translateX(0);
+        }
+    }
+
+    .sidebar-menu li {
+        @include font-family-reading;
+        color: white;
+        padding:4px 8px;
+        i {
+            display: inline-block;
+            padding-right: 8px;
+        }
+
+        &.ss-menu-element {
+            padding-left: 32px;
+            font-size: 14px;
+            font-weight: 300;
+            &:hover {
+                color: $primary-color-1;
+                transition: all .3s ease;
+            }
+            &.not-active {
+                color: $web-grey-4;
+                @include dark-mode {
+                    color: $web-grey-5;
+                }
+                //pointer-events: none;
+            }
+        }
+        &.menu-element {
+            font-size: 18px;
+            padding-top: 16px;
+            &:first-of-type {
+                padding-top: 0;
+            }
+        }
+    }
+
+}

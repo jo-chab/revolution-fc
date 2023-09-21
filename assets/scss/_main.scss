@@ -1,0 +1,683 @@
+/*
+*
+* LOCATION: [core]
+* FOLDER: [scss]
+* FILE NAME: [main.scss]
+* DESCRIPTION: main website user css file
+*
+*/
+
+
+
+/*******************************************************
+MAIN CSS
+*******************************************************/
+
+
+/******************************
+HOME PAGE
+******************************/
+.w-hero {
+	position: relative;
+	
+	.hero-overlay-gradient {
+		position: absolute;
+		top:0;
+		left: 0;
+		z-index: $z-home-hero;
+		
+		width: 100%;
+		height: 100%;
+		
+		display: flex;
+		align-items: flex-end;
+		justify-content: center;
+		
+		background-color: $web-grey-6;
+		background: -webkit-linear-gradient(top, rgba($web-grey-6, 0), rgba($web-grey-6, 1));
+		background: linear-gradient(to bottom, rgba($web-grey-6, 0), rgba($web-grey-6, 1));
+	}
+	
+	.hero-overlay-content {
+		@extend .web-layout;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 24px;
+		
+		margin-bottom: 40px;
+		padding: 0 $space-m;
+		
+		@include tablet {
+			gap: 40px;
+			margin-bottom: 80px;
+		}
+		
+		h1 {
+			color: white;
+			text-align:center;
+		}
+	}
+
+}
+
+.news-container {
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: auto;
+	grid-gap: 16px;
+	justify-items: stretch;
+	margin-bottom: 32px;
+	width: 100%;
+	
+	@include mobile-large {
+		grid-gap: 32px;
+	}
+	@include tablet {
+		margin-bottom: 0;
+		grid-template-columns: repeat(2, 1fr);
+	}
+	@include desktop {
+		grid-template-columns: repeat(3, 1fr);
+		grid-gap: 40px;
+	}
+}
+
+
+
+
+/* ADDONS SECTION */
+.hp-addons {
+	display: flex;
+	flex-direction: column;
+	
+	> * {
+		background-color: white;
+		padding:16px;
+		margin-bottom: 16px;
+		&.important {
+			background-color: $accent-color-1;
+			h3 {
+				color: white;
+				margin-bottom:0;
+			}
+		}
+		&.addon-img {
+			padding: 0;
+		}
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+	
+	img {
+		width: 100%;
+	}
+}
+.addons-registration {
+	h3 {
+		text-align: center;
+	}
+	.secondary-btn {
+		margin-bottom: 16px;
+	}
+}
+
+
+/* JOBS SECTION */
+.hp-jobs {
+	padding: 16px;
+	border: 1px solid $accent-color-1;
+	position: relative;
+	
+	@include tablet {
+		padding: 40px;
+	}
+	
+	&:before {
+		content: 'Offre(s) d\'emploi';
+		position: absolute;
+		top: -16px;
+		left: 50%;
+		transform: translateX(-50%);
+		background: $bg-body;
+		
+		display: table;
+		@include font-style(400, 16px, 1.5em, $accent-color-1);
+		@include font-family-heading;
+		text-transform: uppercase;
+		letter-spacing: .5px;
+		padding: 4px 8px;
+		width: fit-content;
+		
+		@include desktop {
+			font-size: 24px;
+			top: -24px;
+		}
+	}
+	
+	ul {
+		li {
+			display: grid;
+			align-items: center;
+			grid-template-columns: 1fr;
+			grid-gap: 16px 40px;
+			
+			padding-bottom: 16px;
+			margin-bottom: 16px;
+			border-bottom: 1px solid $web-grey-3;
+			&:last-of-type {
+				margin-bottom: 0;
+				border-bottom: none;
+				padding-bottom: 0;
+			}
+			
+			@include tablet {
+				grid-template-columns: 1fr auto;
+			}
+		}
+		.job-infos {
+			display: flex;
+			flex-direction: column;
+			> * {
+				@include mobile-max {
+					align-self: center;
+				}
+			}
+		}
+	}
+}
+
+
+.hp-contact-info {
+	.contact-info-details {
+		margin-bottom: 24px;
+	}
+}
+
+
+/* Sponsors SECTION*/
+.sponsors-list {
+	display: flex;
+	flex-flow: row wrap;
+	gap: 0;
+	
+	align-items: center;
+	justify-content: center;
+	
+	.sponsors-logo {
+		padding: 16px;
+		flex: 1 1 auto;
+		max-width: 20%;
+		img {
+			//max-height: 80px;
+			max-width: 100%;
+			@include tablet {
+				//max-height: 120px;
+				filter: grayscale(1);
+				opacity: .7;
+				transform: scale(.9);
+				transition: all .3s ease;
+				&:hover {
+					filter: grayscale(0);
+					opacity: 1;
+					transform: scale(1);
+					transition: all .3s ease;
+				}
+			}
+		}
+	}
+	
+	&.sponsors-tournament {
+		margin-bottom: 2rem;
+		.sponsors-logo {
+			max-width: 80%;
+			@include tablet {
+				max-width: 30%
+			}
+			img {
+				transform: scale(1);
+				opacity: 1;
+				filter: none;
+			}
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+
+/******************************
+FORMULAIRES PAGE -
+******************************/
+.doc_download {
+	margin: 24px auto;
+	@include mobile-large {
+		margin: 40px auto;
+	}
+	> * {
+		display: grid;
+		grid-template-columns: 1fr;
+		@include desktop {
+			grid-template-columns: auto 220px;
+		}
+		grid-gap: 16px;
+		align-items: center;
+		&.layout-3 {
+			@include desktop {
+				grid-template-columns: auto 220px 220px;
+			}
+		}
+		margin-bottom: 16px;
+		&:last-of-type {
+			margin-bottom: 0;
+		}
+		.primary-btn {
+			margin: 0 auto;
+		}
+	}
+	
+	h4 {
+		text-transform: none;
+		font-size: 1.5em;
+		text-align: center;
+		@include mobile-large {
+			font-size: 18px;
+			text-align: inherit;
+		}
+	}
+}
+
+
+
+
+
+
+
+
+/******************************
+NEWS PAGE
+******************************/
+.pagination {
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: center;
+	align-items: center;
+	
+	margin-top: 80px;
+	
+	.page-cta {
+		background-color: $accent-color-1;
+		padding:8px 16px;
+		font-size:32px;
+		color: white;
+	}
+	
+	p {
+		padding: 0 16px;
+		span {
+			padding: 4px 8px;
+			&.active-page {
+				font-weight: 700;
+				color: $accent-color-1;
+				border-bottom: 4px solid $accent-color-1;
+			}
+		}
+	}
+}
+
+
+
+/*******************************
+News detail / Programme detail - DONE
+*******************************/
+.article-heading {
+	
+	.article-info {
+		display: flex;
+		flex-flow: row nowrap;
+		align-items: center;
+		padding: 16px 0;
+		@include mobile-max {
+			padding-top: 0;
+		}
+	}
+	.article-title {
+		@include font-family-reading();
+		line-height: 1.3em;
+		font-weight: 700;
+		margin-bottom: 16px;
+	}
+	
+}
+
+.article-featured-img {
+	img {
+		width: 100%;
+	}
+}
+
+.article-detail {
+	margin-top: 24px;
+	@include tablet {
+		margin-top: 64px;
+	}
+	
+	span {
+		&.news-section-header {
+			@include font-family-heading();
+			@include font-style(400, 20px, 1.5em, $accent-color-1);
+			text-decoration: underline;
+			display:inline-block;
+			margin-bottom: 16px;
+			@include tablet {
+				font-size: 21px;
+			}
+			@include desktop-medium {
+				font-size: 24px;
+			}
+		}
+		&.news-quote {
+			font-style: italic;
+			font-weight: 400;
+		}
+	}
+	a.news-external_link {
+		color: $accent-color-1;
+		text-decoration: underline;
+		transition: all .3s ease	;
+		&:hover {
+			color: darken($accent-color-1, 30%);
+		}
+	}
+	
+	
+	ul {
+		margin-inline-start: 2.5rem;
+		li {
+			list-style-type: circle;
+			@include font-family-reading;
+			@include font-style(300, 1em, 1em, $primary-color-2);
+			@include mobile-xlarge {
+				font-size: 1.125rem;
+			}
+		}
+		&.news-list {
+			margin-inline-start: 2rem;
+			margin-block-start: 1rem;
+			margin-block-end: 1rem;
+			li {
+				list-style-type: disc;
+			}
+		}
+	}
+	
+}
+
+.article-footer {
+	border-top: 1px solid #E6E6E6;
+	margin-top: 24px;
+	padding-top: 24px;
+	@include tablet {
+		padding-top: 32px;
+		margin-top: 32px;
+	}
+}
+
+
+
+
+
+
+
+
+
+/******************************
+CLUB PAGE
+******************************/
+.grid-club-staff {
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: auto;
+	grid-gap:24px;
+	@include tablet {
+		grid-template-columns: repeat(2, 1fr);
+		align-items: flex-start;
+		grid-gap:40px;
+	}
+	@include desktop {
+		grid-template-columns: repeat(3, 1fr);
+		grid-gap:80px;
+	}
+}
+
+.people-vignette-img {
+	width: 100%;
+	height: 400px;
+	filter: grayscale(1);
+	background-size: contain;
+	background-position: center bottom;
+	background-repeat: no-repeat;
+	&:hover {
+		filter: grayscale(0);
+		transition: all .5s ease;
+		cursor: pointer;
+	}
+}
+
+.people-info {
+	margin-top: 16px;
+	padding: 0 0 16px 0;
+	.people-name {
+		color: $primary-color-2;
+		margin-bottom: 8px;
+	}
+	.people-position {
+		padding-bottom: 8px;
+		@include font-style(700, 24px, 1em, $primary-color-2);
+		border-bottom:2px solid $accent-color-1;
+		margin-bottom: 16px;
+	}
+	.people-contact {
+		@include font-style(400, 16px, 1em, $web-grey-3);
+		&:not(:last-of-type) {
+			margin-bottom: 4px;
+		}
+		&:hover {
+			color: $primary-color-1;
+			transition: all .3s ease;
+		}
+	}
+}
+
+
+
+
+
+
+
+/******************************
+PROGRAMMES - en cours –
+******************************/
+.programme-container {
+	display: grid;
+	grid-gap: 2rem;
+	grid-template-columns: 1fr;
+	@include tablet {
+		grid-template-columns: 1fr 1fr;
+		grid-gap: 4rem 2rem;
+	}
+}
+
+.programme-element {
+	opacity: 1;
+	transition: opacity .3s ease;
+	&:hover {
+		opacity: .8;
+	}
+	
+	h2 {
+		text-transform: unset;
+		margin: 1rem auto .5rem;
+		line-height: 1.3em;
+	}
+	p.intro {
+		color: $primary-color-1;
+	}
+	[class*="btn-"] {
+		margin: 0;
+	}
+}
+.programme-img {
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: cover;
+	width: 100%;
+	aspect-ratio: 3/2;
+}
+
+
+
+
+
+
+
+/******************************
+STAFF TECHNIQUE PAGE –
+******************************/
+
+
+
+
+
+
+
+/******************************
+FIELDS PAGE – Done
+******************************/
+.fields li {
+	width: 100%;
+}
+
+.filter-select {
+	display: grid;
+	grid-template-columns: 1fr;
+	gap: .5rem;
+	justify-content: center;
+	align-items: baseline;
+	
+	@include tablet {
+		grid-template-columns: auto 1fr;
+		gap: 1rem;
+	}
+	
+	.btn-filter-select {
+		display: flex;
+		flex-flow: row wrap;
+		gap: 1rem;
+	}
+}
+
+[class*="filter-buttons-"] {
+	display: flex;
+	flex-flow: row wrap;
+	gap: 1rem;
+}
+.field {
+	&-el {
+		h4 {
+			text-transform: unset;
+		}
+		.btn-tertiary {
+			color: $tertiary-color-1;
+			&:hover {
+				color: $secondary-color-1;
+			}
+		}
+	}
+}
+
+
+
+
+
+
+
+/******************************
+TOURNOI – Done
+******************************/
+.tournoi-tarifs {
+	display: flex;
+	flex-flow: row wrap;
+	gap: 1.5rem;
+	margin: 3rem auto;
+	justify-content: center;
+}
+
+.tournament {
+	&-img {
+		margin-bottom: 1rem;
+		@include tablet {
+			margin-bottom: 2rem;
+		}
+	}
+	&-desc {
+
+	}
+}
+
+.t-card {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 24px;
+	width: calc(50% - 12px);
+	@include mobile-max {
+		width: 100%;
+	}
+	padding: 24px;
+	background: white;
+	box-shadow: 0 8px 20px 0 #e2e2e2;
+	border: 1px solid #d3d3d3;
+	@include border-radius-uniform(8px);
+	@include transition(all, .3s);
+
+	&:hover {
+		@include translate-y(-8px);
+		@include transition(all, .3s);
+	}
+
+	> * {
+		text-align: center;
+	}
+
+	&-type {
+		@include font-family-heading;
+		@include font-style(700, 2rem, 1em, $accent-color-1);
+	}
+	&-category {
+		@include font-family-reading;
+		@include font-style(700, 1.25rem, 1em, $primary-color-2);
+	}
+	&-price {
+		@include font-family-reading;
+		@include font-style(700, 3rem, 1em, $primary-color-2);
+		span {
+			@include font-style(400, .3em, 1em, $primary-color-1);
+		}
+	}
+}
+
+
+
+
+
+/******************************
+RESSOURCES ENTRAINEURS
+******************************/

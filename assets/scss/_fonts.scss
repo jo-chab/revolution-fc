@@ -1,0 +1,192 @@
+/*
+*
+* LOCATION: [core]
+* FOLDER: [scss]
+* FILE NAME: [fonts.scss]
+* DESCRIPTION: fonts styling elements
+*
+*/
+
+
+/***** TITLE *****/
+h1 {
+    @include font-family-heading();
+    @include font-style(400, 2rem, 1.5em, $primary-color-2);
+    @include mobile-xlarge {
+        font-size: 5rem;
+    }
+    
+    &.section-title {
+        margin-bottom: 1rem;
+        @include tablet {
+            margin-bottom: 2rem;
+        }
+    }
+    
+    &.article-title {
+        @include mobile-xlarge {
+            font-size: 3.5rem;
+        }
+    }
+}
+
+h2 {
+    @include font-family-heading();
+    @include font-style(700, 1.5rem, 1.5em, $primary-color-2);
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+    
+    @include mobile-xlarge {
+        font-size: 2rem;
+    }
+    @include tablet {
+        margin-bottom: 1.5rem;
+    }
+    
+    &.section-title {
+        text-transform: none;
+        margin-bottom: 2rem;
+        text-align: center;
+        @include tablet {
+            margin-bottom: 4rem;
+        }
+        
+        .p-tournament & {
+            margin-bottom: 1.5rem;
+            @include tablet {
+                margin-bottom: 1.5rem;
+            }
+        }
+    }
+    
+}
+
+h3 {
+    @include font-family-heading();
+    @include font-style(400, 1.25rem, 1.3em, $primary-color-2);
+    @include mobile-xlarge {
+        @include font-style(700, 1.5rem, 1.3em, $primary-color-2);
+    }
+    margin-bottom: 1rem;
+    
+    #subventions & {
+        color: $accent-color-1;
+    }
+}
+
+h4 {
+    @include font-family-heading();
+    @include font-style(400, 1.125rem, 1.5em, $primary-color-2);
+    @include mobile-xlarge {
+        font-size: 1.25rem;
+    }
+    text-transform: uppercase;
+    
+    &.main_quotes {
+        font-style: italic;
+        margin-bottom: 2rem;
+    }
+    
+    .hp-jobs & {
+        text-transform: capitalize;
+    }
+    
+    .dashboard-title & {
+        color: white;
+    }
+}
+
+h5 {
+    @include font-family-reading();
+    @include font-style(400, 1rem, 1.5em, $primary-color-2);
+    @include mobile-xlarge {
+        font-size: 1.125rem;
+    }
+    
+    &.dates {
+        margin-top: 1rem;
+        color: #a9abac;
+    }
+}
+
+h6 {
+    @include font-style(400, .875rem, 1.5em, $primary-color-2);
+    @include font-family-reading();
+}
+
+
+/***** PARAGRAPH *****/
+p {
+    @include font-style(300, 1rem, 1.7em, $reading-text);
+    @include font-family-reading();
+    @include mobile-xlarge {
+        font-size: 1.125rem;
+    }
+    margin-bottom: 1rem;
+    
+    &:last-of-type {
+        margin-bottom: 0;
+    }
+    
+    &.intro {
+        @include font-style(400, 1.25rem, 1.3em, $tertiary-color-1);
+        @include font-family-reading();
+        margin-bottom: 2rem;
+    }
+    
+    &.quote {
+        color: $accent-color-1;
+        font-style: italic;
+        font-size: 1.25rem;
+        margin-bottom: 2rem;
+    }
+    
+    span.text-highlight {
+        font-weight: 500;
+    }
+    
+    .doc-container & {
+        margin-top: 2rem;
+    }
+    
+    .inline-link {
+        border-bottom: 2px solid $accent-color-1;
+        padding: 0 2px;
+        transition: all .3s ease;
+        
+        &:hover {
+            background: $accent-color-1;
+            color: white;
+        }
+    }
+    
+}
+
+[class*='update-link'] {
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+
+/***** BASIC LIST *****/
+ul {
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 8px;
+    
+    &.basic-list {
+        margin-inline: 32px 16px;
+        margin-block-start: 16px;
+        
+        li {
+            @include font-style(300, 1rem, 1.7em, $primary-color-2);
+            @include font-family-reading();
+            @include mobile-xlarge {
+                font-size: 18px;
+            }
+            
+            list-style-type: circle;
+        }
+    }
+}

@@ -1,0 +1,32 @@
+/*
+*
+* LOCATION: [assets]
+* FOLDER: [scss]
+* FILE NAME: [admin-login.scss]
+* DESCRIPTION: login page
+*
+*/
+
+
+
+/*************************************
+LOGIN PAGE
+*************************************/
+.w-login {
+    width: 100%;
+    min-height: 100dvh;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    align-items: center;
+    justify-content: center;
+    @include tablet {
+        padding: 3rem;
+    }
+}
+
+.login-error {
+    @include font-family-reading;
+    @include font-style(300, 1rem, 1.5em, $color-error);
+}

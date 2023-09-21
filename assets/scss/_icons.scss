@@ -1,0 +1,264 @@
+/*
+*
+* LOCATION: [core]
+* FOLDER: [assets/scss]
+* FILE NAME: [fonts.scss]
+* DESCRIPTION: icons elements
+*
+*/
+
+/***** FONTAWESOME *****/
+// Use for  FontAwesome family
+// font: var(--fa-font-solid);
+// font: var(--fa-font-regular);
+// font: var(--fa-font-light);
+// font: var(--fa-font-thin);
+// font: var(--fa-font-brands);
+// font: var(--fa-font-sharp-solid);
+// font: var(--fa-font-sharp-regular);
+// font: var(--fa-font-sharp-light);
+// font-family: "Font Awesome Kit";
+
+.icon {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    
+    &.icon-atop {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    &.mobile-icon-only {
+        span {
+            @include mobile-max {
+                display: none !important;
+            }
+        }
+    }
+    
+    &.icon-only {
+        span {
+            display: none !important;
+        }
+    }
+    
+    &:before,
+    &:after {
+        /* Common Properties: All required to make icons render reliably - we did this above but it's included here for the full demo */
+        display: inline-block;
+        text-rendering: auto;
+        -webkit-font-smoothing: antialiased;
+        font-size: 1em;
+    }
+}
+
+
+
+/* ICONS */
+.icon-hero:after {
+    font-family: "Font Awesome Kit";
+    content: "\e006";
+    font-size: 1.5rem;
+}
+
+.add {
+    &-basic:after {
+        font: var(--fa-font-sharp-solid);
+        content: '\2b';
+        font-size: 1.25em;
+    }
+    
+    &-news:before {
+        font-family: "Font Awesome Kit";
+        font-size: .875em;
+        content: '\e001';
+    }
+}
+
+.delete {
+    &-basic:before {
+        font-family: "Font Awesome Kit";
+        content: '\e001';
+        font-size: .875em;
+    }
+    
+    &-news:before {
+        font-family: "Font Awesome Kit";
+        font-size: .875em;
+        content: '\e003';
+    }
+}
+
+.i-long-arrow-table:after {
+    font: var(--fa-font-sharp-solid);
+    content: '\f178';
+    font-size: 1.5em;
+}
+
+.i-more:before {
+    font: var(--fa-font-sharp-light);
+    content: '\f055';
+}
+
+.menu-toggle-admin:before {
+    font: var(--fa-font-light);
+    content: '\e24e';
+}
+
+.i-logout:before {
+    font: var(--fa-font-solid);
+    content: '\f08b';
+}
+
+.i-homepage:before {
+    font: var(--fa-font-regular);
+    content: '\e487';
+}
+
+.i-facebook:before {
+    font: var(--fa-font-brands);
+    content: '\f39e';
+}
+
+.i-instagram:before {
+    font: var(--fa-font-brands);
+    content: '\f16d';
+}
+
+// NEWS
+.i-news {
+    &:before {
+        font: var(--fa-font-sharp-light);
+        content: '\f1ea';
+    }
+    
+    &-manage:before {
+        font-family: "Font Awesome Kit";
+        content: '\e003';
+    }
+}
+
+// USERs
+.i-user {
+    &:before {
+        font: var(--fa-font-light);
+        content: '\f0c0';
+    }
+    
+    &-manage:before {
+        font-family: "Font Awesome Kit";
+        content: '\e005';
+    }
+}
+
+.i-sponsors {
+    &:before {
+        font: var(--fa-font-light);
+        content: '\f81d';
+    }
+    
+    &-manage:before {
+        font-family: "Font Awesome Kit";
+        content: '\e009';
+    }
+}
+
+.i-bdd {
+    &:before {
+        font: var(--fa-font-brands);
+        content: '\f388';
+        font-size: 1.5em;
+    }
+}
+
+.i-flash {
+    &:before,
+    &:after {
+        font: var(--fa-font-sharp-solid);
+        content: '\f0e7';
+        font-size: 1.25em;
+    }
+}
+
+.i-info {
+    &:before {
+        font: var(--fa-font-solid);
+        content: '\f05a';
+        font-size: 1.25em;
+    }
+}
+
+.i-emergency {
+    &:before,
+    &:after {
+        font: var(--fa-font-light);
+        content: '\e02e';
+        font-size: 1.25em;
+    }
+}
+
+.i-soccer-1:before {
+    font-family: "Font Awesome Kit";
+    content: "\e006";
+}
+
+.i-arrow:after {
+    font: var(--fa-font-sharp-regular);
+    content: '\f178';
+}
+
+.i-map:before {
+    font: var(--fa-font-sharp-solid);
+    content: '\f3c5';
+}
+
+.i-download:before {
+    font: var(--fa-font-sharp-regular);
+    content: '\f33d';
+}
+
+.i-rfc-logo:before {
+    font-family: "Font Awesome Kit";
+    content: "\e00e";
+}
+
+
+
+
+
+.btn-disable:before {
+    font: var(--fa-font-regular);
+    content: '\f070';
+    font-size: 1.25em;
+}
+
+.btn-activate:before {
+    font: var(--fa-font-regular);
+    content: '\f06e';
+    font-size: 1.25em;
+}
+
+.btn-delete:before {
+    font: var(--fa-font-regular);
+    content: '\f2ed';
+    font-size: 1.25em;
+}
+
+.btn-update:before {
+    font: var(--fa-font-regular);
+    content: '\f044';
+    font-size: 1.25em;
+}
+
+.btn-revert:before {
+    font: var(--fa-font-regular);
+    content: '\f12d';
+    font-size: 1.25em;
+}
+
+.btn-validate:before {
+    font: var(--fa-font-regular);
+    content: '\f058';
+    font-size: 1.25em;
+}

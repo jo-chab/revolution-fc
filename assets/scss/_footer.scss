@@ -1,0 +1,102 @@
+/*
+*
+* LOCATION: [core]
+* FOLDER: [scss]
+* FILE NAME: [footer.scss]
+* DESCRIPTION: footer style
+*
+*/
+
+/*******************************************************
+FOOTER
+*******************************************************/
+footer {
+    padding: 32px 24px 120px;
+    background-color: $bg-footer-color;
+    box-sizing: border-box;
+    @include tablet {
+        padding: 32px;
+    }
+    
+    article {
+        width: 100%;
+        box-sizing: border-box;
+        position: relative;
+        margin: 0 auto;
+        max-width: 960px;
+        padding: 0;
+        @include desktop-large {
+            max-width: 1260px;
+        }
+    }
+}
+
+.main-footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    grid-gap: 32px 16px;
+    @include tablet {
+        grid-template-columns: repeat(5, 1fr);
+        grid-gap: 40px 16px;
+    }
+    
+    .footer-logo {
+        width: 80px;
+        justify-self: center;
+        grid-column: span 2;
+        
+        img {
+            width: 100%;
+        }
+        
+        @include tablet {
+            justify-self: inherit;
+            grid-column: span 1;
+        }
+    }
+    
+    .footer-nav {
+        width: 100%;
+        
+        li {
+            @include font-family-reading();
+            @include font-style(400, 12px, 1.5em, white);
+            padding: 2px 0;
+            
+            &.list-header {
+                font-size: 14px;
+                font-weight: 700;
+                margin-bottom: 8px;
+            }
+            
+            &:hover:not(list-header) {
+                color: $accent-color-2;
+                
+            }
+        }
+    }
+    
+    .footer-copy {
+        grid-column: span 2;
+        text-align: center;
+        @include tablet {
+            grid-row: 2;
+            grid-column: span 5;
+        }
+        
+        p {
+            color: white;
+            font-size: 12px;
+        }
+    }
+    
+}
+
+
+
+
+
+
+
+

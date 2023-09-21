@@ -1,0 +1,17 @@
+{
+  "name": "revolution-fc",
+  "version": "2.0.0",
+  "description": "revolution website",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "sass": "node-sass -w assets/scss/ -o assets/css/ --recursive"
+  },
+  "author": "Jonathan",
+  "license": "ISC",
+  "dependencies": {
+    "node-sass": "^8.0.0"
+  }
+}

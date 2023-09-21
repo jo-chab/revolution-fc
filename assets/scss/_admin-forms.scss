@@ -1,0 +1,271 @@
+/*
+*
+* LOCATION: [assets]
+* FOLDER: [scss]
+* FILE NAME: [admin-forms.scss]
+* DESCRIPTION: form elements for admin section
+*
+*/
+
+
+
+/************************************
+FORMS LAYOUT
+************************************/
+form.popup {
+    width: 100%;
+    max-width: $popup-width-large;
+    padding: 2rem;
+    box-sizing: border-box;
+    
+    background: white;
+    border: 1px solid $web-grey-2;
+    border-radius: 1rem;
+    
+    @include tablet {
+        padding: 4rem;
+    }
+    
+    .popup-title {
+        text-align: center;
+        color: $primary-color-2;
+    }
+}
+
+
+/************************************
+FORMS ELEMENT - block, labels, input & cta
+************************************/
+.form-row {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    
+    &.column {
+        justify-content: flex-start;
+        flex-direction: column;
+        gap: .5rem;
+    }
+}
+
+label {
+    @include font-family-heading;
+    @include font-style(600, .75rem, 1em, $primary-color-2);
+    text-transform: uppercase;
+    padding: 0;
+}
+
+input {
+    width:100%;
+    padding: .75rem 1.5rem;
+    @include font-family-reading;
+    @include font-style(400, 1rem, 1em, $web-grey-5);
+    border: 1px solid $web-grey-2;
+    border-radius: .5rem;
+    &:hover {
+        border-color: $primary-color-1;
+    }
+    &:focus {
+        color: $web-grey-6;
+        border-color: $web-grey-5;
+    }
+    &::placeholder {
+        color: $web-grey-2;
+    }
+    &.prefilled {
+        color: $web-grey-3;
+        background: #f2f2f2;
+    }
+}
+
+textarea {
+    background-color:white;
+    outline: none;
+    height:250px;
+    width:100%; max-width:100%;
+    padding: 1rem;
+    @include font-family-reading;
+    @include font-style(400, 1rem, 1.5em, $web-grey-5);
+    border: 1px solid $web-grey-2;
+    border-radius: .5rem;
+    margin-bottom: 2rem;
+    resize: none;
+    
+    &:hover {
+        border-color: $primary-color-1;
+    }
+    &:focus {
+        color: $web-grey-5;
+        border-color: $web-grey-5;
+    }
+    &.prefilled {
+        color: $web-grey-3;
+        background: #f2f2f2;
+    }
+}
+
+
+.file-list {
+    width: 100%;
+    & + h6 {
+        margin-top: 1rem;
+    }
+}
+.inputfile {
+    width: 0.1px;
+    height: 0.1px;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
+}
+.inputfile + label {
+    width:100%;
+    display:inline-block;
+    padding: .75rem 1rem;
+    background-color: $alert-1;
+    @include font-family-reading;
+    @include font-style(400, 16px, 1.5em, $web-grey-5);
+    text-align:center;
+    @include tablet {
+        max-width: 360px;
+    }
+    
+    &:hover {
+        cursor:  pointer;
+        background-color: $alert-2;
+        transition: all .3s ease;
+    }
+}
+
+input[type='date'] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+
+
+
+
+// CTA update, confirm, activate
+input[class*="cta-"] {
+    width: 100%;
+    padding: 1rem 1.5rem;
+    @include font-family-reading;
+    @include font-style(400, 1rem, 1em, $web-grey-3);
+    border: 0;
+    border-radius: 2rem;
+    text-align: center;
+    margin-bottom: 0;
+    @include tablet {
+        width: fit-content;
+        transition: all .3s ease;
+    }
+    
+    &.cta-login {
+        background-color: $primary-color-1;
+        color: white;
+        border-radius: 2rem;
+        width: 100%;
+        font-size: 1.25rem;
+        margin-top: 1rem;
+        
+        &:hover {
+            background-color: darken($primary-color-1, 20%);
+        }
+    }
+    
+    &.cta-update {
+        background-color: $admin-delete;
+        color: white;
+        
+        &:hover {
+            background-color: darken($admin-delete, 20%);
+        }
+    }
+    
+    &.cta-confirm {
+        max-width: 320px;
+        background-color: $admin-confirm;
+        color: #FFFFFF;
+        
+        &:hover {
+            background-color: darken($admin-confirm, 20%);
+        }
+    }
+    
+    &.cta-activate {
+        background-color: $admin-confirm;
+        color: #FFFFFF;
+        
+        &.is-inactive {
+            background-color: $web-grey-3;
+        }
+        
+        &:hover {
+            background-color: darken($admin-confirm, 20%);
+        }
+    }
+    
+    &.cta-delete {
+        padding: 0;
+        border-radius: 0;
+        color: $web-grey-3;
+        
+        &:hover {
+            color: $admin-delete;
+        }
+    }
+}
+
+
+
+.multiple-fileInputs {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+
+
+
+
+
+// switch buttons
+/* Hide the default checkbox */
+.switch-checkbox {
+    display: none;
+}
+
+/* Style the switch container */
+.switch-container {
+    display: inline-block;
+    position: relative;
+    width: 60px;
+    height: 30px;
+    background-color: #ccc; /* Default background color */
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+/* Style the switch knob */
+.switch-knob {
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    width: 24px;
+    height: 24px;
+    background-color: #fff;
+    border-radius: 50%;
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+.switch-container:has(.switch-checkbox:checked) {
+    background-color: #4CAF50;
+}
+.switch-checkbox:checked + .switch-knob {
+    transform: translateX(30px);
+}

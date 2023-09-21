@@ -1,0 +1,16 @@
+Header always set Content-Security-Policy "upgrade-insecure-requests;"
+
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+
+    # Enforce HTTPS (SSL) Redirect
+    RewriteCond %{HTTPS} off
+    RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+    # Remove .php extension from URLs
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_FILENAME}.php -f
+    RewriteRule ^(.+)$ $1.php [L]
+
+
+</IfModule>

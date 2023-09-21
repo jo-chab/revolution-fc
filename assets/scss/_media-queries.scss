@@ -1,0 +1,112 @@
+/*
+*
+* LOCATION: [core]
+* FOLDER: [scss]
+* FILE NAME: [media-queries.scss]
+* DESCRIPTION: media queries
+*
+*/
+
+/************************************************************
+MEDIA QUERIES
+************************************************************/
+
+/** Target points **/
+$mobile: 375px;
+$mobile-medium: 480px;
+$mobile-large: 520px;
+$mobile-xlarge: 620px;
+$tablet: 768px;
+$desktop: 1024px;
+$desktop-medium: 1240px;
+$desktop-large: 1440px;
+$website-max-width: 1260px;
+
+
+/* MOBILE - Targeting iPhone 5s only */
+@mixin mobile-small {
+  @media (max-width: #{$mobile - 1px}) {
+    @content;
+  }
+}
+
+/* TABLET - mobile & up */
+@mixin mobile {
+  @media (min-width: #{$mobile}) {
+    @content;
+  }
+}
+
+
+/* TABLET - 480px & up */
+@mixin mobile-medium {
+  @media (min-width: #{$mobile-large}) {
+    @content;
+  }
+}
+
+
+/* TABLET - 520px & up */
+@mixin mobile-large {
+  @media (min-width: #{$mobile-large}) {
+    @content;
+  }
+}
+
+
+/* TABLET - 620px & up */
+@mixin mobile-xlarge {
+  @media (min-width: #{$mobile-xlarge}) {
+    @content;
+  }
+}
+
+
+/* MOBILE - Only Mobile */
+@mixin mobile-max {
+  @media (max-width: #{$tablet - 1px}) {
+    @content;
+  }
+}
+
+/* TABLET - Tablet & up */
+@mixin tablet {
+  @media (min-width: #{$tablet}) {
+    @content;
+  }
+}
+
+/* TABLET - Targeting only tablet */
+@mixin tablet-only {
+  @media (min-width: #{$tablet}) and (max-width: #{$desktop - 1px}) {
+    @content;
+  }
+}
+
+/* TABLET - Targeting Mobile & Tablet */
+@mixin tablet-max {
+  @media (max-width: #{$desktop - 1px}) {
+    @content;
+  }
+}
+
+/* DESKTOP - Desktop & Up */
+@mixin desktop {
+  @media (min-width: #{$desktop}) {
+    @content;
+  }
+}
+
+/* DESKTOP - Custom targeting point */
+@mixin desktop-medium {
+  @media (min-width: #{$desktop-medium}) {
+    @content;
+  }
+}
+
+/* DESKTOP -  13 inch Macbook Pro screen */
+@mixin desktop-large {
+  @media (min-width: #{$desktop-large}) {
+    @content;
+  }
+}

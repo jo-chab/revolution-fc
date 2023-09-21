@@ -1,0 +1,1 @@
+<?php	session_start();	mysqli_close();	session_destroy();	header('Location: https://www.revolutionfc.ca/?m=12');	exit();?>
