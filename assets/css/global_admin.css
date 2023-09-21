@@ -412,6 +412,11 @@ ul {
   font: var(--fa-font-sharp-light);
   content: '\f055'; }
 
+.i-more-2:after {
+  font: var(--fa-font-sharp-regular);
+  content: '\f055';
+  font-size: 1.25em; }
+
 .menu-toggle-admin:before {
   font: var(--fa-font-light);
   content: '\e24e'; }
