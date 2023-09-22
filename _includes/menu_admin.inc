@@ -4,6 +4,7 @@
 
 <li class="menu-element icon i-rfc-logo">Club</li>
 <li class="ss-menu-element"><a href="index.php?p=31">Gérer les documents</a></li>
+<li class="ss-menu-element"><a href="index.php?p=33">Gérer les caetgories de documents</a></li>
 <li class="ss-menu-element"><a href="index.php?p=301">Gérer les offres d'emplois</a></li>
 
 <li class="menu-element icon i-user">Personnes</li>

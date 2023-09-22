@@ -349,6 +349,9 @@ p {
     transition: all .3s ease; }
     p .inline-link:hover {
       color: #EFDBB2; }
+  p.legend {
+    font-size: .875rem;
+    color: #5f6369; }
   p:has(+ h1, + h2) {
     margin-bottom: 4rem; }
   p:has(+ h3, + h4) {

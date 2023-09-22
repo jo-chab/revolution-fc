@@ -192,6 +192,11 @@ p {
             color: $secondary-color-3;
         }
     }
+    &.legend {
+        font-size: .875rem;
+        color: $web-grey-4;
+        
+    }
     
     &:has(+ h1, + h2) {
         margin-bottom: 4rem;
