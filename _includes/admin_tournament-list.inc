@@ -10,7 +10,7 @@
         
         <div class="dashboard-content content-add" style="margin-top: 3rem;">
             
-            <form method="post" action="action_tournament_add.php" enctype="multipart/form-data">
+            <form method="post" action="action_tournament_add" enctype="multipart/form-data">
                 <div class="d-form-wrapper">
                     
                     <div class="grid-layout-2">
