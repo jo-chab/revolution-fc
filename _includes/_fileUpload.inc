@@ -63,7 +63,7 @@
         } else {
             if ($erreurupload > 0) retour_erreur($page,1002);
             
-            $extensions_valides = array('jpg', 'jpeg', 'png', 'pdf', 'doc', 'docs');
+            $extensions_valides = array('jpg', 'jpeg', 'png', 'pdf', 'doc', 'docs', 'docx');
             $extension_upload = strtolower(  substr(  strrchr($nomoriginel, '.')  ,1)  );
             if (!in_array($extension_upload,$extensions_valides))  retour_erreur($page,1023);
             

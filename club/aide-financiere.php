@@ -8,7 +8,7 @@ include("../_includes/_revolutionfc.inc");
 
 <meta charset="UTF-8">
 
-<title>Assurances</title>
+<title>Aide financi&egrave;re</title>
 
 <?php
     include("../_includes/head.inc");
