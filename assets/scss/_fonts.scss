@@ -1,192 +1,213 @@
 /*
 *
 * LOCATION: [core]
-* FOLDER: [scss]
+* FOLDER: [assets/scss]
 * FILE NAME: [fonts.scss]
 * DESCRIPTION: fonts styling elements
 *
 */
 
 
+
+@mixin font-family-reading(){
+    font-family: 'Source Sans 3', sans-serif;
+}
+
+@mixin font-family-heading(){
+    font-family: 'Poppins', sans-serif;
+}
+
+@mixin font-style($weight, $size, $height, $color){
+    font-weight: $weight;
+    font-size: $size;
+    line-height: $height;
+    color: $color;
+}
+
+
+
 /***** TITLE *****/
 h1 {
     @include font-family-heading();
-    @include font-style(400, 2rem, 1.5em, $primary-color-2);
-    @include mobile-xlarge {
-        font-size: 5rem;
+    @include font-style(700, 2rem, 1.3em, $primary-color-2);
+    text-align: center;
+    margin-bottom: 2rem;
+    @include tablet {
+        margin-bottom: 4rem;
     }
-    
-    &.section-title {
-        margin-bottom: 1rem;
-        @include tablet {
-            margin-bottom: 2rem;
-        }
+    @include mobile-xlarge {
+        font-size: 4rem;
     }
     
     &.article-title {
+        @include font-family-reading();
         @include mobile-xlarge {
-            font-size: 3.5rem;
+            font-size: 3rem;
         }
     }
+    &:has(+ h3, + h4) {
+        margin-bottom: 1.5rem;
+    }
+    
 }
 
 h2 {
     @include font-family-heading();
-    @include font-style(700, 1.5rem, 1.5em, $primary-color-2);
+    @include font-style(700, 1.5rem, 1.5em, $primary-color-1);
     text-transform: uppercase;
+    letter-spacing: 2px;
     margin-bottom: 1rem;
+    text-align: center;
     
     @include mobile-xlarge {
         font-size: 2rem;
     }
     @include tablet {
+        text-align: unset;
         margin-bottom: 1.5rem;
     }
     
     &.section-title {
-        text-transform: none;
+        color: $primary-color-2;
         margin-bottom: 2rem;
         text-align: center;
-        @include tablet {
-            margin-bottom: 4rem;
-        }
-        
-        .p-tournament & {
-            margin-bottom: 1.5rem;
-            @include tablet {
-                margin-bottom: 1.5rem;
-            }
+    }
+    &.icon {
+        align-items: baseline;
+        &:before,
+        &:after {
+            font: var(--fa-font-sharp-solid);
+            content: '\e404';
         }
     }
     
+    &:has(+ p) {
+        margin-bottom: 1.25rem;
+    }
 }
 
 h3 {
     @include font-family-heading();
-    @include font-style(400, 1.25rem, 1.3em, $primary-color-2);
+    @include font-style(600, 1.25rem, 1.3em, $primary-color-2);
     @include mobile-xlarge {
-        @include font-style(700, 1.5rem, 1.3em, $primary-color-2);
+        font-size: 1.5rem;
     }
     margin-bottom: 1rem;
     
-    #subventions & {
-        color: $accent-color-1;
+    &.news-card-headline {
+        @include font-family-reading();
+        
+        @include line-clamp(2);
+        @include tablet {
+            font-size: 2rem;
+            @include line-clamp(3);
+        }
+        @include desktop {
+            font-size: 1.5rem;
+        }
     }
+    
 }
 
 h4 {
     @include font-family-heading();
-    @include font-style(400, 1.125rem, 1.5em, $primary-color-2);
+    @include font-style(600, 1.125rem, 1.5em, $primary-color-2);
     @include mobile-xlarge {
         font-size: 1.25rem;
     }
-    text-transform: uppercase;
     
-    &.main_quotes {
-        font-style: italic;
-        margin-bottom: 2rem;
-    }
-    
-    .hp-jobs & {
-        text-transform: capitalize;
+    .flash-alert & {
+        color: white;
+        padding: .5rem;
+        justify-content: center;
+        @include tablet {
+            padding: 2rem;
+        }
     }
     
     .dashboard-title & {
-        color: white;
+        font-size: .875rem;
+    }
+    
+    &:has(+ p) {
+        margin-bottom: .5rem;
     }
 }
 
 h5 {
     @include font-family-reading();
-    @include font-style(400, 1rem, 1.5em, $primary-color-2);
+    @include font-style(400, .875rem, 1.5em, $primary-color-2);
     @include mobile-xlarge {
-        font-size: 1.125rem;
-    }
-    
-    &.dates {
-        margin-top: 1rem;
-        color: #a9abac;
+        font-size: 1rem;
     }
 }
 
 h6 {
-    @include font-style(400, .875rem, 1.5em, $primary-color-2);
     @include font-family-reading();
+    @include font-style(400, .75rem, 1.5em, $primary-color-2);
+}
+
+
+.text-dates {
+    color: $secondary-color-1;
+}
+.white {
+    color: white;
 }
 
 
 /***** PARAGRAPH *****/
 p {
-    @include font-style(300, 1rem, 1.7em, $reading-text);
     @include font-family-reading();
-    @include mobile-xlarge {
-        font-size: 1.125rem;
+    @include font-style(400, 1.125rem, 1.7em, $reading-text);
+    max-width: $text-content-max-width;;
+    .center {
+        margin-left: auto;
+        margin-right: auto;
     }
-    margin-bottom: 1rem;
+    &.article-intro {
+        font-weight: 600;
+        font-size: 1.25rem;
+        color: $primary-color-2;
+        margin-bottom: 1rem;
+        @include tablet {
+            font-size: 1.375rem;
+        }
+    }
     
-    &:last-of-type {
+    &:last-child {
         margin-bottom: 0;
     }
     
-    &.intro {
-        @include font-style(400, 1.25rem, 1.3em, $tertiary-color-1);
-        @include font-family-reading();
-        margin-bottom: 2rem;
-    }
-    
-    &.quote {
-        color: $accent-color-1;
-        font-style: italic;
-        font-size: 1.25rem;
-        margin-bottom: 2rem;
-    }
-    
     span.text-highlight {
-        font-weight: 500;
-    }
-    
-    .doc-container & {
-        margin-top: 2rem;
+        font-weight: 700;
     }
     
     .inline-link {
-        border-bottom: 2px solid $accent-color-1;
-        padding: 0 2px;
+        color: $primary-color-1;
+        font-weight: 600;
         transition: all .3s ease;
         
         &:hover {
-            background: $accent-color-1;
-            color: white;
+            color: $secondary-color-3;
         }
     }
+    
+    &:has(+ h1, + h2) {
+        margin-bottom: 4rem;
+    }
+    &:has(+ h3, + h4) {
+        margin-bottom: 2rem;
+    }
+    &:has(+ p) {
+        margin-bottom: 1.25rem;
+    }
+    
     
 }
 
 [class*='update-link'] {
     &:hover {
         cursor: pointer;
-    }
-}
-
-
-/***** BASIC LIST *****/
-ul {
-    display: flex;
-    flex-flow: column nowrap;
-    gap: 8px;
-    
-    &.basic-list {
-        margin-inline: 32px 16px;
-        margin-block-start: 16px;
-        
-        li {
-            @include font-style(300, 1rem, 1.7em, $primary-color-2);
-            @include font-family-reading();
-            @include mobile-xlarge {
-                font-size: 18px;
-            }
-            
-            list-style-type: circle;
-        }
     }
 }

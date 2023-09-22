@@ -52,7 +52,7 @@
     
     
     // Function to handle file upload and return the destination path
-    function handleDocUpload($file, $uploadDir, $page, $code) {
+    function handleDocUpload($file, $uploadDir, $page) {
         
         $nomoriginel = $file['name'];
         $adresseserveur = $file['tmp_name'];
@@ -63,9 +63,9 @@
         } else {
             if ($erreurupload > 0) retour_erreur($page,1002);
             
-            $extensions_valides = array('jpg', 'jpeg', 'png', 'pdf', 'doc', 'docs');
+            $extensions_valides = array('jpg', 'jpeg', 'png', 'pdf', 'doc', 'docs', 'docx');
             $extension_upload = strtolower(  substr(  strrchr($nomoriginel, '.')  ,1)  );
-            if (!in_array($extension_upload,$extensions_valides))  retour_erreur($page,$code);
+            if (!in_array($extension_upload,$extensions_valides))  retour_erreur($page,1023);
             
             $fichier = basename($nomoriginel);
             $fichier = strtr($fichier,
