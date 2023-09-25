@@ -59,7 +59,7 @@
 
                 <div class="dashboard-content content-add">
 
-                    <form method="post" action="action_field_add.php" enctype="multipart/form-data">
+                    <form method="post" action="action_field_add" enctype="multipart/form-data">
                         <div class="d-form-wrapper">
 
                             <div class="flex-layout-2">

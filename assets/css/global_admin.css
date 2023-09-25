@@ -293,7 +293,8 @@ h4 {
       .flash-alert h4 {
         padding: 2rem; } }
   .dashboard-title h4 {
-    font-size: .875rem; }
+    font-size: .875rem;
+    color: white; }
   h4:has(+ p) {
     margin-bottom: .5rem; }
 
@@ -349,6 +350,9 @@ p {
     transition: all .3s ease; }
     p .inline-link:hover {
       color: #EFDBB2; }
+  p.legend {
+    font-size: .875rem;
+    color: #5f6369; }
   p:has(+ h1, + h2) {
     margin-bottom: 4rem; }
   p:has(+ h3, + h4) {
@@ -422,7 +426,7 @@ p {
   font: var(--fa-font-sharp-light);
   content: '\f055'; }
 
-.i-more-2:after {
+.i-more-2:before {
   font: var(--fa-font-sharp-regular);
   content: '\f055';
   font-size: 1.25em; }
@@ -660,40 +664,28 @@ section {
 ALERT MESSAGES in Dashboard
 ************************/
 .message-box {
-  background-color: #fed624;
-  padding: 1rem;
-  box-sizing: border-box;
-  border: 1px solid #d5ae01;
-  margin-bottom: 2rem;
-  position: relative; }
-  .message-box.alert-error {
-    background: none;
-    padding: 0;
-    border: none; }
-    .message-box.alert-error p {
-      color: #EF233C; }
-      .message-box.alert-error p:before {
-        font: var(--fa-font-solid);
-        content: "\f06a"; }
-  .message-box.alert-correct {
-    background: none;
-    padding: 0;
-    border: none; }
-    .message-box.alert-correct p {
-      color: #117417; }
-      .message-box.alert-correct p:before {
-        font: var(--fa-font-solid);
-        content: "\f058"; }
-  .message-box p {
-    color: #181818;
-    display: flex;
-    gap: .5rem;
-    align-items: baseline;
-    justify-content: flex-start; }
-    .message-box p:before {
-      font: var(--fa-font-sharp-light);
+  display: flex;
+  flex-flow: row nowrap;
+  position: absolute;
+  bottom: 4rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+  -webkit-box-shadow: 0 5px 20px -6px rgba(18, 18, 18, 0.4);
+  -moz-box-shadow: 0 5px 20px -6px rgba(18, 18, 18, 0.4);
+  box-shadow: 0 5px 20px -6px rgba(18, 18, 18, 0.4); }
+  .message-box .icon {
+    padding: 1rem;
+    background-color: #fed624; }
+    .message-box .icon:before {
+      font: var(--fa-font-sharp-regular);
       content: "\f05a";
-      padding-right: 8px; }
+      font-size: 2rem; }
+  .message-box p {
+    padding: 1rem;
+    background: #181818;
+    color: white;
+    font-size: .875rem; }
   .message-box .message-box-close {
     position: absolute;
     top: 0;
@@ -702,9 +694,16 @@ ALERT MESSAGES in Dashboard
     font-weight: 300;
     color: #2e2e2e;
     content: "\f00d"; }
+  .message-box.fade-out {
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out;
+    /* Adjust the duration and timing function as needed */ }
+  .message-box.fade-out.hide {
+    opacity: 0;
+    pointer-events: none;
+    /* Prevent interaction with hidden element */ }
 
 /********* FONCTIONS *********/
-.hide,
 .is-hide,
 .is-hidden {
   display: none !important; }

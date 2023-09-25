@@ -5,12 +5,12 @@
     
     <div class="dashboard-content">
         
-        <div class="btn-primary cta-add js-content-add">Ajouter un tournoi</div>
+        <div class="btn-primary cta-add icon mobile-icon-only i-more-2 js-content-add">Ajouter un tournoi</div>
         
         
         <div class="dashboard-content content-add" style="margin-top: 3rem;">
             
-            <form method="post" action="action_tournament_add.php" enctype="multipart/form-data">
+            <form method="post" action="action_tournament_add" enctype="multipart/form-data">
                 <div class="d-form-wrapper">
                     
                     <div class="grid-layout-2">

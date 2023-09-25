@@ -58,7 +58,8 @@
                         ?>
                     </div>
                     
-                    <div>
+                    <div class="form-row column">
+                        <label>Mettre à jour l'image</label>
                         <ul class="file-list">
                             <li class="file-list-element">
                                 <div class="dashboard-file-box">
@@ -118,7 +119,7 @@
                 </div>
                 <div class='element-title'>$category – $soccer</div>
                 <div class='list-cta content-btn'>
-                    <form action='index.php?p=85' method='post'>
+                    <form action='index.php?p=83' method='post'>
                         <input type='hidden' name='num_category' value='$id_category'>
                         <input type='hidden' name='num_tournoi' value='$element'>
                         <div class='btn-primary btn-update icon mobile-icon-only'><span>Modifier</span></div>
@@ -130,8 +131,7 @@
                 }
             ?>
             
-            <div class="btn-primary cta-add js-content-add"><a><i class="fa-regular fa-file-plus"></i> Ajouter une
-                    categorie</a></div>
+            <div class="btn-primary cta-add icon mobile-icon-only i-more-2 js-content-add"><a>Ajouter une categorie</a></div>
             
             <?php include("../_includes/admin_tournament_category-add.inc"); ?>
         

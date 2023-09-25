@@ -127,6 +127,7 @@ h4 {
     
     .dashboard-title & {
         font-size: .875rem;
+        color: white;
     }
     
     &:has(+ p) {
@@ -191,6 +192,11 @@ p {
         &:hover {
             color: $secondary-color-3;
         }
+    }
+    &.legend {
+        font-size: .875rem;
+        color: $web-grey-4;
+        
     }
     
     &:has(+ h1, + h2) {

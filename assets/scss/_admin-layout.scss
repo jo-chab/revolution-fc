@@ -155,55 +155,32 @@ section {
 ALERT MESSAGES in Dashboard
 ************************/
 .message-box {
-    background-color: $alert-1;
-    padding: 1rem;
-    box-sizing: border-box;
-    border: 1px solid $alert-2;
-    margin-bottom: 2rem;
-    position: relative;
+    display: flex;
+    flex-flow: row nowrap;
     
-    &.alert-error {
-        background: none;
-        padding: 0;
-        border: none;
-        
-        p {
-            color: $color-error;
-            
-            &:before {
-                font: var(--fa-font-solid);
-                content: "\f06a";
-            }
-        }
-    }
+    position: absolute;
+    bottom: 4rem; left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
     
-    &.alert-correct {
-        background: none;
-        padding: 0;
-        border: none;
-        
-        p {
-            color: darken($color-correct, 20%);
-            
-            &:before {
-                font: var(--fa-font-solid);
-                content: "\f058";
-            }
-        }
-    }
+    -webkit-box-shadow: 0 5px 20px -6px rgba(18,18,18,.4);
+    -moz-box-shadow: 0 5px 20px -6px rgba(18,18,18,.4);
+    box-shadow: 0 5px 20px -6px rgba(18,18,18,.4);
     
-    p {
-        color: $web-grey-6;
-        display: flex;
-        gap: .5rem;
-        align-items: baseline;
-        justify-content: flex-start;
-        
+    .icon {
+        padding: 1rem;
+        background-color: $alert-1;
         &:before {
-            font: var(--fa-font-sharp-light);
+            font: var(--fa-font-sharp-regular);
             content: "\f05a";
-            padding-right: 8px;
+            font-size: 2rem;
         }
+    }
+    p {
+        padding: 1rem;
+        background: $web-grey-6;
+        color: white;
+        font-size: .875rem;
     }
     
     .message-box-close {
@@ -215,11 +192,20 @@ ALERT MESSAGES in Dashboard
         color: #2e2e2e;
         content: "\f00d";
     }
+    
+    &.fade-out {
+        opacity: 1;
+        transition: opacity 0.5s ease-in-out; /* Adjust the duration and timing function as needed */
+    }
+    
+    &.fade-out.hide {
+        opacity: 0;
+        pointer-events: none; /* Prevent interaction with hidden element */
+    }
 }
 
 
 /********* FONCTIONS *********/
-.hide,
 .is-hide,
 .is-hidden {
     display:none !important;
