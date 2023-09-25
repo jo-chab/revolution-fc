@@ -9,7 +9,7 @@
                 
                 
                 <div class="form-row">
-                    <a class="btn-primary cta-add icon mobile-icon-only add-basic js-content-add"><span>Ajouter un.e membre du staff</span></a>
+                    <a class="btn-primary cta-add icon mobile-icon-only i-more-2 js-content-add"><span>Ajouter un.e membre du staff</span></a>
                 </div>
 
                 <div class="dashboard-content content-add">

@@ -131,8 +131,7 @@
                 }
             ?>
             
-            <div class="btn-primary cta-add js-content-add"><a><i class="fa-regular fa-file-plus"></i> Ajouter une
-                    categorie</a></div>
+            <div class="btn-primary cta-add icon mobile-icon-only i-more-2 js-content-add"><a>Ajouter une categorie</a></div>
             
             <?php include("../_includes/admin_tournament_category-add.inc"); ?>
         
