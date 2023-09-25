@@ -7,7 +7,6 @@
         
         <div class="btn-primary cta-add icon mobile-icon-only i-more-2 js-content-add">Ajouter un tournoi</div>
         
-        
         <div class="dashboard-content content-add" style="margin-top: 3rem;">
             
             <form method="post" action="action_tournament_add" enctype="multipart/form-data">

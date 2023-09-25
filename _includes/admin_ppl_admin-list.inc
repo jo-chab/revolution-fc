@@ -8,9 +8,7 @@
             <div class="dashboard-content">
                 
                 
-                <div class="form-row">
-                    <a class="btn-primary cta-add icon mobile-icon-only i-more-2 js-content-add"><span>Ajouter un.e membre de l'administration</span></a>
-                </div>
+                <div class="btn-primary cta-add icon mobile-icon-only i-more-2 js-content-add"><span>Ajouter un.e membre de l'administration</span></div>
 
                 <div class="dashboard-content content-add">
 
