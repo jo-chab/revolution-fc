@@ -674,11 +674,11 @@ ALERT MESSAGES in Dashboard
   -webkit-box-shadow: 0 5px 20px -6px rgba(18, 18, 18, 0.4);
   -moz-box-shadow: 0 5px 20px -6px rgba(18, 18, 18, 0.4);
   box-shadow: 0 5px 20px -6px rgba(18, 18, 18, 0.4); }
-  .message-box span {
+  .message-box .icon {
     padding: 1rem;
     background-color: #fed624; }
-    .message-box span:before {
-      font: var(--fa-font-sharp-light);
+    .message-box .icon:before {
+      font: var(--fa-font-sharp-regular);
       content: "\f05a";
       font-size: 2rem; }
   .message-box p {
