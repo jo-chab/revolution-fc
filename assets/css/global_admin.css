@@ -666,7 +666,7 @@ ALERT MESSAGES in Dashboard
 .message-box {
   display: flex;
   flex-flow: row nowrap;
-  position: absolute;
+  position: fixed;
   bottom: 4rem;
   left: 50%;
   transform: translateX(-50%);

@@ -567,44 +567,44 @@ img {
   height: auto; }
 
 /*** For extend ***/
-.web-layout, article, .w-hero .hero-overlay-content {
+.web-layout, article, .list-people, .w-hero .hero-overlay-content {
   width: 100%;
   max-width: 1260px;
   margin: 0 auto;
   position: relative; }
-  .web-layout.flex-layout, article.flex-layout, .w-hero .flex-layout.hero-overlay-content {
+  .web-layout.flex-layout, article.flex-layout, .flex-layout.list-people, .w-hero .flex-layout.hero-overlay-content {
     display: flex; }
-  .web-layout.grid-layout, article.grid-layout, .w-hero .grid-layout.hero-overlay-content {
+  .web-layout.grid-layout, article.grid-layout, .grid-layout.list-people, .w-hero .grid-layout.hero-overlay-content {
     display: grid;
     gap: 1rem; }
     @media (min-width: 768px) {
-      .web-layout.grid-layout, article.grid-layout, .w-hero .grid-layout.hero-overlay-content {
+      .web-layout.grid-layout, article.grid-layout, .grid-layout.list-people, .w-hero .grid-layout.hero-overlay-content {
         gap: 1.5rem; } }
     @media (min-width: 1024px) {
-      .web-layout.grid-layout, article.grid-layout, .w-hero .grid-layout.hero-overlay-content {
+      .web-layout.grid-layout, article.grid-layout, .grid-layout.list-people, .w-hero .grid-layout.hero-overlay-content {
         gap: 2.5rem; } }
-    .web-layout.grid-layout.field-filter, article.grid-layout.field-filter, .w-hero .grid-layout.field-filter.hero-overlay-content {
+    .web-layout.grid-layout.field-filter, article.grid-layout.field-filter, .grid-layout.field-filter.list-people, .w-hero .grid-layout.field-filter.hero-overlay-content {
       gap: .5rem; }
-  .web-layout.col-12, article.col-12, .w-hero .col-12.hero-overlay-content {
+  .web-layout.col-12, article.col-12, .col-12.list-people, .w-hero .col-12.hero-overlay-content {
     grid-template-columns: repeat(4, 1fr); }
     @media (min-width: 768px) {
-      .web-layout.col-12, article.col-12, .w-hero .col-12.hero-overlay-content {
+      .web-layout.col-12, article.col-12, .col-12.list-people, .w-hero .col-12.hero-overlay-content {
         grid-template-columns: repeat(6, 1fr); } }
     @media (min-width: 1024px) {
-      .web-layout.col-12, article.col-12, .w-hero .col-12.hero-overlay-content {
+      .web-layout.col-12, article.col-12, .col-12.list-people, .w-hero .col-12.hero-overlay-content {
         grid-template-columns: repeat(12, 1fr); } }
-  .web-layout.col-2, article.col-2, .w-hero .col-2.hero-overlay-content {
+  .web-layout.col-2, article.col-2, .col-2.list-people, .w-hero .col-2.hero-overlay-content {
     grid-template-columns: 1fr; }
     @media (min-width: 768px) {
-      .web-layout.col-2, article.col-2, .w-hero .col-2.hero-overlay-content {
+      .web-layout.col-2, article.col-2, .col-2.list-people, .w-hero .col-2.hero-overlay-content {
         grid-template-columns: repeat(2, 1fr); } }
-  .web-layout.col-3, article.col-3, .w-hero .col-3.hero-overlay-content {
+  .web-layout.col-3, article.col-3, .col-3.list-people, .w-hero .col-3.hero-overlay-content {
     grid-template-columns: 1fr; }
     @media (min-width: 768px) {
-      .web-layout.col-3, article.col-3, .w-hero .col-3.hero-overlay-content {
+      .web-layout.col-3, article.col-3, .col-3.list-people, .w-hero .col-3.hero-overlay-content {
         grid-template-columns: repeat(2, 1fr); } }
     @media (min-width: 1024px) {
-      .web-layout.col-3, article.col-3, .w-hero .col-3.hero-overlay-content {
+      .web-layout.col-3, article.col-3, .col-3.list-people, .w-hero .col-3.hero-overlay-content {
         grid-template-columns: repeat(3, 1fr); } }
 
 /*******************************************************
@@ -1055,39 +1055,59 @@ DESIGN SYSTEM – Lists
       /* Unicode character for a bullet (circle) */
       display: inline-flex; }
 
-.list-basic {
-  margin-bottom: 1rem;
-  margin-inline-start: 0; }
+.list-people {
+  margin-block: 3rem; }
   @media (min-width: 768px) {
-    .list-basic {
-      margin-inline-start: 3rem; } }
-  .list-basic li {
-    list-style-type: disc;
-    margin-bottom: .5rem;
-    font-family: 'Source Sans 3', sans-serif;
-    font-weight: 300;
-    font-size: 1rem;
-    line-height: 1.3em;
-    color: #181818; }
-    .list-basic li:last-of-type {
-      margin-bottom: 0; }
-    @media (min-width: 768px) {
-      .list-basic li {
-        font-size: 1.125rem; } }
-    .list-basic li a {
+    .list-people.col-2 .list-people-header {
+      grid-column: span 2; } }
+  @media (min-width: 768px) {
+    .list-people.col-3 .list-people-header {
+      grid-column: span 2; } }
+  @media (min-width: 1024px) {
+    .list-people.col-3 .list-people-header {
+      grid-column: span 3; } }
+  .list-people .people-el {
+    display: flex;
+    flex-flow: column nowrap;
+    gap: .5rem; }
+    .list-people .people-el .list-people-function {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 700;
+      font-size: 1.5rem;
+      line-height: 1em;
+      color: #181818;
+      text-transform: uppercase;
+      margin-bottom: .5rem; }
+    .list-people .people-el .list-people-img {
+      margin-bottom: 1rem;
+      width: 100%;
+      aspect-ratio: 1;
+      background-position: top center;
+      background-repeat: no-repeat;
+      background-size: cover; }
+      @media (min-width: 768px) {
+        .list-people .people-el .list-people-img {
+          max-width: 320px; } }
+    .list-people .people-el .list-people-name {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 700;
+      font-size: 1.125rem;
+      line-height: 1em;
+      color: #C4A84C;
+      text-transform: capitalize; }
+    .list-people .people-el .list-people-legend {
+      font-family: 'Source Sans 3', sans-serif;
       font-weight: 400;
-      color: #949A90;
-      border-bottom: 3px solid #949A90;
-      padding: 0 2px;
-      -webkit-transition: all 0.2s ease;
-      -moz-transition: all 0.2s ease;
-      transition: all 0.2s ease; }
-      .list-basic li a:hover {
-        background-color: #949A90;
-        color: white;
-        -webkit-transition: all 0.4s ease;
-        -moz-transition: all 0.4s ease;
-        transition: all 0.4s ease; }
+      font-size: 0.875rem;
+      line-height: 1.5em;
+      color: #2D3D32; }
+    .list-people .people-el .list-people-email {
+      margin-top: .5rem;
+      font-family: 'Source Sans 3', sans-serif;
+      font-weight: 400;
+      font-size: 1rem;
+      line-height: 1em;
+      color: #C4A84C; }
 
 /***** DOCUMENTS LISTS *****/
 .w-list-docs {

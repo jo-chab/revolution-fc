@@ -158,7 +158,7 @@ ALERT MESSAGES in Dashboard
     display: flex;
     flex-flow: row nowrap;
     
-    position: absolute;
+    position: fixed;
     bottom: 4rem; left: 50%;
     transform: translateX(-50%);
     z-index: 10;

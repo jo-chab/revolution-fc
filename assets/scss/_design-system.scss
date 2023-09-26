@@ -379,35 +379,70 @@ DESIGN SYSTEM – Lists
         }
     }
 }
-.list-basic {
-    margin-bottom: 1rem;
-    margin-inline-start: 0;
-    @include tablet {
-        margin-inline-start: 3rem;
-    }
-    li {
-        list-style-type: disc;
-        margin-bottom: .5rem;
-        &:last-of-type {
-            margin-bottom: 0;
+
+.list-people {
+    @extend .web-layout;
+    margin-block: 3rem;
+    
+    &.col-2 {
+        .list-people-header {
+            @include tablet {
+                grid-column: span 2;
+            }
         }
-        @include font-family-reading();
-        @include font-style(300, 1rem, 1.3em, $primary-color-2);
-        @include tablet {
-            font-size: 1.125rem;
+    }
+    
+    &.col-3 {
+        .list-people-header {
+            @include tablet {
+                grid-column: span 2;
+            }
+            @include desktop {
+                grid-column: span 3;
+            }
+        }
+    }
+    
+    .people-el {
+        display: flex;
+        flex-flow: column nowrap;
+        gap: .5rem;
+        
+        .list-people-function {
+            @include font-family-heading();
+            @include font-style(700, 1.5rem, 1em, $primary-color-2);
+            text-transform: uppercase;
+            margin-bottom: .5rem;
         }
         
-        a {
-            font-weight: 400;
-            color: $accent-color-1;
-            border-bottom: 3px solid $accent-color-1;
-            padding: 0 2px;
-            @include transition(all, .2s);
-            &:hover {
-                background-color: $accent-color-1;
-                color: white;
-                @include transition(all, .4s);
+        .list-people-img {
+            margin-bottom: 1rem;
+            width: 100%;
+            aspect-ratio: 1;
+            
+            background-position: top center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            @include tablet {
+                max-width: 320px;
             }
+        }
+        
+        .list-people-name {
+            @include font-family-heading();
+            @include font-style(700, 1.125rem, 1em, $primary-color-1);
+            text-transform: capitalize;
+        }
+        
+        .list-people-legend {
+            @include font-family-reading();
+            @include font-style(400, .875rem, 1.5em, $secondary-color-1);
+        }
+        
+        .list-people-email {
+            margin-top: .5rem;
+            @include font-family-reading();
+            @include font-style(400, 1rem, 1em, $primary-color-1);
         }
     }
 }
