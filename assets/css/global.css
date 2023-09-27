@@ -1236,60 +1236,6 @@ select {
 /****************************************
 HEADER CSS -
 ****************************************/
-/********** ALERT BOXES **********/
-.alert-box {
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 99;
-  display: flex;
-  flex-flow: column nowrap;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 100vh;
-  padding: 16px;
-  background-color: rgba(0, 0, 0, 0.6);
-  box-sizing: border-box; }
-  .alert-box .alert-message {
-    width: 600px;
-    min-height: 200px;
-    padding: 16px;
-    box-sizing: border-box;
-    display: flex;
-    flex-flow: column;
-    align-items: center;
-    justify-content: center;
-    font-family: 'Source Sans 3', sans-serif;
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 1.5em;
-    color: #181818;
-    border: 1px solid #d5ae01;
-    background-color: #fed624; }
-    .alert-box .alert-message i {
-      color: #d5ae01;
-      padding: 0 0 16px;
-      font-size: 2em; }
-    .alert-box .alert-message.correct {
-      background-color: #9bce7c;
-      border-color: #293D1D;
-      color: #293D1D; }
-      .alert-box .alert-message.correct i {
-        color: #293D1D; }
-    .alert-box .alert-message.error {
-      background-color: #ff1541;
-      border-color: #BA0F2F;
-      color: white; }
-      .alert-box .alert-message.error i {
-        color: white; }
-    .alert-box .alert-message span {
-      margin-top: 16px; }
-  .alert-box .close-alert-box {
-    grid-column: span 2;
-    cursor: pointer;
-    text-decoration: underline; }
-
 /********** TOP HEADER **********/
 .top-header {
   width: 100%;
