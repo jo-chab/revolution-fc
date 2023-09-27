@@ -62,10 +62,11 @@ $admin-color-1: #072ac8;
 
 
 /****** HEADER & FOOTER ******/
-$bg-header-color: $web-grey-6;
-$bg-dark-header-color: #121212;
-$bg-footer-color: $web-grey-6;
-$bg-dark-footer-color: #121212;
+$header-height-small: 80px;
+$header-height-large: 120px;
+$bg-header-color: white;
+$bg-sidemenu-color: $primary-color-2;
+$bg-footer-color: $primary-color-2;
 
 
 

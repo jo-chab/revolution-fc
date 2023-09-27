@@ -131,11 +131,11 @@ $space-dl: 8rem;
 
 
 main.w-content {
-    //padding-top: 6rem;
+    padding-top: 6rem;
     .w-home & {
-        //@include mobile-max {
+        @include mobile-max {
             padding-top: 0;
-        //}
+        }
     }
 }
 
@@ -223,8 +223,8 @@ article {
                 justify-content: flex-end;
                 height: 60dvh;
                 @include tablet {
-                    min-height: 520px;
-                    max-height: 70dvh;
+                    min-height: 580px;
+                    max-height: 80dvh;
                     justify-content: flex-end;
                 }
             }
