@@ -4,33 +4,6 @@ $(document).ready(function () {
 
     'use strict';
 
-    // Fonction pour faire disparaitre le menu lors du scroll down et le faire reapparaitre lors du scoll up
-    var c, currentScrollTop = 0,
-    navbar = $('.top-header');
-
-    var heroHeight = $('.hp-hero').outerHeight();
-
-    $(window).scroll(function () {
-        var a = $(window).scrollTop();
-        var b = navbar.height();
-
-        currentScrollTop = a;
-
-        if (c < currentScrollTop && a > b + b) {
-            navbar.addClass("scrollUp");
-        } else if (c > currentScrollTop && !(a <= b)) {
-            navbar.removeClass("scrollUp");
-        }
-        c = currentScrollTop;
-
-        // Fonction pour changer la classe du HEADER et ainsi ses proprietes CSS
-        if (a <= heroHeight - (b + b)) {
-            navbar.removeClass('top-header-bg').addClass("top-header-bg-alt");
-        } else {
-            navbar.removeClass("top-header-bg-alt").addClass('top-header-bg');
-        }
-    });
-
     // Fonction pour ouvrir le menu au clic
     $('.menu-toggle').click(function(){
         $('.desktop').toggleClass('open');
@@ -59,22 +32,8 @@ $(document).ready(function () {
     });
 
     $(".close-alert-box").click(function(){
-        $(".alert-box").hide();
+        $(".w-alert-message").hide();
     });
-
-
-    // $('.f_calendar_plus').click(function() {
-    //     $(this).toggleClass('clicked');
-    //     $('.f_calendar_plus').not(this).removeClass('clicked');
-    //     $('.calendar-info').each(function() {
-    //         $(this).slideUp("900");
-    //     });
-    //     if ($(this).closest('.f_calendar_content').next('.calendar-info').is(':visible')) {
-    //         $(this).closest('.f_calendar_content').next('.calendar-info').slideUp('900');
-    //     } else {
-    //         $(this).closest('.f_calendar_content').next('.calendar-info').slideDown('900');
-    //     };
-    // });
 
 });
 

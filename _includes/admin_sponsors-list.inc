@@ -23,8 +23,7 @@
             </div>
 
             <div class="dashboard-content">
-
-
+                
                 <div class="grid-layout-2">
                     <div class="form-row column">
                         <label>Selectionner le type</label>

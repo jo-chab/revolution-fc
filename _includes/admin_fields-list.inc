@@ -55,7 +55,7 @@
                     ?>
                 </ul>
 
-                <div class="btn-primary cta-add js-content-add"><a><i class="fa-regular fa-file-plus"></i> Ajouter un terrain</a></div>
+                <div class="btn-primary cta-add icon i-more js-content-add">Ajouter un terrain</div>
 
                 <div class="dashboard-content content-add">
 

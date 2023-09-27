@@ -459,6 +459,10 @@ p {
   font-family: "Font Awesome Kit";
   content: '\e003'; }
 
+.i-tournament:before {
+  font: var(--fa-font-sharp-light);
+  content: '\f5a2'; }
+
 .i-user:before {
   font: var(--fa-font-light);
   content: '\f0c0'; }

@@ -145,6 +145,12 @@
     }
 }
 
+// Admin menu elements
+.i-tournament:before {
+    font: var(--fa-font-sharp-light);
+    content: '\f5a2';
+}
+
 // USERs
 .i-user {
     &:before {

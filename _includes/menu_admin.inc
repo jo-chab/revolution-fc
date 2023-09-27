@@ -18,7 +18,7 @@
 <li class="ss-menu-element not-active"><a href="index.php?p=61">Gérer les Terrains</a></li>
 <li class="ss-menu-element not-active"><a href="index.php?p=95">Gérer les Documents technique</a></li>
 
-<li class="menu-element">Tournois</li>
+<li class="menu-element icon i-tournament">Tournois</li>
 <li class="ss-menu-element"><a href="index.php?p=81">Gérer les tournois</a></li>
 
 <li class="menu-element icon i-sponsors"><a href="?p=91">Sponsors</a></li>
