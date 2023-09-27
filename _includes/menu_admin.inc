@@ -1,4 +1,9 @@
 
+<li class="menu-element icon i-config">Configuration</li>
+<li class="ss-menu-element"><a href="?p=2">Config ADMIN – Jonathan</a></li>
+<!--<li class="ss-menu-element not-active"><a href="?content=3">Config générale</a></li>-->
+<li class="ss-menu-element"><a href="?p=4">Page d'accueil</a></li>
+
 <li class="menu-element icon i-news">Actualités</li>
 <li class="ss-menu-element"><a href="index.php?p=11">Gérer les actualités</a></li>
 

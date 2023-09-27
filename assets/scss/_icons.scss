@@ -54,7 +54,6 @@
 }
 
 
-
 /* ICONS */
 .icon-hero:after {
     font-family: "Font Awesome Kit";
@@ -132,6 +131,10 @@
     content: '\f16d';
 }
 
+
+/******************************************
+ADMIN ICONS
+******************************************/
 // NEWS
 .i-news {
     &:before {
@@ -145,13 +148,13 @@
     }
 }
 
-// Admin menu elements
+// Tournament
 .i-tournament:before {
     font: var(--fa-font-sharp-light);
     content: '\f5a2';
 }
 
-// USERs
+// Users
 .i-user {
     &:before {
         font: var(--fa-font-light);
@@ -164,6 +167,7 @@
     }
 }
 
+// Sponsors
 .i-sponsors {
     &:before {
         font: var(--fa-font-light);
@@ -176,13 +180,16 @@
     }
 }
 
-.i-bdd {
-    &:before {
-        font: var(--fa-font-brands);
-        content: '\f388';
-        font-size: 1.5em;
-    }
+.i-bdd:before {
+    font: var(--fa-font-brands);
+    content: '\f388';
+    font-size: 1.5em;
 }
+.i-config:before {
+    font: var(--fa-font-light);
+    content: '\f013';
+}
+
 
 .i-flash {
     &:before,
@@ -236,9 +243,7 @@
 }
 
 
-
-
-
+// BTN icon on ADMIN
 .btn-disable:before {
     font: var(--fa-font-regular);
     content: '\f070';

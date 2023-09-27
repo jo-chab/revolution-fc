@@ -11,7 +11,7 @@ VARIABLES
 *******************************************************/
 
 
-$bg-body: #f2f2f2;
+$bg-body: #ffffff;
 
 $text-content-max-width: 960px;
 
@@ -47,7 +47,7 @@ $tertiary-color-4: #D0D3D4;
 
 //$accent-color-1: #00B0AD;
 //$accent-color-2: #008776;
-$accent-color-1: $tertiary-color-1;
+$accent-color-1: $secondary-color-1;
 $accent-color-2: $tertiary-color-1;
 $accent-color-3: #ff1541;
 $accent-color-4: #BA0F2F;
@@ -78,18 +78,18 @@ $text-color-dark: $web-grey-1;
 
 
 
-/****** Z-INDEX ******/
-$z-side-menu: 5;
-$z-mobile-menu: 4;
-
-$z-alert-popup: 99;
-
-$z-alert-popup: 99;
-
-$z-home-hero: 3;
 
 $popup-color: $primary-color-1;
 $popup-text-color: white;
+/****** Z-INDEX ******/
+$z-top-menu: 4;
+$z-mobile-menu: 4;
+$z-side-menu: 5;
+
+$z-alert-popup: 99;
+
+$z-home-hero-overlay: 2;
+$z-home-hero-content: 3;
 
 
 /*******************************************************

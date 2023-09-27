@@ -451,6 +451,9 @@ p {
   font: var(--fa-font-brands);
   content: '\f16d'; }
 
+/******************************************
+ADMIN ICONS
+******************************************/
 .i-news:before {
   font: var(--fa-font-sharp-light);
   content: '\f1ea'; }
@@ -483,6 +486,10 @@ p {
   font: var(--fa-font-brands);
   content: '\f388';
   font-size: 1.5em; }
+
+.i-config:before {
+  font: var(--fa-font-light);
+  content: '\f013'; }
 
 .i-flash:before, .i-flash:after {
   font: var(--fa-font-sharp-solid);
@@ -562,7 +569,7 @@ GENERAL LAYOUT
 ****************************************/
 body {
   font-size: 16px;
-  background-color: #f2f2f2; }
+  background-color: #ffffff; }
   body * {
     box-sizing: border-box; }
 
@@ -646,9 +653,9 @@ GRID SYSTEM
 /*******************************************************
 VARIABLES
 *******************************************************/
-/*******************************************************
-LAYOUT ELEMENTS
-*******************************************************/
+.w-home main.w-content {
+  padding-top: 0; }
+
 /********* SECTION *********/
 section {
   width: 100%;
@@ -658,19 +665,14 @@ section {
     section {
       padding: 4rem 0; } }
   section.w-hero {
-    padding: 0 !important;
-    height: 90dvh;
-    max-height: 520px; }
-    @media (min-width: 768px) {
-      section.w-hero {
-        max-height: 800px; } }
-    section.w-hero article {
-      height: 100%;
-      overflow: hidden; }
-  section:only-of-type {
+    padding: 0; }
+  @media (min-width: 768px) {
+    section:first-of-type:not(.w-hero) {
+      padding-top: 4rem; } }
+  section:only-child {
     min-height: 800px; }
   section.contact {
-    background-color: #D0D3D4; }
+    background-color: #f2f2f2; }
 
 article {
   padding: 0 1.5rem;
@@ -693,69 +695,64 @@ article {
       justify-content: center; }
     article.wrapper.align-end {
       justify-content: flex-end; }
+    article.wrapper.bg-img-content {
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-size: cover; }
+    .w-hero article.wrapper {
+      max-width: inherit; }
+      .w-hero article.wrapper:not(:only-child) {
+        margin-bottom: 0; }
+      .w-hero article.wrapper.bg-img-content {
+        justify-content: flex-end;
+        height: 60dvh; }
+        @media (min-width: 768px) {
+          .w-hero article.wrapper.bg-img-content {
+            min-height: 520px;
+            max-height: 70dvh;
+            justify-content: flex-end; } }
+    article.wrapper.flash-alert {
+      background: #C4A84C;
+      display: grid;
+      gap: .5rem;
+      padding: 1.5rem; }
+      @media (min-width: 768px) {
+        article.wrapper.flash-alert {
+          padding: 0 5rem;
+          grid-template-columns: auto 1fr; } }
+      article.wrapper.flash-alert.urgent {
+        background: #EF233C; }
   article.wrapper-full {
-    max-width: inherit;
-    padding: 0; }
+    max-width: unset;
+    padding: 1.5rem; }
+    @media (min-width: 768px) {
+      article.wrapper-full {
+        padding: 1.5rem 2.5rem; } }
+    @media (min-width: 1024px) {
+      article.wrapper-full {
+        padding: 2rem 5rem; } }
   article.wrapper-text {
     max-width: 960px; }
 
-/********* POPUP WINDOW *********/
-.icon-left {
-  padding-right: 8px; }
+figure {
+  margin-bottom: 2rem; }
+  figure img {
+    width: 100%; }
 
-.popup-container {
-  width: 100%;
-  height: 100%;
-  background-color: white;
-  display: flex;
-  flex-flow: column nowrap;
-  align-items: center;
-  justify-content: center;
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 12;
-  padding: 1rem; }
-
-.popup-window {
-  padding: 2rem;
-  width: 100%;
-  max-width: 840px;
-  margin: 0 auto;
-  height: auto;
-  position: relative;
-  box-sizing: border-box;
-  overflow-y: scroll; }
-  @media (max-width: 767px) {
-    .popup-window {
-      padding: 1rem;
-      margin: 120px auto; } }
-
-.popup-btn {
-  position: absolute;
-  top: 2.5rem;
-  right: 2.5rem;
-  padding: 1rem;
-  border: 1px solid #C4A84C;
-  font-family: 'Source Sans 3', sans-serif;
-  font-weight: 300;
-  font-size: 1.125rem;
-  line-height: 1em;
-  color: #C4A84C;
-  cursor: pointer; }
-
-/********* FONCTIONS *********/
+/*******************************************************
+FONCTIONS
+*******************************************************/
 .is-hide,
 .is-hidden {
   display: none !important; }
 
 @media (min-width: 768px) {
   .only-mobile {
-    display: none; } }
+    display: none !important; } }
 
 @media (max-width: 767px) {
   .only-tablet {
-    display: none; } }
+    display: none !important; } }
 
 /*
 *
@@ -781,7 +778,7 @@ DESIGN SYSTEM – Alert message box
   width: 100%;
   height: 100vh;
   padding: 16px;
-  background-color: rgba(242, 242, 242, 0.7);
+  background-color: rgba(255, 255, 255, 0.7);
   box-sizing: border-box; }
   .w-alert-message .alert-message {
     max-width: 600px;
@@ -835,73 +832,58 @@ DESIGN SYSTEM – CARDS
 .news-card {
   display: grid;
   grid-template-columns: 1fr;
-  transition: transform .3s ease, box-shadow .3s ease;
+  gap: .5rem;
   width: 100%;
   height: auto;
-  justify-items: stretch;
-  background: none; }
-  @media (min-width: 520px) {
+  opacity: 1;
+  transition: all .3s ease;
+  transform: translateY(0); }
+  @media (min-width: 768px) {
     .news-card {
-      background-color: #FFFFFF; } }
-  .news-card:hover {
-    cursor: pointer; }
-    @media (min-width: 520px) {
-      .news-card:hover {
-        -webkit-box-shadow: 0 5px 20px -6px #aca9a9;
-        -moz-box-shadow: 0 5px 20px -6px #aca9a9;
-        box-shadow: 0 5px 20px -6px #aca9a9;
-        -webkit-transform: translateY(-5px);
-        -moz-transform: translateY(-5px);
-        transform: translateY(-5px);
-        transition: transform .3s ease, box-shadow .3s ease; } }
+      gap: 1rem;
+      grid-template-columns: 200px 1fr; } }
+  @media (min-width: 1024px) {
+    .news-card {
+      grid-template-columns: 1fr; } }
+  @media (min-width: 520px) {
+    .news-card:hover {
+      cursor: pointer;
+      opacity: .7;
+      transition: opacity .3s ease; } }
+  @media (min-width: 1024px) {
+    .news-card:hover {
+      transform: translateY(-0.5rem);
+      transition: all .3s ease; } }
   .news-card-img {
     width: 100%;
-    height: 0;
-    display: none;
+    height: auto;
+    display: block;
+    aspect-ratio: 3/2;
     overflow: hidden;
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover; }
-    @media (min-width: 520px) {
-      .news-card-img {
-        display: block;
-        height: 240px; } }
   .news-card-vignette {
     display: flex;
     flex-flow: column nowrap;
-    gap: 1rem;
+    gap: .5rem;
     padding: 0; }
-    @media (min-width: 520px) {
-      .news-card-vignette {
-        padding: 1.5rem; } }
   .news-card-info {
     display: flex;
     flex-flow: row nowrap;
     align-items: center;
     gap: .5rem; }
   .news-card-headline {
-    font-family: 'Source Sans 3', sans-serif;
-    font-weight: 600;
-    height: auto;
     margin: 0; }
-    .news-card-headline:after {
-      display: inline-flex;
-      font-family: "Font Awesome 6 Pro";
-      content: '\f178';
-      font-weight: 400;
-      font-size: 1rem;
-      color: #949A90;
-      margin-left: 1rem;
-      animation: arrowMoveRight 1s infinite; }
 
 .news-category {
-  font-weight: 400;
+  font-weight: 600;
   font-size: 0.75rem;
   line-height: 1em;
   color: white;
   font-family: 'Source Sans 3', sans-serif;
   padding: .5rem .75rem;
-  background-color: #949A90;
+  background-color: #FFCD00;
   display: inline-block;
   text-transform: uppercase; }
 
@@ -916,7 +898,7 @@ DESIGN SYSTEM – Buttons
   gap: 1rem;
   font-family: 'Source Sans 3', sans-serif;
   text-align: center;
-  padding: 24px 40px;
+  padding: 1.5rem 2rem;
   transition: all .3s ease; }
   @media (max-width: 767px) {
     .button, .btn-primary, .btn-secondary, .btn-tertiary, .btn-filter, .btn-download {
@@ -928,13 +910,16 @@ DESIGN SYSTEM – Buttons
     font-size: 2em; }
 
 .btn-primary {
-  background-color: #949A90;
+  background-color: #2D3D32;
   font-weight: 400;
-  font-size: 20px;
+  font-size: 1.125rem;
   line-height: 1em;
   color: white; }
   .btn-primary:hover {
-    background-color: #6e746a; }
+    background-color: #0d110e; }
+  @media (min-width: 768px) {
+    .btn-primary {
+      font-size: 1.25rem; } }
   .btn-primary.cta-back {
     background-color: #fed624;
     color: #181818; }
@@ -944,7 +929,7 @@ DESIGN SYSTEM – Buttons
       font-family: "Font Awesome 6 Pro";
       content: '\f177';
       font-weight: 400;
-      font-size: 20px; }
+      font-size: 1.25em; }
   .btn-primary[class*='cta-download'] {
     font-weight: 400;
     font-size: 1em;
@@ -961,13 +946,16 @@ DESIGN SYSTEM – Buttons
 
 .btn-secondary {
   font-weight: 400;
-  font-size: 1.25em;
+  font-size: 1.125em;
   line-height: 1em;
-  color: #949A90;
-  border: 1px solid #949A90; }
+  color: #2D3D32;
+  border: 1px solid #2D3D32; }
+  @media (min-width: 768px) {
+    .btn-secondary {
+      font-size: 1.25rem; } }
   .btn-secondary:hover {
-    border-color: #6e746a;
-    color: #6e746a; }
+    border-color: #0d110e;
+    color: #0d110e; }
   .btn-secondary.ghost-white {
     color: white;
     border-color: white; }
@@ -1184,7 +1172,7 @@ select {
     font-weight: 300;
     color: #ffffff;
     content: "\f107";
-    background-color: #949A90; }
+    background-color: #2D3D32; }
 
 /****** FORMS ******/
 #wrapper-form input {
@@ -1204,7 +1192,7 @@ select {
     border-color: #1ecd28; }
   #wrapper-form input[type="submit"] {
     display: block;
-    background-color: #949A90;
+    background-color: #2D3D32;
     border: none;
     max-width: 320px;
     margin: 1rem auto;
@@ -1587,7 +1575,7 @@ HOME PAGE
     position: absolute;
     top: 0;
     left: 0;
-    z-index: 3;
+    z-index: 2;
     width: 100%;
     height: 100%;
     display: flex;
@@ -1597,39 +1585,25 @@ HOME PAGE
     background: -webkit-linear-gradient(top, rgba(24, 24, 24, 0), #181818);
     background: linear-gradient(to bottom, rgba(24, 24, 24, 0), #181818); }
   .w-hero .hero-overlay-content {
+    z-index: 3;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 24px;
-    margin-bottom: 40px;
-    padding: 0 1.5rem; }
+    gap: 2rem;
+    margin-bottom: 4rem; }
     @media (min-width: 768px) {
       .w-hero .hero-overlay-content {
-        gap: 40px;
-        margin-bottom: 80px; } }
+        gap: 3rem; } }
     .w-hero .hero-overlay-content h1 {
       color: white;
-      text-align: center; }
+      margin-bottom: 0; }
 
-.news-container {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: auto;
-  grid-gap: 16px;
-  justify-items: stretch;
-  margin-bottom: 32px;
-  width: 100%; }
-  @media (min-width: 520px) {
-    .news-container {
-      grid-gap: 32px; } }
+.w-news {
+  margin: 2rem auto;
+  gap: 2rem; }
   @media (min-width: 768px) {
-    .news-container {
-      margin-bottom: 0;
-      grid-template-columns: repeat(2, 1fr); } }
-  @media (min-width: 1024px) {
-    .news-container {
-      grid-template-columns: repeat(3, 1fr);
-      grid-gap: 40px; } }
+    .w-news {
+      margin: 3rem auto; } }
 
 /* ADDONS SECTION */
 .hp-addons {
@@ -1640,7 +1614,7 @@ HOME PAGE
     padding: 16px;
     margin-bottom: 16px; }
     .hp-addons > *.important {
-      background-color: #949A90; }
+      background-color: #2D3D32; }
       .hp-addons > *.important h3 {
         color: white;
         margin-bottom: 0; }
@@ -1660,7 +1634,7 @@ HOME PAGE
 /* JOBS SECTION */
 .hp-jobs {
   padding: 16px;
-  border: 1px solid #949A90;
+  border: 1px solid #2D3D32;
   position: relative; }
   @media (min-width: 768px) {
     .hp-jobs {
@@ -1671,12 +1645,12 @@ HOME PAGE
     top: -16px;
     left: 50%;
     transform: translateX(-50%);
-    background: #f2f2f2;
+    background: #ffffff;
     display: table;
     font-weight: 400;
     font-size: 16px;
     line-height: 1.5em;
-    color: #949A90;
+    color: #2D3D32;
     font-family: 'Poppins', sans-serif;
     text-transform: uppercase;
     letter-spacing: .5px;
@@ -1686,7 +1660,7 @@ HOME PAGE
       .hp-jobs:before {
         font-size: 24px;
         top: -24px; } }
-  .hp-jobs ul li {
+  .hp-jobs li {
     display: grid;
     align-items: center;
     grid-template-columns: 1fr;
@@ -1694,18 +1668,18 @@ HOME PAGE
     padding-bottom: 16px;
     margin-bottom: 16px;
     border-bottom: 1px solid #aca9a9; }
-    .hp-jobs ul li:last-of-type {
+    .hp-jobs li:last-of-type {
       margin-bottom: 0;
       border-bottom: none;
       padding-bottom: 0; }
     @media (min-width: 768px) {
-      .hp-jobs ul li {
+      .hp-jobs li {
         grid-template-columns: 1fr auto; } }
-  .hp-jobs ul .job-infos {
+  .hp-jobs .job-infos {
     display: flex;
     flex-direction: column; }
     @media (max-width: 767px) {
-      .hp-jobs ul .job-infos > * {
+      .hp-jobs .job-infos > * {
         align-self: center; } }
 
 .hp-contact-info .contact-info-details {
@@ -1748,40 +1722,7 @@ HOME PAGE
         filter: none; }
 
 /******************************
-FORMULAIRES PAGE -
-******************************/
-.doc_download {
-  margin: 24px auto; }
-  @media (min-width: 520px) {
-    .doc_download {
-      margin: 40px auto; } }
-  .doc_download > * {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-gap: 16px;
-    align-items: center;
-    margin-bottom: 16px; }
-    @media (min-width: 1024px) {
-      .doc_download > * {
-        grid-template-columns: auto 220px; } }
-    @media (min-width: 1024px) {
-      .doc_download > *.layout-3 {
-        grid-template-columns: auto 220px 220px; } }
-    .doc_download > *:last-of-type {
-      margin-bottom: 0; }
-    .doc_download > * .primary-btn {
-      margin: 0 auto; }
-  .doc_download h4 {
-    text-transform: none;
-    font-size: 1.5em;
-    text-align: center; }
-    @media (min-width: 520px) {
-      .doc_download h4 {
-        font-size: 18px;
-        text-align: inherit; } }
-
-/******************************
-NEWS PAGE
+NEWS PAGE – To do
 ******************************/
 .pagination {
   display: flex;
@@ -1790,7 +1731,7 @@ NEWS PAGE
   align-items: center;
   margin-top: 80px; }
   .pagination .page-cta {
-    background-color: #949A90;
+    background-color: #2D3D32;
     padding: 8px 16px;
     font-size: 32px;
     color: white; }
@@ -1800,26 +1741,33 @@ NEWS PAGE
       padding: 4px 8px; }
       .pagination p span.active-page {
         font-weight: 700;
-        color: #949A90;
-        border-bottom: 4px solid #949A90; }
+        color: #2D3D32;
+        border-bottom: 4px solid #2D3D32; }
 
 /*******************************
-News detail / Programme detail - DONE
+News detail / Programme detail - To do
 *******************************/
-.article-heading .article-info {
-  display: flex;
-  flex-flow: row nowrap;
-  align-items: center;
-  padding: 16px 0; }
-  @media (max-width: 767px) {
-    .article-heading .article-info {
-      padding-top: 0; } }
+.article-heading {
+  margin-bottom: 2rem;
+  display: grid;
+  grid-gap: 1rem; }
+  .article-heading .article-info {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    gap: .5rem; }
+  .article-heading .article-title {
+    line-height: 1.3em;
+    margin-bottom: 0;
+    text-align: left; }
 
-.article-heading .article-title {
-  font-family: 'Source Sans 3', sans-serif;
-  line-height: 1.3em;
-  font-weight: 700;
-  margin-bottom: 16px; }
+.article-featured-img {
+  margin-bottom: 1rem; }
+  @media (max-width: 767px) {
+    .article-featured-img {
+      margin: 0 -1.5rem 1rem; } }
+  .article-featured-img img {
+    width: 100%; }
 
 .article-featured-img img {
   width: 100%; }
@@ -1834,7 +1782,7 @@ News detail / Programme detail - DONE
     font-weight: 400;
     font-size: 20px;
     line-height: 1.5em;
-    color: #949A90;
+    color: #2D3D32;
     text-decoration: underline;
     display: inline-block;
     margin-bottom: 16px; }
@@ -1848,11 +1796,11 @@ News detail / Programme detail - DONE
     font-style: italic;
     font-weight: 400; }
   .article-detail a.news-external_link {
-    color: #949A90;
+    color: #2D3D32;
     text-decoration: underline;
     transition: all .3s ease; }
     .article-detail a.news-external_link:hover {
-      color: #484c45; }
+      color: black; }
   .article-detail ul {
     margin-inline-start: 2.5rem; }
     .article-detail ul li {
@@ -1884,58 +1832,6 @@ News detail / Programme detail - DONE
 /******************************
 CLUB PAGE
 ******************************/
-.grid-club-staff {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: auto;
-  grid-gap: 24px; }
-  @media (min-width: 768px) {
-    .grid-club-staff {
-      grid-template-columns: repeat(2, 1fr);
-      align-items: flex-start;
-      grid-gap: 40px; } }
-  @media (min-width: 1024px) {
-    .grid-club-staff {
-      grid-template-columns: repeat(3, 1fr);
-      grid-gap: 80px; } }
-
-.people-vignette-img {
-  width: 100%;
-  height: 400px;
-  filter: grayscale(1);
-  background-size: contain;
-  background-position: center bottom;
-  background-repeat: no-repeat; }
-  .people-vignette-img:hover {
-    filter: grayscale(0);
-    transition: all .5s ease;
-    cursor: pointer; }
-
-.people-info {
-  margin-top: 16px;
-  padding: 0 0 16px 0; }
-  .people-info .people-name {
-    color: #181818;
-    margin-bottom: 8px; }
-  .people-info .people-position {
-    padding-bottom: 8px;
-    font-weight: 700;
-    font-size: 24px;
-    line-height: 1em;
-    color: #181818;
-    border-bottom: 2px solid #949A90;
-    margin-bottom: 16px; }
-  .people-info .people-contact {
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 1em;
-    color: #aca9a9; }
-    .people-info .people-contact:not(:last-of-type) {
-      margin-bottom: 4px; }
-    .people-info .people-contact:hover {
-      color: #C4A84C;
-      transition: all .3s ease; }
-
 /******************************
 PROGRAMMES - en cours –
 ******************************/
@@ -1969,9 +1865,6 @@ PROGRAMMES - en cours –
   width: 100%;
   aspect-ratio: 3/2; }
 
-/******************************
-STAFF TECHNIQUE PAGE –
-******************************/
 /******************************
 FIELDS PAGE – Done
 ******************************/
@@ -2055,7 +1948,7 @@ TOURNOI – Done
     font-weight: 700;
     font-size: 2rem;
     line-height: 1em;
-    color: #949A90; }
+    color: #2D3D32; }
   .t-card-category {
     font-family: 'Source Sans 3', sans-serif;
     font-weight: 700;

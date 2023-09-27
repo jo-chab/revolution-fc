@@ -1,3 +1,5 @@
+</main>
+
 <footer>
 
 	<article class="main-footer">
@@ -38,7 +40,7 @@
             <li><a href="../politiques/code-conduite-joueur.pdf" target="_blank">Joueur / Joueuse</a></li>-->
         </ul>
 		<div class="footer-copy">
-			<p>&copy; <?php echo date("Y"); ?> R&eacute;volution FC - Tous droits réservés - Aucune reproduction partielle ou total du site et de son contenu n'est autorisé </p>
+			<p>&copy; <?php echo date("Y"); ?> R&eacute;volution FC - Tous droits réservés - Aucune reproduction partielle ou totale du site et de son contenu n'est autorisée.</p>
 			<p>Site concu et r&eacute;alis&eacute; par <a href="https://www.chabertdesign.com" target="_blank" rel="noreferrer">Chabert Design</a></p>
 		</div>
 	</article>

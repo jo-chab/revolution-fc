@@ -451,6 +451,9 @@ p {
   font: var(--fa-font-brands);
   content: '\f16d'; }
 
+/******************************************
+ADMIN ICONS
+******************************************/
 .i-news:before {
   font: var(--fa-font-sharp-light);
   content: '\f1ea'; }
@@ -483,6 +486,10 @@ p {
   font: var(--fa-font-brands);
   content: '\f388';
   font-size: 1.5em; }
+
+.i-config:before {
+  font: var(--fa-font-light);
+  content: '\f013'; }
 
 .i-flash:before, .i-flash:after {
   font: var(--fa-font-sharp-solid);
@@ -616,7 +623,7 @@ section {
   width: 100%;
   height: 100vh;
   padding: 16px;
-  background-color: rgba(242, 242, 242, 0.7);
+  background-color: rgba(255, 255, 255, 0.7);
   box-sizing: border-box; }
   .w-alert-message .alert-message {
     max-width: 600px;

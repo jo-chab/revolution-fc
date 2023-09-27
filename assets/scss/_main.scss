@@ -22,9 +22,9 @@ HOME PAGE
 	
 	.hero-overlay-gradient {
 		position: absolute;
-		top:0;
+		top: 0;
 		left: 0;
-		z-index: $z-home-hero;
+		z-index: $z-home-hero-overlay;
 		
 		width: 100%;
 		height: 100%;
@@ -33,56 +33,41 @@ HOME PAGE
 		align-items: flex-end;
 		justify-content: center;
 		
-		background-color: $web-grey-6;
-		background: -webkit-linear-gradient(top, rgba($web-grey-6, 0), rgba($web-grey-6, 1));
-		background: linear-gradient(to bottom, rgba($web-grey-6, 0), rgba($web-grey-6, 1));
+		background-color: $primary-color-2;
+		background: -webkit-linear-gradient(top, rgba($primary-color-2, 0), rgba($primary-color-2, 1));
+		background: linear-gradient(to bottom, rgba($primary-color-2, 0), rgba($primary-color-2, 1));
 	}
 	
 	.hero-overlay-content {
+		z-index: $z-home-hero-content;
 		@extend .web-layout;
 		display: flex;
 		flex-direction: column;
 		align-items: center;
-		gap: 24px;
-		
-		margin-bottom: 40px;
-		padding: 0 $space-m;
+		gap: 2rem;
+		margin-bottom: 4rem;
 		
 		@include tablet {
-			gap: 40px;
-			margin-bottom: 80px;
+			gap: 3rem;
 		}
 		
 		h1 {
 			color: white;
-			text-align:center;
+			margin-bottom: 0;
 		}
 	}
-
-}
-
-.news-container {
-	display: grid;
-	grid-template-columns: 1fr;
-	grid-template-rows: auto;
-	grid-gap: 16px;
-	justify-items: stretch;
-	margin-bottom: 32px;
-	width: 100%;
 	
-	@include mobile-large {
-		grid-gap: 32px;
-	}
-	@include tablet {
-		margin-bottom: 0;
-		grid-template-columns: repeat(2, 1fr);
-	}
-	@include desktop {
-		grid-template-columns: repeat(3, 1fr);
-		grid-gap: 40px;
-	}
 }
 
+
+.w-news {
+	margin: 2rem auto;
+	gap: 2rem;
+	
+	@include tablet {
+		margin: 3rem auto;
+	}
+}
 
 
 
@@ -156,33 +141,31 @@ HOME PAGE
 		}
 	}
 	
-	ul {
-		li {
-			display: grid;
-			align-items: center;
-			grid-template-columns: 1fr;
-			grid-gap: 16px 40px;
-			
-			padding-bottom: 16px;
-			margin-bottom: 16px;
-			border-bottom: 1px solid $web-grey-3;
-			&:last-of-type {
-				margin-bottom: 0;
-				border-bottom: none;
-				padding-bottom: 0;
-			}
-			
-			@include tablet {
-				grid-template-columns: 1fr auto;
-			}
+	li {
+		display: grid;
+		align-items: center;
+		grid-template-columns: 1fr;
+		grid-gap: 16px 40px;
+		
+		padding-bottom: 16px;
+		margin-bottom: 16px;
+		border-bottom: 1px solid $web-grey-3;
+		&:last-of-type {
+			margin-bottom: 0;
+			border-bottom: none;
+			padding-bottom: 0;
 		}
-		.job-infos {
-			display: flex;
-			flex-direction: column;
-			> * {
-				@include mobile-max {
-					align-self: center;
-				}
+		
+		@include tablet {
+			grid-template-columns: 1fr auto;
+		}
+	}
+	.job-infos {
+		display: flex;
+		flex-direction: column;
+		> * {
+			@include mobile-max {
+				align-self: center;
 			}
 		}
 	}
@@ -253,56 +236,9 @@ HOME PAGE
 
 
 
-/******************************
-FORMULAIRES PAGE -
-******************************/
-.doc_download {
-	margin: 24px auto;
-	@include mobile-large {
-		margin: 40px auto;
-	}
-	> * {
-		display: grid;
-		grid-template-columns: 1fr;
-		@include desktop {
-			grid-template-columns: auto 220px;
-		}
-		grid-gap: 16px;
-		align-items: center;
-		&.layout-3 {
-			@include desktop {
-				grid-template-columns: auto 220px 220px;
-			}
-		}
-		margin-bottom: 16px;
-		&:last-of-type {
-			margin-bottom: 0;
-		}
-		.primary-btn {
-			margin: 0 auto;
-		}
-	}
-	
-	h4 {
-		text-transform: none;
-		font-size: 1.5em;
-		text-align: center;
-		@include mobile-large {
-			font-size: 18px;
-			text-align: inherit;
-		}
-	}
-}
-
-
-
-
-
-
-
 
 /******************************
-NEWS PAGE
+NEWS PAGE – To do
 ******************************/
 .pagination {
 	display: flex;
@@ -335,26 +271,38 @@ NEWS PAGE
 
 
 /*******************************
-News detail / Programme detail - DONE
+News detail / Programme detail - To do
 *******************************/
 .article-heading {
+	margin-bottom: 2rem;
+	display: grid;
+	grid-gap: 1rem;
 	
 	.article-info {
 		display: flex;
 		flex-flow: row nowrap;
 		align-items: center;
-		padding: 16px 0;
-		@include mobile-max {
-			padding-top: 0;
-		}
-	}
-	.article-title {
-		@include font-family-reading();
-		line-height: 1.3em;
-		font-weight: 700;
-		margin-bottom: 16px;
+		gap: .5rem;
 	}
 	
+	.article-title {
+		line-height: 1.3em;
+		margin-bottom: 0;
+		text-align: left;
+	}
+	
+}
+
+.article-featured-img {
+	margin-bottom: 1rem;
+	
+	@include mobile-max {
+		margin: 0 -#{$space-m} 1rem;
+	}
+	
+	img {
+		width: 100%;
+	}
 }
 
 .article-featured-img {
@@ -441,60 +389,6 @@ News detail / Programme detail - DONE
 /******************************
 CLUB PAGE
 ******************************/
-.grid-club-staff {
-	display: grid;
-	grid-template-columns: 1fr;
-	grid-template-rows: auto;
-	grid-gap:24px;
-	@include tablet {
-		grid-template-columns: repeat(2, 1fr);
-		align-items: flex-start;
-		grid-gap:40px;
-	}
-	@include desktop {
-		grid-template-columns: repeat(3, 1fr);
-		grid-gap:80px;
-	}
-}
-
-.people-vignette-img {
-	width: 100%;
-	height: 400px;
-	filter: grayscale(1);
-	background-size: contain;
-	background-position: center bottom;
-	background-repeat: no-repeat;
-	&:hover {
-		filter: grayscale(0);
-		transition: all .5s ease;
-		cursor: pointer;
-	}
-}
-
-.people-info {
-	margin-top: 16px;
-	padding: 0 0 16px 0;
-	.people-name {
-		color: $primary-color-2;
-		margin-bottom: 8px;
-	}
-	.people-position {
-		padding-bottom: 8px;
-		@include font-style(700, 24px, 1em, $primary-color-2);
-		border-bottom:2px solid $accent-color-1;
-		margin-bottom: 16px;
-	}
-	.people-contact {
-		@include font-style(400, 16px, 1em, $web-grey-3);
-		&:not(:last-of-type) {
-			margin-bottom: 4px;
-		}
-		&:hover {
-			color: $primary-color-1;
-			transition: all .3s ease;
-		}
-	}
-}
 
 
 
@@ -541,16 +435,6 @@ PROGRAMMES - en cours –
 	width: 100%;
 	aspect-ratio: 3/2;
 }
-
-
-
-
-
-
-
-/******************************
-STAFF TECHNIQUE PAGE –
-******************************/
 
 
 

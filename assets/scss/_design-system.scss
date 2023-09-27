@@ -95,50 +95,62 @@ DESIGN SYSTEM – Alert message box
     
 }
 
+
+
+
+
+
+
 /***********************
 DESIGN SYSTEM – CARDS
 ***********************/
 .news-card {
     display: grid;
     grid-template-columns: 1fr;
-    transition: transform .3s ease, box-shadow .3s ease;
+    gap: .5rem;
+    
     width: 100%;
-    height:auto;
-    justify-items: stretch;
-    background: none;
-    @include mobile-large {
-        background-color: #FFFFFF;
+    height: auto;
+    opacity: 1;
+    transition: all .3s ease;
+    transform: translateY(0);
+    
+    @include tablet {
+        gap: 1rem;
+        grid-template-columns: 200px 1fr;
     }
+    @include desktop {
+        grid-template-columns: 1fr;
+    }
+    
     &:hover {
-        cursor:pointer;
         @include mobile-large {
-            @include box-shadow();
-            @include translate-y(-5px);
-            transition: transform .3s ease, box-shadow .3s ease;
+            cursor: pointer;
+            opacity: .7;
+            transition: opacity .3s ease;
+        }
+        @include desktop {
+            transform: translateY(-.5rem);
+            transition: all .3s ease;
         }
     }
     
     &-img {
-        width:100%;
-        height: 0;
-        display: none;
-        @include mobile-large {
-            display: block;
-            height: 240px;
-        }
-        overflow:hidden;
+        width: 100%;
+        height: auto;
+        display: block;
+        aspect-ratio: 3/2;
+        overflow: hidden;
         background-position: center center;
         background-repeat: no-repeat;
-        background-size:cover;
+        background-size: cover;
     }
+    
     &-vignette {
         display: flex;
         flex-flow: column nowrap;
-        gap: 1rem;
+        gap: .5rem;
         padding: 0;
-        @include mobile-large {
-            padding: 1.5rem;
-        }
     }
     
     &-info {
@@ -149,30 +161,20 @@ DESIGN SYSTEM – CARDS
     }
     
     &-headline {
-        @include font-family-reading();
-        font-weight: 600;
-        height: auto;
         margin: 0;
-        &:after {
-            display: inline-flex;
-            font-family: "Font Awesome 6 Pro";
-            content:'\f178';
-            font-weight: 400;
-            font-size: 1rem;
-            color: $accent-color-1;
-            margin-left: 1rem;
-            animation: arrowMoveRight 1s infinite;
-        }
     }
 }
+
 .news-category {
-    @include font-style(400, .75rem, 1em, white);
+    @include font-style(600, .75rem, 1em, white);
     @include font-family-reading();
     padding: .5rem .75rem;
-    background-color: $accent-color-1;
+    background-color: $primary-color-3;
     display: inline-block;
     text-transform: uppercase;
 }
+
+
 
 
 
@@ -190,7 +192,7 @@ DESIGN SYSTEM – Buttons
     
     @include font-family-reading;
     text-align: center;
-    padding: 24px 40px;
+    padding: 1.5rem 2rem;
     transition: all .3s ease;
     
     @include mobile-max {
@@ -208,9 +210,12 @@ DESIGN SYSTEM – Buttons
 .btn-primary {
     @extend .button;
     background-color: $accent-color-1;
-    @include font-style(400, 20px, 1em, white);
+    @include font-style(400, 1.125rem, 1em, white);
     &:hover {
         background-color: darken($accent-color-1, 15%);
+    }
+    @include tablet {
+        font-size: 1.25rem;
     }
     
     &.cta-back {
@@ -223,7 +228,7 @@ DESIGN SYSTEM – Buttons
             font-family: "Font Awesome 6 Pro";
             content:'\f177';
             font-weight: 400;
-            font-size: 20px;
+            font-size: 1.25em;
         }
     }
     
@@ -246,8 +251,11 @@ DESIGN SYSTEM – Buttons
 .btn-secondary {
     @extend .button;
     
-    @include font-style(400, 1.25em, 1em, $accent-color-1);
+    @include font-style(400, 1.125em, 1em, $accent-color-1);
     border: 1px solid $accent-color-1;
+    @include tablet {
+        font-size: 1.25rem;
+    }
     
     &:hover {
         border-color: darken($accent-color-1, 15%);
