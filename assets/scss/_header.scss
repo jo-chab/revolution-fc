@@ -18,9 +18,9 @@ HEADER CSS -
     padding: 0;
     box-sizing: border-box;
     
-    //position: absolute;
-    //top: 0;
-    //left: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
     z-index: $z-top-menu;
     
     display: grid;
@@ -182,6 +182,11 @@ HEADER CSS -
         cursor: pointer;
         @include mobile-max {
             font-size: 2rem;
+        }
+        .w-home & {
+            @include mobile-max {
+                color: white;
+            }
         }
     }
 }

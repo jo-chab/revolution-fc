@@ -454,6 +454,30 @@ p {
 /******************************************
 ADMIN ICONS
 ******************************************/
+.i-config-superadmin:before {
+  font-family: "Font Awesome Kit";
+  content: '\e012'; }
+
+.i-config-site:before {
+  font-family: "Font Awesome Kit";
+  content: '\e011'; }
+
+.i-config-home:before {
+  font-family: "Font Awesome Kit";
+  content: '\e010'; }
+
+.i-news-add:before {
+  font-family: "Font Awesome Kit";
+  content: '\e001'; }
+
+.i-doc-add:before {
+  font-family: "Font Awesome Kit";
+  content: '\e013'; }
+
+.i-doc:before {
+  font-family: "Font Awesome Kit";
+  content: '\e014'; }
+
 .i-news:before {
   font: var(--fa-font-sharp-light);
   content: '\f1ea'; }
@@ -631,24 +655,30 @@ GRID SYSTEM
   @media (min-width: 1024px) {
     .grid-system {
       gap: 2.5rem; } }
-
-.grid-col-2 {
-  grid-template-columns: 1fr; }
-  @media (min-width: 768px) {
-    .grid-col-2 {
-      grid-template-columns: repeat(2, 1fr); } }
-
-.grid-col-3 {
-  grid-template-columns: 1fr; }
-  @media (min-width: 768px) {
-    .grid-col-3 {
-      grid-template-columns: repeat(2, 1fr); } }
-  @media (min-width: 1024px) {
-    .grid-col-3 {
-      grid-template-columns: repeat(3, 1fr); } }
-  @media (min-width: 768px) {
-    .grid-col-3.t1 {
-      grid-template-columns: 1fr; } }
+  .grid-system.grid-col-2 {
+    grid-template-columns: 1fr; }
+    @media (min-width: 768px) {
+      .grid-system.grid-col-2 {
+        grid-template-columns: repeat(2, 1fr); } }
+  .grid-system.grid-col-3 {
+    grid-template-columns: 1fr; }
+    @media (min-width: 768px) {
+      .grid-system.grid-col-3 {
+        grid-template-columns: repeat(2, 1fr); } }
+    @media (min-width: 1024px) {
+      .grid-system.grid-col-3 {
+        grid-template-columns: repeat(3, 1fr); } }
+    @media (min-width: 768px) {
+      .grid-system.grid-col-3.t1 {
+        grid-template-columns: 1fr; } }
+  .grid-system.grid-col-4 {
+    grid-template-columns: 1fr 1fr; }
+    @media (min-width: 1024px) {
+      .grid-system.grid-col-4 {
+        grid-template-columns: repeat(4, 1fr); } }
+    @media (min-width: 768px) {
+      .grid-system.grid-col-4.t1 {
+        grid-template-columns: 1fr; } }
 
 /*******************************************************
 VARIABLES
@@ -1244,6 +1274,9 @@ HEADER CSS -
   width: 100%;
   padding: 0;
   box-sizing: border-box;
+  position: absolute;
+  top: 0;
+  left: 0;
   z-index: 4;
   display: grid;
   grid-gap: 0;
@@ -1357,6 +1390,9 @@ HEADER CSS -
     @media (max-width: 767px) {
       .top-header .menu-toggle i {
         font-size: 2rem; } }
+    @media (max-width: 767px) {
+      .w-home .top-header .menu-toggle i {
+        color: white; } }
 
 .header-logo-center {
   width: 1.5rem;

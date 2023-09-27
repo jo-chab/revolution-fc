@@ -135,6 +135,34 @@
 /******************************************
 ADMIN ICONS
 ******************************************/
+// DEFAULT page
+.i-config-superadmin:before {
+    font-family: "Font Awesome Kit";
+    content: '\e012';
+}
+.i-config-site:before {
+    font-family: "Font Awesome Kit";
+    content: '\e011';
+}
+.i-config-home:before {
+    font-family: "Font Awesome Kit";
+    content: '\e010';
+}
+.i-news-add:before {
+    font-family: "Font Awesome Kit";
+    content: '\e001';
+}
+.i-doc-add:before {
+    font-family: "Font Awesome Kit";
+    content: '\e013';
+}
+.i-doc:before {
+    font-family: "Font Awesome Kit";
+    content: '\e014';
+}
+
+
+
 // NEWS
 .i-news {
     &:before {

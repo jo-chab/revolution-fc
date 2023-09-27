@@ -454,6 +454,30 @@ p {
 /******************************************
 ADMIN ICONS
 ******************************************/
+.i-config-superadmin:before {
+  font-family: "Font Awesome Kit";
+  content: '\e012'; }
+
+.i-config-site:before {
+  font-family: "Font Awesome Kit";
+  content: '\e011'; }
+
+.i-config-home:before {
+  font-family: "Font Awesome Kit";
+  content: '\e010'; }
+
+.i-news-add:before {
+  font-family: "Font Awesome Kit";
+  content: '\e001'; }
+
+.i-doc-add:before {
+  font-family: "Font Awesome Kit";
+  content: '\e013'; }
+
+.i-doc:before {
+  font-family: "Font Awesome Kit";
+  content: '\e014'; }
+
 .i-news:before {
   font: var(--fa-font-sharp-light);
   content: '\f1ea'; }
@@ -595,6 +619,44 @@ section {
 @media (min-width: 768px) {
   .grid-layout-3 {
     grid-template-columns: 1fr 1fr 1fr; } }
+
+/*******************************************************
+GRID SYSTEM
+*******************************************************/
+.grid-system {
+  width: 100%;
+  display: grid;
+  gap: 1rem; }
+  @media (min-width: 768px) {
+    .grid-system {
+      gap: 1.5rem; } }
+  @media (min-width: 1024px) {
+    .grid-system {
+      gap: 2.5rem; } }
+  .grid-system.grid-col-2 {
+    grid-template-columns: 1fr; }
+    @media (min-width: 768px) {
+      .grid-system.grid-col-2 {
+        grid-template-columns: repeat(2, 1fr); } }
+  .grid-system.grid-col-3 {
+    grid-template-columns: 1fr; }
+    @media (min-width: 768px) {
+      .grid-system.grid-col-3 {
+        grid-template-columns: repeat(2, 1fr); } }
+    @media (min-width: 1024px) {
+      .grid-system.grid-col-3 {
+        grid-template-columns: repeat(3, 1fr); } }
+    @media (min-width: 768px) {
+      .grid-system.grid-col-3.t1 {
+        grid-template-columns: 1fr; } }
+  .grid-system.grid-col-4 {
+    grid-template-columns: 1fr 1fr; }
+    @media (min-width: 1024px) {
+      .grid-system.grid-col-4 {
+        grid-template-columns: repeat(4, 1fr); } }
+    @media (min-width: 768px) {
+      .grid-system.grid-col-4.t1 {
+        grid-template-columns: 1fr; } }
 
 .file-upload {
   margin-top: 3rem; }
@@ -1252,7 +1314,33 @@ input[class*="cta-"] {
       border-color: #1ecd28; }
 
 /*************************************
-ADMIN – HOME PAGE
+ADMIN – DEFAULT
+*************************************/
+.list-dashboard-menu {
+  margin-block: 3rem; }
+  .list-dashboard-menu li {
+    padding: 3rem;
+    border: 1px solid #FFCD00;
+    background-color: white;
+    -webkit-border-radius: 0.5rem;
+    -moz-border-radius: 0.5rem;
+    border-radius: 0.5rem; }
+  .list-dashboard-menu a {
+    gap: 1rem;
+    font-size: 3rem;
+    opacity: 1;
+    transition: all .3s ease; }
+    .list-dashboard-menu a:hover {
+      opacity: .5; }
+    .list-dashboard-menu a span {
+      font-family: 'Source Sans 3', sans-serif;
+      font-weight: 400;
+      font-size: 0.875rem;
+      line-height: 1.5em;
+      color: #181818; }
+
+/*************************************
+ADMIN – CONTENT
 *************************************/
 .dashboard {
   display: grid;

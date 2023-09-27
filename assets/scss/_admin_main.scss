@@ -8,341 +8,371 @@
 */
 
 
-// CTA cancel and confirm for form submit
 .d-form-cta {
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  margin: 2rem 0 0;
-  padding: 0;
-  gap: 1rem;
-  
-  .content-add & {
-    justify-content: center;
-    margin-bottom: 3rem;
-  }
-  
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin: 2rem 0 0;
+    padding: 0;
+    gap: 1rem;
+    
+    .content-add & {
+        justify-content: center;
+        margin-bottom: 3rem;
+    }
+    
 }
 
 .inactive > * {
-  opacity: 0.2;
+    opacity: 0.2;
 }
 
 .select-dropdown {
-  position: relative;
-  width: 100%;
-  min-width: 220px;
-  margin-bottom: 16px;
-  
-  &:after {
-    height: 100%;
-    font-family: "Font Awesome 6 Pro";
-    font-weight: 300;
-    color: #ffffff;
-    content: "\f107";
-    position: absolute;
-    top: 0;
-    right: 0;
-    z-index: 3;
-    font-size: 2em;
-    background-color: $primary-color-1;
-    text-align: center;
-    padding: 0 8px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  select {
+    position: relative;
     width: 100%;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-    background-color: white;
-    padding: 8px 16px;
-    box-sizing: border-box;
-    color: #312828;;
-    border: 1px solid #d3d3d3;
-    -webkit-border-radius: 0;
-    -moz-border-radius: 0;
-    border-radius: 0;
-    font: 16px/1.45em 'roboto', sans-serif;
+    min-width: 220px;
+    margin-bottom: 16px;
     
-    &:focus {
-      border-color: $alert-4;
+    &:after {
+        height: 100%;
+        font-family: "Font Awesome 6 Pro";
+        font-weight: 300;
+        color: #ffffff;
+        content: "\f107";
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: 3;
+        font-size: 2em;
+        background-color: $primary-color-1;
+        text-align: center;
+        padding: 0 8px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
-  }
+    
+    select {
+        width: 100%;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        background-color: white;
+        padding: 8px 16px;
+        box-sizing: border-box;
+        color: #312828;;
+        border: 1px solid #d3d3d3;
+        -webkit-border-radius: 0;
+        -moz-border-radius: 0;
+        border-radius: 0;
+        font: 16px/1.45em 'roboto', sans-serif;
+        
+        &:focus {
+            border-color: $alert-4;
+        }
+    }
 }
 
 
 /*************************************
-ADMIN – HOME PAGE
+ADMIN – DEFAULT
+*************************************/
+.list-dashboard-menu {
+    margin-block: 3rem;
+    
+    li {
+        padding: 3rem;
+        border: 1px solid $primary-color-3;
+        background-color: white;
+        @include border-radius-uniform(.5rem);
+    }
+    a {
+        gap:1rem;
+        font-size: 3rem;
+        opacity: 1;
+        transition: all .3s ease;
+        &:hover {
+            opacity: .5;
+        }
+        span {
+            @include font-family-reading;
+            @include font-style(400, .875rem, 1.5em, $primary-color-2);
+        }
+    }
+}
+
+
+/*************************************
+ADMIN – CONTENT
 *************************************/
 .dashboard {
-  display: grid;
-  grid-template-columns: 1fr;
-  padding: 3rem 2rem 1rem;
-  @include tablet {
-    grid-template-columns: $sidemenu-width auto;
-    grid-gap: 1.5rem;
-    padding: 2rem 2rem 1rem 0;
-  }
-  @include desktop {
-    grid-gap: 2rem;
-  }
+    display: grid;
+    grid-template-columns: 1fr;
+    padding: 3rem 2rem 1rem;
+    @include tablet {
+        grid-template-columns: $sidemenu-width auto;
+        grid-gap: 1.5rem;
+        padding: 2rem 2rem 1rem 0;
+    }
+    @include desktop {
+        grid-gap: 2rem;
+    }
 }
 
 .dashboard-container {
-  position: relative;
-  width: 100%;
-  max-width: 1080px;
-  margin: 0 auto;
-  @include tablet {
-    grid-column: 2;
-  }
-  
-  .dashboard-main {
-    border: 1px solid #d3d3d3;
-    background-color: white;
-    margin-bottom: 2rem;
-  }
-  
-  .dashboard-title {
-    background-color: $primary-color-2;
-    text-transform: capitalize;
-    padding: .5rem 1rem;
-  }
-  
-  .dashboard-content {
-    padding: 1rem;
+    position: relative;
+    width: 100%;
+    max-width: 1080px;
+    margin: 0 auto;
     @include tablet {
-      padding: 1.5rem;
+        grid-column: 2;
     }
     
-    .cta-add {
-      margin-bottom: 1.5rem;
+    .dashboard-main {
+        border: 1px solid #d3d3d3;
+        background-color: white;
+        margin-bottom: 2rem;
     }
-  }
-  
+    
+    .dashboard-title {
+        background-color: $primary-color-2;
+        text-transform: capitalize;
+        padding: .5rem 1rem;
+    }
+    
+    .dashboard-content {
+        padding: 1rem;
+        @include tablet {
+            padding: 1.5rem;
+        }
+        
+        .cta-add {
+            margin-bottom: 1.5rem;
+        }
+    }
+    
 }
-
 
 
 /*** INTERACTION CONTENT ***/
 .content-add,
 .content-update {
-  display: none;
-  
-  &.is-active {
-    display: block;
-    padding: 0;
-    margin-bottom: 2rem;
-  }
+    display: none;
+    
+    &.is-active {
+        display: block;
+        padding: 0;
+        margin-bottom: 2rem;
+    }
 }
 
 form.content-delete {
-  margin: 1rem auto 3rem;
-  width: fit-content;
-  
-  .footer-dashboard & {
-    margin: 0;
-  }
+    margin: 1rem auto 3rem;
+    width: fit-content;
+    
+    .footer-dashboard & {
+        margin: 0;
+    }
 }
-
-
 
 
 .dashboard-list {
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-  @include tablet {
-    gap: 1rem;
-  }
-  
-  li {
-    display: grid;
-    gap: 1rem;
-    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
     @include tablet {
-      grid-template-columns: 1fr auto;
+        gap: 1rem;
     }
-    //&.dashboard-list-elements {
-    //    display: flex;
-    //    flex-direction: row-reverse;
-    //}
-    &.layout-delete {
-      grid-template-columns: auto 1fr auto;
-      grid-template-rows: auto;
-      grid-template-areas:
+    
+    li {
+        display: grid;
+        gap: 1rem;
+        align-items: center;
+        @include tablet {
+            grid-template-columns: 1fr auto;
+        }
+        &.layout-delete {
+            grid-template-columns: auto 1fr auto;
+            grid-template-rows: auto;
+            grid-template-areas:
                     "delete name buttons";
-      @include mobile-max {
-        grid-template-columns: 1fr auto auto;
-        grid-template-areas:
+            @include mobile-max {
+                grid-template-columns: 1fr auto auto;
+                grid-template-areas:
                     "name delete buttons";
-      }
-      .content-delete {
-        grid-area: delete;
-      }
-      .content-id {
-        grid-area: name;
-      }
-      .content-btn {
-        grid-area: buttons;
-      }
-    }
-    &.list-user {
-      grid-template-columns: auto 1fr auto;
-      grid-template-rows: auto;
-      grid-template-areas:
+            }
+            
+            .content-delete {
+                grid-area: delete;
+            }
+            
+            .content-id {
+                grid-area: name;
+            }
+            
+            .content-btn {
+                grid-area: buttons;
+            }
+        }
+        
+        &.list-user {
+            grid-template-columns: auto 1fr auto;
+            grid-template-rows: auto;
+            grid-template-areas:
                     "delete name buttons";
-      @include mobile-max {
-        grid-template-columns: auto 1fr;
-        grid-template-areas:
+            @include mobile-max {
+                grid-template-columns: auto 1fr;
+                grid-template-areas:
                     "delete name"
                     "buttons buttons";
-      }
-      .list-user-delete {
-        grid-area: delete;
-      }
-      .user-name {
-        grid-area: name;
-      }
-      .list-user-type {
-        grid-area: buttons;
-      }
+            }
+            
+            .list-user-delete {
+                grid-area: delete;
+            }
+            
+            .user-name {
+                grid-area: name;
+            }
+            
+            .list-user-type {
+                grid-area: buttons;
+            }
+        }
+        
+        .element-title {
+            @include font-family-reading;
+            @include font-style(400, 1.25rem, 1.5em, $primary-color-2);
+            text-align: center;
+            @include tablet {
+                text-align: unset;
+                font-size: 1rem;
+            }
+            
+            span {
+                font-weight: 700;
+            }
+        }
+        
+        &.user-hide {
+            display: none;
+        }
     }
     
-    .element-title {
-      @include font-family-reading;
-      @include font-style(400, 1.25rem, 1.5em, $primary-color-2);
-      text-align: center;
-      @include tablet {
-        text-align: unset;
-        font-size: 1rem;
-      }
-      span {
-        font-weight: 700;
-      }
+    .list-cta {
+        display: flex;
+        flex-direction: row;
+        gap: 1rem;
+        align-items: center;
+        @include mobile-max {
+            justify-content: center;
+        }
+        
+        &.list-user-type {
+            gap: .5rem;
+            
+            > * {
+                flex-grow: 1;
+            }
+        }
     }
     
-    &.user-hide {
-      display: none;
-    }
-  }
-  
-  .list-cta {
-    display: flex;
-    flex-direction: row;
-    gap: 1rem;
-    align-items: center;
-    @include mobile-max {
-      justify-content: center;
-    }
-    
-    &.list-user-type {
-      gap: .5rem;
-      > * {
-        flex-grow: 1;
-      }
-    }
-  }
-  
 }
 
 .d-form-wrapper {
-  display: flex;
-  flex-direction: column;
+    display: flex;
+    flex-direction: column;
 }
 
 .actu-img-upload {
-  width: 100%;
-  max-width: 320px;
-  @include mobile-max {
-    max-width: unset;
-  }
-  
-  img {
     width: 100%;
-  }
+    max-width: 320px;
+    @include mobile-max {
+        max-width: unset;
+    }
+    
+    img {
+        width: 100%;
+    }
 }
 
 span.logo-mini {
-  width: 2rem;
-  display: inline-block;
-  vertical-align: middle;
-  margin-right: 1rem;
-  
-  img {
-    width: 100%;
-  }
+    width: 2rem;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 1rem;
+    
+    img {
+        width: 100%;
+    }
 }
 
 /* Insert element in textarea */
 .edit-text-panel {
-  display: flex;
-  flex-flow: row wrap;
-  align-items: flex-start;
-  margin-bottom: 1rem;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: flex-start;
+    margin-bottom: 1rem;
 }
 
 .edit-panel-cta {
-  @include font-family-reading;
-  @include font-style(300, 1.125rem, 1em, $web-grey-4);
-  border-right: 1px solid #d3d3d3;
-  padding: .5rem 1rem;
-  box-sizing: border-box;
-  
-  &:hover {
-    cursor: pointer;
-    color: $secondary-color-1;
-  }
+    @include font-family-reading;
+    @include font-style(300, 1.125rem, 1em, $web-grey-4);
+    border-right: 1px solid #d3d3d3;
+    padding: .5rem 1rem;
+    box-sizing: border-box;
+    
+    &:hover {
+        cursor: pointer;
+        color: $secondary-color-1;
+    }
 }
-
-
 
 
 /*************************************
 USERS
 *************************************/
 .user-name {
-  width: 100%;
-  @include font-family-heading;
-  @include font-style(400, .875rem, 1em, $primary-color-2);
-  
-  span {
-    font-weight: 600;
-  }
+    width: 100%;
+    @include font-family-heading;
+    @include font-style(400, .875rem, 1em, $primary-color-2);
+    
+    span {
+        font-weight: 600;
+    }
 }
 
 .cta-user {
-  input[type="submit"] {
-    text-align: center;
-    padding: .5rem .75rem;
-    background-color: $web-grey-2;
-    border-radius: 2rem;
-    @include font-family-heading;
-    @include font-style(400, .75rem, 1em, $web-grey-5);
-    transition: all .3s ease;
-    &:hover {
-      background-color: darken($web-grey-2, 20%);
+    input[type="submit"] {
+        text-align: center;
+        padding: .5rem .75rem;
+        background-color: $web-grey-2;
+        border-radius: 2rem;
+        @include font-family-heading;
+        @include font-style(400, .75rem, 1em, $web-grey-5);
+        transition: all .3s ease;
+        
+        &:hover {
+            background-color: darken($web-grey-2, 20%);
+        }
     }
-  }
-  
-  &.activate input[type="submit"] {
-    background-color: $primary-color-1;
-    color: white;
-    &:hover {
-      background-color: darken($primary-color-1, 20%);
+    
+    &.activate input[type="submit"] {
+        background-color: $primary-color-1;
+        color: white;
+        
+        &:hover {
+            background-color: darken($primary-color-1, 20%);
+        }
     }
-  }
-  
-  &.delete input[type="submit"] {
-    background-color: $color-error;
-    color: white;
-    &:hover {
-      background-color: darken($color-error, 20%);
+    
+    &.delete input[type="submit"] {
+        background-color: $color-error;
+        color: white;
+        
+        &:hover {
+            background-color: darken($color-error, 20%);
+        }
     }
-  }
 }
 

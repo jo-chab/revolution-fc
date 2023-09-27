@@ -94,28 +94,42 @@ GRID SYSTEM
         gap: 2.5rem;
     }
     
-}
-
-.grid-col-2 {
-    grid-template-columns: 1fr;
-    @include tablet {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-.grid-col-3 {
-    grid-template-columns: 1fr;
-    @include tablet {
-        grid-template-columns: repeat(2, 1fr);
-    }
-    @include desktop {
-        grid-template-columns: repeat(3, 1fr);
+    &.grid-col-2 {
+        grid-template-columns: 1fr;
+        @include tablet {
+            grid-template-columns: repeat(2, 1fr);
+        }
     }
     
-    &.t1 {
+    &.grid-col-3 {
+        grid-template-columns: 1fr;
         @include tablet {
-            grid-template-columns: 1fr;
+            grid-template-columns: repeat(2, 1fr);
         }
+        @include desktop {
+            grid-template-columns: repeat(3, 1fr);
+        }
+        
+        &.t1 {
+            @include tablet {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+    }
+    
+    &.grid-col-4 {
+        grid-template-columns: 1fr 1fr;
+        @include desktop {
+            grid-template-columns: repeat(4, 1fr);
+        }
+        
+        &.t1 {
+            @include tablet {
+                grid-template-columns: 1fr;
+            }
+        }
+        
     }
     
 }
