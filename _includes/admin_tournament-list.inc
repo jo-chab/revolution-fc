@@ -5,7 +5,7 @@
     
     <div class="dashboard-content">
         
-        <div class="btn-primary cta-add icon mobile-icon-only i-more-2 js-content-add">Ajouter un tournoi</div>
+        <div class="btn-primary cta-add small icon mobile-icon-only i-more js-content-add">Ajouter un tournoi</div>
         
         <div class="dashboard-content content-add" style="margin-top: 3rem;">
             
@@ -48,8 +48,8 @@
                 
                 </div>
                 <div class="d-form-cta">
-                    <div class="btn-primary btn-revert icon mobile-icon-only"><span>Effacer</span></div>
-                    <div class="btn-primary btn-validate icon mobile-icon-only"><span>Valider</span></div>
+                    <div class="btn-primary small btn-revert icon mobile-icon-only"><span>Effacer</span></div>
+                    <div class="btn-primary small btn-confirm icon mobile-icon-only"><span>Valider</span></div>
                 </div>
             </form>
         
@@ -84,12 +84,12 @@
                                         <div>
                                             <form action='action_tournament_disable.php' method='post'>
                                                 <input type='hidden' name='element' value='$id_tournament'>
-                                                <div class='btn-primary $btnClass icon mobile-icon-only'><span>$texte_bouton</span></div>
+                                                <div class='btn-primary $btnClass small icon mobile-icon-only'><span>$texte_bouton</span></div>
                                             </form>
                                         </div>
                                         <div>
                                             <form action='index.php?p=82&t=$id_tournament' method='post'>
-                                                <div class='btn-primary btn-update icon mobile-icon-only'><span>Modifier</span></div>
+                                                <div class='btn-primary btn-update small icon mobile-icon-only'><span>Modifier</span></div>
                                             </form>
                                         </div>
                                     </div>

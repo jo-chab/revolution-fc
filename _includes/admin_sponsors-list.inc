@@ -111,7 +111,7 @@
                                     <div class='list-cta'>
                                         <form action='action_sponsors_delete' method='post'>
                                             <input type='hidden' name='element' value='$id_sponsors'>
-                                            <div class='btn-secondary btn-delete icon mobile-icon-only'></div>
+                                            <div class='btn-tertiary small btn-delete icon mobile-icon-only'></div>
                                         </form>
                                     </div>
                                     <div class='element-title content-id'>
@@ -120,7 +120,7 @@
                                     <div class='list-cta content-btn'>
                                         <form action='?p=92' method='post'>
                                             <input type='hidden' name='element' value='$id_sponsors'>
-                                            <div class='btn-primary btn-update icon mobile-icon-only'><span>Modifier</span></div>
+                                            <div class='btn-primary btn-update small icon mobile-icon-only'><span>Modifier</span></div>
                                         </form>
                                     </div>
                                 </li>";

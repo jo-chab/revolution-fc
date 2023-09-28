@@ -15,7 +15,6 @@ COLORS
 /* BASICS */
 /* SPECIFIC BRAND */
 /****** HEADER & FOOTER ******/
-/****** DARK MODE *****/
 /****** Z-INDEX ******/
 /*******************************************************
 ADMIN
@@ -418,17 +417,20 @@ p {
   content: '\e003'; }
 
 .i-long-arrow-table:after {
-  font: var(--fa-font-sharp-solid);
-  content: '\f178';
+  font-family: "Font Awesome Kit";
+  content: '\e00f';
   font-size: 1.5em; }
 
 .i-more:before {
   font: var(--fa-font-sharp-light);
   content: '\f055'; }
+  .dashboard .i-more:before {
+    font-size: 1.5em !important;
+    font: var(--fa-font-sharp-regular); }
 
-.i-more-2:before {
-  font: var(--fa-font-sharp-regular);
-  content: '\f055';
+.i-check:before {
+  font: var(--fa-font-light);
+  content: '\f058';
   font-size: 1.25em; }
 
 .menu-toggle-admin:before {
@@ -565,6 +567,11 @@ ADMIN ICONS
   content: '\f2ed';
   font-size: 1.25em; }
 
+.btn-cancel:before {
+  font: var(--fa-font-regular);
+  content: '\f057';
+  font-size: 1.25em; }
+
 .btn-update:before {
   font: var(--fa-font-regular);
   content: '\f044';
@@ -575,7 +582,7 @@ ADMIN ICONS
   content: '\f12d';
   font-size: 1.25em; }
 
-.btn-validate:before {
+.btn-confirm:before {
   font: var(--fa-font-regular);
   content: '\f058';
   font-size: 1.25em; }
@@ -689,7 +696,9 @@ main.w-content {
     .w-home main.w-content {
       padding-top: 0; } }
 
-/********* SECTION *********/
+/*******************************************************
+LAYOUT ELEMENTS
+*******************************************************/
 section {
   width: 100%;
   margin: 0 auto;
@@ -754,7 +763,7 @@ article {
           padding: 0 5rem;
           grid-template-columns: auto 1fr; } }
       article.wrapper.flash-alert.urgent {
-        background: #EF233C; }
+        background: #FF1541; }
   article.wrapper-full {
     max-width: unset;
     padding: 1.5rem; }
@@ -771,6 +780,43 @@ figure {
   margin-bottom: 2rem; }
   figure img {
     width: 100%; }
+
+/*******************************************************
+COOKIES Popup
+*******************************************************/
+.cookie-popup {
+  display: none;
+  flex-direction: column;
+  align-items: flex-start;
+  position: fixed;
+  bottom: 4rem;
+  right: 4rem;
+  z-index: 99;
+  padding: 2rem;
+  width: 80%;
+  max-width: 520px;
+  -webkit-border-radius: 1.5rem;
+  -moz-border-radius: 1.5rem;
+  border-radius: 1.5rem;
+  background: #f2f2f2;
+  border: 1px solid #C4A84C;
+  -webkit-box-shadow: 0 5px 20px -6px rgba(18, 18, 18, 0.4);
+  -moz-box-shadow: 0 5px 20px -6px rgba(18, 18, 18, 0.4);
+  box-shadow: 0 5px 20px -6px rgba(18, 18, 18, 0.4); }
+  @media (max-width: 767px) {
+    .cookie-popup {
+      right: 2rem;
+      bottom: 2rem; } }
+  .cookie-popup p {
+    color: #181818; }
+
+.cookie-cta {
+  display: flex;
+  gap: 2rem;
+  place-self: flex-end;
+  margin-top: 1rem; }
+  .cookie-cta .btn-tertiary {
+    margin: 0; }
 
 /*******************************************************
 FONCTIONS
@@ -847,8 +893,8 @@ DESIGN SYSTEM – Alert message box
       .w-alert-message .alert-message.alert-correct i {
         color: white; }
     .w-alert-message .alert-message.alert-error {
-      background-color: #EF233C;
-      border-color: #a00c1e;
+      background-color: #FF1541;
+      border-color: #ae0021;
       color: white; }
       .w-alert-message .alert-message.alert-error i {
         color: white; }
@@ -924,77 +970,102 @@ DESIGN SYSTEM – CARDS
 DESIGN SYSTEM – Buttons
 ***********************/
 .button, .btn-primary, .btn-secondary, .btn-tertiary, .btn-filter, .btn-download {
-  display: inline-flex;
+  display: flex;
   width: fit-content;
   align-items: center;
   justify-content: center;
-  gap: 1rem;
+  gap: .5rem;
   font-family: 'Source Sans 3', sans-serif;
   text-align: center;
-  padding: 1.5rem 2rem;
   transition: all .3s ease; }
+  .button:hover, .btn-primary:hover, .btn-secondary:hover, .btn-tertiary:hover, .btn-filter:hover, .btn-download:hover {
+    cursor: pointer; }
   @media (max-width: 767px) {
     .button, .btn-primary, .btn-secondary, .btn-tertiary, .btn-filter, .btn-download {
       width: 100%; } }
-  .button:hover, .btn-primary:hover, .btn-secondary:hover, .btn-tertiary:hover, .btn-filter:hover, .btn-download:hover {
-    cursor: pointer;
-    transition: all .3s ease; }
-  .button .fa-long-arrow, .btn-primary .fa-long-arrow, .btn-secondary .fa-long-arrow, .btn-tertiary .fa-long-arrow, .btn-filter .fa-long-arrow, .btn-download .fa-long-arrow {
-    font-size: 2em; }
+  .dashboard .button, .dashboard .btn-primary, .dashboard .btn-secondary, .dashboard .btn-tertiary, .dashboard .btn-filter, .dashboard .btn-download {
+    border-radius: .5rem; }
 
 .btn-primary {
-  background-color: #2D3D32;
+  padding: 1.25rem 2rem;
   font-weight: 400;
   font-size: 1.125rem;
   line-height: 1em;
-  color: white; }
-  .btn-primary:hover {
-    background-color: #0d110e; }
+  color: white;
+  background-color: #C4A84C; }
+  @media (max-width: 767px) {
+    .btn-primary {
+      padding: 1rem; } }
   @media (min-width: 768px) {
     .btn-primary {
       font-size: 1.25rem; } }
+  @media (min-width: 768px) {
+    .btn-primary:hover {
+      background-color: #806c2a; } }
+  .btn-primary.small {
+    font-size: 1rem; }
+  .btn-primary.btn-update {
+    background-color: #FF1541; }
+    @media (min-width: 768px) {
+      .btn-primary.btn-update:hover {
+        background-color: #ae0021; } }
+  .btn-primary.btn-confirm {
+    background-color: #1ecd28;
+    justify-self: center; }
+    @media (min-width: 768px) {
+      .btn-primary.btn-confirm:hover {
+        background-color: #117417; } }
+  .btn-primary.btn-delete, .btn-primary.btn-cancel, .btn-primary.btn-disable, .btn-primary.btn-activate, .btn-primary.btn-revert {
+    background-color: #eef1f7;
+    color: #434c57; }
+    @media (min-width: 768px) {
+      .btn-primary.btn-delete:hover, .btn-primary.btn-cancel:hover, .btn-primary.btn-disable:hover, .btn-primary.btn-activate:hover, .btn-primary.btn-revert:hover {
+        color: #FF1541; } }
   .btn-primary.cta-back {
     background-color: #fed624;
     color: #181818; }
-    .btn-primary.cta-back:hover {
-      background-color: #d5ae01; }
+    @media (min-width: 768px) {
+      .btn-primary.cta-back:hover {
+        background-color: #d5ae01; } }
     .btn-primary.cta-back:before {
-      font-family: "Font Awesome 6 Pro";
-      content: '\f177';
-      font-weight: 400;
-      font-size: 1.25em; }
-  .btn-primary[class*='cta-download'] {
-    font-weight: 400;
-    font-size: 1em;
-    line-height: 1em;
-    color: white; }
-    .btn-primary[class*='cta-download']:before {
-      font-family: "Font Awesome 6 Pro";
-      content: '\f33d';
-      font-weight: 400;
-      font-size: 20px; }
+      font: var(--fa-font-sharp-regular);
+      content: '\f344';
+      font-size: .875em; }
+  .btn-primary.cta-add {
+    background-color: #1ecd28;
+    justify-self: center; }
+    @media (min-width: 768px) {
+      .btn-primary.cta-add:hover {
+        background-color: #117417; } }
   @media (max-width: 767px) {
     .btn-primary span.is-hide-mobile {
       display: none; } }
 
 .btn-secondary {
+  padding: 1.25rem 2rem;
   font-weight: 400;
   font-size: 1.125em;
   line-height: 1em;
   color: #2D3D32;
   border: 1px solid #2D3D32; }
+  @media (max-width: 767px) {
+    .btn-secondary {
+      padding: 1rem; } }
   @media (min-width: 768px) {
     .btn-secondary {
       font-size: 1.25rem; } }
-  .btn-secondary:hover {
-    border-color: #0d110e;
-    color: #0d110e; }
+  @media (min-width: 768px) {
+    .btn-secondary:hover {
+      border-color: #0d110e;
+      color: #0d110e; } }
+  .btn-secondary.small {
+    font-size: 1rem; }
   .btn-secondary.ghost-white {
     color: white;
     border-color: white; }
     .btn-secondary.ghost-white:hover {
-      border-color: #C4A84C;
-      color: #C4A84C; }
+      border-color: #FFCD00;
+      color: #FFCD00; }
 
 .btn-tertiary {
   font-weight: 400;
@@ -1002,17 +1073,33 @@ DESIGN SYSTEM – Buttons
   line-height: 1em;
   color: #181818;
   padding: 0;
-  margin: 24px 0; }
-  .btn-tertiary.btn-light {
-    color: white; }
+  margin: 1.5rem 0; }
   .btn-tertiary:hover {
     color: #C4A84C; }
-  .btn-tertiary:after {
-    font-family: "Font Awesome 6 Pro";
-    content: '\f178';
-    font-weight: 400;
-    font-size: 20px;
-    margin-left: 8px; }
+  .dashboard .btn-tertiary {
+    margin: 0; }
+  .btn-tertiary.btn-light {
+    color: white; }
+  .btn-tertiary.small {
+    font-size: 1rem; }
+  .btn-tertiary.cta-add {
+    color: #1ecd28; }
+    .btn-tertiary.cta-add:hover {
+      color: #117417; }
+  .btn-tertiary.btn-disable, .btn-tertiary.btn-delete, .btn-tertiary.btn-cancel, .btn-tertiary.btn-activate, .btn-tertiary.btn-revert {
+    color: #aca9a9; }
+    .btn-tertiary.btn-disable:hover, .btn-tertiary.btn-delete:hover, .btn-tertiary.btn-cancel:hover, .btn-tertiary.btn-activate:hover, .btn-tertiary.btn-revert:hover {
+      color: #FF1541; }
+    @media (max-width: 767px) {
+      .btn-tertiary.btn-disable, .btn-tertiary.btn-delete, .btn-tertiary.btn-cancel, .btn-tertiary.btn-activate, .btn-tertiary.btn-revert {
+        background-color: #aca9a9;
+        color: white; }
+        .btn-tertiary.btn-disable:hover, .btn-tertiary.btn-delete:hover, .btn-tertiary.btn-cancel:hover, .btn-tertiary.btn-activate:hover, .btn-tertiary.btn-revert:hover {
+          color: unset; } }
+  .btn-tertiary.btn-update {
+    color: #C4A84C; }
+    .btn-tertiary.btn-update:hover {
+      color: #806c2a; }
 
 .btn-filter {
   gap: .5rem;
@@ -1055,120 +1142,6 @@ DESIGN SYSTEM – Buttons
   .is-inactive > * h4:after {
     content: " (pas encore disponible)"; }
 
-/***********************
-DESIGN SYSTEM – Lists
-***********************/
-.list-text {
-  position: relative;
-  margin-block: 1rem 2rem;
-  margin-inline-start: 2rem;
-  list-style: none; }
-  .list-text li {
-    font-family: 'Source Sans 3', sans-serif;
-    font-weight: 400;
-    font-size: 1rem;
-    line-height: 1.5em;
-    color: #181818;
-    margin-bottom: .25rem;
-    display: flex;
-    align-items: baseline;
-    gap: .5rem; }
-    .list-text li:last-of-type {
-      margin-bottom: 0; }
-    .list-text li:before {
-      content: "\2022";
-      /* Unicode character for a bullet (circle) */
-      display: inline-flex; }
-
-.list-people {
-  margin-block: 3rem; }
-  @media (min-width: 768px) {
-    .list-people.col-2 .list-people-header {
-      grid-column: span 2; } }
-  @media (min-width: 768px) {
-    .list-people.col-3 .list-people-header {
-      grid-column: span 2; } }
-  @media (min-width: 1024px) {
-    .list-people.col-3 .list-people-header {
-      grid-column: span 3; } }
-  .list-people .people-el {
-    display: flex;
-    flex-flow: column nowrap;
-    gap: .5rem; }
-    .list-people .people-el .list-people-function {
-      font-family: 'Poppins', sans-serif;
-      font-weight: 700;
-      font-size: 1.5rem;
-      line-height: 1em;
-      color: #181818;
-      text-transform: uppercase;
-      margin-bottom: .5rem; }
-    .list-people .people-el .list-people-img {
-      margin-bottom: 1rem;
-      width: 100%;
-      aspect-ratio: 1;
-      background-position: top center;
-      background-repeat: no-repeat;
-      background-size: cover; }
-      @media (min-width: 768px) {
-        .list-people .people-el .list-people-img {
-          max-width: 320px; } }
-    .list-people .people-el .list-people-name {
-      font-family: 'Poppins', sans-serif;
-      font-weight: 700;
-      font-size: 1.125rem;
-      line-height: 1em;
-      color: #C4A84C;
-      text-transform: capitalize; }
-    .list-people .people-el .list-people-legend {
-      font-family: 'Source Sans 3', sans-serif;
-      font-weight: 400;
-      font-size: 0.875rem;
-      line-height: 1.5em;
-      color: #2D3D32; }
-    .list-people .people-el .list-people-email {
-      margin-top: .5rem;
-      font-family: 'Source Sans 3', sans-serif;
-      font-weight: 400;
-      font-size: 1rem;
-      line-height: 1em;
-      color: #C4A84C; }
-
-/***** DOCUMENTS LISTS *****/
-.w-list-docs {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  width: 100%;
-  margin-top: 3rem; }
-
-.list-docs {
-  width: 100%;
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-  margin-block: 1rem 4rem; }
-  @media (min-width: 768px) {
-    .list-docs {
-      gap: 1rem; } }
-  .list-docs li {
-    display: inline-flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 1.25rem; }
-    @media (min-width: 768px) {
-      .list-docs li {
-        gap: 3rem; } }
-  .list-docs span.docs-title {
-    font-family: 'Poppins', sans-serif;
-    font-weight: 400;
-    font-size: 1rem;
-    line-height: 1.5em;
-    color: #C4A84C;
-    flex-grow: 1; }
-
 /***** DROPDOWN *****/
 select {
   width: 100%;
@@ -1206,6 +1179,26 @@ select {
     color: #ffffff;
     content: "\f107";
     background-color: #2D3D32; }
+  .dashboard .select-dropdown {
+    margin: 0 0 1rem;
+    min-width: 220px;
+    max-width: unset; }
+    .dashboard .select-dropdown select {
+      width: 100%;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+      background-color: white;
+      padding: 8px 16px;
+      box-sizing: border-box;
+      color: #312828;
+      border: 1px solid #d3d3d3;
+      -webkit-border-radius: 0;
+      -moz-border-radius: 0;
+      border-radius: 0;
+      font: 16px/1.45em 'roboto', sans-serif; }
+      .dashboard .select-dropdown select:focus {
+        border-color: #1ecd28; }
 
 /****** FORMS ******/
 #wrapper-form input {
@@ -1588,6 +1581,120 @@ footer {
 /*******************************************************
 MAIN CSS
 *******************************************************/
+/***********************
+Lists
+***********************/
+.list-text {
+  position: relative;
+  margin-block: 1rem 2rem;
+  margin-inline-start: 2rem;
+  list-style: none; }
+  .list-text li {
+    font-family: 'Source Sans 3', sans-serif;
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 1.5em;
+    color: #181818;
+    margin-bottom: .25rem;
+    display: flex;
+    align-items: baseline;
+    gap: .5rem; }
+    .list-text li:last-of-type {
+      margin-bottom: 0; }
+    .list-text li:before {
+      content: "\2022";
+      /* Unicode character for a bullet (circle) */
+      display: inline-flex; }
+
+.list-people {
+  margin-block: 3rem; }
+  @media (min-width: 768px) {
+    .list-people.col-2 .list-people-header {
+      grid-column: span 2; } }
+  @media (min-width: 768px) {
+    .list-people.col-3 .list-people-header {
+      grid-column: span 2; } }
+  @media (min-width: 1024px) {
+    .list-people.col-3 .list-people-header {
+      grid-column: span 3; } }
+  .list-people .people-el {
+    display: flex;
+    flex-flow: column nowrap;
+    gap: .5rem; }
+    .list-people .people-el .list-people-function {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 700;
+      font-size: 1.5rem;
+      line-height: 1em;
+      color: #181818;
+      text-transform: uppercase;
+      margin-bottom: .5rem; }
+    .list-people .people-el .list-people-img {
+      margin-bottom: 1rem;
+      width: 100%;
+      aspect-ratio: 1;
+      background-position: top center;
+      background-repeat: no-repeat;
+      background-size: cover; }
+      @media (min-width: 768px) {
+        .list-people .people-el .list-people-img {
+          max-width: 320px; } }
+    .list-people .people-el .list-people-name {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 700;
+      font-size: 1.125rem;
+      line-height: 1em;
+      color: #C4A84C;
+      text-transform: capitalize; }
+    .list-people .people-el .list-people-legend {
+      font-family: 'Source Sans 3', sans-serif;
+      font-weight: 400;
+      font-size: 0.875rem;
+      line-height: 1.5em;
+      color: #2D3D32; }
+    .list-people .people-el .list-people-email {
+      margin-top: .5rem;
+      font-family: 'Source Sans 3', sans-serif;
+      font-weight: 400;
+      font-size: 1rem;
+      line-height: 1em;
+      color: #C4A84C; }
+
+/***** DOCUMENTS LISTS *****/
+.w-list-docs {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  margin-top: 3rem; }
+
+.list-docs {
+  width: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-block: 1rem 4rem; }
+  @media (min-width: 768px) {
+    .list-docs {
+      gap: 1rem; } }
+  .list-docs li {
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.25rem; }
+    @media (min-width: 768px) {
+      .list-docs li {
+        gap: 3rem; } }
+  .list-docs span.docs-title {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 1.5em;
+    color: #63666A;
+    flex-grow: 1; }
+
 /******************************
 HOME PAGE
 ******************************/

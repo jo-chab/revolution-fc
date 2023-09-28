@@ -12,7 +12,6 @@ VARIABLES
 
 
 $bg-body: #ffffff;
-
 $text-content-max-width: 960px;
 
 
@@ -45,18 +44,16 @@ $tertiary-color-2: #C8C3B3;
 $tertiary-color-3: #63666A;
 $tertiary-color-4: #D0D3D4;
 
-//$accent-color-1: #00B0AD;
-//$accent-color-2: #008776;
-$accent-color-1: $secondary-color-1;
-$accent-color-2: $tertiary-color-1;
-$accent-color-3: #ff1541;
-$accent-color-4: #BA0F2F;
+//$secondary-color-1: #00B0AD;
+//$tertiary-color-1: #008776;
 
 $alert-1: #fed624;
 $alert-2: darken($alert-1, 15%);
 $alert-3: #9bce7c;
 $alert-4: #1ecd28;
 $alert-5: #293D1D;
+$alert-6: #FF1541;
+$alert-7: #BA0F2F;
 
 $admin-color-1: #072ac8;
 
@@ -70,18 +67,20 @@ $bg-footer-color: $primary-color-2;
 
 
 
-/****** DARK MODE *****/
-$bg-body-dark: #181818;
-$title-color-dark: white;
-$reading-text: $web-grey-6;
-$reading-text-dark: $web-grey-1;
-$text-color-dark: $web-grey-1;
-
-
 
 
 $popup-color: $primary-color-1;
 $popup-text-color: white;
+$popup-color-2: #f2f2f2;
+$popup-text-color-2: $primary-color-2;
+$popup-width-small: 320px;
+$popup-width-large: 520px;
+
+
+
+$reading-text: $web-grey-6;
+
+
 /****** Z-INDEX ******/
 $z-top-menu: 4;
 $z-mobile-menu: 4;
@@ -93,16 +92,20 @@ $z-home-hero-overlay: 2;
 $z-home-hero-content: 3;
 
 
+
+
+
+
 /*******************************************************
 ADMIN
 *******************************************************/
 $admin-color-1 : $secondary-color-3;
 $admin-update: $tertiary-color-2;
-$admin-confirm: #1ecd28;
-$admin-delete: $tertiary-color-3;
+$admin-confirm: $alert-4;
+$admin-delete: $alert-6;
 
 
 /****** MESSAGES & ALERTS ******/
 $color-info: #fed624;
-$color-error: #EF233C;
-$color-correct: #1ecd28;
+$color-error: $alert-6;
+$color-correct: $alert-4;

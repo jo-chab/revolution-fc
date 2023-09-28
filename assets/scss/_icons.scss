@@ -90,19 +90,22 @@
 }
 
 .i-long-arrow-table:after {
-    font: var(--fa-font-sharp-solid);
-    content: '\f178';
+    font-family: "Font Awesome Kit";
+    content: '\e00f';
     font-size: 1.5em;
 }
 
 .i-more:before {
     font: var(--fa-font-sharp-light);
     content: '\f055';
+    .dashboard & {
+        font-size: 1.5em !important;
+        font: var(--fa-font-sharp-regular);
+    }
 }
-
-.i-more-2:before {
-    font: var(--fa-font-sharp-regular);
-    content: '\f055';
+.i-check:before {
+    font: var(--fa-font-light);
+    content: '\f058';
     font-size: 1.25em;
 }
 
@@ -290,6 +293,12 @@ ADMIN ICONS
     font-size: 1.25em;
 }
 
+.btn-cancel:before {
+    font: var(--fa-font-regular);
+    content: '\f057';
+    font-size: 1.25em;
+}
+
 .btn-update:before {
     font: var(--fa-font-regular);
     content: '\f044';
@@ -302,7 +311,7 @@ ADMIN ICONS
     font-size: 1.25em;
 }
 
-.btn-validate:before {
+.btn-confirm:before {
     font: var(--fa-font-regular);
     content: '\f058';
     font-size: 1.25em;
