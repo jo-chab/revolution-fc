@@ -54,8 +54,8 @@
 
             </div>
             <div class="d-form-cta">
-                <div class="btn-primary btn-revert icon mobile-icon-only"><span>Effacer</span></div>
-                <div class="btn-primary btn-validate icon mobile-icon-only"><span>Valider</span></div>
+                <div class="btn-primary small btn-revert icon mobile-icon-only"><span>Effacer</span></div>
+                <div class="btn-primary small btn-confirm icon mobile-icon-only"><span>Mettre à jour</span></div>
             </div>
 
         </form>

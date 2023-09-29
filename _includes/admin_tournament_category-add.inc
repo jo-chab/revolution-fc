@@ -32,7 +32,7 @@
 
                     </div>
                     <div class="d-form-cta">
-                        <div class="btn-primary btn-validate icon mobile-icon-only"><span>Ajouter cat&eacute;gorie</span></div>
+                        <div class="btn-primary btn-confirm small icon mobile-icon-only"><span>Ajouter cat&eacute;gorie</span></div>
                     </div>
 
                 </form>

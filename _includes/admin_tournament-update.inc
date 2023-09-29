@@ -79,8 +79,8 @@
             
             </div>
             <div class="d-form-cta">
-                <div class="btn-primary btn-revert icon mobile-icon-only"><span>Effacer</span></div>
-                <div class="btn-primary btn-validate icon mobile-icon-only"><span>Valider</span></div>
+                <div class="btn-primary small btn-revert icon mobile-icon-only"><span>Effacer</span></div>
+                <div class="btn-primary small btn-confirm icon mobile-icon-only"><span>Mettre à jour</span></div>
             </div>
         
         </form>
@@ -114,7 +114,7 @@
                       <form action='action_tournoi_category_delete' method='post'>
                         <input type='hidden' name='num_category' value='$id_category'>
                         <input type='hidden' name='num_tournoi' value='$element'>
-                        <div class='btn-secondary btn-delete icon mobile-icon-only'></div>
+                        <div class='btn-tertiary small btn-delete icon mobile-icon-only'></div>
                     </form>
                 </div>
                 <div class='element-title'>$category – $soccer</div>
@@ -122,7 +122,7 @@
                     <form action='index.php?p=83' method='post'>
                         <input type='hidden' name='num_category' value='$id_category'>
                         <input type='hidden' name='num_tournoi' value='$element'>
-                        <div class='btn-primary btn-update icon mobile-icon-only'><span>Modifier</span></div>
+                        <div class='btn-primary small btn-update icon mobile-icon-only'><span>Modifier</span></div>
                     </form>
                 </div>
             </li>
@@ -131,7 +131,7 @@
                 }
             ?>
             
-            <div class="btn-primary cta-add icon mobile-icon-only i-more-2 js-content-add"><a>Ajouter une categorie</a></div>
+            <div class="btn-primary cta-add small icon mobile-icon-only i-more js-content-add"><a>Ajouter une categorie</a></div>
             
             <?php include("../_includes/admin_tournament_category-add.inc"); ?>
         

@@ -4,6 +4,27 @@ $(document).ready(function () {
 
     'use strict';
 
+    // Fonction pour faire disparaitre le menu lors du scroll down et le faire reapparaitre lors du scoll up
+    var c, currentScrollTop = 0,
+        navbar = $('.top-header');
+
+    var heroHeight = $('.hp-hero').outerHeight();
+
+    $(window).scroll(function () {
+        var a = $(window).scrollTop();
+        var b = navbar.height();
+
+        currentScrollTop = a;
+
+        if (c < currentScrollTop && a > b + b) {
+            navbar.addClass("small");
+        } else if (c > currentScrollTop && !(a <= b)) {
+            navbar.removeClass("small");
+        }
+        c = currentScrollTop;
+
+    });
+
     // Fonction pour ouvrir le menu au clic
     $('.menu-toggle').click(function(){
         $('.desktop').toggleClass('open');

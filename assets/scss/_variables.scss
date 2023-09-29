@@ -12,7 +12,6 @@ VARIABLES
 
 
 $bg-body: #ffffff;
-
 $text-content-max-width: 960px;
 
 
@@ -31,8 +30,7 @@ $web-grey-5: #343741;
 $web-grey-6: #181818;
 
 /* SPECIFIC BRAND */
-$primary-color-1: #C4A84C;
-//$primary-color-1: #FFCD00;
+$primary-color-1: #c2a031;
 $primary-color-2: #181818;
 $primary-color-3: #FFCD00;
 
@@ -45,63 +43,64 @@ $tertiary-color-2: #C8C3B3;
 $tertiary-color-3: #63666A;
 $tertiary-color-4: #D0D3D4;
 
-//$accent-color-1: #00B0AD;
-//$accent-color-2: #008776;
-$accent-color-1: $secondary-color-1;
-$accent-color-2: $tertiary-color-1;
-$accent-color-3: #ff1541;
-$accent-color-4: #BA0F2F;
 
+
+/****** MESSAGES & ALERTS ******/
 $alert-1: #fed624;
-$alert-2: darken($alert-1, 15%);
+$alert-2: #C2A031;
 $alert-3: #9bce7c;
 $alert-4: #1ecd28;
 $alert-5: #293D1D;
+$alert-6: #FF1541;
+$alert-7: #BA0F2F;
+
+$color-info: $alert-1;
+$color-error: $alert-6;
+$color-correct: $alert-4;
 
 $admin-color-1: #072ac8;
 
 
 /****** HEADER & FOOTER ******/
-$bg-header-color: $web-grey-6;
-$bg-dark-header-color: #121212;
-$bg-footer-color: $web-grey-6;
-$bg-dark-footer-color: #121212;
+$header-height-small: 80px;
+$header-height-large: 120px;
+$bg-header-color: white;
+$bg-sidemenu-color: $primary-color-2;
+$bg-footer-color: $primary-color-2;
 
 
-
-/****** DARK MODE *****/
-$bg-body-dark: #181818;
-$title-color-dark: white;
+/****** TITLES & TEXTS ******/
 $reading-text: $web-grey-6;
-$reading-text-dark: $web-grey-1;
-$text-color-dark: $web-grey-1;
 
 
-
-
+/****** POPUP ******/
 $popup-color: $primary-color-1;
 $popup-text-color: white;
-/****** Z-INDEX ******/
-$z-top-menu: 4;
-$z-mobile-menu: 4;
-$z-side-menu: 5;
-
-$z-alert-popup: 99;
-
-$z-home-hero-overlay: 2;
-$z-home-hero-content: 3;
+$popup-color-2: #f2f2f2;
+$popup-text-color-2: $primary-color-2;
+$popup-width-small: 320px;
+$popup-width-large: 520px;
 
 
 /*******************************************************
 ADMIN
 *******************************************************/
-$admin-color-1 : $secondary-color-3;
-$admin-update: $tertiary-color-2;
-$admin-confirm: #1ecd28;
-$admin-delete: $tertiary-color-3;
+$admin-color-1 : $secondary-color-1;
+$admin-update: $primary-color-1;
+$admin-confirm: $alert-4;
+$admin-delete: $alert-6;
 
 
-/****** MESSAGES & ALERTS ******/
-$color-info: #fed624;
-$color-error: #EF233C;
-$color-correct: #1ecd28;
+/*******************************************************
+Z-INDEX
+*******************************************************/
+$z-home-hero-overlay: 2;
+$z-home-hero-content: 3;
+$z-top-menu: 4;
+$z-side-menu: 5;
+$z-alert-popup: 99;
+
+
+
+
+

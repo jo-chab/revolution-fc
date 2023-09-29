@@ -94,28 +94,42 @@ GRID SYSTEM
         gap: 2.5rem;
     }
     
-}
-
-.grid-col-2 {
-    grid-template-columns: 1fr;
-    @include tablet {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-.grid-col-3 {
-    grid-template-columns: 1fr;
-    @include tablet {
-        grid-template-columns: repeat(2, 1fr);
-    }
-    @include desktop {
-        grid-template-columns: repeat(3, 1fr);
+    &.grid-col-2 {
+        grid-template-columns: 1fr;
+        @include tablet {
+            grid-template-columns: repeat(2, 1fr);
+        }
     }
     
-    &.t1 {
+    &.grid-col-3 {
+        grid-template-columns: 1fr;
         @include tablet {
-            grid-template-columns: 1fr;
+            grid-template-columns: repeat(2, 1fr);
         }
+        @include desktop {
+            grid-template-columns: repeat(3, 1fr);
+        }
+        
+        &.t1 {
+            @include tablet {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+    }
+    
+    &.grid-col-4 {
+        grid-template-columns: 1fr 1fr;
+        @include desktop {
+            grid-template-columns: repeat(4, 1fr);
+        }
+        
+        &.t1 {
+            @include tablet {
+                grid-template-columns: 1fr;
+            }
+        }
+        
     }
     
 }
@@ -131,18 +145,20 @@ $space-dl: 8rem;
 
 
 main.w-content {
-    //padding-top: 6rem;
+    padding-top: 6rem;
     .w-home & {
-        //@include mobile-max {
+        @include mobile-max {
             padding-top: 0;
-        //}
+        }
     }
 }
 
 
 
 
-/********* SECTION *********/
+/*******************************************************
+LAYOUT ELEMENTS
+*******************************************************/
 section {
     width:100%;
     margin:0 auto;
@@ -168,10 +184,6 @@ section {
         background-color: $web-grey-1;
     }
 }
-
-
-
-
 
 article {
     @extend .web-layout;
@@ -223,8 +235,8 @@ article {
                 justify-content: flex-end;
                 height: 60dvh;
                 @include tablet {
-                    min-height: 520px;
-                    max-height: 70dvh;
+                    min-height: 580px;
+                    max-height: 80dvh;
                     justify-content: flex-end;
                 }
             }
@@ -269,6 +281,53 @@ figure {
     
     img {
         width: 100%;
+    }
+}
+
+
+
+
+/*******************************************************
+COOKIES Popup
+*******************************************************/
+.cookie-popup {
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    
+    position: fixed;
+    bottom: 4rem;
+    right: 4rem;
+    z-index: $z-alert-popup;
+    
+    padding: 2rem;
+    width: 80%;
+    max-width: $popup-width-large;
+    @include border-radius-uniform(1.5rem);
+    background: $popup-color-2;
+    border: 1px solid $primary-color-1;
+    
+    -webkit-box-shadow: 0 5px 20px -6px rgba(18,18,18,.4);
+    -moz-box-shadow: 0 5px 20px -6px rgba(18,18,18,.4);
+    box-shadow: 0 5px 20px -6px rgba(18,18,18,.4);
+    
+    @include mobile-max {
+        right: 2rem;
+        bottom: 2rem;
+    }
+    
+    p {
+        color: $popup-text-color-2;
+    }
+}
+.cookie-cta {
+    display: flex;
+    gap: 2rem;
+    place-self: flex-end;
+    margin-top: 1rem;
+    
+    .btn-tertiary {
+        margin: 0;
     }
 }
 

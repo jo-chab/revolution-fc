@@ -14,6 +14,146 @@ MAIN CSS
 *******************************************************/
 
 
+/***********************
+Lists
+***********************/
+.list-text {
+	position: relative;
+	margin-block: 1rem 2rem;
+	margin-inline-start: 2rem;
+	list-style: none;
+	
+	li {
+		@include font-family-reading;
+		@include font-style(400, 1rem, 1.5em, $reading-text);
+		margin-bottom: .25rem;
+		
+		display: flex;
+		align-items: baseline;
+		gap: .5rem;
+		
+		&:last-of-type {
+			margin-bottom: 0;
+		}
+		
+		&:before {
+			content: "\2022"; /* Unicode character for a bullet (circle) */
+			display: inline-flex;
+		}
+	}
+}
+
+.list-people {
+	@extend .web-layout;
+	margin-block: 3rem;
+	
+	&.col-2 {
+		.list-people-header {
+			@include tablet {
+				grid-column: span 2;
+			}
+		}
+	}
+	
+	&.col-3 {
+		.list-people-header {
+			@include tablet {
+				grid-column: span 2;
+			}
+			@include desktop {
+				grid-column: span 3;
+			}
+		}
+	}
+	
+	.people-el {
+		display: flex;
+		flex-flow: column nowrap;
+		gap: .5rem;
+		
+		.list-people-function {
+			@include font-family-heading();
+			@include font-style(700, 1.5rem, 1em, $primary-color-2);
+			text-transform: uppercase;
+			margin-bottom: .5rem;
+		}
+		
+		.list-people-img {
+			margin-bottom: 1rem;
+			width: 100%;
+			aspect-ratio: 1;
+			
+			background-position: top center;
+			background-repeat: no-repeat;
+			background-size: cover;
+			@include tablet {
+				max-width: 320px;
+			}
+		}
+		
+		.list-people-name {
+			@include font-family-heading();
+			@include font-style(700, 1.125rem, 1em, $primary-color-1);
+			text-transform: capitalize;
+		}
+		
+		.list-people-legend {
+			@include font-family-reading();
+			@include font-style(400, .875rem, 1.5em, $secondary-color-1);
+		}
+		
+		.list-people-email {
+			margin-top: .5rem;
+			@include font-family-reading();
+			@include font-style(400, 1rem, 1em, $primary-color-1);
+		}
+	}
+}
+
+/***** DOCUMENTS LISTS *****/
+.w-list-docs {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	
+	width: 100%;
+	margin-top: 3rem;
+	
+}
+
+.list-docs {
+	width: 100%;
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	gap: 2rem;
+	margin-block: 1rem 4rem;
+	@include tablet {
+		gap: 1rem;
+	}
+	
+	li {
+		display: inline-flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: 1.25rem;
+		@include tablet {
+			gap: 3rem;
+		}
+	}
+	
+	span.docs-title {
+		@include font-family-heading();
+		@include font-style(400, 1rem, 1.5em, $tertiary-color-3);
+		flex-grow: 1;
+	}
+}
+
+
+
+
+
 /******************************
 HOME PAGE
 ******************************/
@@ -81,7 +221,7 @@ HOME PAGE
 		padding:16px;
 		margin-bottom: 16px;
 		&.important {
-			background-color: $accent-color-1;
+			background-color: $secondary-color-1;
 			h3 {
 				color: white;
 				margin-bottom:0;
@@ -112,7 +252,7 @@ HOME PAGE
 /* JOBS SECTION */
 .hp-jobs {
 	padding: 16px;
-	border: 1px solid $accent-color-1;
+	border: 1px solid $secondary-color-1;
 	position: relative;
 	
 	@include tablet {
@@ -128,7 +268,7 @@ HOME PAGE
 		background: $bg-body;
 		
 		display: table;
-		@include font-style(400, 16px, 1.5em, $accent-color-1);
+		@include font-style(400, 16px, 1.5em, $secondary-color-1);
 		@include font-family-heading;
 		text-transform: uppercase;
 		letter-spacing: .5px;
@@ -249,7 +389,7 @@ NEWS PAGE – To do
 	margin-top: 80px;
 	
 	.page-cta {
-		background-color: $accent-color-1;
+		background-color: $secondary-color-1;
 		padding:8px 16px;
 		font-size:32px;
 		color: white;
@@ -261,8 +401,8 @@ NEWS PAGE – To do
 			padding: 4px 8px;
 			&.active-page {
 				font-weight: 700;
-				color: $accent-color-1;
-				border-bottom: 4px solid $accent-color-1;
+				color: $secondary-color-1;
+				border-bottom: 4px solid $secondary-color-1;
 			}
 		}
 	}
@@ -320,7 +460,7 @@ News detail / Programme detail - To do
 	span {
 		&.news-section-header {
 			@include font-family-heading();
-			@include font-style(400, 20px, 1.5em, $accent-color-1);
+			@include font-style(400, 20px, 1.5em, $secondary-color-1);
 			text-decoration: underline;
 			display:inline-block;
 			margin-bottom: 16px;
@@ -337,11 +477,11 @@ News detail / Programme detail - To do
 		}
 	}
 	a.news-external_link {
-		color: $accent-color-1;
+		color: $secondary-color-1;
 		text-decoration: underline;
 		transition: all .3s ease	;
 		&:hover {
-			color: darken($accent-color-1, 30%);
+			color: darken($secondary-color-1, 30%);
 		}
 	}
 	
@@ -543,7 +683,7 @@ TOURNOI – Done
 
 	&-type {
 		@include font-family-heading;
-		@include font-style(700, 2rem, 1em, $accent-color-1);
+		@include font-style(700, 2rem, 1em, $secondary-color-1);
 	}
 	&-category {
 		@include font-family-reading;

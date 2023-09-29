@@ -8,7 +8,7 @@
             <div class="dashboard-content">
                 
                 
-                <div class="btn-primary cta-add icon mobile-icon-only i-more-2 js-content-add"><span>Ajouter un.e membre de l'administration</span></div>
+                <div class="btn-primary small cta-add icon mobile-icon-only i-more js-content-add"><span>Ajouter un.e membre de l'administration</span></div>
 
                 <div class="dashboard-content content-add">
 
@@ -53,7 +53,7 @@
 
                         </div>
                         <div class="d-form-cta">
-                            <div class="btn-primary btn-validate icon mobile-icon-only"><span>Ajouter</span></div>
+                            <div class="btn-primary small btn-validate icon mobile-icon-only"><span>Ajouter</span></div>
                         </div>
                     </form>
 
@@ -88,7 +88,7 @@
                             echo "
                             <form action='action_ppl_admin_delete' method='post'>
                                 <input type='hidden' name='element' value='$member'>
-                                <div class='btn-primary btn-delete icon mobile-icon-only validate-form'><span>Supprimer</span></div>
+                                <div class='btn-primary small btn-delete icon mobile-icon-only validate-form'><span>Supprimer</span></div>
                             </form>
                             ";
                         }
@@ -96,7 +96,7 @@
                         echo "
                             <form action='?p=24' method='post'>
                                 <input type='hidden' name='element' value='$member'>
-                                <div class='btn-primary btn-update icon mobile-icon-only validate-form'><span>Modifier</span></div>
+                                <div class='btn-primary small btn-update icon mobile-icon-only validate-form'><span>Modifier</span></div>
                             </form>
                         </div>	
                     </li>
