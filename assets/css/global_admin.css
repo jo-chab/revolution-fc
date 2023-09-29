@@ -14,12 +14,16 @@ COLORS
 *******************************************************/
 /* BASICS */
 /* SPECIFIC BRAND */
+/****** MESSAGES & ALERTS ******/
 /****** HEADER & FOOTER ******/
-/****** Z-INDEX ******/
+/****** TITLES & TEXTS ******/
+/****** POPUP ******/
 /*******************************************************
 ADMIN
 *******************************************************/
-/****** MESSAGES & ALERTS ******/
+/*******************************************************
+Z-INDEX
+*******************************************************/
 /*
 *
 * LOCATION: [core]
@@ -222,7 +226,7 @@ h2 {
   font-weight: 700;
   font-size: 1.5rem;
   line-height: 1.5em;
-  color: #C4A84C;
+  color: #c2a031;
   text-transform: uppercase;
   letter-spacing: 2px;
   margin-bottom: 1rem;
@@ -344,7 +348,7 @@ p {
   p span.text-highlight {
     font-weight: 700; }
   p .inline-link {
-    color: #C4A84C;
+    color: #c2a031;
     font-weight: 600;
     transition: all .3s ease; }
     p .inline-link:hover {
@@ -779,12 +783,12 @@ DESIGN SYSTEM – Alert message box
       .w-alert-message .alert-message {
         padding: 4rem; } }
     .w-alert-message .alert-message i {
-      color: #d5ae01;
+      color: #C2A031;
       padding: 0 0 16px;
       font-size: 2em; }
     .w-alert-message .alert-message.alert-info {
-      background-color: #C4A84C;
-      border-color: #5a4c1e;
+      background-color: #c2a031;
+      border-color: #483b12;
       color: white; }
       .w-alert-message .alert-message.alert-info i {
         color: white; }
@@ -894,7 +898,7 @@ DESIGN SYSTEM – Buttons
   font-size: 1.125rem;
   line-height: 1em;
   color: white;
-  background-color: #C4A84C; }
+  background-color: #c2a031; }
   @media (max-width: 767px) {
     .btn-primary {
       padding: 1rem; } }
@@ -903,7 +907,7 @@ DESIGN SYSTEM – Buttons
       font-size: 1.25rem; } }
   @media (min-width: 768px) {
     .btn-primary:hover {
-      background-color: #806c2a; } }
+      background-color: #715d1c; } }
   .btn-primary.small {
     font-size: 1rem; }
   .btn-primary.btn-update {
@@ -928,7 +932,7 @@ DESIGN SYSTEM – Buttons
     color: #181818; }
     @media (min-width: 768px) {
       .btn-primary.cta-back:hover {
-        background-color: #d5ae01; } }
+        background-color: #C2A031; } }
     .btn-primary.cta-back:before {
       font: var(--fa-font-sharp-regular);
       content: '\f344';
@@ -977,7 +981,7 @@ DESIGN SYSTEM – Buttons
   padding: 0;
   margin: 1.5rem 0; }
   .btn-tertiary:hover {
-    color: #C4A84C; }
+    color: #c2a031; }
   .dashboard .btn-tertiary {
     margin: 0; }
   .btn-tertiary.btn-light {
@@ -999,16 +1003,16 @@ DESIGN SYSTEM – Buttons
         .btn-tertiary.btn-disable:hover, .btn-tertiary.btn-delete:hover, .btn-tertiary.btn-cancel:hover, .btn-tertiary.btn-activate:hover, .btn-tertiary.btn-revert:hover {
           color: unset; } }
   .btn-tertiary.btn-update {
-    color: #C4A84C; }
+    color: #c2a031; }
     .btn-tertiary.btn-update:hover {
-      color: #806c2a; }
+      color: #715d1c; }
 
 .btn-filter {
   gap: .5rem;
   font-weight: 400;
   font-size: 0.875rem;
   line-height: 1em;
-  color: #C4A84C;
+  color: #c2a031;
   padding: 0; }
   .btn-filter-select .btn-filter {
     color: #2D3D32;
@@ -1022,7 +1026,7 @@ DESIGN SYSTEM – Buttons
     color: #949A90; }
     .btn-filter.is-inactive:hover {
       opacity: 1;
-      color: #C4A84C; }
+      color: #c2a031; }
 
 .btn-download {
   background: #D0D3D4;
@@ -1035,7 +1039,7 @@ DESIGN SYSTEM – Buttons
     .btn-download {
       width: unset; } }
   .btn-download:hover {
-    background: #C4A84C; }
+    background: #c2a031; }
 
 .is-inactive > * {
   opacity: 0.2; }
@@ -1276,7 +1280,7 @@ SIDEBAR - IN PROGRESS
       font-size: 14px;
       font-weight: 300; }
       .sidebar .sidebar-menu li.ss-menu-element:hover {
-        color: #C4A84C;
+        color: #c2a031;
         transition: all .3s ease; }
       .sidebar .sidebar-menu li.ss-menu-element.not-active {
         color: #5f6369; }
@@ -1349,7 +1353,7 @@ input {
   border: 1px solid #d3d3d3;
   border-radius: .5rem; }
   input:hover {
-    border-color: #C4A84C; }
+    border-color: #c2a031; }
   input:focus {
     color: #181818;
     border-color: #343741; }
@@ -1376,7 +1380,7 @@ textarea {
   margin-bottom: 2rem;
   resize: none; }
   textarea:hover {
-    border-color: #C4A84C; }
+    border-color: #c2a031; }
   textarea:focus {
     color: #343741;
     border-color: #343741; }
@@ -1413,7 +1417,7 @@ textarea {
       max-width: 360px; } }
   .inputfile + label:hover {
     cursor: pointer;
-    background-color: #d5ae01;
+    background-color: #C2A031;
     transition: all .3s ease; }
 
 input[type='date'] {
@@ -1438,14 +1442,14 @@ input[class*="cta-"] {
       width: fit-content;
       transition: all .3s ease; } }
   input[class*="cta-"].cta-login {
-    background-color: #C4A84C;
+    background-color: #c2a031;
     color: white;
     border-radius: 2rem;
     width: 100%;
     font-size: 1.25rem;
     margin-top: 1rem; }
     input[class*="cta-"].cta-login:hover {
-      background-color: #806c2a; }
+      background-color: #715d1c; }
   input[class*="cta-"].cta-update {
     background-color: #FF1541;
     color: white; }
@@ -1513,7 +1517,7 @@ input[class*="cta-"] {
 * LOCATION: [assets]
 * FOLDER: [scss]
 * FILE NAME: [main-admin.scss]
-* DESCRIPTION: admin css file for Panel
+* DESCRIPTION: admin css file
 *
 */
 .d-form-cta {
@@ -1751,10 +1755,10 @@ USERS
     background-color: #a0a0a0; }
 
 .cta-user.activate input[type="submit"] {
-  background-color: #C4A84C;
+  background-color: #c2a031;
   color: white; }
   .cta-user.activate input[type="submit"]:hover {
-    background-color: #806c2a; }
+    background-color: #715d1c; }
 
 .cta-user.delete input[type="submit"] {
   background-color: #FF1541;
