@@ -61,7 +61,7 @@ footer {
         
         li {
             @include font-family-reading();
-            @include font-style(400, 12px, 1.5em, white);
+            @include font-style(300, .75rem, 1.5em, white);
             padding: 2px 0;
             
             &.list-header {
@@ -70,24 +70,27 @@ footer {
                 margin-bottom: 8px;
             }
             
-            &:hover:not(list-header) {
-                color: $tertiary-color-1;
-                
+            &:hover:not(.list-header) {
+                color: $primary-color-1;
             }
         }
     }
     
     .footer-copy {
+        display: grid;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
         grid-column: span 2;
-        text-align: center;
         @include tablet {
             grid-row: 2;
             grid-column: span 5;
         }
         
         p {
+            margin: 0 auto;
             color: white;
-            font-size: 12px;
+            font-size: .875rem;
         }
     }
     

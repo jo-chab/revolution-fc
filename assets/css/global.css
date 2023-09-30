@@ -1553,8 +1553,8 @@ footer {
     width: 100%; }
     .main-footer .footer-nav li {
       font-family: 'Source Sans 3', sans-serif;
-      font-weight: 400;
-      font-size: 12px;
+      font-weight: 300;
+      font-size: 0.75rem;
       line-height: 1.5em;
       color: white;
       padding: 2px 0; }
@@ -1562,18 +1562,22 @@ footer {
         font-size: 14px;
         font-weight: 700;
         margin-bottom: 8px; }
-      .main-footer .footer-nav li:hover:not(list-header) {
-        color: #949A90; }
+      .main-footer .footer-nav li:hover:not(.list-header) {
+        color: #c2a031; }
   .main-footer .footer-copy {
-    grid-column: span 2;
-    text-align: center; }
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    grid-column: span 2; }
     @media (min-width: 768px) {
       .main-footer .footer-copy {
         grid-row: 2;
         grid-column: span 5; } }
     .main-footer .footer-copy p {
+      margin: 0 auto;
       color: white;
-      font-size: 12px; }
+      font-size: .875rem; }
 
 /*
 *
