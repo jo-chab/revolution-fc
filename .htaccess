@@ -13,4 +13,6 @@ Header always set Content-Security-Policy "upgrade-insecure-requests;"
     RewriteRule ^(.+)$ $1.php [L]
 
 
+    RewriteRule ^nouvelles/index$ /nouvelles/ [R=301,L]
+
 </IfModule>

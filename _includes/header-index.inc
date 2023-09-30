@@ -1,1 +1,0 @@
-<script type="text/javascript" src="../js/header-js.js"></script><?php include("_includes/alert_messages.inc"); ?><!-- START OF THE HEADER --><header>	<div class="top-header top-header-bg-alt">        <?php include("_includes/header-top-menu.inc"); ?>	</div>    <?php include("_includes/header-side-menu.inc"); ?></header><!-- END OF THE HEADER -->

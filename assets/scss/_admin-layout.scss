@@ -176,6 +176,8 @@ ALERT MESSAGES in Dashboard
         background: $web-grey-6;
         color: white;
         font-size: .875rem;
+        display: inline-flex;
+        align-items: center;
     }
     
     .message-box-close {

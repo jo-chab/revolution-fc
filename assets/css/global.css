@@ -468,6 +468,10 @@ ADMIN ICONS
   font-family: "Font Awesome Kit";
   content: '\e011'; }
 
+.i-config-club:before {
+  font-family: "Font Awesome Kit";
+  content: '\e015'; }
+
 .i-config-home:before {
   font-family: "Font Awesome Kit";
   content: '\e010'; }
@@ -586,7 +590,8 @@ ADMIN ICONS
   content: '\f12d';
   font-size: 1.25em; }
 
-.btn-confirm:before {
+.btn-confirm:before,
+.btn-validate:before {
   font: var(--fa-font-regular);
   content: '\f058';
   font-size: 1.25em; }
@@ -1007,17 +1012,18 @@ DESIGN SYSTEM – Buttons
     .btn-primary:hover {
       background-color: #715d1c; } }
   .btn-primary.small {
-    font-size: 1rem; }
+    font-size: .875rem;
+    padding: .75rem 1.25rem; }
   .btn-primary.btn-update {
     background-color: #FF1541; }
     @media (min-width: 768px) {
       .btn-primary.btn-update:hover {
         background-color: #ae0021; } }
-  .btn-primary.btn-confirm {
+  .btn-primary.btn-confirm, .btn-primary.cta-add {
     background-color: #1ecd28;
     justify-self: center; }
     @media (min-width: 768px) {
-      .btn-primary.btn-confirm:hover {
+      .btn-primary.btn-confirm:hover, .btn-primary.cta-add:hover {
         background-color: #117417; } }
   .btn-primary.btn-delete, .btn-primary.btn-cancel, .btn-primary.btn-disable, .btn-primary.btn-activate, .btn-primary.btn-revert {
     background-color: #eef1f7;
@@ -1035,12 +1041,6 @@ DESIGN SYSTEM – Buttons
       font: var(--fa-font-sharp-regular);
       content: '\f344';
       font-size: .875em; }
-  .btn-primary.cta-add {
-    background-color: #1ecd28;
-    justify-self: center; }
-    @media (min-width: 768px) {
-      .btn-primary.cta-add:hover {
-        background-color: #117417; } }
   @media (max-width: 767px) {
     .btn-primary span.is-hide-mobile {
       display: none; } }
@@ -1063,7 +1063,8 @@ DESIGN SYSTEM – Buttons
       border-color: #0d110e;
       color: #0d110e; } }
   .btn-secondary.small {
-    font-size: 1rem; }
+    font-size: .875rem;
+    padding: .75rem 1.25rem; }
   .btn-secondary.ghost-white {
     color: white;
     border-color: white; }
@@ -1085,7 +1086,7 @@ DESIGN SYSTEM – Buttons
   .btn-tertiary.btn-light {
     color: white; }
   .btn-tertiary.small {
-    font-size: 1rem; }
+    font-size: .875rem; }
   .btn-tertiary.cta-add {
     color: #1ecd28; }
     .btn-tertiary.cta-add:hover {

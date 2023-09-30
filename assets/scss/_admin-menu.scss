@@ -26,6 +26,7 @@ header {
         flex-wrap: nowrap;
         justify-content: center;
         align-items: center;
+        gap: 2rem;
         @include tablet {
             justify-content: flex-end;
         }
@@ -34,30 +35,12 @@ header {
             @include font-family-reading;
             @include font-style(400, 14px, 1.5em, $web-grey-4);
             padding: 0;
-            .is-hide-mobile {
-                @include mobile-max {
-                    display: none;
-                }
-            }
-            &:after {
-                content: '|';
-                padding: 0 16px;
-            }
-            &:last-of-type:after {
-                content:none;
-                padding: 0 0 0 8px;
-            }
             &:hover {
                 color: $web-grey-6;
                 cursor: pointer;
             }
             &.menu-toggle {
                 @include tablet {
-                    display: none;
-                }
-            }
-            &.is-hide-mobile {
-                @include mobile-max {
                     display: none;
                 }
             }
@@ -80,7 +63,7 @@ SIDEBAR - IN PROGRESS
     width: $sidemenu-width;
     height: 100vh;
     overflow-x: scroll;
-    padding: 32px 16px;
+    padding: 2rem 1rem;
 
     background-color: $web-grey-5;
     @include dark-mode {
@@ -88,7 +71,6 @@ SIDEBAR - IN PROGRESS
     }
     @include mobile-max {
         width: 100%;
-        //margin: -16px 0 0 -16px;
         transform: translateX(-1000px);
         transition:  all .5s ease;
         &.open {
@@ -99,15 +81,11 @@ SIDEBAR - IN PROGRESS
     .sidebar-menu li {
         @include font-family-reading;
         color: white;
-        padding:4px 8px;
-        i {
-            display: inline-block;
-            padding-right: 8px;
-        }
+        padding:.25rem .5rem;
 
         &.ss-menu-element {
-            padding-left: 32px;
-            font-size: 14px;
+            padding-left: 2.5rem;
+            font-size: .875rem;
             font-weight: 300;
             &:hover {
                 color: $primary-color-1;
@@ -118,7 +96,6 @@ SIDEBAR - IN PROGRESS
                 @include dark-mode {
                     color: $web-grey-5;
                 }
-                //pointer-events: none;
             }
         }
         &.menu-element {

@@ -147,6 +147,10 @@ ADMIN ICONS
     font-family: "Font Awesome Kit";
     content: '\e011';
 }
+.i-config-club:before {
+    font-family: "Font Awesome Kit";
+    content: '\e015';
+}
 .i-config-home:before {
     font-family: "Font Awesome Kit";
     content: '\e010';
@@ -311,7 +315,8 @@ ADMIN ICONS
     font-size: 1.25em;
 }
 
-.btn-confirm:before {
+.btn-confirm:before,
+.btn-validate:before {
     font: var(--fa-font-regular);
     content: '\f058';
     font-size: 1.25em;
