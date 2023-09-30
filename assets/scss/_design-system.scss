@@ -227,7 +227,8 @@ DESIGN SYSTEM – Buttons
     }
     
     &.small {
-        font-size: 1rem;
+        font-size: .875rem;
+        padding: .75rem 1.25rem;
     }
     
     &.btn-update {
@@ -239,7 +240,8 @@ DESIGN SYSTEM – Buttons
         }
     }
     
-    &.btn-confirm {
+    &.btn-confirm,
+    &.cta-add {
         background-color: $color-correct;
         justify-self: center;
         @include tablet {
@@ -280,16 +282,6 @@ DESIGN SYSTEM – Buttons
         }
     }
     
-    &.cta-add {
-        background-color: $color-correct;
-        justify-self: center;
-        @include tablet {
-            &:hover {
-                background-color: darken($color-correct, 20%);
-            }
-        }
-    }
-    
     span.is-hide-mobile {
         @include mobile-max {
             display: none;
@@ -317,7 +309,8 @@ DESIGN SYSTEM – Buttons
     }
     
     &.small {
-        font-size: 1rem;
+        font-size: .875rem;
+        padding: .75rem 1.25rem;
     }
     
     &.ghost-white {
@@ -349,7 +342,7 @@ DESIGN SYSTEM – Buttons
     }
     
     &.small {
-        font-size: 1rem;
+        font-size: .875rem;
     }
     
     &.cta-add {
