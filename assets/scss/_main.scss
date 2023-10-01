@@ -25,7 +25,7 @@ Lists
 	
 	li {
 		@include font-family-reading;
-		@include font-style(400, 1rem, 1.5em, $reading-text);
+		@include font-style(400, 1.125rem, 1.5em, $reading-text);
 		margin-bottom: .25rem;
 		
 		display: flex;

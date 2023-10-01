@@ -519,7 +519,7 @@ ADMIN ICONS
 .i-bdd:before {
   font: var(--fa-font-brands);
   content: '\f388';
-  font-size: 1.5em; }
+  font-size: 1.75rem; }
 
 .i-config:before {
   font: var(--fa-font-light);
@@ -1224,16 +1224,16 @@ header {
     .top-header ul li {
       font-family: 'Source Sans 3', sans-serif;
       font-weight: 400;
-      font-size: 14px;
+      font-size: 1.25rem;
       line-height: 1.5em;
       color: #5f6369;
       padding: 0; }
+      @media (min-width: 768px) {
+        .top-header ul li {
+          font-size: .875rem; } }
       .top-header ul li:hover {
         color: #181818;
         cursor: pointer; }
-      @media (min-width: 768px) {
-        .top-header ul li.menu-toggle {
-          display: none; } }
 
 /*************************************
 SIDEBAR - IN PROGRESS

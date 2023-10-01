@@ -519,7 +519,7 @@ ADMIN ICONS
 .i-bdd:before {
   font: var(--fa-font-brands);
   content: '\f388';
-  font-size: 1.5em; }
+  font-size: 1.75rem; }
 
 .i-config:before {
   font: var(--fa-font-light);
@@ -1601,7 +1601,7 @@ Lists
   .list-text li {
     font-family: 'Source Sans 3', sans-serif;
     font-weight: 400;
-    font-size: 1rem;
+    font-size: 1.125rem;
     line-height: 1.5em;
     color: #181818;
     margin-bottom: .25rem;

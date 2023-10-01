@@ -33,16 +33,14 @@ header {
 
         li {
             @include font-family-reading;
-            @include font-style(400, 14px, 1.5em, $web-grey-4);
+            @include font-style(400, 1.25rem, 1.5em, $web-grey-4);
             padding: 0;
+            @include tablet {
+                font-size: .875rem;
+            }
             &:hover {
                 color: $web-grey-6;
                 cursor: pointer;
-            }
-            &.menu-toggle {
-                @include tablet {
-                    display: none;
-                }
             }
         }
     }
