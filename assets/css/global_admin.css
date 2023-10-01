@@ -519,7 +519,7 @@ ADMIN ICONS
 .i-bdd:before {
   font: var(--fa-font-brands);
   content: '\f388';
-  font-size: 1.5em; }
+  font-size: 1.75rem; }
 
 .i-config:before {
   font: var(--fa-font-light);
@@ -980,13 +980,18 @@ DESIGN SYSTEM – Buttons
   font-weight: 400;
   font-size: 1.25em;
   line-height: 1em;
-  color: #181818;
-  padding: 0;
-  margin: 1.5rem 0; }
+  color: #c2a031;
+  padding: 1.25rem 2rem;
+  margin: 1.5rem 0;
+  border-radius: 0; }
   .btn-tertiary:hover {
-    color: #c2a031; }
+    color: #856e22; }
   .dashboard .btn-tertiary {
     margin: 0; }
+  .btn-tertiary.btn-text {
+    margin: 0;
+    padding: 0;
+    justify-content: flex-start; }
   .btn-tertiary.btn-light {
     color: white; }
   .btn-tertiary.small {
@@ -1018,12 +1023,12 @@ DESIGN SYSTEM – Buttons
   color: #c2a031;
   padding: 0; }
   .btn-filter-select .btn-filter {
-    color: #2D3D32;
+    color: #c2a031;
     text-transform: uppercase; }
     .btn-filter-select .btn-filter.is-inactive {
       color: #949A90; }
       .btn-filter-select .btn-filter.is-inactive:hover {
-        color: #2D3D32; }
+        color: #c2a031; }
   .btn-filter.is-inactive {
     opacity: .5;
     color: #949A90; }
@@ -1224,16 +1229,16 @@ header {
     .top-header ul li {
       font-family: 'Source Sans 3', sans-serif;
       font-weight: 400;
-      font-size: 14px;
+      font-size: 1.25rem;
       line-height: 1.5em;
       color: #5f6369;
       padding: 0; }
+      @media (min-width: 768px) {
+        .top-header ul li {
+          font-size: .875rem; } }
       .top-header ul li:hover {
         color: #181818;
         cursor: pointer; }
-      @media (min-width: 768px) {
-        .top-header ul li.menu-toggle {
-          display: none; } }
 
 /*************************************
 SIDEBAR - IN PROGRESS
@@ -1368,6 +1373,8 @@ textarea {
   border-radius: .5rem;
   margin-bottom: 2rem;
   resize: none; }
+  textarea.small {
+    height: 100px; }
   textarea:hover {
     border-color: #c2a031; }
   textarea:focus {

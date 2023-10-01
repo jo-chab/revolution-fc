@@ -31,34 +31,11 @@
 
 
     //const filterButtons = document.querySelectorAll(".btn-filter");
-    const filterButtonsSeason = document.querySelectorAll(".filter-buttons-season .btn-filter");
     const filterButtonsCity = document.querySelectorAll(".filter-buttons-city .btn-filter");
     const filterButtonsType = document.querySelectorAll(".filter-buttons-type .btn-filter");
     const fieldEls = document.querySelectorAll(".field-el");
 
-    filterButtonsSeason.forEach(buttonSeason => {
-        buttonSeason.addEventListener("click", function() {
-            const filterSeason = buttonSeason.getAttribute("id").replace("cta-field-", "");
 
-            fieldEls.forEach(fieldEl => {
-                const season = fieldEl.getAttribute("data-season");
-
-                if (filterSeason === "all" || season === filterSeason) {
-                  fieldEl.classList.remove("is-hide");
-                } else {
-                  fieldEl.classList.add("is-hide");
-                }
-            });
-            filterButtonsSeason.forEach(btn => {
-            if (btn === buttonSeason) {
-                btn.classList.remove("is-inactive");
-            }
-            else {
-                btn.classList.add("is-inactive");
-            }
-          });
-        });
-    });
 
     filterButtonsCity.forEach(buttonCity => {
         buttonCity.addEventListener("click", function() {

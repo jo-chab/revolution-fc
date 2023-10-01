@@ -93,6 +93,10 @@ textarea {
     margin-bottom: 2rem;
     resize: none;
     
+    &.small {
+        height: 100px;
+    }
+    
     &:hover {
         border-color: $primary-color-1;
     }

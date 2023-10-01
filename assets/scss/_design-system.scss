@@ -288,7 +288,6 @@ DESIGN SYSTEM – Buttons
         }
     }
 }
-
 .btn-secondary {
     @extend .button;
     padding: 1.25rem 2rem;
@@ -327,15 +326,22 @@ DESIGN SYSTEM – Buttons
 .btn-tertiary {
     @extend .button;
     
-    @include font-style(400, 1.25em, 1em, $primary-color-2);
-    padding: 0;
+    @include font-style(400, 1.25em, 1em, $primary-color-1);
+    padding: 1.25rem 2rem;
     margin: 1.5rem 0;
+    border-radius: 0;
     &:hover {
-        color: $primary-color-1;
+        color: darken($primary-color-1, 15%);
     }
     
     .dashboard & {
         margin: 0;
+    }
+    
+    &.btn-text {
+        margin: 0;
+        padding: 0;
+        justify-content: flex-start;
     }
     &.btn-light {
         color: white;
@@ -351,6 +357,7 @@ DESIGN SYSTEM – Buttons
             color: darken($color-correct, 20%);
         }
     }
+    
     &.btn-disable,
     &.btn-delete,
     &.btn-cancel,
@@ -375,9 +382,8 @@ DESIGN SYSTEM – Buttons
             color: darken($primary-color-1, 20%);
         }
     }
+    
 }
-
-
 
 .btn-filter {
     @extend .button;
@@ -386,13 +392,13 @@ DESIGN SYSTEM – Buttons
     @include font-style(400, .875rem, 1em, $primary-color-1);
     padding: 0;
     .btn-filter-select & {
-        color: $secondary-color-1;
+        color: $primary-color-1;
         text-transform: uppercase;
         
         &.is-inactive {
             color: $tertiary-color-1;
             &:hover {
-                color: $secondary-color-1;
+                color: $primary-color-1;
             }
         }
     }
@@ -406,7 +412,6 @@ DESIGN SYSTEM – Buttons
         }
     }
 }
-
 
 .btn-download {
     @extend .button;
