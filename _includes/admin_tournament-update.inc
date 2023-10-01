@@ -114,7 +114,7 @@
                       <form action='action_tournoi_category_delete' method='post'>
                         <input type='hidden' name='num_category' value='$id_category'>
                         <input type='hidden' name='num_tournoi' value='$element'>
-                        <div class='btn-tertiary small btn-delete icon mobile-icon-only'></div>
+                        <div class='btn-tertiary btn-text small btn-delete icon mobile-icon-only'></div>
                     </form>
                 </div>
                 <div class='element-title'>$category – $soccer</div>

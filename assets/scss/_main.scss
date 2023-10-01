@@ -568,6 +568,7 @@ PROGRAMMES - en cours –
 		margin: 0;
 	}
 }
+
 .programme-img {
 	background-repeat: no-repeat;
 	background-position: center center;
@@ -613,17 +614,33 @@ FIELDS PAGE – Done
 	flex-flow: row wrap;
 	gap: 1rem;
 }
+.list-fields {
+	margin-bottom: 6rem;
+}
 .field {
 	&-el {
-		h4 {
-			text-transform: unset;
+		width: 100%;
+		p {
+			margin-bottom: 0;
 		}
 		.btn-tertiary {
-			color: $tertiary-color-1;
-			&:hover {
-				color: $secondary-color-1;
-			}
+			margin-top: 1rem;
 		}
+	}
+	
+	&-name {
+		margin: 0;
+		font-weight: 700;
+	}
+	
+	&-desc {
+		font-size: .875rem;
+		color: $secondary-color-1;
+	}
+	
+	&-address {
+		margin-top: .5rem;
+		line-height: 1.3em;
 	}
 }
 

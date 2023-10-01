@@ -1076,13 +1076,18 @@ DESIGN SYSTEM – Buttons
   font-weight: 400;
   font-size: 1.25em;
   line-height: 1em;
-  color: #181818;
-  padding: 0;
-  margin: 1.5rem 0; }
+  color: #c2a031;
+  padding: 1.25rem 2rem;
+  margin: 1.5rem 0;
+  border-radius: 0; }
   .btn-tertiary:hover {
-    color: #c2a031; }
+    color: #856e22; }
   .dashboard .btn-tertiary {
     margin: 0; }
+  .btn-tertiary.btn-text {
+    margin: 0;
+    padding: 0;
+    justify-content: flex-start; }
   .btn-tertiary.btn-light {
     color: white; }
   .btn-tertiary.small {
@@ -1114,12 +1119,12 @@ DESIGN SYSTEM – Buttons
   color: #c2a031;
   padding: 0; }
   .btn-filter-select .btn-filter {
-    color: #2D3D32;
+    color: #c2a031;
     text-transform: uppercase; }
     .btn-filter-select .btn-filter.is-inactive {
       color: #949A90; }
       .btn-filter-select .btn-filter.is-inactive:hover {
-        color: #2D3D32; }
+        color: #c2a031; }
   .btn-filter.is-inactive {
     opacity: .5;
     color: #949A90; }
@@ -2029,13 +2034,27 @@ FIELDS PAGE – Done
   flex-flow: row wrap;
   gap: 1rem; }
 
-.field-el h4 {
-  text-transform: unset; }
+.list-fields {
+  margin-bottom: 6rem; }
 
-.field-el .btn-tertiary {
-  color: #949A90; }
-  .field-el .btn-tertiary:hover {
-    color: #2D3D32; }
+.field-el {
+  width: 100%; }
+  .field-el p {
+    margin-bottom: 0; }
+  .field-el .btn-tertiary {
+    margin-top: 1rem; }
+
+.field-name {
+  margin: 0;
+  font-weight: 700; }
+
+.field-desc {
+  font-size: .875rem;
+  color: #2D3D32; }
+
+.field-address {
+  margin-top: .5rem;
+  line-height: 1.3em; }
 
 /******************************
 TOURNOI – Done
