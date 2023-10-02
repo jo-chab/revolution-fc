@@ -190,12 +190,27 @@ p {
         transition: all .3s ease;
         
         &:hover {
-            color: $secondary-color-3;
+            color: darken($primary-color-1, 15%);
         }
     }
     &.legend {
         font-size: .875rem;
         color: $web-grey-4;
+    }
+    &.pwd-reset {
+        font-size: .875rem;
+        a {
+            color: $tertiary-color-1;
+            transition: all .3s ease;
+            &:hover {
+                color: $primary-color-1;
+            }
+        }
+    }
+    &.login-legend {
+        margin-top: 1rem;
+        text-align:center;
+        font-size: 1rem;
     }
     
     &:has(+ h1, + h2) {

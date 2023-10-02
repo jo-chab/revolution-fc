@@ -352,10 +352,21 @@ p {
     font-weight: 600;
     transition: all .3s ease; }
     p .inline-link:hover {
-      color: #EFDBB2; }
+      color: #856e22; }
   p.legend {
     font-size: .875rem;
     color: #5f6369; }
+  p.pwd-reset {
+    font-size: .875rem; }
+    p.pwd-reset a {
+      color: #949A90;
+      transition: all .3s ease; }
+      p.pwd-reset a:hover {
+        color: #c2a031; }
+  p.login-legend {
+    margin-top: 1rem;
+    text-align: center;
+    font-size: 1rem; }
   p:has(+ h1, + h2) {
     margin-bottom: 4rem; }
   p:has(+ h3, + h4) {
