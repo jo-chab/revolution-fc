@@ -708,7 +708,7 @@ ALERT MESSAGES in Dashboard
   position: fixed;
   bottom: 4rem;
   left: 50%;
-  transform: translateX(-50%);
+  transform: translate(-50%, 0);
   z-index: 10;
   -webkit-box-shadow: 0 5px 20px -6px rgba(18, 18, 18, 0.4);
   -moz-box-shadow: 0 5px 20px -6px rgba(18, 18, 18, 0.4);
@@ -737,12 +737,7 @@ ALERT MESSAGES in Dashboard
     content: "\f00d"; }
   .message-box.fade-out {
     opacity: 1;
-    transition: opacity 0.5s ease-in-out;
-    /* Adjust the duration and timing function as needed */ }
-  .message-box.fade-out.hide {
-    opacity: 0;
-    pointer-events: none;
-    /* Prevent interaction with hidden element */ }
+    transition: all 0.5s ease-in-out; }
 
 /********* FONCTIONS *********/
 .is-hide,
