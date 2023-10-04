@@ -1174,9 +1174,13 @@ DESIGN SYSTEM – Buttons
 /***** DROPDOWN *****/
 select {
   width: 100%;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
   background-color: white;
-  padding: .5rem 2.5rem .5rem 1rem;
+  padding: .75rem 1rem;
   border: 1px solid #d3d3d3;
+  border-radius: .5rem 0 0 .5rem;
   font-family: 'Source Sans 3', sans-serif;
   font-weight: 400;
   font-size: 1rem;
@@ -1186,66 +1190,98 @@ select {
 .select-dropdown {
   position: relative;
   width: 100%;
-  max-width: 220px;
-  margin: 0 auto 2rem; }
+  min-width: 220px;
+  max-width: 320px;
+  margin: 0 0 1rem;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: flex; }
   .select-dropdown.contact {
     margin-left: 0;
-    width: fit-content;
+    width: 100%;
     max-width: inherit; }
-  .select-dropdown:after {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: absolute;
-    top: 0;
-    right: 0;
-    z-index: 3;
-    height: 100%;
-    width: 2rem;
-    font-family: "Font Awesome 6 Pro";
-    font-size: 2em;
-    font-weight: 300;
-    color: #ffffff;
-    content: "\f107";
-    background-color: #2D3D32; }
   .dashboard .select-dropdown {
-    margin: 0 0 1rem;
-    min-width: 220px;
     max-width: unset; }
     .dashboard .select-dropdown select {
-      width: 100%;
-      -webkit-appearance: none;
-      -moz-appearance: none;
-      appearance: none;
-      background-color: white;
-      padding: 8px 16px;
-      box-sizing: border-box;
-      color: #312828;
-      border: 1px solid #d3d3d3;
-      -webkit-border-radius: 0;
-      -moz-border-radius: 0;
-      border-radius: 0;
-      font: 16px/1.45em 'roboto', sans-serif; }
-      .dashboard .select-dropdown select:focus {
-        border-color: #1ecd28; }
+      padding: 2rem 4rem .5rem 1rem; }
+  .select-dropdown label {
+    position: absolute;
+    top: .75rem;
+    left: 1rem;
+    z-index: 2;
+    color: #c2a031;
+    letter-spacing: 2px; }
+  .select-dropdown select {
+    font-size: 1.125rem;
+    border-color: #434C57;
+    color: #434C57;
+    background-color: #eef1f7;
+    padding: .75rem 4rem .75rem 1rem;
+    background-image: url("https://clients.chabertdesign.com/panel/assets/img/chevron-down-black.svg");
+    background-size: 24px 24px;
+    background-position: 95% center;
+    background-repeat: no-repeat;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0; }
 
-/****** FORMS ******/
-#wrapper-form input {
-  background-color: white;
-  border: 1px solid #aca9a9;
+/************************************
+FORMS ELEMENT - block, labels, input & cta
+************************************/
+.w-form {
+  display: grid;
+  gap: 1rem;
+  min-width: 400px; }
+  .w-form .g-recaptcha {
+    width: fit-content;
+    margin: 0 auto; }
+
+.form-row {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 1rem; }
+  .form-row.column {
+    justify-content: flex-start;
+    flex-direction: column;
+    gap: .5rem; }
+
+label {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-size: 0.75rem;
+  line-height: 1em;
+  color: #181818;
+  text-transform: uppercase;
+  padding: 0; }
+
+input {
   width: 100%;
-  margin: 1rem 0;
-  padding: 1rem;
-  outline: none;
+  padding: .75rem 1.5rem;
   font-family: 'Source Sans 3', sans-serif;
-  font-weight: 300;
+  font-weight: 400;
   font-size: 1rem;
   line-height: 1em;
-  color: #5f6369;
-  text-align: left; }
-  #wrapper-form input:focus {
-    border-color: #1ecd28; }
-  #wrapper-form input[type="submit"] {
+  color: #aca9a9;
+  background-color: white;
+  border: 1px solid #d3d3d3;
+  border-radius: .5rem;
+  outline: none; }
+  input:hover {
+    border-color: #343741; }
+  input:focus {
+    color: #343741;
+    border-color: #c2a031; }
+  input::placeholder {
+    color: #d3d3d3; }
+  input.prefilled {
+    color: #aca9a9;
+    background: #f2f2f2; }
+  input[type="submit"] {
     display: block;
     background-color: #2D3D32;
     border: none;
@@ -1257,25 +1293,38 @@ select {
     font-size: 1.25rem;
     text-align: center;
     cursor: pointer; }
-    #wrapper-form input[type="submit"].cta-send:after {
+    input[type="submit"].cta-send:after {
       font-family: "Font Awesome 6 Pro";
       content: '\f30b';
       font-weight: 400;
       font-size: 1em;
       margin-left: .5rem; }
 
-#wrapper-form textarea {
+textarea {
   background-color: white;
   outline: none;
-  height: 190px;
+  height: 250px;
   width: 100%;
   max-width: 100%;
-  margin: 1rem 0;
   padding: 1rem;
-  font: 400 1em "roboto", sans-serif;
-  border: 1px solid #b6b4b5; }
-  #wrapper-form textarea:focus {
-    border-color: #1ecd28; }
+  font-family: 'Source Sans 3', sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.5em;
+  color: #aca9a9;
+  border: 1px solid #d3d3d3;
+  border-radius: .5rem;
+  resize: none; }
+  textarea.small {
+    height: 100px; }
+  textarea:hover {
+    border-color: #343741; }
+  textarea:focus {
+    color: #343741;
+    border-color: #c2a031; }
+  textarea.prefilled {
+    color: #aca9a9;
+    background: #f2f2f2; }
 
 .recaptcha div {
   margin: 0 auto; }
