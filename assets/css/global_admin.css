@@ -1198,6 +1198,8 @@ input {
       font-weight: 400;
       font-size: 1em;
       margin-left: .5rem; }
+    .dashboard input[type="submit"] {
+      margin: 0; }
 
 textarea {
   background-color: white;

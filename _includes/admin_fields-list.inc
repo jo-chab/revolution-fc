@@ -15,8 +15,8 @@
                     
                     <div class="grid-layout-2">
                         <div class="form-row column">
-                            <label>Ville / Arrondissement</label>
                             <div class="select-dropdown">
+                                <label>Ville / Arrondissement</label>
                                 <select name="ld_city" required>
                                     <option value="">Sélectionner un choix</option>
                                     <?php
@@ -34,8 +34,8 @@
                             </div>
                         </div>
                         <div class="form-row column">
-                            <label>Type de terrain</label>
                             <div class="select-dropdown">
+                                <label>Type de terrain</label>
                                 <select name="ld_type" required>
                                     <option value="">Sélectionner un choix</option>
                                     <?php

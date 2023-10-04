@@ -33,8 +33,8 @@
                 
                 <div class="grid-layout-2">
                     <div class="form-row column">
-                        <label>Type de terrain</label>
                         <div class="select-dropdown">
+                            <label>Type de terrain</label>
                             <select name="ld_type" required>
                                 <?php
                                     $stmt3 = $db->prepare("SELECT * FROM TERRAINS_type order by id_genre_terrain ASC");
@@ -55,8 +55,8 @@
                         </div>
                     </div>
                     <div class="form-row column">
-                        <label>Ville</label>
                         <div class="select-dropdown">
+                            <label>Ville</label>
                             <select name="ld_city" required>
                                 <?php
                                     $stmt4 = $db->prepare("SELECT * FROM TERRAINS_cities order by id_city ASC");

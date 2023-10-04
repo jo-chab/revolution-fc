@@ -610,6 +610,10 @@ input {
                 margin-left: .5rem;
             }
         }
+        
+        .dashboard & {
+            margin: 0;
+        }
     }
 }
 
