@@ -259,73 +259,103 @@ nav.desktop {
         flex-flow: row nowrap;
         
         .top-nav-item {
-            padding: 24px 16px;
-            font: 400 16px/24px 'Roboto', sans-serif;
+            padding: 1.5rem 1rem;
+            @include font-family-reading();
+            @include font-style(400, 1rem, 1.5em, white);
         }
     }
     
+    .nav-item-el {
+        flex-grow: 1;
+        align-items: center;
+        @include font-family-heading();
+        @include font-style(500, 1.125rem, 1.3em, $side-menu-color);
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        transition: all .3s ease;
+        
+        &:hover {
+            cursor: pointer;
+            color: $primary-color-1;
+        }
+        
+    }
+    
     .menu {
+        display: flex;
+        flex-flow: column nowrap;
+        gap: 2rem;
+        
         width: 100%;
-        padding: 16px;
         @include mobile-max {
-            height: 80vh;
+            padding: 3rem 2rem;
             overflow-y: scroll;
         }
         @include tablet {
-            padding: 64px;
+            padding: 3rem;
         }
         
         .nav-item {
             position: relative;
-            font: 400 18px/28px 'Roboto', sans-serif;
             width: 100%;
-            padding: 8px 4px;
-            
-            &:first-of-type {
-                border-top: none;
-            }
-            
-            &:last-of-type {
-                border-bottom: none;
-            }
+            display: flex;
+            gap: 1rem;
         }
         
-        .arrowed:after {
-            font-family: "Font Awesome 6 Pro";
-            font-weight: 400;
-            content: "\2b";
-            position: absolute;
-            top: 10px;
-            right: 0;
-            font-size: 1.125rem;
-            transition: all .3s ease;
-        }
-        
-        .selected:after {
-            transform: rotate(45deg);
-            transition: all .3s ease;
+        .arrowed {
+            &:after {
+                font-family: "Font Awesome 6 Pro";
+                font-weight: 400;
+                content: "\2b";
+                color: $side-menu-color;
+                font-size: 1.25rem;
+                transition: all .3s ease;
+            }
+            
+            &:hover {
+                &:after {
+                    cursor: pointer;
+                    color: $side-menu-accent;
+                }
+            }
+            
+            &.selected:after {
+                transform: rotate(45deg);
+                transition: all .3s ease;
+            }
         }
         
     }
 }
 
 .sub-nav {
-    width: 100%;
     display: flex;
     flex-flow: column nowrap;
-    box-sizing: border-box;
     position: relative;
-    margin: 0;
-    padding: 0 0 0 24px;
-    //overflow: hidden;
-    
-    .sub-nav-item {
-        width: 100%;
-        box-sizing: border-box;
-        padding: 8px 0;
-        font: 400 18px/1.45em 'Roboto', sans-serif;
+    margin-block: 0rem 1rem;
+    margin-inline-start: 2rem;
+    gap: 1rem;
+    @include tablet {
+        gap: .5rem;
     }
     
+    .sub-nav-item {
+        position: relative;
+        width: 100%;
+        display: flex;
+        gap: 1rem;
+        flex-grow: 1;
+    }
+    .sub-nav-item-el {
+        @include font-family-heading();
+        @include font-style(400, 1rem, 1.3em, $side-submenu-color);
+        transition: all .3s ease;
+        
+        &:hover {
+            cursor: pointer;
+            color: $side-menu-accent;
+        }
+    }
 }
 
 .close-menu {

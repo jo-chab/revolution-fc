@@ -56,6 +56,7 @@ Lists
 	}
 	
 	&.col-3 {
+		gap: 4rem 2rem;
 		.list-people-header {
 			@include tablet {
 				grid-column: span 2;
@@ -87,7 +88,7 @@ Lists
 			background-repeat: no-repeat;
 			background-size: cover;
 			@include tablet {
-				max-width: 320px;
+				//max-width: 320px;
 			}
 		}
 		
