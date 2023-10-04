@@ -295,6 +295,8 @@ h4 {
     @media (min-width: 768px) {
       .flash-alert h4 {
         padding: 2rem; } }
+  .job-infos h4 {
+    font-weight: 700; }
   .dashboard-title h4 {
     font-size: .875rem;
     color: white; }
@@ -352,10 +354,21 @@ p {
     font-weight: 600;
     transition: all .3s ease; }
     p .inline-link:hover {
-      color: #EFDBB2; }
+      color: #856e22; }
   p.legend {
     font-size: .875rem;
     color: #5f6369; }
+  p.pwd-reset {
+    font-size: .875rem; }
+    p.pwd-reset a {
+      color: #949A90;
+      transition: all .3s ease; }
+      p.pwd-reset a:hover {
+        color: #c2a031; }
+  p.login-legend {
+    margin-top: 1rem;
+    text-align: center;
+    font-size: 1rem; }
   p:has(+ h1, + h2) {
     margin-bottom: 4rem; }
   p:has(+ h3, + h4) {
@@ -726,7 +739,7 @@ section {
     background-color: #f2f2f2; }
 
 article {
-  padding: 0 1.5rem;
+  padding: 0 2rem;
   margin-bottom: 4rem; }
   article[class]:last-of-type {
     margin-bottom: 0; }
@@ -1031,6 +1044,12 @@ DESIGN SYSTEM – Buttons
     @media (min-width: 768px) {
       .btn-primary.btn-delete:hover, .btn-primary.btn-cancel:hover, .btn-primary.btn-disable:hover, .btn-primary.btn-activate:hover, .btn-primary.btn-revert:hover {
         color: #FF1541; } }
+  .btn-primary.btn-card {
+    color: #eef1f7;
+    background-color: #434c57; }
+    @media (min-width: 768px) {
+      .btn-primary.btn-card:hover {
+        background-color: #22262c; } }
   .btn-primary.cta-back {
     background-color: #fed624;
     color: #181818; }
@@ -1709,6 +1728,41 @@ Lists
     color: #63666A;
     flex-grow: 1; }
 
+.list-jobs {
+  margin-block: 2rem;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 3rem; }
+  .list-jobs .job-el {
+    display: grid;
+    align-items: center;
+    grid-template-columns: 1fr;
+    grid-gap: 1.5rem;
+    width: 100%;
+    max-width: 800px;
+    padding: 2rem;
+    -webkit-border-radius: 1rem;
+    -moz-border-radius: 1rem;
+    border-radius: 1rem;
+    background-color: white;
+    border: 1px solid #949A90; }
+    @media (min-width: 768px) {
+      .list-jobs .job-el {
+        grid-gap: 2.5rem;
+        grid-template-columns: 1fr auto; } }
+  .list-jobs .job-infos p {
+    font-weight: 300;
+    font-size: 1rem;
+    line-height: 1.3em;
+    color: #949A90;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis; }
+
 /******************************
 HOME PAGE
 ******************************/
@@ -1775,55 +1829,8 @@ HOME PAGE
   margin-bottom: 16px; }
 
 /* JOBS SECTION */
-.hp-jobs {
-  padding: 16px;
-  border: 1px solid #2D3D32;
-  position: relative; }
-  @media (min-width: 768px) {
-    .hp-jobs {
-      padding: 40px; } }
-  .hp-jobs:before {
-    content: 'Offre(s) d\'emploi';
-    position: absolute;
-    top: -16px;
-    left: 50%;
-    transform: translateX(-50%);
-    background: #ffffff;
-    display: table;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 1.5em;
-    color: #2D3D32;
-    font-family: 'Poppins', sans-serif;
-    text-transform: uppercase;
-    letter-spacing: .5px;
-    padding: 4px 8px;
-    width: fit-content; }
-    @media (min-width: 1024px) {
-      .hp-jobs:before {
-        font-size: 24px;
-        top: -24px; } }
-  .hp-jobs li {
-    display: grid;
-    align-items: center;
-    grid-template-columns: 1fr;
-    grid-gap: 16px 40px;
-    padding-bottom: 16px;
-    margin-bottom: 16px;
-    border-bottom: 1px solid #aca9a9; }
-    .hp-jobs li:last-of-type {
-      margin-bottom: 0;
-      border-bottom: none;
-      padding-bottom: 0; }
-    @media (min-width: 768px) {
-      .hp-jobs li {
-        grid-template-columns: 1fr auto; } }
-  .hp-jobs .job-infos {
-    display: flex;
-    flex-direction: column; }
-    @media (max-width: 767px) {
-      .hp-jobs .job-infos > * {
-        align-self: center; } }
+.w-jobs {
+  border-top: 1px solid #d3d3d3; }
 
 .hp-contact-info .contact-info-details {
   margin-bottom: 24px; }
@@ -1908,7 +1915,7 @@ News detail / Programme detail - To do
   margin-bottom: 1rem; }
   @media (max-width: 767px) {
     .article-featured-img {
-      margin: 0 -1.5rem 1rem; } }
+      margin: 0 -2rem 1rem; } }
   .article-featured-img img {
     width: 100%; }
 

@@ -295,6 +295,8 @@ h4 {
     @media (min-width: 768px) {
       .flash-alert h4 {
         padding: 2rem; } }
+  .job-infos h4 {
+    font-weight: 700; }
   .dashboard-title h4 {
     font-size: .875rem;
     color: white; }
@@ -352,10 +354,21 @@ p {
     font-weight: 600;
     transition: all .3s ease; }
     p .inline-link:hover {
-      color: #EFDBB2; }
+      color: #856e22; }
   p.legend {
     font-size: .875rem;
     color: #5f6369; }
+  p.pwd-reset {
+    font-size: .875rem; }
+    p.pwd-reset a {
+      color: #949A90;
+      transition: all .3s ease; }
+      p.pwd-reset a:hover {
+        color: #c2a031; }
+  p.login-legend {
+    margin-top: 1rem;
+    text-align: center;
+    font-size: 1rem; }
   p:has(+ h1, + h2) {
     margin-bottom: 4rem; }
   p:has(+ h3, + h4) {
@@ -697,7 +710,7 @@ ALERT MESSAGES in Dashboard
   position: fixed;
   bottom: 4rem;
   left: 50%;
-  transform: translateX(-50%);
+  transform: translate(-50%, 0);
   z-index: 10;
   -webkit-box-shadow: 0 5px 20px -6px rgba(18, 18, 18, 0.4);
   -moz-box-shadow: 0 5px 20px -6px rgba(18, 18, 18, 0.4);
@@ -726,12 +739,7 @@ ALERT MESSAGES in Dashboard
     content: "\f00d"; }
   .message-box.fade-out {
     opacity: 1;
-    transition: opacity 0.5s ease-in-out;
-    /* Adjust the duration and timing function as needed */ }
-  .message-box.fade-out.hide {
-    opacity: 0;
-    pointer-events: none;
-    /* Prevent interaction with hidden element */ }
+    transition: all 0.5s ease-in-out; }
 
 /********* FONCTIONS *********/
 .is-hide,
@@ -935,6 +943,12 @@ DESIGN SYSTEM – Buttons
     @media (min-width: 768px) {
       .btn-primary.btn-delete:hover, .btn-primary.btn-cancel:hover, .btn-primary.btn-disable:hover, .btn-primary.btn-activate:hover, .btn-primary.btn-revert:hover {
         color: #FF1541; } }
+  .btn-primary.btn-card {
+    color: #eef1f7;
+    background-color: #434c57; }
+    @media (min-width: 768px) {
+      .btn-primary.btn-card:hover {
+        background-color: #22262c; } }
   .btn-primary.cta-back {
     background-color: #fed624;
     color: #181818; }

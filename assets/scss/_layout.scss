@@ -138,7 +138,7 @@ GRID SYSTEM
 /*******************************************************
 VARIABLES
 *******************************************************/
-$space-m: 1.5rem;
+$space-m: 2rem;
 $space-t: 2.5rem;
 $space-d: 5rem;
 $space-dl: 8rem;
@@ -188,17 +188,17 @@ section {
 article {
     @extend .web-layout;
     
-    padding: 0 1.5rem;
+    padding: 0 $space-m;
     margin-bottom: 4rem;
     &[class]:last-of-type {
         margin-bottom: 0;
     }
     
     @include tablet {
-        padding: 0 2.5rem;
+        padding: 0 $space-t;
     }
     @include desktop {
-        padding: 0 5rem;
+        padding: 0 $space-d;
     }
     
     &.wrapper {
