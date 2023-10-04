@@ -295,6 +295,8 @@ h4 {
     @media (min-width: 768px) {
       .flash-alert h4 {
         padding: 2rem; } }
+  .job-infos h4 {
+    font-weight: 700; }
   .dashboard-title h4 {
     font-size: .875rem;
     color: white; }
@@ -941,6 +943,12 @@ DESIGN SYSTEM – Buttons
     @media (min-width: 768px) {
       .btn-primary.btn-delete:hover, .btn-primary.btn-cancel:hover, .btn-primary.btn-disable:hover, .btn-primary.btn-activate:hover, .btn-primary.btn-revert:hover {
         color: #FF1541; } }
+  .btn-primary.btn-card {
+    color: #eef1f7;
+    background-color: #434c57; }
+    @media (min-width: 768px) {
+      .btn-primary.btn-card:hover {
+        background-color: #22262c; } }
   .btn-primary.cta-back {
     background-color: #fed624;
     color: #181818; }

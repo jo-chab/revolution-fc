@@ -152,6 +152,45 @@ Lists
 
 
 
+.list-jobs {
+	margin-block: $space-m;
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	gap: 3rem;
+	
+	.job-el {
+		display: grid;
+		align-items: center;
+		grid-template-columns: 1fr;
+		grid-gap: 1.5rem;
+		width: 100%;
+		max-width: 800px;
+		
+		padding: 2rem;
+		@include border-radius-uniform(1rem);
+		background-color: white;
+		border: 1px solid $tertiary-color-1;
+		
+		//-webkit-box-shadow: 4px 8px 16px 0 rgba(8,40,62,.1);
+		//-moz-box-shadow: 4px 8px 16px 0 rgba(8,40,62,.1);
+		//box-shadow: 4px 8px 16px 0 rgba(8,40,62,.1);
+		
+		@include tablet {
+			grid-gap: 2.5rem;
+			grid-template-columns: 1fr auto;
+		}
+	}
+	.job-infos {
+		p {
+			@include font-style(300, 1rem, 1.3em, $tertiary-color-1);
+			@include line-clamp(3);
+		}
+	}
+}
+
+
 
 
 /******************************
@@ -250,65 +289,8 @@ HOME PAGE
 
 
 /* JOBS SECTION */
-.hp-jobs {
-	padding: 16px;
-	border: 1px solid $secondary-color-1;
-	position: relative;
-	
-	@include tablet {
-		padding: 40px;
-	}
-	
-	&:before {
-		content: 'Offre(s) d\'emploi';
-		position: absolute;
-		top: -16px;
-		left: 50%;
-		transform: translateX(-50%);
-		background: $bg-body;
-		
-		display: table;
-		@include font-style(400, 16px, 1.5em, $secondary-color-1);
-		@include font-family-heading;
-		text-transform: uppercase;
-		letter-spacing: .5px;
-		padding: 4px 8px;
-		width: fit-content;
-		
-		@include desktop {
-			font-size: 24px;
-			top: -24px;
-		}
-	}
-	
-	li {
-		display: grid;
-		align-items: center;
-		grid-template-columns: 1fr;
-		grid-gap: 16px 40px;
-		
-		padding-bottom: 16px;
-		margin-bottom: 16px;
-		border-bottom: 1px solid $web-grey-3;
-		&:last-of-type {
-			margin-bottom: 0;
-			border-bottom: none;
-			padding-bottom: 0;
-		}
-		
-		@include tablet {
-			grid-template-columns: 1fr auto;
-		}
-	}
-	.job-infos {
-		display: flex;
-		flex-direction: column;
-		> * {
-			@include mobile-max {
-				align-self: center;
-			}
-		}
-	}
+.w-jobs {
+	border-top: 1px solid $web-grey-2;
 }
 
 
