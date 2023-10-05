@@ -1,6 +1,6 @@
 
 
-<ul class="list-dashboard-menu grid-system grid-col-4">
+<ul class="list-dashboard-menu grid-system">
     
     <li><a class="icon icon-atop i-config-superadmin" href="?p=2"><span>Config ADMIN</span></a></li>
     <li><a class="icon icon-atop i-config-site" href="?p=3"><span>Config website</span></a></li>

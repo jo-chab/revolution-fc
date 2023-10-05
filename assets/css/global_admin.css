@@ -333,7 +333,8 @@ p {
   font-size: 1.125rem;
   line-height: 1.7em;
   color: #181818;
-  max-width: 960px; }
+  max-width: 960px;
+  margin-bottom: 1.5rem; }
   p .center {
     margin-left: auto;
     margin-right: auto; }
@@ -355,7 +356,7 @@ p {
     transition: all .3s ease; }
     p .inline-link:hover {
       color: #856e22; }
-  p.legend {
+  p.legend, p.input-legend {
     font-size: .875rem;
     color: #5f6369; }
   p.pwd-reset {
@@ -469,6 +470,10 @@ p {
 .i-instagram:before {
   font: var(--fa-font-brands);
   content: '\f16d'; }
+
+.i-send:after {
+  font: var(--fa-font-regular);
+  content: '\f1d8'; }
 
 /******************************************
 ADMIN ICONS
@@ -1137,6 +1142,8 @@ FORMS ELEMENT - block, labels, input & cta
   .w-form .g-recaptcha {
     width: fit-content;
     margin: 0 auto; }
+  .w-form .btn-primary {
+    margin: 2rem auto 0; }
 
 .form-row {
   display: flex;
@@ -1165,7 +1172,7 @@ input {
   font-weight: 400;
   font-size: 1rem;
   line-height: 1em;
-  color: #aca9a9;
+  color: #343741;
   background-color: white;
   border: 1px solid #d3d3d3;
   border-radius: .5rem;
@@ -1181,23 +1188,13 @@ input {
     color: #aca9a9;
     background: #f2f2f2; }
   input[type="submit"] {
-    display: block;
-    background-color: #2D3D32;
-    border: none;
-    max-width: 320px;
-    margin: 1rem auto;
-    padding: 1rem 1.5rem;
-    color: white;
-    font-weight: normal;
-    font-size: 1.25rem;
-    text-align: center;
-    cursor: pointer; }
-    input[type="submit"].cta-send:after {
-      font-family: "Font Awesome 6 Pro";
-      content: '\f30b';
-      font-weight: 400;
-      font-size: 1em;
-      margin-left: .5rem; }
+    min-width: 320px;
+    margin: 2rem auto;
+    cursor: pointer;
+    background-color: #c2a031; }
+    input[type="submit"]:focus {
+      color: white;
+      border: none; }
     .dashboard input[type="submit"] {
       margin: 0; }
 
@@ -1212,7 +1209,7 @@ textarea {
   font-weight: 400;
   font-size: 1rem;
   line-height: 1.5em;
-  color: #aca9a9;
+  color: #343741;
   border: 1px solid #d3d3d3;
   border-radius: .5rem;
   resize: none; }
@@ -1229,6 +1226,141 @@ textarea {
 
 .recaptcha div {
   margin: 0 auto; }
+
+/***********************
+Lists
+***********************/
+.list-text {
+  position: relative;
+  margin-block: 1rem 2rem;
+  margin-inline-start: 2rem;
+  list-style: none; }
+  .list-text li {
+    font-family: 'Source Sans 3', sans-serif;
+    font-weight: 400;
+    font-size: 1.125rem;
+    line-height: 1.5em;
+    color: #181818;
+    margin-bottom: .25rem;
+    display: flex;
+    align-items: baseline;
+    gap: .5rem; }
+    .list-text li:last-of-type {
+      margin-bottom: 0; }
+    .list-text li:before {
+      content: "\2022";
+      /* Unicode character for a bullet (circle) */
+      display: inline-flex; }
+
+.list-people .people-el {
+  display: flex;
+  flex-flow: column nowrap;
+  gap: .5rem; }
+  .list-people .people-el .list-people-function {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 1.5rem;
+    line-height: 1em;
+    color: #181818;
+    text-transform: uppercase;
+    margin-bottom: .5rem; }
+  .list-people .people-el .list-people-img {
+    margin-bottom: 1rem;
+    width: 100%;
+    aspect-ratio: 3/4;
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: cover; }
+  .list-people .people-el .list-people-name {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 1.125rem;
+    line-height: 1em;
+    color: #c2a031;
+    text-transform: capitalize; }
+  .list-people .people-el .list-people-legend {
+    font-family: 'Source Sans 3', sans-serif;
+    font-weight: 400;
+    font-size: 0.875rem;
+    line-height: 1.5em;
+    color: #2D3D32; }
+  .list-people .people-el .list-people-email {
+    margin-top: .5rem;
+    font-family: 'Source Sans 3', sans-serif;
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 1em;
+    color: #c2a031; }
+
+/***** DOCUMENTS LISTS *****/
+.w-list-docs {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  margin-top: 3rem; }
+
+.list-docs {
+  width: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-block: 1rem 4rem; }
+  @media (min-width: 768px) {
+    .list-docs {
+      gap: 1rem; } }
+  .list-docs li {
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.25rem; }
+    @media (min-width: 768px) {
+      .list-docs li {
+        gap: 3rem; } }
+  .list-docs span.docs-title {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 1.5em;
+    color: #63666A;
+    flex-grow: 1; }
+
+.list-jobs {
+  margin-block: 2rem;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 3rem; }
+  .list-jobs .job-el {
+    display: grid;
+    align-items: center;
+    grid-template-columns: 1fr;
+    grid-gap: 1.5rem;
+    width: 100%;
+    max-width: 800px;
+    padding: 2rem;
+    -webkit-border-radius: 1rem;
+    -moz-border-radius: 1rem;
+    border-radius: 1rem;
+    background-color: white;
+    border: 1px solid #949A90; }
+    @media (min-width: 768px) {
+      .list-jobs .job-el {
+        grid-gap: 2.5rem;
+        grid-template-columns: 1fr auto; } }
+  .list-jobs .job-infos p {
+    font-weight: 300;
+    font-size: 1rem;
+    line-height: 1.3em;
+    color: #949A90;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis; }
 
 /*
 *
@@ -1377,6 +1509,14 @@ form.popup {
   form.popup .popup-title {
     text-align: center;
     color: #181818; }
+  form.popup .g-recaptcha {
+    width: fit-content;
+    margin: 1rem auto; }
+  form.popup .btn-primary {
+    margin: 2rem auto 0; }
+    @media (min-width: 768px) {
+      form.popup .btn-primary {
+        min-width: 320px; } }
 
 /************************************
 FORMS ELEMENT - block, labels, input & cta
@@ -1481,27 +1621,49 @@ input[type='date'] {
 ADMIN – DEFAULT
 *************************************/
 .list-dashboard-menu {
-  margin-block: 3rem; }
+  margin-block: 3rem;
+  grid-template-columns: 1fr 1fr; }
+  @media (min-width: 1024px) {
+    .list-dashboard-menu {
+      grid-template-columns: repeat(3, 1fr); } }
+  @media (min-width: 1440px) {
+    .list-dashboard-menu {
+      grid-template-columns: repeat(4, 1fr); } }
   .list-dashboard-menu li {
-    padding: 3rem;
+    padding: 1rem;
     border: 1px solid #FFCD00;
     background-color: white;
     -webkit-border-radius: 0.5rem;
     -moz-border-radius: 0.5rem;
     border-radius: 0.5rem; }
+    @media (min-width: 768px) {
+      .list-dashboard-menu li {
+        padding: 2rem; } }
+    @media (min-width: 1240px) {
+      .list-dashboard-menu li {
+        padding: 3rem; } }
   .list-dashboard-menu a {
     gap: 1rem;
-    font-size: 3rem;
+    font-size: 1.5rem;
     opacity: 1;
     transition: all .3s ease; }
     .list-dashboard-menu a:hover {
       opacity: .5; }
+    @media (min-width: 768px) {
+      .list-dashboard-menu a {
+        font-size: 2rem; } }
+    @media (min-width: 1240px) {
+      .list-dashboard-menu a {
+        font-size: 3rem; } }
     .list-dashboard-menu a span {
       font-family: 'Source Sans 3', sans-serif;
-      font-weight: 400;
-      font-size: 0.875rem;
-      line-height: 1.5em;
-      color: #181818; }
+      font-weight: 600;
+      font-size: 0.75rem;
+      line-height: 1.3em;
+      color: #181818;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      text-align: center; }
 
 /*************************************
 ADMIN – CONTENT

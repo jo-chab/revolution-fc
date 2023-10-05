@@ -36,24 +36,47 @@ ADMIN – DEFAULT
 *************************************/
 .list-dashboard-menu {
     margin-block: 3rem;
+    grid-template-columns: 1fr 1fr;
+    @include desktop {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    @include desktop-large {
+        grid-template-columns: repeat(4, 1fr);
+    }
     
     li {
-        padding: 3rem;
+        padding: 1rem;
         border: 1px solid $primary-color-3;
         background-color: white;
         @include border-radius-uniform(.5rem);
+        @include tablet {
+            padding: 2rem;
+        }
+        @include desktop-medium {
+            padding: 3rem;
+        }
     }
     a {
-        gap:1rem;
-        font-size: 3rem;
+        gap: 1rem;
+        font-size: 1.5rem;
         opacity: 1;
         transition: all .3s ease;
         &:hover {
             opacity: .5;
         }
+        @include tablet {
+            font-size: 2rem;
+        }
+        @include desktop-medium {
+            font-size: 3rem;
+        }
+        
         span {
             @include font-family-reading;
-            @include font-style(400, .875rem, 1.5em, $primary-color-2);
+            @include font-style(600, .75rem, 1.3em, $primary-color-2);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            text-align: center;
         }
     }
 }
