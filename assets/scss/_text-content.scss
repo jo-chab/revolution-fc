@@ -81,7 +81,7 @@ a {
     transition: all .3s ease;
     
     &:hover {
-        color: $secondary-color-3;
+        color: darken($primary-color-1, 20%);
     }
 }
 

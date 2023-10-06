@@ -204,7 +204,7 @@ h1 {
   font-weight: 700;
   font-size: 2rem;
   line-height: 1.3em;
-  color: #181818;
+  color: #43474d;
   text-align: center;
   margin-bottom: 2rem; }
   @media (min-width: 768px) {
@@ -226,7 +226,7 @@ h2 {
   font-weight: 700;
   font-size: 1.5rem;
   line-height: 1.5em;
-  color: #c2a031;
+  color: #d5c392;
   text-transform: uppercase;
   letter-spacing: 2px;
   margin-bottom: 1rem;
@@ -239,7 +239,7 @@ h2 {
       text-align: unset;
       margin-bottom: 1.5rem; } }
   h2.section-title {
-    color: #181818;
+    color: #43474d;
     margin-bottom: 2rem;
     text-align: center; }
   h2.icon {
@@ -255,7 +255,7 @@ h3 {
   font-weight: 600;
   font-size: 1.25rem;
   line-height: 1.3em;
-  color: #181818;
+  color: #43474d;
   margin-bottom: 1rem; }
   @media (min-width: 620px) {
     h3 {
@@ -284,7 +284,7 @@ h4 {
   font-weight: 600;
   font-size: 1.125rem;
   line-height: 1.5em;
-  color: #181818; }
+  color: #43474d; }
   @media (min-width: 620px) {
     h4 {
       font-size: 1.25rem; } }
@@ -308,7 +308,7 @@ h5 {
   font-weight: 400;
   font-size: 0.875rem;
   line-height: 1.5em;
-  color: #181818; }
+  color: #43474d; }
   @media (min-width: 620px) {
     h5 {
       font-size: 1rem; } }
@@ -318,10 +318,10 @@ h6 {
   font-weight: 400;
   font-size: 0.75rem;
   line-height: 1.5em;
-  color: #181818; }
+  color: #43474d; }
 
 .text-dates {
-  color: #2D3D32; }
+  color: #aba7a7; }
 
 .white {
   color: white; }
@@ -343,7 +343,7 @@ p {
     font-size: 1.25rem;
     line-height: 1.3em;
     margin-bottom: 1rem;
-    color: #C8C3B3; }
+    color: #aba7a7; }
     @media (min-width: 768px) {
       p.intro {
         font-size: 1.375rem; } }
@@ -360,11 +360,11 @@ p {
   p span.text-highlight {
     font-weight: 700; }
   p .inline-link {
-    color: #c2a031;
+    color: #d5c392;
     font-weight: 600;
     transition: all .3s ease; }
     p .inline-link:hover {
-      color: #856e22; }
+      color: #c0a55b; }
   p.legend, p.input-legend {
     font-size: .875rem;
     color: #5f6369; }
@@ -374,7 +374,7 @@ p {
       color: #949A90;
       transition: all .3s ease; }
       p.pwd-reset a:hover {
-        color: #c2a031; }
+        color: #d5c392; }
   p.login-legend {
     margin-top: 1rem;
     text-align: center;
@@ -678,8 +678,8 @@ DESIGN SYSTEM – Alert message box
       padding: 0 0 16px;
       font-size: 2em; }
     .w-alert-message .alert-message.alert-info {
-      background-color: #c2a031;
-      border-color: #483b12;
+      background-color: #d5c392;
+      border-color: #957c39;
       color: white; }
       .w-alert-message .alert-message.alert-info i {
         color: white; }
@@ -759,7 +759,7 @@ DESIGN SYSTEM – CARDS
   color: white;
   font-family: 'Source Sans 3', sans-serif;
   padding: .5rem .75rem;
-  background-color: #FFCD00;
+  background-color: #d5c392;
   display: inline-block;
   text-transform: uppercase; }
 
@@ -789,7 +789,7 @@ DESIGN SYSTEM – Buttons
   font-size: 1.125rem;
   line-height: 1em;
   color: white;
-  background-color: #c2a031; }
+  background-color: #d5c392; }
   @media (max-width: 767px) {
     .btn-primary {
       padding: 1rem; } }
@@ -798,7 +798,7 @@ DESIGN SYSTEM – Buttons
       font-size: 1.25rem; } }
   @media (min-width: 768px) {
     .btn-primary:hover {
-      background-color: #715d1c; } }
+      background-color: #b99a48; } }
   .btn-primary.small {
     font-size: .875rem;
     padding: .75rem 1.25rem; }
@@ -844,8 +844,8 @@ DESIGN SYSTEM – Buttons
   font-weight: 400;
   font-size: 1.125em;
   line-height: 1em;
-  color: #2D3D32;
-  border: 1px solid #2D3D32; }
+  color: #bdaa7c;
+  border: 1px solid #bdaa7c; }
   @media (max-width: 767px) {
     .btn-secondary {
       padding: 1rem; } }
@@ -854,8 +854,8 @@ DESIGN SYSTEM – Buttons
       font-size: 1.25rem; } }
   @media (min-width: 768px) {
     .btn-secondary:hover {
-      border-color: #0d110e;
-      color: #0d110e; } }
+      border-color: #9d864f;
+      color: #9d864f; } }
   .btn-secondary.small {
     font-size: .875rem;
     padding: .75rem 1.25rem; }
@@ -863,19 +863,19 @@ DESIGN SYSTEM – Buttons
     color: white;
     border-color: white; }
     .btn-secondary.ghost-white:hover {
-      border-color: #FFCD00;
-      color: #FFCD00; }
+      border-color: #d5c392;
+      color: #d5c392; }
 
 .btn-tertiary {
   font-weight: 400;
   font-size: 1.25em;
   line-height: 1em;
-  color: #c2a031;
+  color: #d5c392;
   padding: 1.25rem 2rem;
   margin: 1.5rem 0;
   border-radius: 0; }
   .btn-tertiary:hover {
-    color: #856e22; }
+    color: #c0a55b; }
   .dashboard .btn-tertiary {
     margin: 0; }
   .btn-tertiary.btn-text {
@@ -901,30 +901,30 @@ DESIGN SYSTEM – Buttons
         .btn-tertiary.btn-disable:hover, .btn-tertiary.btn-delete:hover, .btn-tertiary.btn-cancel:hover, .btn-tertiary.btn-activate:hover, .btn-tertiary.btn-revert:hover {
           color: unset; } }
   .btn-tertiary.btn-update {
-    color: #c2a031; }
+    color: #d5c392; }
     .btn-tertiary.btn-update:hover {
-      color: #715d1c; }
+      color: #b99a48; }
 
 .btn-filter {
   gap: .5rem;
   font-weight: 400;
   font-size: 0.875rem;
   line-height: 1em;
-  color: #c2a031;
+  color: #d5c392;
   padding: 0; }
   .btn-filter-select .btn-filter {
-    color: #c2a031;
+    color: #d5c392;
     text-transform: uppercase; }
     .btn-filter-select .btn-filter.is-inactive {
       color: #949A90; }
       .btn-filter-select .btn-filter.is-inactive:hover {
-        color: #c2a031; }
+        color: #d5c392; }
   .btn-filter.is-inactive {
     opacity: .5;
     color: #949A90; }
     .btn-filter.is-inactive:hover {
       opacity: 1;
-      color: #c2a031; }
+      color: #d5c392; }
 
 .btn-download {
   background: #D0D3D4;
@@ -937,7 +937,7 @@ DESIGN SYSTEM – Buttons
     .btn-download {
       width: unset; } }
   .btn-download:hover {
-    background: #c2a031; }
+    background: #d5c392; }
 
 .is-inactive > * {
   opacity: 0.2; }
@@ -987,7 +987,7 @@ select {
     top: .75rem;
     left: 1rem;
     z-index: 2;
-    color: #c2a031;
+    color: #d5c392;
     letter-spacing: 2px; }
   .select-dropdown select {
     font-size: 1.125rem;
@@ -1032,7 +1032,7 @@ label {
   font-weight: 600;
   font-size: 0.75rem;
   line-height: 1em;
-  color: #181818;
+  color: #43474d;
   text-transform: uppercase;
   padding: 0; }
 
@@ -1052,7 +1052,7 @@ input {
     border-color: #343741; }
   input:focus {
     color: #343741;
-    border-color: #c2a031; }
+    border-color: #d5c392; }
   input::placeholder {
     color: #d3d3d3; }
   input.prefilled {
@@ -1062,7 +1062,7 @@ input {
     min-width: 320px;
     margin: 2rem auto;
     cursor: pointer;
-    background-color: #c2a031; }
+    background-color: #d5c392; }
     input[type="submit"]:focus {
       color: white;
       border: none; }
@@ -1090,7 +1090,7 @@ textarea {
     border-color: #343741; }
   textarea:focus {
     color: #343741;
-    border-color: #c2a031; }
+    border-color: #d5c392; }
   textarea.prefilled {
     color: #aca9a9;
     background: #f2f2f2; }
@@ -1132,7 +1132,7 @@ Lists
     font-weight: 700;
     font-size: 1.5rem;
     line-height: 1em;
-    color: #181818;
+    color: #43474d;
     text-transform: uppercase;
     margin-bottom: .5rem; }
   .list-people .people-el .list-people-img {
@@ -1147,21 +1147,21 @@ Lists
     font-weight: 700;
     font-size: 1.125rem;
     line-height: 1em;
-    color: #c2a031;
+    color: #d5c392;
     text-transform: capitalize; }
   .list-people .people-el .list-people-legend {
     font-family: 'Source Sans 3', sans-serif;
     font-weight: 400;
     font-size: 0.875rem;
     line-height: 1.5em;
-    color: #2D3D32; }
+    color: #bdaa7c; }
   .list-people .people-el .list-people-email {
     margin-top: .5rem;
     font-family: 'Source Sans 3', sans-serif;
     font-weight: 400;
     font-size: 1rem;
     line-height: 1em;
-    color: #c2a031; }
+    color: #aba7a7; }
 
 /***** DOCUMENTS LISTS *****/
 .w-list-docs {
@@ -1195,7 +1195,7 @@ Lists
     font-weight: 400;
     font-size: 1rem;
     line-height: 1.5em;
-    color: #63666A;
+    color: #aba7a7;
     flex-grow: 1; }
 
 .list-jobs {
@@ -1217,7 +1217,7 @@ Lists
     -moz-border-radius: 1rem;
     border-radius: 1rem;
     background-color: white;
-    border: 1px solid #949A90; }
+    border: 1px solid #dbcca9; }
     @media (min-width: 768px) {
       .list-jobs .job-el {
         grid-gap: 2.5rem;
@@ -1397,7 +1397,7 @@ article {
             max-height: 80dvh;
             justify-content: flex-end; } }
     article.wrapper.flash-alert {
-      background: #c2a031;
+      background: #d5c392;
       display: grid;
       gap: .5rem;
       padding: 1.5rem; }
@@ -1442,7 +1442,7 @@ COOKIES Popup
   -moz-border-radius: 1.5rem;
   border-radius: 1.5rem;
   background: #f2f2f2;
-  border: 1px solid #c2a031;
+  border: 1px solid #d5c392;
   -webkit-box-shadow: 0 5px 20px -6px rgba(18, 18, 18, 0.4);
   -moz-box-shadow: 0 5px 20px -6px rgba(18, 18, 18, 0.4);
   box-shadow: 0 5px 20px -6px rgba(18, 18, 18, 0.4); }
@@ -1451,7 +1451,7 @@ COOKIES Popup
       right: 2rem;
       bottom: 2rem; } }
   .cookie-popup p {
-    color: #181818; }
+    color: #43474d; }
 
 .cookie-cta {
   display: flex;
@@ -1507,7 +1507,7 @@ HEADER CSS -
       justify-items: center;
       grid-template-columns: 1fr auto 1fr;
       grid-template-areas: "hamburger logo social";
-      border-bottom: 2px solid #181818;
+      border-bottom: 2px solid #d5c392;
       background-color: white; } }
   .top-header ul {
     width: 100%;
@@ -1523,7 +1523,7 @@ HEADER CSS -
           justify-content: flex-start; } }
     .top-header ul.header-social {
       grid-area: social;
-      background: #181818;
+      background: #43474d;
       justify-self: flex-end;
       width: fit-content;
       justify-content: flex-end;
@@ -1547,7 +1547,7 @@ HEADER CSS -
       font-weight: 600;
       font-size: 1rem;
       line-height: 1.5em;
-      color: #181818;
+      color: #43474d;
       text-transform: uppercase;
       letter-spacing: 1px;
       transition: all .3s ease; }
@@ -1556,11 +1556,11 @@ HEADER CSS -
           padding-left: 2rem;
           padding-right: 2rem; } }
       .top-header .nav-item a:hover {
-        color: #c2a031; }
+        color: #d5c392; }
     .top-header .nav-item.nav-social {
       color: white; }
       .top-header .nav-item.nav-social:hover {
-        background-color: #c2a031; }
+        background-color: #d5c392; }
         .top-header .nav-item.nav-social:hover a {
           color: white; }
       .top-header .nav-item.nav-social a {
@@ -1568,12 +1568,14 @@ HEADER CSS -
         padding-left: 2rem;
         padding-right: 2rem; }
     .top-header .nav-item.lock-content {
-      border-left: 2px solid #181818;
+      border-left: 2px solid #d5c392;
       background-color: white; }
       .top-header .nav-item.lock-content:hover {
-        background-color: #f2f2f2; }
+        background-color: #d5c392; }
+        .top-header .nav-item.lock-content:hover a {
+          color: white; }
       .top-header .nav-item.lock-content a {
-        color: #c2a031; }
+        color: #bdaa7c; }
     .top-header .nav-item .icon {
       font-size: 1.5rem;
       padding-left: 1.5rem;
@@ -1605,7 +1607,7 @@ HEADER CSS -
     padding: .5rem 1.5rem; }
   .top-header .menu-toggle i {
     padding: 2rem;
-    color: #c2a031;
+    color: #d5c392;
     cursor: pointer; }
     @media (max-width: 767px) {
       .top-header .menu-toggle i {
@@ -1643,7 +1645,7 @@ nav.desktop {
   align-items: center;
   width: 100%;
   height: 100vh;
-  background-color: #181818;
+  background-color: #43474d;
   overflow-y: scroll;
   transform: translateX(-1000px);
   transition: all .5s ease; }
@@ -1657,7 +1659,7 @@ nav.desktop {
     color: white;
     transition: all .3s ease; }
     nav.desktop li:hover {
-      color: #c2a031;
+      color: #d5c392;
       transition: all .3s ease; }
   nav.desktop .top-menu {
     width: 100%;
@@ -1683,7 +1685,7 @@ nav.desktop {
     transition: all .3s ease; }
     nav.desktop .nav-item-el:hover {
       cursor: pointer;
-      color: #c2a031; }
+      color: #d5c392; }
   nav.desktop .menu {
     display: flex;
     flex-flow: column nowrap;
@@ -1710,7 +1712,7 @@ nav.desktop {
       transition: all .3s ease; }
     nav.desktop .menu .arrowed:hover:after {
       cursor: pointer;
-      color: #c2a031; }
+      color: #d5c392; }
     nav.desktop .menu .arrowed.selected:after {
       transform: rotate(45deg);
       transition: all .3s ease; }
@@ -1740,7 +1742,7 @@ nav.desktop {
     transition: all .3s ease; }
     .sub-nav .sub-nav-item-el:hover {
       cursor: pointer;
-      color: #c2a031; }
+      color: #d5c392; }
 
 .close-menu {
   position: absolute;
@@ -1750,7 +1752,7 @@ nav.desktop {
   font-size: 2rem;
   cursor: pointer; }
   .close-menu:hover {
-    color: #c2a031;
+    color: #d5c392;
     transition: all .3s ease; }
 
 /*
@@ -1766,7 +1768,7 @@ FOOTER
 *******************************************************/
 footer {
   padding: 32px 24px 120px;
-  background-color: #181818;
+  background-color: #43474d;
   box-sizing: border-box; }
   @media (min-width: 768px) {
     footer {
@@ -1815,7 +1817,7 @@ footer {
         font-weight: 700;
         margin-bottom: 8px; }
       .main-footer .footer-nav li:hover:not(.list-header) {
-        color: #c2a031; }
+        color: #d5c392; }
   .main-footer .footer-copy {
     display: grid;
     align-items: center;
@@ -1874,9 +1876,9 @@ HOME PAGE
     display: flex;
     align-items: flex-end;
     justify-content: center;
-    background-color: #181818;
-    background: -webkit-linear-gradient(top, rgba(24, 24, 24, 0), #181818);
-    background: linear-gradient(to bottom, rgba(24, 24, 24, 0), #181818); }
+    background-color: #43474d;
+    background: -webkit-linear-gradient(top, rgba(67, 71, 77, 0), #43474d);
+    background: linear-gradient(to bottom, rgba(67, 71, 77, 0), #43474d); }
   .w-hero .hero-overlay-content {
     z-index: 3;
     display: flex;
@@ -1907,7 +1909,7 @@ HOME PAGE
     padding: 16px;
     margin-bottom: 16px; }
     .hp-addons > *.important {
-      background-color: #2D3D32; }
+      background-color: #bdaa7c; }
       .hp-addons > *.important h3 {
         color: white;
         margin-bottom: 0; }
@@ -1968,7 +1970,7 @@ HOME PAGE
         filter: none; }
 
 /******************************
-NEWS PAGE – To do
+NEWS PAGE
 ******************************/
 .pagination {
   display: flex;
@@ -1977,7 +1979,7 @@ NEWS PAGE – To do
   align-items: center;
   margin-top: 80px; }
   .pagination .page-cta {
-    background-color: #2D3D32;
+    background-color: #bdaa7c;
     padding: 8px 16px;
     font-size: 32px;
     color: white; }
@@ -1987,8 +1989,8 @@ NEWS PAGE – To do
       padding: 4px 8px; }
       .pagination p span.active-page {
         font-weight: 700;
-        color: #2D3D32;
-        border-bottom: 4px solid #2D3D32; }
+        color: #bdaa7c;
+        border-bottom: 4px solid #bdaa7c; }
 
 /*******************************
 News detail / Programme detail
@@ -2033,10 +2035,10 @@ News detail / Programme detail
       margin-top: 3rem; } }
   .article-detail .article-intro {
     font-weight: 600;
-    color: #2D3D32;
+    color: #bdaa7c;
     margin-bottom: 2rem; }
   .article-detail h2 {
-    color: #181818;
+    color: #43474d;
     margin-bottom: 1.5rem;
     text-transform: none;
     letter-spacing: unset; }
@@ -2044,7 +2046,7 @@ News detail / Programme detail
     font-weight: 700;
     font-size: 1.25rem;
     line-height: 1.5em;
-    color: #c2a031;
+    color: #d5c392;
     margin-bottom: .5rem;
     text-transform: uppercase;
     letter-spacing: 2px; }
@@ -2060,7 +2062,7 @@ News detail / Programme detail
       -webkit-font-smoothing: antialiased;
       font: var(--fa-font-sharp-solid);
       content: '\f10d';
-      color: #f2f2f2;
+      color: #aba7a7;
       font-size: 3em;
       align-self: flex-start; }
     .article-detail blockquote:after {
@@ -2069,7 +2071,7 @@ News detail / Programme detail
       -webkit-font-smoothing: antialiased;
       font: var(--fa-font-sharp-solid);
       content: '\f10e';
-      color: #f2f2f2;
+      color: #aba7a7;
       font-size: 3em;
       align-self: flex-end; }
     .article-detail blockquote p {
@@ -2077,7 +2079,7 @@ News detail / Programme detail
       font-weight: 500;
       font-size: 1.5rem;
       line-height: 1.7em;
-      color: #c2a031;
+      color: #d5c392;
       font-style: italic;
       padding: 2rem 1rem;
       margin: 0; }
@@ -2086,11 +2088,11 @@ News detail / Programme detail
   .article-detail p {
     margin-bottom: 1.5rem; }
   .article-detail a {
-    color: #c2a031;
+    color: #d5c392;
     font-weight: 600;
     transition: all .3s ease; }
     .article-detail a:hover {
-      color: #EFDBB2; }
+      color: #b99a48; }
   .article-detail strong {
     font-weight: 700; }
   .article-detail ul, .article-detail ol {
@@ -2101,7 +2103,7 @@ News detail / Programme detail
       font-weight: 400;
       font-size: 1.125rem;
       line-height: 1.5em;
-      color: #181818;
+      color: #43474d;
       margin-bottom: .25rem; }
       .article-detail ul li:last-of-type, .article-detail ol li:last-of-type {
         margin-bottom: 0; }
@@ -2122,7 +2124,7 @@ News detail / Programme detail
     font-weight: 700;
     font-size: 0.875rem;
     line-height: 1.5em;
-    color: #181818;
+    color: #43474d;
     text-transform: uppercase;
     letter-spacing: 2px; }
   .article-detail table td {
@@ -2131,7 +2133,7 @@ News detail / Programme detail
     font-weight: 400;
     font-size: 1rem;
     line-height: 1.5em;
-    color: #181818; }
+    color: #43474d; }
 
 .article-footer {
   border-top: 1px solid #E6E6E6;
@@ -2163,7 +2165,7 @@ PROGRAMMES
     margin-bottom: .5rem;
     line-height: 1.3em;
     text-align: unset;
-    color: #181818; }
+    color: #43474d; }
 
 .list-programs .program-img {
   background-repeat: no-repeat;
@@ -2225,7 +2227,7 @@ FIELDS PAGE – Done
 
 .field-desc {
   font-size: .875rem;
-  color: #2D3D32; }
+  color: #bdaa7c; }
 
 .field-address {
   margin-top: .5rem;
@@ -2280,24 +2282,24 @@ TOURNOI – Done
     font-weight: 700;
     font-size: 2rem;
     line-height: 1em;
-    color: #2D3D32; }
+    color: #bdaa7c; }
   .t-card-category {
     font-family: 'Source Sans 3', sans-serif;
     font-weight: 700;
     font-size: 1.25rem;
     line-height: 1em;
-    color: #181818; }
+    color: #43474d; }
   .t-card-price {
     font-family: 'Source Sans 3', sans-serif;
     font-weight: 700;
     font-size: 3rem;
     line-height: 1em;
-    color: #181818; }
+    color: #43474d; }
     .t-card-price span {
       font-weight: 400;
       font-size: 0.3em;
       line-height: 1em;
-      color: #c2a031; }
+      color: #d5c392; }
 
 /******************************
 RESSOURCES ENTRAINEURS

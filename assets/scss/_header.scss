@@ -37,7 +37,7 @@ HEADER CSS -
         grid-template-areas:
                     "hamburger logo social";
         
-        border-bottom: 2px solid $primary-color-2;
+        border-bottom: 2px solid $primary-color-1;
         background-color: $bg-header-color;
         //height: $header-height-large;
     }
@@ -114,15 +114,18 @@ HEADER CSS -
         }
         
         &.lock-content {
-            border-left: 2px solid $primary-color-2;
+            border-left: 2px solid $primary-color-1;
             background-color: white;
             
             &:hover {
-                background-color: $secondary-color-2;
+                background-color: $primary-color-1;
+                a {
+                    color: white;
+                }
             }
             
             a {
-                color: $primary-color-1;
+                color: $secondary-color-1;
             }
         }
         

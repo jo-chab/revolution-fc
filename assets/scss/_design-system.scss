@@ -169,7 +169,7 @@ DESIGN SYSTEM – CARDS
     @include font-style(600, .75rem, 1em, white);
     @include font-family-reading();
     padding: .5rem .75rem;
-    background-color: $primary-color-3;
+    background-color: $primary-color-1;
     display: inline-block;
     text-transform: uppercase;
 }
@@ -327,8 +327,8 @@ DESIGN SYSTEM – Buttons
         border-color: white;
         
         &:hover {
-            border-color: $primary-color-3;
-            color: $primary-color-3;
+            border-color: $primary-color-1;
+            color: $primary-color-1;
         }
     }
     
@@ -565,7 +565,6 @@ label {
     padding: 0;
 }
 
-
 input {
     width:100%;
     padding: .75rem 1.5rem;
@@ -714,7 +713,7 @@ Lists
         .list-people-email {
             margin-top: .5rem;
             @include font-family-reading();
-            @include font-style(400, 1rem, 1em, $primary-color-1);
+            @include font-style(400, 1rem, 1em, $secondary-color-2);
         }
     }
 }
@@ -754,7 +753,7 @@ Lists
     
     span.docs-title {
         @include font-family-heading();
-        @include font-style(400, 1rem, 1.5em, $tertiary-color-3);
+        @include font-style(400, 1rem, 1.5em, $secondary-color-2);
         flex-grow: 1;
     }
 }
@@ -780,7 +779,7 @@ Lists
         padding: 2rem;
         @include border-radius-uniform(1rem);
         background-color: white;
-        border: 1px solid $tertiary-color-1;
+        border: 1px solid $tertiary-color-2;
         
         //-webkit-box-shadow: 4px 8px 16px 0 rgba(8,40,62,.1);
         //-moz-box-shadow: 4px 8px 16px 0 rgba(8,40,62,.1);
