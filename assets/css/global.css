@@ -1975,7 +1975,7 @@ NEWS PAGE – To do
         border-bottom: 4px solid #2D3D32; }
 
 /*******************************
-News detail / Programme detail - To do
+News detail / Programme detail
 *******************************/
 .article-heading {
   margin-bottom: 2rem;
@@ -2014,7 +2014,7 @@ News detail / Programme detail - To do
 */ }
   @media (min-width: 768px) {
     .article-detail {
-      margin-top: 64px; } }
+      margin-top: 3rem; } }
   .article-detail .article-intro {
     font-weight: 600;
     color: #2D3D32;
@@ -2130,7 +2130,7 @@ News detail / Programme detail - To do
 CLUB PAGE
 ******************************/
 /******************************
-PROGRAMMES - en cours –
+PROGRAMMES
 ******************************/
 .programme-container {
   display: grid;

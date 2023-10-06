@@ -246,7 +246,7 @@ NEWS PAGE – To do
 
 
 /*******************************
-News detail / Programme detail - To do
+News detail / Programme detail
 *******************************/
 .article-heading {
 	margin-bottom: 2rem;
@@ -289,7 +289,7 @@ News detail / Programme detail - To do
 .article-detail {
 	margin-top: 1.5rem;
 	@include tablet {
-		margin-top: 64px;
+		margin-top: 3rem;
 	}
 	
 	@import "text-content";
@@ -325,7 +325,7 @@ CLUB PAGE
 
 
 /******************************
-PROGRAMMES - en cours –
+PROGRAMMES
 ******************************/
 .programme-container {
 	display: grid;
@@ -364,7 +364,6 @@ PROGRAMMES - en cours –
 	width: 100%;
 	aspect-ratio: 3/2;
 }
-
 
 
 
