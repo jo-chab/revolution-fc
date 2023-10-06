@@ -59,7 +59,7 @@ HEADER CSS -
         
         &.header-social {
             grid-area: social;
-            //background: $primary-color-2;
+            background: $primary-color-2;
             justify-self: flex-end;
             width: fit-content;
             justify-content: flex-end;
@@ -107,7 +107,7 @@ HEADER CSS -
                 }
             }
             a {
-                color: $primary-color-1;
+                color: white;
                 padding-left: 2rem;
                 padding-right: 2rem;
             }
@@ -115,7 +115,6 @@ HEADER CSS -
         
         &.lock-content {
             border-left: 2px solid $primary-color-1;
-            border-right: 2px solid $primary-color-1;
             background-color: white;
             
             &:hover {

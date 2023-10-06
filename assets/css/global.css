@@ -321,7 +321,7 @@ h6 {
   color: #43474d; }
 
 .text-dates {
-  color: #bdaa7c; }
+  color: #aba7a7; }
 
 .white {
   color: white; }
@@ -1217,7 +1217,7 @@ Lists
     -moz-border-radius: 1rem;
     border-radius: 1rem;
     background-color: white;
-    border: 1px solid #bdaa7c; }
+    border: 1px solid #dbcca9; }
     @media (min-width: 768px) {
       .list-jobs .job-el {
         grid-gap: 2.5rem;
@@ -1523,6 +1523,7 @@ HEADER CSS -
           justify-content: flex-start; } }
     .top-header ul.header-social {
       grid-area: social;
+      background: #43474d;
       justify-self: flex-end;
       width: fit-content;
       justify-content: flex-end;
@@ -1563,12 +1564,11 @@ HEADER CSS -
         .top-header .nav-item.nav-social:hover a {
           color: white; }
       .top-header .nav-item.nav-social a {
-        color: #d5c392;
+        color: white;
         padding-left: 2rem;
         padding-right: 2rem; }
     .top-header .nav-item.lock-content {
       border-left: 2px solid #d5c392;
-      border-right: 2px solid #d5c392;
       background-color: white; }
       .top-header .nav-item.lock-content:hover {
         background-color: #d5c392; }

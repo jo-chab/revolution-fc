@@ -321,7 +321,7 @@ h6 {
   color: #43474d; }
 
 .text-dates {
-  color: #bdaa7c; }
+  color: #aba7a7; }
 
 .white {
   color: white; }
@@ -1362,7 +1362,7 @@ Lists
     -moz-border-radius: 1rem;
     border-radius: 1rem;
     background-color: white;
-    border: 1px solid #bdaa7c; }
+    border: 1px solid #dbcca9; }
     @media (min-width: 768px) {
       .list-jobs .job-el {
         grid-gap: 2.5rem;
