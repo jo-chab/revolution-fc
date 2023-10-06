@@ -287,59 +287,12 @@ News detail / Programme detail - To do
 }
 
 .article-detail {
-	margin-top: 24px;
+	margin-top: 1.5rem;
 	@include tablet {
 		margin-top: 64px;
 	}
 	
-	span {
-		&.news-section-header {
-			@include font-family-heading();
-			@include font-style(400, 20px, 1.5em, $secondary-color-1);
-			text-decoration: underline;
-			display:inline-block;
-			margin-bottom: 16px;
-			@include tablet {
-				font-size: 21px;
-			}
-			@include desktop-medium {
-				font-size: 24px;
-			}
-		}
-		&.news-quote {
-			font-style: italic;
-			font-weight: 400;
-		}
-	}
-	a.news-external_link {
-		color: $secondary-color-1;
-		text-decoration: underline;
-		transition: all .3s ease	;
-		&:hover {
-			color: darken($secondary-color-1, 30%);
-		}
-	}
-	
-	
-	ul {
-		margin-inline-start: 2.5rem;
-		li {
-			list-style-type: circle;
-			@include font-family-reading;
-			@include font-style(300, 1em, 1em, $primary-color-2);
-			@include mobile-xlarge {
-				font-size: 1.125rem;
-			}
-		}
-		&.news-list {
-			margin-inline-start: 2rem;
-			margin-block-start: 1rem;
-			margin-block-end: 1rem;
-			li {
-				list-style-type: disc;
-			}
-		}
-	}
+	@import "text-content";
 	
 }
 
