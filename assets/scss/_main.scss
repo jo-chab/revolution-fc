@@ -327,42 +327,48 @@ CLUB PAGE
 /******************************
 PROGRAMMES
 ******************************/
-.programme-container {
-	display: grid;
-	grid-gap: 2rem;
-	grid-template-columns: 1fr;
-	@include tablet {
-		grid-template-columns: 1fr 1fr;
-		grid-gap: 4rem 2rem;
-	}
-}
-
-.programme-element {
-	opacity: 1;
-	transition: opacity .3s ease;
-	&:hover {
-		opacity: .8;
+.list-programs {
+	@include mobile-max {
+		gap: 3rem;
 	}
 	
-	h2 {
-		text-transform: unset;
-		margin: 1rem auto .5rem;
-		line-height: 1.3em;
+	.program-element {
+		position: relative;
+		opacity: 1;
+		transition: opacity .3s ease;
+		&:hover {
+			opacity: .8;
+		}
+		
+		h2 {
+			//text-transform: unset;
+			letter-spacing: 0;
+			margin-bottom :.5rem;
+			line-height: 1.3em;
+			text-align: unset;
+			color: $primary-color-2;
+		}
 	}
-	p.intro {
-		color: $primary-color-1;
+	
+	.program-img {
+		background-repeat: no-repeat;
+		background-position: center center;
+		background-size: cover;
+		width: 100%;
+		aspect-ratio: 3/2;
+		margin-bottom: 1rem;
 	}
-	[class*="btn-"] {
-		margin: 0;
-	}
-}
 
-.programme-img {
-	background-repeat: no-repeat;
-	background-position: center center;
-	background-size: cover;
-	width: 100%;
-	aspect-ratio: 3/2;
+	.btn-overlay-content {
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		height: 100%;
+		width: 100%;
+		display: block;
+	}
 }
 
 

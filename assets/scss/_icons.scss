@@ -95,14 +95,29 @@
     font-size: 1.5em;
 }
 
-.i-more:before {
-    font: var(--fa-font-sharp-light);
-    content: '\f055';
-    .dashboard & {
-        font-size: 1.5em !important;
-        font: var(--fa-font-sharp-regular);
+.i-more {
+    &:before {
+        font: var(--fa-font-sharp-light);
+        content: '\f055';
+        
+        .dashboard & {
+            font-size: 1.5em !important;
+            font: var(--fa-font-sharp-regular);
+        }
     }
 }
+.i-more-2 {
+    &:after {
+        font: var(--fa-font-sharp-light);
+        content: '\f138';
+        
+        .dashboard & {
+            font-size: 1.5em !important;
+            font: var(--fa-font-sharp-regular);
+        }
+    }
+}
+
 .i-check:before {
     font: var(--fa-font-light);
     content: '\f058';
@@ -128,6 +143,7 @@
     font: var(--fa-font-brands);
     content: '\f39e';
 }
+
 .i-instagram:before {
     font: var(--fa-font-brands);
     content: '\f16d';
@@ -147,31 +163,36 @@ ADMIN ICONS
     font-family: "Font Awesome Kit";
     content: '\e012';
 }
+
 .i-config-site:before {
     font-family: "Font Awesome Kit";
     content: '\e011';
 }
+
 .i-config-club:before {
     font-family: "Font Awesome Kit";
     content: '\e015';
 }
+
 .i-config-home:before {
     font-family: "Font Awesome Kit";
     content: '\e010';
 }
+
 .i-news-add:before {
     font-family: "Font Awesome Kit";
     content: '\e001';
 }
+
 .i-doc-add:before {
     font-family: "Font Awesome Kit";
     content: '\e013';
 }
+
 .i-doc:before {
     font-family: "Font Awesome Kit";
     content: '\e014';
 }
-
 
 
 // NEWS
@@ -224,6 +245,7 @@ ADMIN ICONS
     content: '\f388';
     font-size: 1.75rem;
 }
+
 .i-config:before {
     font: var(--fa-font-light);
     content: '\f013';
@@ -325,3 +347,4 @@ ADMIN ICONS
     content: '\f058';
     font-size: 1.25em;
 }
+

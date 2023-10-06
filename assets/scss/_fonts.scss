@@ -170,10 +170,20 @@ p {
         margin-left: auto;
         margin-right: auto;
     }
+    &.intro {
+        font-weight: 600;
+        font-size: 1.25rem;
+        line-height: 1.3em;
+        margin-bottom: 1rem;
+        color: $tertiary-color-2;
+        @include tablet {
+            font-size: 1.375rem;
+        }
+    }
     &.article-intro {
         font-weight: 600;
         font-size: 1.25rem;
-        color: $primary-color-2;
+        color: $tertiary-color-1;
         margin-bottom: 1rem;
         @include tablet {
             font-size: 1.375rem;
