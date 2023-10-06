@@ -22,11 +22,10 @@ h2 {
 }
 
 h3 {
-    @include font-style(600, 1.25rem, 1.5em, $secondary-color-1);
-    margin-bottom: 1rem;
-    @include desktop-medium {
-        font-size: 1.5rem;
-    }
+    @include font-style(700, 1.25rem, 1.5em, $primary-color-1);
+    margin-bottom: .5rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
 }
 
 blockquote {
@@ -96,11 +95,8 @@ ul, ol {
     
     li {
         @include font-family-reading;
-        @include font-style(400, 1em, 1.5em, $primary-color-2);
+        @include font-style(400, 1.125rem, 1.5em, $primary-color-2);
         margin-bottom: .25rem;
-        @include mobile-xlarge {
-            font-size: 1.125rem;
-        }
         
         &:last-of-type {
             margin-bottom: 0;
@@ -110,10 +106,16 @@ ul, ol {
 
 ul li {
     list-style-type: disc;
+    li {
+        list-style: circle;
+    }
 }
 
 ol li {
     list-style-type: decimal;
+    li {
+        list-style: lower-alpha;
+    }
 }
 
 table {
