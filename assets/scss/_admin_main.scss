@@ -140,9 +140,14 @@ ADMIN – CONTENT
     
     &.is-active {
         display: block;
-        padding: 0;
         margin-bottom: 2rem;
     }
+}
+.content-update {
+    border: 1px solid $secondary-color-2;
+    background-color: $web-grey-1;
+    padding: 1rem;
+    
 }
 
 form.content-delete {

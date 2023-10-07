@@ -34,3 +34,13 @@
     // Call the function to enable the toggle behavior
     toggleContentAdd();
     toggleContentUpdate();
+
+    // Handle the "Cancel" button click event
+    $('.js-cancel-update').click(function () {
+        const contentUpdate = $(this).closest('.content-update');
+        const categoryId = contentUpdate.attr('class').match(/content-update-(\d+)/)[1]; // Extract categoryId
+        const updateButton = document.querySelector(`.js-content-update[data-category="${categoryId}"]`);
+
+        contentUpdate.removeClass('is-active');
+        updateButton.classList.remove('is-not-active');
+    });

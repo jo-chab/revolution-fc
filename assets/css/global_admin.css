@@ -1734,8 +1734,12 @@ ADMIN – CONTENT
   .content-add.is-active,
   .content-update.is-active {
     display: block;
-    padding: 0;
     margin-bottom: 2rem; }
+
+.content-update {
+  border: 1px solid #aba7a7;
+  background-color: #f2f2f2;
+  padding: 1rem; }
 
 form.content-delete {
   margin: 1rem auto 3rem;
