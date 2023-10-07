@@ -519,8 +519,7 @@ RESSOURCES ENTRAINEURS
 	margin-block: 3rem;
 	
 	.category-element {
-		display: flex;
-		flex-direction: column;
+		display: inline-grid;
 		align-items: center;
 		justify-content: center;
 		padding: 2rem;
@@ -553,8 +552,8 @@ RESSOURCES ENTRAINEURS
 
 .list-subcategory {
 	
-	&.hidden-subcategories {
-		display: none !important;
+	li {
+		display: inline-grid;
 	}
 	
 	.subcategory-element {

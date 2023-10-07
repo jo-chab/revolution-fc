@@ -1172,7 +1172,7 @@ Lists
   flex-direction: column;
   justify-content: center;
   width: 100%;
-  margin-top: 3rem; }
+  margin: 3rem 0; }
 
 .list-docs {
   width: 100%;
@@ -2309,8 +2309,7 @@ RESSOURCES ENTRAINEURS
 .list-category {
   margin-block: 3rem; }
   .list-category .category-element {
-    display: flex;
-    flex-direction: column;
+    display: inline-grid;
     align-items: center;
     justify-content: center;
     padding: 2rem;
@@ -2337,8 +2336,8 @@ RESSOURCES ENTRAINEURS
       background: #d5c392;
       color: white; }
 
-.list-subcategory.hidden-subcategories {
-  display: none !important; }
+.list-subcategory li {
+  display: inline-grid; }
 
 .list-subcategory .subcategory-element {
   display: flex;
