@@ -2306,3 +2306,63 @@ TOURNOI – Done
 /******************************
 RESSOURCES ENTRAINEURS
 ******************************/
+.list-category {
+  margin-block: 3rem; }
+  .list-category .category-element {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 1.25rem;
+    line-height: 1.3em;
+    color: #43474d;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-align: center;
+    background: #f2f2f2;
+    border: 1px solid #d5c392;
+    -webkit-border-radius: 1rem;
+    -moz-border-radius: 1rem;
+    border-radius: 1rem;
+    transition: all .1s ease; }
+    .list-category .category-element:hover {
+      cursor: pointer;
+      background: #d5c392;
+      color: white;
+      transition: all .3s ease; }
+    .list-category .category-element.is-active {
+      background: #d5c392;
+      color: white; }
+
+.list-subcategory.hidden-subcategories {
+  display: none !important; }
+
+.list-subcategory .subcategory-element {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-size: 1rem;
+  line-height: 1.3em;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-align: center;
+  background: #aba7a7;
+  border: 1px solid #43474d;
+  -webkit-border-radius: 1rem;
+  -moz-border-radius: 1rem;
+  border-radius: 1rem;
+  transition: all .1s ease; }
+  .list-subcategory .subcategory-element:hover {
+    cursor: pointer;
+    background: #43474d;
+    transition: all .3s ease; }
+  .list-subcategory .subcategory-element.is-active {
+    background: #d5c392; }
