@@ -116,7 +116,6 @@ ADMIN – CONTENT
     
     .dashboard-title {
         background-color: $primary-color-2;
-        text-transform: capitalize;
         padding: .5rem 1rem;
     }
     
@@ -287,27 +286,6 @@ span.logo-mini {
     }
 }
 
-/* Insert element in textarea */
-.edit-text-panel {
-    display: flex;
-    flex-flow: row wrap;
-    align-items: flex-start;
-    margin-bottom: 1rem;
-}
-
-.edit-panel-cta {
-    @include font-family-reading;
-    @include font-style(300, 1.125rem, 1em, $web-grey-4);
-    border-right: 1px solid #d3d3d3;
-    padding: .5rem 1rem;
-    box-sizing: border-box;
-    
-    &:hover {
-        cursor: pointer;
-        color: $secondary-color-1;
-    }
-}
-
 
 /*************************************
 USERS
@@ -324,6 +302,7 @@ USERS
 
 .cta-user {
     input[type="submit"] {
+        min-width: unset;
         text-align: center;
         padding: .5rem .75rem;
         background-color: $web-grey-2;
@@ -333,7 +312,7 @@ USERS
         transition: all .3s ease;
         
         &:hover {
-            background-color: darken($web-grey-2, 20%);
+            background-color: $secondary-color-1;
         }
     }
     
@@ -342,7 +321,7 @@ USERS
         color: white;
         
         &:hover {
-            background-color: darken($primary-color-1, 20%);
+            background-color: $secondary-color-1;
         }
     }
     

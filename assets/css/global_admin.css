@@ -911,7 +911,7 @@ DESIGN SYSTEM – CARDS
 /***********************
 DESIGN SYSTEM – Buttons
 ***********************/
-.button, .btn-primary, .btn-secondary, .btn-tertiary, .btn-filter, .btn-download {
+.button, .btn-primary, .btn-secondary, .btn-tertiary, .btn-filter, .btn-download, .inputfile + label {
   display: flex;
   width: fit-content;
   align-items: center;
@@ -920,12 +920,12 @@ DESIGN SYSTEM – Buttons
   font-family: 'Source Sans 3', sans-serif;
   text-align: center;
   transition: all .3s ease; }
-  .button:hover, .btn-primary:hover, .btn-secondary:hover, .btn-tertiary:hover, .btn-filter:hover, .btn-download:hover {
+  .button:hover, .btn-primary:hover, .btn-secondary:hover, .btn-tertiary:hover, .btn-filter:hover, .btn-download:hover, .inputfile + label:hover {
     cursor: pointer; }
   @media (max-width: 767px) {
-    .button, .btn-primary, .btn-secondary, .btn-tertiary, .btn-filter, .btn-download {
+    .button, .btn-primary, .btn-secondary, .btn-tertiary, .btn-filter, .btn-download, .inputfile + label {
       width: 100%; } }
-  .dashboard .button, .dashboard .btn-primary, .dashboard .btn-secondary, .dashboard .btn-tertiary, .dashboard .btn-filter, .dashboard .btn-download {
+  .dashboard .button, .dashboard .btn-primary, .dashboard .btn-secondary, .dashboard .btn-tertiary, .dashboard .btn-filter, .dashboard .btn-download, .dashboard .inputfile + label {
     border-radius: .5rem; }
 
 .btn-primary {
@@ -1551,23 +1551,28 @@ FORMS ELEMENT - block, labels, input & cta
   z-index: -1; }
 
 .inputfile + label {
-  width: 100%;
-  display: inline-block;
-  padding: .75rem 1rem;
-  background-color: #fed624;
-  font-family: 'Source Sans 3', sans-serif;
+  padding: 1.25rem 2rem;
   font-weight: 400;
-  font-size: 16px;
-  line-height: 1.5em;
-  color: #343741;
-  text-align: center; }
-  @media (min-width: 768px) {
+  font-size: 0.875rem;
+  line-height: 1em;
+  color: white;
+  background-color: #d5c392; }
+  @media (max-width: 767px) {
     .inputfile + label {
-      max-width: 360px; } }
-  .inputfile + label:hover {
-    cursor: pointer;
-    background-color: #C2A031;
-    transition: all .3s ease; }
+      padding: 1rem; } }
+  @media (min-width: 768px) {
+    .inputfile + label:hover {
+      background-color: #b99a48; } }
+  .inputfile + label:before {
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    font-size: 1em;
+    font: var(--fa-font-sharp-regular);
+    content: '\f342'; }
+  .inputfile + label.small {
+    font-size: .875rem;
+    padding: .75rem 1.25rem; }
 
 input[type='date'] {
   -webkit-appearance: none;
@@ -1711,7 +1716,6 @@ ADMIN – CONTENT
     margin-bottom: 2rem; }
   .dashboard-container .dashboard-title {
     background-color: #43474d;
-    text-transform: capitalize;
     padding: .5rem 1rem; }
   .dashboard-container .dashboard-content {
     padding: 1rem; }
@@ -1828,26 +1832,6 @@ span.logo-mini {
   span.logo-mini img {
     width: 100%; }
 
-/* Insert element in textarea */
-.edit-text-panel {
-  display: flex;
-  flex-flow: row wrap;
-  align-items: flex-start;
-  margin-bottom: 1rem; }
-
-.edit-panel-cta {
-  font-family: 'Source Sans 3', sans-serif;
-  font-weight: 300;
-  font-size: 1.125rem;
-  line-height: 1em;
-  color: #5f6369;
-  border-right: 1px solid #d3d3d3;
-  padding: .5rem 1rem;
-  box-sizing: border-box; }
-  .edit-panel-cta:hover {
-    cursor: pointer;
-    color: #bdaa7c; }
-
 /*************************************
 USERS
 *************************************/
@@ -1862,6 +1846,7 @@ USERS
     font-weight: 600; }
 
 .cta-user input[type="submit"] {
+  min-width: unset;
   text-align: center;
   padding: .5rem .75rem;
   background-color: #d3d3d3;
@@ -1873,13 +1858,13 @@ USERS
   color: #343741;
   transition: all .3s ease; }
   .cta-user input[type="submit"]:hover {
-    background-color: #a0a0a0; }
+    background-color: #bdaa7c; }
 
 .cta-user.activate input[type="submit"] {
   background-color: #d5c392;
   color: white; }
   .cta-user.activate input[type="submit"]:hover {
-    background-color: #b99a48; }
+    background-color: #bdaa7c; }
 
 .cta-user.delete input[type="submit"] {
   background-color: #FF1541;
