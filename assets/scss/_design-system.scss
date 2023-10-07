@@ -203,6 +203,10 @@ DESIGN SYSTEM – Buttons
         width: 100%;
     }
     
+    &.is-not-active {
+        opacity: .2;
+    }
+    
     .dashboard & {
         border-radius: .5rem;
     }
@@ -327,8 +331,8 @@ DESIGN SYSTEM – Buttons
         border-color: white;
         
         &:hover {
-            border-color: $primary-color-1;
-            color: $primary-color-1;
+            background-color: white;
+            color: $primary-color-2;
         }
     }
     

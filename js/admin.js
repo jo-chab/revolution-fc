@@ -17,6 +17,20 @@
             addButton.classList.toggle('is-hide');
         });
     }
+    function toggleContentUpdate() {
+        const updateButtons = document.querySelectorAll('.js-content-update');
+
+        updateButtons.forEach(updateButton => {
+            updateButton.addEventListener('click', () => {
+                const categoryId = updateButton.getAttribute('data-category');
+                const contentUpdate = document.querySelector(`.content-update-${categoryId}`);
+
+                contentUpdate.classList.toggle('is-active');
+                updateButton.classList.toggle('is-not-active');
+            });
+        });
+    }
 
     // Call the function to enable the toggle behavior
     toggleContentAdd();
+    toggleContentUpdate();

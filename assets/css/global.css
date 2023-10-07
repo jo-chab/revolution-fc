@@ -780,6 +780,8 @@ DESIGN SYSTEM – Buttons
   @media (max-width: 767px) {
     .button, .btn-primary, .btn-secondary, .btn-tertiary, .btn-filter, .btn-download {
       width: 100%; } }
+  .button.is-not-active, .is-not-active.btn-primary, .is-not-active.btn-secondary, .is-not-active.btn-tertiary, .is-not-active.btn-filter, .is-not-active.btn-download {
+    opacity: .2; }
   .dashboard .button, .dashboard .btn-primary, .dashboard .btn-secondary, .dashboard .btn-tertiary, .dashboard .btn-filter, .dashboard .btn-download {
     border-radius: .5rem; }
 
@@ -863,8 +865,8 @@ DESIGN SYSTEM – Buttons
     color: white;
     border-color: white; }
     .btn-secondary.ghost-white:hover {
-      border-color: #d5c392;
-      color: #d5c392; }
+      background-color: white;
+      color: #43474d; }
 
 .btn-tertiary {
   font-weight: 400;
