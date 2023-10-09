@@ -28,7 +28,7 @@ form.popup {
     
     .popup-title {
         text-align: center;
-        color: $primary-color-2;
+        color: $secondary-color;
     }
     
     .g-recaptcha {
@@ -65,15 +65,15 @@ FORMS ELEMENT - block, labels, input & cta
 .inputfile + label {
     @extend .button;
     padding: 1.25rem 2rem;
-    @include font-style(400, .875rem, 1em, white);
-    background-color: $primary-color-1;
+    @include font-style(400, .875rem, 1em, $secondary-color);
+    background-color: $color-warning;
     @include mobile-max {
         padding: 1rem;
     }
     
     @include tablet {
         &:hover {
-            background-color: darken($primary-color-1, 20%);
+            background-color: $color-warning-dark;
         }
     }
     
@@ -97,7 +97,6 @@ input[type='date'] {
     -moz-appearance: none;
     appearance: none;
 }
-
 
 
 .multiple-fileInputs {
@@ -141,7 +140,7 @@ input[type='date'] {
 }
 
 .switch-container:has(.switch-checkbox:checked) {
-    background-color: #4CAF50;
+    background-color: $admin-primary;
 }
 .switch-checkbox:checked + .switch-knob {
     transform: translateX(30px);

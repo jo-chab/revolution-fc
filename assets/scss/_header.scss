@@ -37,7 +37,7 @@ HEADER CSS -
         grid-template-areas:
                     "hamburger logo social";
         
-        border-bottom: 2px solid $primary-color-1;
+        border-bottom: 2px solid $primary-color;
         background-color: $bg-header-color;
         //height: $header-height-large;
     }
@@ -59,7 +59,7 @@ HEADER CSS -
         
         &.header-social {
             grid-area: social;
-            background: $primary-color-2;
+            background: $secondary-color;
             justify-self: flex-end;
             width: fit-content;
             justify-content: flex-end;
@@ -84,7 +84,7 @@ HEADER CSS -
             cursor: pointer;
             text-align: center;
             @include font-family-heading();
-            @include font-style(600, 1rem, 1.5em, $primary-color-2);
+            @include font-style(600, 1rem, 1.5em, $secondary-color);
             text-transform: uppercase;
             letter-spacing: 1px;
             transition: all .3s ease;
@@ -94,14 +94,14 @@ HEADER CSS -
             }
             
             &:hover {
-                color: $primary-color-1;
+                color: $primary-color;
             }
         }
         
         &.nav-social {
             color: white;
             &:hover {
-                background-color: $primary-color-1;
+                background-color: $primary-color;
                 a {
                     color: white;
                 }
@@ -114,18 +114,18 @@ HEADER CSS -
         }
         
         &.lock-content {
-            border-left: 2px solid $primary-color-1;
+            border-left: 2px solid $primary-color;
             background-color: white;
             
             &:hover {
-                background-color: $primary-color-1;
+                background-color: $primary-color;
                 a {
                     color: white;
                 }
             }
             
             a {
-                color: $secondary-color-1;
+                color: $secondary-color;
             }
         }
         
@@ -184,7 +184,7 @@ HEADER CSS -
     
     .menu-toggle i {
         padding: 2rem;
-        color: $primary-color-1;
+        color: $primary-color;
         cursor: pointer;
         @include mobile-max {
             font-size: 2rem;
@@ -254,7 +254,7 @@ nav.desktop {
         transition: all .3s ease;
         
         &:hover {
-            color: $primary-color-1;
+            color: $primary-color;
             transition: all .3s ease;
         }
     }
@@ -282,7 +282,7 @@ nav.desktop {
         
         &:hover {
             cursor: pointer;
-            color: $primary-color-1;
+            color: $primary-color;
         }
         
     }
@@ -373,7 +373,7 @@ nav.desktop {
     cursor: pointer;
     
     &:hover {
-        color: $primary-color-1;
+        color: $primary-color;
         transition: all .3s ease;
     }
 }

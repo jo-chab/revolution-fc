@@ -29,7 +29,7 @@
 /***** TITLE *****/
 h1 {
     @include font-family-heading();
-    @include font-style(700, 2rem, 1.3em, $primary-color-2);
+    @include font-style(700, 2rem, 1.3em, $secondary-color);
     text-align: center;
     margin-bottom: 2rem;
     @include tablet {
@@ -53,7 +53,7 @@ h1 {
 
 h2 {
     @include font-family-heading();
-    @include font-style(700, 1.5rem, 1.5em, $primary-color-1);
+    @include font-style(700, 1.5rem, 1.5em, $primary-color);
     text-transform: uppercase;
     letter-spacing: 2px;
     margin-bottom: 1rem;
@@ -68,7 +68,7 @@ h2 {
     }
     
     &.section-title {
-        color: $primary-color-2;
+        color: $secondary-color;
         margin-bottom: 2rem;
         text-align: center;
     }
@@ -88,7 +88,7 @@ h2 {
 
 h3 {
     @include font-family-heading();
-    @include font-style(600, 1.25rem, 1.3em, $primary-color-2);
+    @include font-style(600, 1.25rem, 1.3em, $secondary-color);
     @include mobile-xlarge {
         font-size: 1.5rem;
     }
@@ -111,7 +111,7 @@ h3 {
 
 h4 {
     @include font-family-heading();
-    @include font-style(600, 1.125rem, 1.5em, $primary-color-2);
+    @include font-style(600, 1.125rem, 1.5em, $secondary-color);
     @include mobile-xlarge {
         font-size: 1.25rem;
     }
@@ -140,7 +140,7 @@ h4 {
 
 h5 {
     @include font-family-reading();
-    @include font-style(400, .875rem, 1.5em, $primary-color-2);
+    @include font-style(400, .875rem, 1.5em, $secondary-color);
     @include mobile-xlarge {
         font-size: 1rem;
     }
@@ -148,12 +148,12 @@ h5 {
 
 h6 {
     @include font-family-reading();
-    @include font-style(400, .75rem, 1.5em, $primary-color-2);
+    @include font-style(400, .75rem, 1.5em, $secondary-color);
 }
 
 
 .text-dates {
-    color: $secondary-color-2;
+    color: $secondary-color-light;
 }
 .white {
     color: white;
@@ -175,7 +175,7 @@ p {
         font-size: 1.25rem;
         line-height: 1.3em;
         margin-bottom: 1rem;
-        color: $secondary-color-2;
+        color: $secondary-color-light;
         @include tablet {
             font-size: 1.375rem;
         }
@@ -183,7 +183,7 @@ p {
     &.article-intro {
         font-weight: 600;
         font-size: 1.25rem;
-        color: $tertiary-color-1;
+        color: $secondary-color-light;
         margin-bottom: 1rem;
         @include tablet {
             font-size: 1.375rem;
@@ -199,12 +199,12 @@ p {
     }
     
     .inline-link {
-        color: $primary-color-1;
+        color: $primary-color;
         font-weight: 600;
         transition: all .3s ease;
         
         &:hover {
-            color: darken($primary-color-1, 15%);
+            color: $primary-color-dark;
         }
     }
     &.legend,
@@ -215,10 +215,10 @@ p {
     &.pwd-reset {
         font-size: .875rem;
         a {
-            color: $tertiary-color-1;
+            color: $primary-color;
             transition: all .3s ease;
             &:hover {
-                color: $primary-color-1;
+                color: $primary-color-dark;
             }
         }
     }

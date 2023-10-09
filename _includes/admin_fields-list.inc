@@ -59,10 +59,6 @@
                             <label>Nom du terrrain (max 80 caract&egrave;res) :</label>
                             <input id="field_name" name="zt_name" type="text" maxlength="80" required>
                         </div>
-<!--                        <div class="form-row column">-->
-<!--                            <label>Description - optionnel (max 60 caract&egrave;res) :</label>-->
-<!--                            <input id="field_desc" name="zt_desc" type="text" maxlength="60" required>-->
-<!--                        </div>-->
                     </div>
                     
                     <div class="grid-layout-2">

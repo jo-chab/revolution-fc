@@ -234,7 +234,7 @@ article {
         }
         
         &.flash-alert {
-            background: $primary-color-1;
+            background: $primary-color;
             display: grid;
             gap: .5rem;
             
@@ -296,7 +296,7 @@ COOKIES Popup
     max-width: $popup-width-large;
     @include border-radius-uniform(1.5rem);
     background: $popup-color-2;
-    border: 1px solid $primary-color-1;
+    border: 1px solid $primary-color;
     
     -webkit-box-shadow: 0 5px 20px -6px rgba(18,18,18,.4);
     -moz-box-shadow: 0 5px 20px -6px rgba(18,18,18,.4);

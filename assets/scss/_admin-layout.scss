@@ -164,7 +164,7 @@ ALERT MESSAGES in Dashboard
     
     .icon {
         padding: 1rem;
-        background-color: $alert-1;
+        background-color: $color-warning;
         &:before {
             font: var(--fa-font-sharp-regular);
             content: "\f05a";

@@ -47,7 +47,7 @@ DESIGN SYSTEM – Alert message box
         }
         
         i {
-            color: $alert-2;
+            color: $color-warning;
             padding: 0 0 16px;
             font-size: 2em;
         }
@@ -63,8 +63,8 @@ DESIGN SYSTEM – Alert message box
         }
         
         &.alert-correct {
-            background-color: $color-correct;
-            border-color: darken($color-correct, 30%);
+            background-color: $color-success;
+            border-color: $color-success-darker;
             color: white;
             
             i {
@@ -74,7 +74,7 @@ DESIGN SYSTEM – Alert message box
         
         &.alert-error {
             background-color: $color-error;
-            border-color: darken($color-error, 20%);
+            border-color: $color-error-darker;
             color: white;
             
             i {
@@ -169,7 +169,7 @@ DESIGN SYSTEM – CARDS
     @include font-style(600, .75rem, 1em, white);
     @include font-family-reading();
     padding: .5rem .75rem;
-    background-color: $primary-color-1;
+    background-color: $primary-color;
     display: inline-block;
     text-transform: uppercase;
 }
@@ -203,6 +203,10 @@ DESIGN SYSTEM – Buttons
         width: 100%;
     }
     
+    &.is-not-active {
+        opacity: .2;
+    }
+    
     .dashboard & {
         border-radius: .5rem;
     }
@@ -212,7 +216,7 @@ DESIGN SYSTEM – Buttons
     @extend .button;
     padding: 1.25rem 2rem;
     @include font-style(400, 1.125rem, 1em, white);
-    background-color: $primary-color-1;
+    background-color: $primary-color-dark;
     @include mobile-max {
         padding: 1rem;
     }
@@ -222,7 +226,7 @@ DESIGN SYSTEM – Buttons
     
     @include tablet {
         &:hover {
-            background-color: darken($primary-color-1, 20%);
+            background-color: $primary-color-darker;
         }
     }
     
@@ -235,18 +239,19 @@ DESIGN SYSTEM – Buttons
         background-color: $color-error;
         @include tablet {
             &:hover {
-                background-color: darken($color-error, 20%);
+                background-color: $color-error-dark;
             }
         }
     }
     
     &.btn-confirm,
     &.cta-add {
-        background-color: $color-correct;
+        background-color: $color-success;
+        color: $color-success-darker;
         justify-self: center;
         @include tablet {
             &:hover {
-                background-color: darken($color-correct, 20%);
+                background-color: $color-success-dark;
             }
         }
     }
@@ -276,12 +281,12 @@ DESIGN SYSTEM – Buttons
     }
     
     &.cta-back {
-        background-color: $alert-1;
+        background-color: $color-warning;
         color: $web-grey-6;
         
         @include tablet {
             &:hover {
-                background-color: $alert-2;
+                background-color: $color-warning-dark;
             }
         }
         
@@ -301,8 +306,8 @@ DESIGN SYSTEM – Buttons
 .btn-secondary {
     @extend .button;
     padding: 1.25rem 2rem;
-    @include font-style(400, 1.125em, 1em, $secondary-color-1);
-    border: 1px solid $secondary-color-1;
+    @include font-style(400, 1.125em, 1em, $secondary-color);
+    border: 1px solid $secondary-color;
     @include mobile-max {
         padding: 1rem;
     }
@@ -312,8 +317,8 @@ DESIGN SYSTEM – Buttons
     
     @include tablet {
         &:hover {
-            border-color: darken($secondary-color-1, 15%);
-            color: darken($secondary-color-1, 15%);
+            border-color: darken($secondary-color, 15%);
+            color: darken($secondary-color, 15%);
         }
     }
     
@@ -327,8 +332,8 @@ DESIGN SYSTEM – Buttons
         border-color: white;
         
         &:hover {
-            border-color: $primary-color-1;
-            color: $primary-color-1;
+            background-color: white;
+            color: $secondary-color;
         }
     }
     
@@ -336,16 +341,17 @@ DESIGN SYSTEM – Buttons
 .btn-tertiary {
     @extend .button;
     
-    @include font-style(400, 1.25em, 1em, $primary-color-1);
+    @include font-style(400, 1.25em, 1em, $primary-color-dark);
     padding: 1.25rem 2rem;
     margin: 1.5rem 0;
     border-radius: 0;
     &:hover {
-        color: darken($primary-color-1, 15%);
+        color: $primary-color-darker;
     }
     
     .dashboard & {
         margin: 0;
+        @include border-radius-uniform(0);
     }
     
     &.btn-text {
@@ -362,9 +368,9 @@ DESIGN SYSTEM – Buttons
     }
     
     &.cta-add {
-        color: $color-correct;
+        color: $color-success-light;
         &:hover {
-            color: darken($color-correct, 20%);
+            color: $color-success;
         }
     }
     
@@ -378,8 +384,6 @@ DESIGN SYSTEM – Buttons
             color: $color-error;
         }
         @include mobile-max {
-            background-color: $web-grey-3;
-            color: white;
             &:hover {
                 color: unset;
             }
@@ -387,9 +391,9 @@ DESIGN SYSTEM – Buttons
     }
     
     &.btn-update {
-        color: $primary-color-1;
+        color: $admin-primary-light;
         &:hover {
-            color: darken($primary-color-1, 20%);
+            color: $admin-primary;
         }
     }
     
@@ -399,16 +403,16 @@ DESIGN SYSTEM – Buttons
     @extend .button;
     gap: .5rem;
     
-    @include font-style(400, .875rem, 1em, $primary-color-1);
+    @include font-style(400, .875rem, 1em, $primary-color);
     padding: 0;
     .btn-filter-select & {
-        color: $primary-color-1;
+        color: $primary-color;
         text-transform: uppercase;
         
         &.is-inactive {
             color: $tertiary-color-1;
             &:hover {
-                color: $primary-color-1;
+                color: $primary-color;
             }
         }
     }
@@ -418,7 +422,7 @@ DESIGN SYSTEM – Buttons
         color: $tertiary-color-1;
         &:hover {
             opacity: 1;
-            color: $primary-color-1;
+            color: $primary-color;
         }
     }
 }
@@ -433,7 +437,7 @@ DESIGN SYSTEM – Buttons
     }
     
     &:hover {
-        background: $primary-color-1;
+        background: $primary-color;
     }
 }
 
@@ -502,15 +506,15 @@ select {
         top: .75rem;
         left: 1rem;
         z-index: 2;
-        color: $primary-color-1;
+        color: $secondary-color;
         letter-spacing: 2px;
     }
     
     select {
         font-size: 1.125rem;
-        border-color: $admin-update-2;
+        border-color: $secondary-color;
         color: $admin-update-2;
-        background-color: $admin-update;
+        background-color: lighten($primary-color, 5%);
         padding: .75rem 4rem .75rem 1rem;
         
         background-image: url('https://clients.chabertdesign.com/panel/assets/img/chevron-down-black.svg');
@@ -560,7 +564,7 @@ FORMS ELEMENT - block, labels, input & cta
 
 label {
     @include font-family-heading;
-    @include font-style(600, .75rem, 1em, $primary-color-2);
+    @include font-style(600, .75rem, 1em, $secondary-color);
     text-transform: uppercase;
     padding: 0;
 }
@@ -581,7 +585,7 @@ input {
     }
     &:focus {
         color: $web-grey-5;
-        border-color: $primary-color-1;
+        border-color: $primary-color;
     }
     &::placeholder {
         color: $web-grey-2;
@@ -595,7 +599,7 @@ input {
         min-width: 320px;
         margin:2rem auto;
         cursor:pointer;
-        background-color: $primary-color-1;
+        background-color: $primary-color;
         &:focus {
             color: white;
             border: none;
@@ -628,7 +632,7 @@ textarea {
     }
     &:focus {
         color: $web-grey-5;
-        border-color: $primary-color-1;
+        border-color: $primary-color;
     }
     &.prefilled {
         color: $web-grey-3;
@@ -681,7 +685,7 @@ Lists
         
         .list-people-function {
             @include font-family-heading();
-            @include font-style(700, 1.5rem, 1em, $primary-color-2);
+            @include font-style(700, 1.5rem, 1em, $secondary-color);
             text-transform: uppercase;
             margin-bottom: .5rem;
         }
@@ -701,19 +705,19 @@ Lists
         
         .list-people-name {
             @include font-family-heading();
-            @include font-style(700, 1.125rem, 1em, $primary-color-1);
+            @include font-style(700, 1.125rem, 1em, $primary-color);
             text-transform: capitalize;
         }
         
         .list-people-legend {
             @include font-family-reading();
-            @include font-style(400, .875rem, 1.5em, $secondary-color-1);
+            @include font-style(400, .875rem, 1.5em, $secondary-color);
         }
         
         .list-people-email {
             margin-top: .5rem;
             @include font-family-reading();
-            @include font-style(400, 1rem, 1em, $secondary-color-2);
+            @include font-style(400, 1rem, 1em, $secondary-color-light);
         }
     }
 }
@@ -726,7 +730,7 @@ Lists
     justify-content: center;
     
     width: 100%;
-    margin-top: 3rem;
+    margin: 3rem 0;
     
 }
 
@@ -753,12 +757,10 @@ Lists
     
     span.docs-title {
         @include font-family-heading();
-        @include font-style(400, 1rem, 1.5em, $secondary-color-2);
+        @include font-style(400, 1rem, 1.5em, $secondary-color-light);
         flex-grow: 1;
     }
 }
-
-
 
 .list-jobs {
     margin-block: $space-m;
@@ -779,7 +781,7 @@ Lists
         padding: 2rem;
         @include border-radius-uniform(1rem);
         background-color: white;
-        border: 1px solid $tertiary-color-2;
+        border: 1px solid $secondary-color-lighter;
         
         //-webkit-box-shadow: 4px 8px 16px 0 rgba(8,40,62,.1);
         //-moz-box-shadow: 4px 8px 16px 0 rgba(8,40,62,.1);
@@ -792,7 +794,7 @@ Lists
     }
     .job-infos {
         p {
-            @include font-style(300, 1rem, 1.3em, $tertiary-color-1);
+            @include font-style(300, 1rem, 1.3em, $secondary-color-light);
             @include line-clamp(3);
         }
     }

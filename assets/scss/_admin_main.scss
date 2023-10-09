@@ -46,7 +46,7 @@ ADMIN – DEFAULT
     
     li {
         padding: 1rem;
-        border: 1px solid $primary-color-1;
+        border: 1px solid $primary-color;
         background-color: white;
         @include border-radius-uniform(.5rem);
         @include tablet {
@@ -73,7 +73,7 @@ ADMIN – DEFAULT
         
         span {
             @include font-family-reading;
-            @include font-style(600, .75rem, 1.3em, $primary-color-2);
+            @include font-style(600, .75rem, 1.3em, $secondary-color);
             text-transform: uppercase;
             letter-spacing: 1px;
             text-align: center;
@@ -115,7 +115,7 @@ ADMIN – CONTENT
     }
     
     .dashboard-title {
-        background-color: $primary-color-2;
+        background-color: $secondary-color-dark;
         padding: .5rem 1rem;
     }
     
@@ -140,9 +140,17 @@ ADMIN – CONTENT
     
     &.is-active {
         display: block;
-        padding: 0;
         margin-bottom: 2rem;
     }
+}
+.content-add {
+    border-bottom: 1px solid $secondary-color-light;
+}
+.content-update {
+    border: 1px solid $admin-secondary;
+    background-color: $web-grey-1;
+    padding: 1rem;
+    
 }
 
 form.content-delete {
@@ -221,7 +229,7 @@ form.content-delete {
         
         .element-title {
             @include font-family-reading;
-            @include font-style(400, 1.25rem, 1.5em, $primary-color-2);
+            @include font-style(400, 1.25rem, 1.5em, $secondary-color);
             text-align: center;
             @include tablet {
                 text-align: unset;
@@ -293,7 +301,7 @@ USERS
 .user-name {
     width: 100%;
     @include font-family-heading;
-    @include font-style(400, .875rem, 1em, $primary-color-2);
+    @include font-style(400, .875rem, 1em, $secondary-color);
     
     span {
         font-weight: 600;
@@ -305,23 +313,24 @@ USERS
         min-width: unset;
         text-align: center;
         padding: .5rem .75rem;
-        background-color: $web-grey-2;
+        background-color: $admin-primary-lighter;
         border-radius: 2rem;
         @include font-family-heading;
-        @include font-style(400, .75rem, 1em, $web-grey-5);
+        @include font-style(400, .75rem, 1em, $secondary-color);
         transition: all .3s ease;
         
         &:hover {
-            background-color: $secondary-color-1;
+            background-color: $admin-primary-light;
+            color: white;
         }
     }
     
     &.activate input[type="submit"] {
-        background-color: $primary-color-1;
+        background-color: $admin-primary;
         color: white;
         
         &:hover {
-            background-color: $secondary-color-1;
+            pointer-events: none;
         }
     }
     
@@ -330,7 +339,7 @@ USERS
         color: white;
         
         &:hover {
-            background-color: darken($color-error, 20%);
+            background-color: $color-error-darker;
         }
     }
 }

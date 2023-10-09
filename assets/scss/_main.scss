@@ -17,7 +17,6 @@ MAIN CSS
 /***********************
 Lists
 ***********************/
-
 .list-people {
 	@extend .web-layout;
 	margin-block: 3rem;
@@ -65,9 +64,9 @@ HOME PAGE
 		align-items: flex-end;
 		justify-content: center;
 		
-		background-color: $primary-color-2;
-		background: -webkit-linear-gradient(top, rgba($primary-color-2, 0), rgba($primary-color-2, 1));
-		background: linear-gradient(to bottom, rgba($primary-color-2, 0), rgba($primary-color-2, 1));
+		background-color: $secondary-color;
+		background: -webkit-linear-gradient(top, rgba($secondary-color, 0), rgba($secondary-color, 1));
+		background: linear-gradient(to bottom, rgba($secondary-color, 0), rgba($secondary-color, 1));
 	}
 	
 	.hero-overlay-content {
@@ -113,7 +112,7 @@ HOME PAGE
 		padding:16px;
 		margin-bottom: 16px;
 		&.important {
-			background-color: $secondary-color-1;
+			background-color: $secondary-color;
 			h3 {
 				color: white;
 				margin-bottom:0;
@@ -224,7 +223,7 @@ NEWS PAGE
 	margin-top: 80px;
 	
 	.page-cta {
-		background-color: $secondary-color-1;
+		background-color: $secondary-color;
 		padding:8px 16px;
 		font-size:32px;
 		color: white;
@@ -236,8 +235,8 @@ NEWS PAGE
 			padding: 4px 8px;
 			&.active-page {
 				font-weight: 700;
-				color: $secondary-color-1;
-				border-bottom: 4px solid $secondary-color-1;
+				color: $primary-color-dark;
+				border-bottom: 4px solid $primary-color-dark;
 			}
 		}
 	}
@@ -346,7 +345,7 @@ PROGRAMMES
 			margin-bottom :.5rem;
 			line-height: 1.3em;
 			text-align: unset;
-			color: $primary-color-2;
+			color: $secondary-color;
 		}
 	}
 	
@@ -377,7 +376,7 @@ PROGRAMMES
 
 
 /******************************
-FIELDS PAGE – Done
+FIELDS
 ******************************/
 .fields li {
 	width: 100%;
@@ -428,7 +427,7 @@ FIELDS PAGE – Done
 	
 	&-desc {
 		font-size: .875rem;
-		color: $secondary-color-1;
+		color: $secondary-color;
 	}
 	
 	&-address {
@@ -444,7 +443,7 @@ FIELDS PAGE – Done
 
 
 /******************************
-TOURNOI – Done
+TOURNOIS
 ******************************/
 .tournoi-tarifs {
 	display: flex;
@@ -493,17 +492,17 @@ TOURNOI – Done
 
 	&-type {
 		@include font-family-heading;
-		@include font-style(700, 2rem, 1em, $secondary-color-1);
+		@include font-style(700, 2rem, 1em, $secondary-color);
 	}
 	&-category {
 		@include font-family-reading;
-		@include font-style(700, 1.25rem, 1em, $primary-color-2);
+		@include font-style(700, 1.25rem, 1em, $secondary-color);
 	}
 	&-price {
 		@include font-family-reading;
-		@include font-style(700, 3rem, 1em, $primary-color-2);
+		@include font-style(700, 3rem, 1em, $secondary-color);
 		span {
-			@include font-style(400, .3em, 1em, $primary-color-1);
+			@include font-style(400, .3em, 1em, $primary-color);
 		}
 	}
 }
@@ -515,3 +514,75 @@ TOURNOI – Done
 /******************************
 RESSOURCES ENTRAINEURS
 ******************************/
+.list-category {
+	margin-block: 3rem;
+	
+	.category-element {
+		display: inline-grid;
+		align-items: center;
+		justify-content: center;
+		padding: 2rem;
+		
+		@include font-family-heading;
+		@include font-style(600, 1.25rem, 1.3em, $secondary-color);
+		text-transform: uppercase;
+		letter-spacing: 1px;
+		text-align: center;
+		
+		background: #f2f2f2;
+		border: 1px solid $primary-color;
+		@include border-radius-uniform(1rem);
+		
+		transition: all .1s ease;
+		
+		&:hover {
+			cursor: pointer;
+			background: $primary-color;
+			color: white;
+			transition: all .3s ease;
+		}
+		
+		&.is-active {
+			background: $primary-color;
+			color: white
+		}
+	}
+}
+
+.list-subcategory {
+	
+	li {
+		display: inline-grid;
+	}
+	
+	.subcategory-element {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		padding: 1rem;
+		
+		@include font-family-heading;
+		@include font-style(600, 1rem, 1.3em, white);
+		text-transform: uppercase;
+		letter-spacing: 1px;
+		text-align: center;
+		
+		background: $secondary-color-light;
+		border: 1px solid $secondary-color;
+		@include border-radius-uniform(1rem);
+		
+		transition: all .1s ease;
+		
+		&:hover {
+			cursor: pointer;
+			background: $secondary-color;
+			transition: all .3s ease;
+		}
+		
+		&.is-active {
+			background: $primary-color;
+		}
+		
+	}
+}

@@ -53,7 +53,7 @@
 
                         </div>
                         <div class="d-form-cta">
-                            <div class="btn-primary small btn-validate icon mobile-icon-only"><span>Ajouter</span></div>
+                            <div class="btn-primary small btn-confirm icon mobile-icon-only"><span>Enregistrer</span></div>
                         </div>
                     </form>
 

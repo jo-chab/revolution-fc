@@ -36,47 +36,60 @@ $web-grey-5: #343741;
 $web-grey-6: #181818;
 
 /* SPECIFIC BRAND */
-$primary-color-1: #d5c392;
-$primary-color-2: #43474d;
-//$primary-color-3: #FFCD00;
+$primary-color: #d5c392;
+$primary-color-light: #dbcca9;
+$primary-color-lighter: #f6e9d5;
+$primary-color-dark: #a8956c;
+$primary-color-darker: #8a7b43;
 
-$secondary-color-1: #bdaa7c;
-$secondary-color-2: #aba7a7;
-$secondary-color-3: #d7d4d3;
+$secondary-color: #43474d;
+$secondary-color-lighter: #bec3ca;
+$secondary-color-light: #767b81;
+$secondary-color-dark: #363b41;
+$secondary-color-darker: #15171a;
 
-$tertiary-color-1: #949A90;
-$tertiary-color-2: #dbcca9;
-//$tertiary-color-3: #63666A;
-//$tertiary-color-4: #D0D3D4;
+$tertiary-color-1: #d7d4d3;
+$tertiary-color-2: #aba7a7;
+$tertiary-color-3: #949A90;
+
+$accent-color: #92d5c3;
+$accent-color-light: #bce5da;
+$accent-color-dark: #52b59a;
+$accent-color-darker: #52b59a;
+
 
 
 
 /****** MESSAGES & ALERTS ******/
-$alert-1: #fed624;
-$alert-2: #C2A031;
-$alert-3: #9bce7c;
-$alert-4: #1ecd28;
-$alert-5: #293D1D;
-$alert-6: #FF1541;
-$alert-7: #BA0F2F;
+$color-success: #00E676;
+$color-success-light: #69F0AE;
+$color-success-lighter: #B9F6CA;
+$color-success-dark: #00bd60;
+$color-success-darker: #00732e;
 
-$color-info: $alert-1;
-$color-error: $alert-6;
-$color-correct: $alert-4;
+$color-warning: #ffbe2e;
+$color-warning-light: #fee685;
+$color-warning-lighter: #ede9cf;
+$color-warning-dark: #e5a000;
+$color-warning-darker: #936f38;
 
-$admin-color-1: #072ac8;
+$color-error: #ff1540;
+$color-error-light: #f45967;
+$color-error-lighter: #ffc5cf;
+$color-error-dark: #e4001b;
+$color-error-darker: #c80004;
 
 
 /****** HEADER & FOOTER ******/
 $header-height-small: 80px;
 $header-height-large: 120px;
 $bg-header-color: white;
-$bg-sidemenu-color: $primary-color-2;
-$bg-footer-color: $primary-color-2;
+$bg-sidemenu-color: $secondary-color;
+$bg-footer-color: $secondary-color;
 
 $side-menu-color: white;
 $side-submenu-color: $tertiary-color-1;
-$side-menu-accent: $primary-color-1;
+$side-menu-accent: $primary-color;
 
 
 /****** TITLES & TEXTS ******/
@@ -84,21 +97,33 @@ $reading-text: $web-grey-6;
 
 
 /****** POPUP ******/
-$popup-color: $primary-color-1;
+$popup-color: $primary-color;
 $popup-text-color: white;
 $popup-color-2: #f2f2f2;
-$popup-text-color-2: $primary-color-2;
+$popup-text-color-2: $secondary-color;
 $popup-width-small: 320px;
 $popup-width-large: 520px;
+
 
 
 /*******************************************************
 ADMIN
 *******************************************************/
-$admin-color-1 : $secondary-color-1;
-$admin-alert: $alert-1;
-$admin-confirm: $alert-4;
-$admin-delete: $alert-6;
+$admin-primary: #6300ee;
+$admin-primary-light: #9965f4;
+$admin-primary-lighter: #efe5fd;
+$admin-primary-dark: #5300e8;
+$admin-primary-darker: #3700b3;
+
+$admin-secondary: #03dac4;
+$admin-secondary-light: #92e9dc;
+$admin-secondary-lighter: #d4f6f2;
+$admin-secondary-dark: #00c7ab;
+$admin-secondary-darker: #00b798;
+
+$admin-alert: $color-warning;
+$admin-confirm: $color-success;
+$admin-delete: $color-error;
 $admin-update: #eef1f7;
 $admin-update-2: #434C57;
 
