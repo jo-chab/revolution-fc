@@ -38,13 +38,15 @@ $web-grey-6: #181818;
 /* SPECIFIC BRAND */
 $primary-color: #d5c392;
 $primary-color-light: #dbcca9;
-$primary-color-dark: #bdaa7c;
-$primary-color-darker: #b89c4b;
+$primary-color-lighter: #f6e9d5;
+$primary-color-dark: #a8956c;
+$primary-color-darker: #8a7b43;
 
 $secondary-color: #43474d;
 $secondary-color-lighter: #bec3ca;
 $secondary-color-light: #767b81;
-$secondary-color-dark: #22262b;
+$secondary-color-dark: #363b41;
+$secondary-color-darker: #15171a;
 
 $tertiary-color-1: #d7d4d3;
 $tertiary-color-2: #aba7a7;
@@ -59,23 +61,23 @@ $accent-color-darker: #52b59a;
 
 
 /****** MESSAGES & ALERTS ******/
-$color-success: #00a91c;
-$color-success-light: #70e17b;
-$color-success-lighter: #ecf3ec;
-$color-success-dark: #008817;
-$color-success-darker: #216e1f;
+$color-success: #00E676;
+$color-success-light: #69F0AE;
+$color-success-lighter: #B9F6CA;
+$color-success-dark: #00bd60;
+$color-success-darker: #00732e;
 
 $color-warning: #ffbe2e;
 $color-warning-light: #fee685;
-$color-warning-lighter: #d7edcf;
+$color-warning-lighter: #ede9cf;
 $color-warning-dark: #e5a000;
 $color-warning-darker: #936f38;
 
-$color-error: #ed323b;
-$color-error-light: #fbcad2;
-$color-error-lighter: #fbcad2;
-$color-error-dark: #cc1d33;
-$color-error-darker: #cc1d33;
+$color-error: #ff1540;
+$color-error-light: #f45967;
+$color-error-lighter: #ffc5cf;
+$color-error-dark: #e4001b;
+$color-error-darker: #c80004;
 
 
 /****** HEADER & FOOTER ******/
@@ -107,12 +109,18 @@ $popup-width-large: 520px;
 /*******************************************************
 ADMIN
 *******************************************************/
-$admin-color-1: #6300ee;
-$admin-color-2: #9a66f4;
-$admin-color-3: #4100e0;
-$admin-color-4: #03dac4;
-$admin-color-5: #d4f6f2;
-$admin-color-6: #00b798;
+$admin-primary: #6300ee;
+$admin-primary-light: #9965f4;
+$admin-primary-lighter: #efe5fd;
+$admin-primary-dark: #5300e8;
+$admin-primary-darker: #3700b3;
+
+$admin-secondary: #03dac4;
+$admin-secondary-light: #92e9dc;
+$admin-secondary-lighter: #d4f6f2;
+$admin-secondary-dark: #00c7ab;
+$admin-secondary-darker: #00b798;
+
 $admin-alert: $color-warning;
 $admin-confirm: $color-success;
 $admin-delete: $color-error;

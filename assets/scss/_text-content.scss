@@ -119,13 +119,18 @@ ol li {
 }
 
 table {
+    margin-bottom: 1.5rem;
+    
     thead {
-        background: #f5f9fa;
-        border-bottom: 2px solid darken(#f5f9fa, 20%);
+        background: $primary-color-lighter;
+        border-bottom: 2px solid $primary-color-darker;
     }
     
     tr, td, th {
         //border: 1px solid #B4BABE;
+    }
+    tr:nth-child(even) {
+        background: $web-grey-1;
     }
     
     th {

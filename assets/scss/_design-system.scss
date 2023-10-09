@@ -64,7 +64,7 @@ DESIGN SYSTEM – Alert message box
         
         &.alert-correct {
             background-color: $color-success;
-            border-color: darken($color-success, 30%);
+            border-color: $color-success-darker;
             color: white;
             
             i {
@@ -74,7 +74,7 @@ DESIGN SYSTEM – Alert message box
         
         &.alert-error {
             background-color: $color-error;
-            border-color: darken($color-error, 20%);
+            border-color: $color-error-darker;
             color: white;
             
             i {
@@ -216,7 +216,7 @@ DESIGN SYSTEM – Buttons
     @extend .button;
     padding: 1.25rem 2rem;
     @include font-style(400, 1.125rem, 1em, white);
-    background-color: $primary-color;
+    background-color: $primary-color-dark;
     @include mobile-max {
         padding: 1rem;
     }
@@ -226,7 +226,7 @@ DESIGN SYSTEM – Buttons
     
     @include tablet {
         &:hover {
-            background-color: $primary-color-dark;
+            background-color: $primary-color-darker;
         }
     }
     
@@ -247,10 +247,11 @@ DESIGN SYSTEM – Buttons
     &.btn-confirm,
     &.cta-add {
         background-color: $color-success;
+        color: $color-success-darker;
         justify-self: center;
         @include tablet {
             &:hover {
-                background-color: darken($color-success, 20%);
+                background-color: $color-success-dark;
             }
         }
     }
@@ -340,16 +341,17 @@ DESIGN SYSTEM – Buttons
 .btn-tertiary {
     @extend .button;
     
-    @include font-style(400, 1.25em, 1em, $primary-color);
+    @include font-style(400, 1.25em, 1em, $primary-color-dark);
     padding: 1.25rem 2rem;
     margin: 1.5rem 0;
     border-radius: 0;
     &:hover {
-        color: $primary-color-dark;
+        color: $primary-color-darker;
     }
     
     .dashboard & {
         margin: 0;
+        @include border-radius-uniform(0);
     }
     
     &.btn-text {
@@ -382,8 +384,6 @@ DESIGN SYSTEM – Buttons
             color: $color-error;
         }
         @include mobile-max {
-            background-color: $web-grey-3;
-            color: white;
             &:hover {
                 color: unset;
             }
@@ -391,9 +391,9 @@ DESIGN SYSTEM – Buttons
     }
     
     &.btn-update {
-        color: $admin-color-2;
+        color: $admin-primary-light;
         &:hover {
-            color: $admin-color-1;
+            color: $admin-primary;
         }
     }
     
@@ -781,7 +781,7 @@ Lists
         padding: 2rem;
         @include border-radius-uniform(1rem);
         background-color: white;
-        border: 1px solid $tertiary-color-2;
+        border: 1px solid $secondary-color-lighter;
         
         //-webkit-box-shadow: 4px 8px 16px 0 rgba(8,40,62,.1);
         //-moz-box-shadow: 4px 8px 16px 0 rgba(8,40,62,.1);
@@ -794,7 +794,7 @@ Lists
     }
     .job-infos {
         p {
-            @include font-style(300, 1rem, 1.3em, $tertiary-color-1);
+            @include font-style(300, 1rem, 1.3em, $secondary-color-light);
             @include line-clamp(3);
         }
     }

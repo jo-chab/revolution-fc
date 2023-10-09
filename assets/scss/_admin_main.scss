@@ -115,7 +115,7 @@ ADMIN – CONTENT
     }
     
     .dashboard-title {
-        background-color: $secondary-color;
+        background-color: $secondary-color-dark;
         padding: .5rem 1rem;
     }
     
@@ -147,7 +147,7 @@ ADMIN – CONTENT
     border-bottom: 1px solid $secondary-color-light;
 }
 .content-update {
-    border: 1px solid $secondary-color-light;
+    border: 1px solid $admin-secondary;
     background-color: $web-grey-1;
     padding: 1rem;
     
@@ -313,23 +313,24 @@ USERS
         min-width: unset;
         text-align: center;
         padding: .5rem .75rem;
-        background-color: $admin-color-1;
+        background-color: $admin-primary-lighter;
         border-radius: 2rem;
         @include font-family-heading;
-        @include font-style(400, .75rem, 1em, $web-grey-5);
+        @include font-style(400, .75rem, 1em, $secondary-color);
         transition: all .3s ease;
         
         &:hover {
-            background-color: $admin-color-3;
+            background-color: $admin-primary-light;
+            color: white;
         }
     }
     
     &.activate input[type="submit"] {
-        background-color: $primary-color;
+        background-color: $admin-primary;
         color: white;
         
         &:hover {
-            background-color: $primary-color-dark;
+            pointer-events: none;
         }
     }
     
@@ -338,7 +339,7 @@ USERS
         color: white;
         
         &:hover {
-            background-color: darken($color-error, 20%);
+            background-color: $color-error-darker;
         }
     }
 }
