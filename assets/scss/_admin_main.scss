@@ -46,7 +46,7 @@ ADMIN – DEFAULT
     
     li {
         padding: 1rem;
-        border: 1px solid $primary-color-1;
+        border: 1px solid $primary-color;
         background-color: white;
         @include border-radius-uniform(.5rem);
         @include tablet {
@@ -73,7 +73,7 @@ ADMIN – DEFAULT
         
         span {
             @include font-family-reading;
-            @include font-style(600, .75rem, 1.3em, $secondary-color-1);
+            @include font-style(600, .75rem, 1.3em, $secondary-color);
             text-transform: uppercase;
             letter-spacing: 1px;
             text-align: center;
@@ -115,7 +115,7 @@ ADMIN – CONTENT
     }
     
     .dashboard-title {
-        background-color: $secondary-color-1;
+        background-color: $secondary-color;
         padding: .5rem 1rem;
     }
     
@@ -144,11 +144,11 @@ ADMIN – CONTENT
     }
 }
 .content-add {
-    border-bottom: 1px solid $secondary-color-2;
+    border-bottom: 1px solid $secondary-color-light;
 }
 .content-update {
-    border: 1px solid $secondary-color-2;
-    background-color: $secondary-color-0;
+    border: 1px solid $secondary-color-light;
+    background-color: $web-grey-1;
     padding: 1rem;
     
 }
@@ -229,7 +229,7 @@ form.content-delete {
         
         .element-title {
             @include font-family-reading;
-            @include font-style(400, 1.25rem, 1.5em, $secondary-color-1);
+            @include font-style(400, 1.25rem, 1.5em, $secondary-color);
             text-align: center;
             @include tablet {
                 text-align: unset;
@@ -301,7 +301,7 @@ USERS
 .user-name {
     width: 100%;
     @include font-family-heading;
-    @include font-style(400, .875rem, 1em, $secondary-color-1);
+    @include font-style(400, .875rem, 1em, $secondary-color);
     
     span {
         font-weight: 600;
@@ -325,11 +325,11 @@ USERS
     }
     
     &.activate input[type="submit"] {
-        background-color: $primary-color-1;
+        background-color: $primary-color;
         color: white;
         
         &:hover {
-            background-color: $primary-color-3;
+            background-color: $primary-color-dark;
         }
     }
     

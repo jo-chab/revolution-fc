@@ -738,7 +738,7 @@ ALERT MESSAGES in Dashboard
   box-shadow: 0 5px 20px -6px rgba(18, 18, 18, 0.4); }
   .message-box .icon {
     padding: 1rem;
-    background-color: #ffd743; }
+    background-color: #ffbe2e; }
     .message-box .icon:before {
       font: var(--fa-font-sharp-regular);
       content: "\f05a";
@@ -819,7 +819,7 @@ DESIGN SYSTEM – Alert message box
       .w-alert-message .alert-message {
         padding: 4rem; } }
     .w-alert-message .alert-message i {
-      color: #ffb500;
+      color: #ffbe2e;
       padding: 0 0 16px;
       font-size: 2em; }
     .w-alert-message .alert-message.alert-info {
@@ -829,8 +829,8 @@ DESIGN SYSTEM – Alert message box
       .w-alert-message .alert-message.alert-info i {
         color: white; }
     .w-alert-message .alert-message.alert-correct {
-      background-color: #5c9f4f;
-      border-color: #21391c;
+      background-color: #00a91c;
+      border-color: #001003;
       color: white; }
       .w-alert-message .alert-message.alert-correct i {
         color: white; }
@@ -953,13 +953,13 @@ DESIGN SYSTEM – Buttons
     background-color: #ed323b; }
     @media (min-width: 768px) {
       .btn-primary.btn-update:hover {
-        background-color: #aa0f16; } }
+        background-color: #cc1d33; } }
   .btn-primary.btn-confirm, .btn-primary.cta-add {
-    background-color: #5c9f4f;
+    background-color: #00a91c;
     justify-self: center; }
     @media (min-width: 768px) {
       .btn-primary.btn-confirm:hover, .btn-primary.cta-add:hover {
-        background-color: #355b2d; } }
+        background-color: #00430b; } }
   .btn-primary.btn-delete, .btn-primary.btn-cancel, .btn-primary.btn-disable, .btn-primary.btn-activate, .btn-primary.btn-revert {
     background-color: #eef1f7;
     color: #434c57; }
@@ -973,11 +973,11 @@ DESIGN SYSTEM – Buttons
       .btn-primary.btn-card:hover {
         background-color: #22262c; } }
   .btn-primary.cta-back {
-    background-color: #ffd743;
+    background-color: #ffbe2e;
     color: #181818; }
     @media (min-width: 768px) {
       .btn-primary.cta-back:hover {
-        background-color: #ffb500; } }
+        background-color: #e5a000; } }
     .btn-primary.cta-back:before {
       font: var(--fa-font-sharp-regular);
       content: '\f344';
@@ -1034,9 +1034,9 @@ DESIGN SYSTEM – Buttons
   .btn-tertiary.small {
     font-size: .875rem; }
   .btn-tertiary.cta-add {
-    color: #5c9f4f; }
+    color: #70e17b; }
     .btn-tertiary.cta-add:hover {
-      color: #355b2d; }
+      color: #00a91c; }
   .btn-tertiary.btn-disable, .btn-tertiary.btn-delete, .btn-tertiary.btn-cancel, .btn-tertiary.btn-activate, .btn-tertiary.btn-revert {
     color: #aca9a9; }
     .btn-tertiary.btn-disable:hover, .btn-tertiary.btn-delete:hover, .btn-tertiary.btn-cancel:hover, .btn-tertiary.btn-activate:hover, .btn-tertiary.btn-revert:hover {
@@ -1048,9 +1048,9 @@ DESIGN SYSTEM – Buttons
         .btn-tertiary.btn-disable:hover, .btn-tertiary.btn-delete:hover, .btn-tertiary.btn-cancel:hover, .btn-tertiary.btn-activate:hover, .btn-tertiary.btn-revert:hover {
           color: unset; } }
   .btn-tertiary.btn-update {
-    color: #d5c392; }
+    color: #9a66f4; }
     .btn-tertiary.btn-update:hover {
-      color: #b99a48; }
+      color: #6300ee; }
 
 .btn-filter {
   gap: .5rem;
@@ -1558,13 +1558,13 @@ FORMS ELEMENT - block, labels, input & cta
   font-size: 0.875rem;
   line-height: 1em;
   color: #43474d;
-  background-color: #ffd743; }
+  background-color: #03dac4; }
   @media (max-width: 767px) {
     .inputfile + label {
       padding: 1rem; } }
   @media (min-width: 768px) {
     .inputfile + label:hover {
-      background-color: #ffb500; } }
+      background-color: #d4f6f2; } }
   .inputfile + label:before {
     display: inline-block;
     text-rendering: auto;
@@ -1741,7 +1741,7 @@ ADMIN – CONTENT
 
 .content-update {
   border: 1px solid #767b81;
-  background-color: #bec3ca;
+  background-color: #f2f2f2;
   padding: 1rem; }
 
 form.content-delete {
@@ -1858,7 +1858,7 @@ USERS
   min-width: unset;
   text-align: center;
   padding: .5rem .75rem;
-  background-color: #92a4d5;
+  background-color: #6300ee;
   border-radius: 2rem;
   font-family: 'Poppins', sans-serif;
   font-weight: 400;
@@ -1867,7 +1867,7 @@ USERS
   color: #343741;
   transition: all .3s ease; }
   .cta-user input[type="submit"]:hover {
-    background-color: #0045a4; }
+    background-color: #4100e0; }
 
 .cta-user.activate input[type="submit"] {
   background-color: #d5c392;
