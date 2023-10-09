@@ -59,7 +59,7 @@ HEADER CSS -
         
         &.header-social {
             grid-area: social;
-            background: $primary-color-2;
+            background: $secondary-color-1;
             justify-self: flex-end;
             width: fit-content;
             justify-content: flex-end;
@@ -84,7 +84,7 @@ HEADER CSS -
             cursor: pointer;
             text-align: center;
             @include font-family-heading();
-            @include font-style(600, 1rem, 1.5em, $primary-color-2);
+            @include font-style(600, 1rem, 1.5em, $secondary-color-1);
             text-transform: uppercase;
             letter-spacing: 1px;
             transition: all .3s ease;

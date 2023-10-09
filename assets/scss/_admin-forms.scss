@@ -28,7 +28,7 @@ form.popup {
     
     .popup-title {
         text-align: center;
-        color: $primary-color-2;
+        color: $secondary-color-1;
     }
     
     .g-recaptcha {
@@ -65,15 +65,15 @@ FORMS ELEMENT - block, labels, input & cta
 .inputfile + label {
     @extend .button;
     padding: 1.25rem 2rem;
-    @include font-style(400, .875rem, 1em, white);
-    background-color: $primary-color-1;
+    @include font-style(400, .875rem, 1em, $secondary-color-1);
+    background-color: $alert-1;
     @include mobile-max {
         padding: 1rem;
     }
     
     @include tablet {
         &:hover {
-            background-color: darken($primary-color-1, 20%);
+            background-color: $alert-2;
         }
     }
     

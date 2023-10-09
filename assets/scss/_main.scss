@@ -17,7 +17,6 @@ MAIN CSS
 /***********************
 Lists
 ***********************/
-
 .list-people {
 	@extend .web-layout;
 	margin-block: 3rem;
@@ -65,9 +64,9 @@ HOME PAGE
 		align-items: flex-end;
 		justify-content: center;
 		
-		background-color: $primary-color-2;
-		background: -webkit-linear-gradient(top, rgba($primary-color-2, 0), rgba($primary-color-2, 1));
-		background: linear-gradient(to bottom, rgba($primary-color-2, 0), rgba($primary-color-2, 1));
+		background-color: $secondary-color-1;
+		background: -webkit-linear-gradient(top, rgba($secondary-color-1, 0), rgba($secondary-color-1, 1));
+		background: linear-gradient(to bottom, rgba($secondary-color-1, 0), rgba($secondary-color-1, 1));
 	}
 	
 	.hero-overlay-content {
@@ -236,8 +235,8 @@ NEWS PAGE
 			padding: 4px 8px;
 			&.active-page {
 				font-weight: 700;
-				color: $secondary-color-1;
-				border-bottom: 4px solid $secondary-color-1;
+				color: $primary-color-3;
+				border-bottom: 4px solid $primary-color-3;
 			}
 		}
 	}
@@ -346,7 +345,7 @@ PROGRAMMES
 			margin-bottom :.5rem;
 			line-height: 1.3em;
 			text-align: unset;
-			color: $primary-color-2;
+			color: $secondary-color-1;
 		}
 	}
 	
@@ -377,7 +376,7 @@ PROGRAMMES
 
 
 /******************************
-FIELDS PAGE – Done
+FIELDS
 ******************************/
 .fields li {
 	width: 100%;
@@ -444,7 +443,7 @@ FIELDS PAGE – Done
 
 
 /******************************
-TOURNOI – Done
+TOURNOIS
 ******************************/
 .tournoi-tarifs {
 	display: flex;
@@ -497,11 +496,11 @@ TOURNOI – Done
 	}
 	&-category {
 		@include font-family-reading;
-		@include font-style(700, 1.25rem, 1em, $primary-color-2);
+		@include font-style(700, 1.25rem, 1em, $secondary-color-1);
 	}
 	&-price {
 		@include font-family-reading;
-		@include font-style(700, 3rem, 1em, $primary-color-2);
+		@include font-style(700, 3rem, 1em, $secondary-color-1);
 		span {
 			@include font-style(400, .3em, 1em, $primary-color-1);
 		}
@@ -525,7 +524,7 @@ RESSOURCES ENTRAINEURS
 		padding: 2rem;
 		
 		@include font-family-heading;
-		@include font-style(600, 1.25rem, 1.3em, $primary-color-2);
+		@include font-style(600, 1.25rem, 1.3em, $secondary-color-1);
 		text-transform: uppercase;
 		letter-spacing: 1px;
 		text-align: center;
@@ -570,14 +569,14 @@ RESSOURCES ENTRAINEURS
 		text-align: center;
 		
 		background: $secondary-color-2;
-		border: 1px solid $primary-color-2;
+		border: 1px solid $secondary-color-1;
 		@include border-radius-uniform(1rem);
 		
 		transition: all .1s ease;
 		
 		&:hover {
 			cursor: pointer;
-			background: $primary-color-2;
+			background: $secondary-color-1;
 			transition: all .3s ease;
 		}
 		

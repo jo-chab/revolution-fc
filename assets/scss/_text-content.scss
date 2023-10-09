@@ -15,7 +15,7 @@
 }
 
 h2 {
-    color: $primary-color-2;
+    color: $secondary-color-1;
     margin-bottom: 1.5rem;
     text-transform: none;
     letter-spacing: unset;
@@ -95,7 +95,7 @@ ul, ol {
     
     li {
         @include font-family-reading;
-        @include font-style(400, 1.125rem, 1.5em, $primary-color-2);
+        @include font-style(400, 1.125rem, 1.5em, $secondary-color-1);
         margin-bottom: .25rem;
         
         &:last-of-type {
@@ -131,7 +131,7 @@ table {
     th {
         padding: 1rem;
         @include font-family-heading;
-        @include font-style(700, .875rem, 1.5em, $primary-color-2);
+        @include font-style(700, .875rem, 1.5em, $secondary-color-1);
         text-transform: uppercase;
         letter-spacing: 2px;
     }
@@ -139,6 +139,6 @@ table {
     td {
         padding: 1rem;
         @include font-family-reading;
-        @include font-style(400, 1rem, 1.5em, $primary-color-2);
+        @include font-style(400, 1rem, 1.5em, $secondary-color-1);
     }
 }

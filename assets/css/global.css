@@ -321,7 +321,7 @@ h6 {
   color: #43474d; }
 
 .text-dates {
-  color: #aba7a7; }
+  color: #767b81; }
 
 .white {
   color: white; }
@@ -343,14 +343,14 @@ p {
     font-size: 1.25rem;
     line-height: 1.3em;
     margin-bottom: 1rem;
-    color: #aba7a7; }
+    color: #767b81; }
     @media (min-width: 768px) {
       p.intro {
         font-size: 1.375rem; } }
   p.article-intro {
     font-weight: 600;
     font-size: 1.25rem;
-    color: #949A90;
+    color: #767b81;
     margin-bottom: 1rem; }
     @media (min-width: 768px) {
       p.article-intro {
@@ -364,17 +364,17 @@ p {
     font-weight: 600;
     transition: all .3s ease; }
     p .inline-link:hover {
-      color: #c0a55b; }
+      color: #bdaa7c; }
   p.legend, p.input-legend {
     font-size: .875rem;
     color: #5f6369; }
   p.pwd-reset {
     font-size: .875rem; }
     p.pwd-reset a {
-      color: #949A90;
+      color: #d5c392;
       transition: all .3s ease; }
       p.pwd-reset a:hover {
-        color: #d5c392; }
+        color: #bdaa7c; }
   p.login-legend {
     margin-top: 1rem;
     text-align: center;
@@ -674,7 +674,7 @@ DESIGN SYSTEM – Alert message box
       .w-alert-message .alert-message {
         padding: 4rem; } }
     .w-alert-message .alert-message i {
-      color: #C2A031;
+      color: #ffb500;
       padding: 0 0 16px;
       font-size: 2em; }
     .w-alert-message .alert-message.alert-info {
@@ -684,14 +684,14 @@ DESIGN SYSTEM – Alert message box
       .w-alert-message .alert-message.alert-info i {
         color: white; }
     .w-alert-message .alert-message.alert-correct {
-      background-color: #1ecd28;
-      border-color: #0a480e;
+      background-color: #5c9f4f;
+      border-color: #21391c;
       color: white; }
       .w-alert-message .alert-message.alert-correct i {
         color: white; }
     .w-alert-message .alert-message.alert-error {
-      background-color: #FF1541;
-      border-color: #ae0021;
+      background-color: #ed323b;
+      border-color: #aa0f16;
       color: white; }
       .w-alert-message .alert-message.alert-error i {
         color: white; }
@@ -800,27 +800,27 @@ DESIGN SYSTEM – Buttons
       font-size: 1.25rem; } }
   @media (min-width: 768px) {
     .btn-primary:hover {
-      background-color: #b99a48; } }
+      background-color: #bdaa7c; } }
   .btn-primary.small {
     font-size: .875rem;
     padding: .75rem 1.25rem; }
   .btn-primary.btn-update {
-    background-color: #FF1541; }
+    background-color: #ed323b; }
     @media (min-width: 768px) {
       .btn-primary.btn-update:hover {
-        background-color: #ae0021; } }
+        background-color: #aa0f16; } }
   .btn-primary.btn-confirm, .btn-primary.cta-add {
-    background-color: #1ecd28;
+    background-color: #5c9f4f;
     justify-self: center; }
     @media (min-width: 768px) {
       .btn-primary.btn-confirm:hover, .btn-primary.cta-add:hover {
-        background-color: #117417; } }
+        background-color: #355b2d; } }
   .btn-primary.btn-delete, .btn-primary.btn-cancel, .btn-primary.btn-disable, .btn-primary.btn-activate, .btn-primary.btn-revert {
     background-color: #eef1f7;
     color: #434c57; }
     @media (min-width: 768px) {
       .btn-primary.btn-delete:hover, .btn-primary.btn-cancel:hover, .btn-primary.btn-disable:hover, .btn-primary.btn-activate:hover, .btn-primary.btn-revert:hover {
-        color: #FF1541; } }
+        color: #ed323b; } }
   .btn-primary.btn-card {
     color: #eef1f7;
     background-color: #434c57; }
@@ -828,11 +828,11 @@ DESIGN SYSTEM – Buttons
       .btn-primary.btn-card:hover {
         background-color: #22262c; } }
   .btn-primary.cta-back {
-    background-color: #fed624;
+    background-color: #ffd743;
     color: #181818; }
     @media (min-width: 768px) {
       .btn-primary.cta-back:hover {
-        background-color: #C2A031; } }
+        background-color: #ffb500; } }
     .btn-primary.cta-back:before {
       font: var(--fa-font-sharp-regular);
       content: '\f344';
@@ -846,8 +846,8 @@ DESIGN SYSTEM – Buttons
   font-weight: 400;
   font-size: 1.125em;
   line-height: 1em;
-  color: #bdaa7c;
-  border: 1px solid #bdaa7c; }
+  color: #43474d;
+  border: 1px solid #43474d; }
   @media (max-width: 767px) {
     .btn-secondary {
       padding: 1rem; } }
@@ -856,8 +856,8 @@ DESIGN SYSTEM – Buttons
       font-size: 1.25rem; } }
   @media (min-width: 768px) {
     .btn-secondary:hover {
-      border-color: #9d864f;
-      color: #9d864f; } }
+      border-color: #1f2124;
+      color: #1f2124; } }
   .btn-secondary.small {
     font-size: .875rem;
     padding: .75rem 1.25rem; }
@@ -877,7 +877,7 @@ DESIGN SYSTEM – Buttons
   margin: 1.5rem 0;
   border-radius: 0; }
   .btn-tertiary:hover {
-    color: #c0a55b; }
+    color: #bdaa7c; }
   .dashboard .btn-tertiary {
     margin: 0; }
   .btn-tertiary.btn-text {
@@ -889,13 +889,13 @@ DESIGN SYSTEM – Buttons
   .btn-tertiary.small {
     font-size: .875rem; }
   .btn-tertiary.cta-add {
-    color: #1ecd28; }
+    color: #5c9f4f; }
     .btn-tertiary.cta-add:hover {
-      color: #117417; }
+      color: #355b2d; }
   .btn-tertiary.btn-disable, .btn-tertiary.btn-delete, .btn-tertiary.btn-cancel, .btn-tertiary.btn-activate, .btn-tertiary.btn-revert {
     color: #aca9a9; }
     .btn-tertiary.btn-disable:hover, .btn-tertiary.btn-delete:hover, .btn-tertiary.btn-cancel:hover, .btn-tertiary.btn-activate:hover, .btn-tertiary.btn-revert:hover {
-      color: #FF1541; }
+      color: #ed323b; }
     @media (max-width: 767px) {
       .btn-tertiary.btn-disable, .btn-tertiary.btn-delete, .btn-tertiary.btn-cancel, .btn-tertiary.btn-activate, .btn-tertiary.btn-revert {
         background-color: #aca9a9;
@@ -918,12 +918,12 @@ DESIGN SYSTEM – Buttons
     color: #d5c392;
     text-transform: uppercase; }
     .btn-filter-select .btn-filter.is-inactive {
-      color: #949A90; }
+      color: #d7d4d3; }
       .btn-filter-select .btn-filter.is-inactive:hover {
         color: #d5c392; }
   .btn-filter.is-inactive {
     opacity: .5;
-    color: #949A90; }
+    color: #d7d4d3; }
     .btn-filter.is-inactive:hover {
       opacity: 1;
       color: #d5c392; }
@@ -989,13 +989,13 @@ select {
     top: .75rem;
     left: 1rem;
     z-index: 2;
-    color: #d5c392;
+    color: #43474d;
     letter-spacing: 2px; }
   .select-dropdown select {
     font-size: 1.125rem;
-    border-color: #434C57;
+    border-color: #43474d;
     color: #434C57;
-    background-color: #eef1f7;
+    background-color: #dccda4;
     padding: .75rem 4rem .75rem 1rem;
     background-image: url("https://clients.chabertdesign.com/panel/assets/img/chevron-down-black.svg");
     background-size: 24px 24px;
@@ -1156,14 +1156,14 @@ Lists
     font-weight: 400;
     font-size: 0.875rem;
     line-height: 1.5em;
-    color: #bdaa7c; }
+    color: #43474d; }
   .list-people .people-el .list-people-email {
     margin-top: .5rem;
     font-family: 'Source Sans 3', sans-serif;
     font-weight: 400;
     font-size: 1rem;
     line-height: 1em;
-    color: #aba7a7; }
+    color: #767b81; }
 
 /***** DOCUMENTS LISTS *****/
 .w-list-docs {
@@ -1197,7 +1197,7 @@ Lists
     font-weight: 400;
     font-size: 1rem;
     line-height: 1.5em;
-    color: #aba7a7;
+    color: #767b81;
     flex-grow: 1; }
 
 .list-jobs {
@@ -1219,7 +1219,7 @@ Lists
     -moz-border-radius: 1rem;
     border-radius: 1rem;
     background-color: white;
-    border: 1px solid #dbcca9; }
+    border: 1px solid #aba7a7; }
     @media (min-width: 768px) {
       .list-jobs .job-el {
         grid-gap: 2.5rem;
@@ -1228,7 +1228,7 @@ Lists
     font-weight: 300;
     font-size: 1rem;
     line-height: 1.3em;
-    color: #949A90;
+    color: #d7d4d3;
     display: -webkit-box;
     -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
@@ -1408,7 +1408,7 @@ article {
           padding: 0 5rem;
           grid-template-columns: auto 1fr; } }
       article.wrapper.flash-alert.urgent {
-        background: #FF1541; }
+        background: #ed323b; }
   article.wrapper-full {
     max-width: unset;
     padding: 1.5rem; }
@@ -1577,7 +1577,7 @@ HEADER CSS -
         .top-header .nav-item.lock-content:hover a {
           color: white; }
       .top-header .nav-item.lock-content a {
-        color: #bdaa7c; }
+        color: #43474d; }
     .top-header .nav-item .icon {
       font-size: 1.5rem;
       padding-left: 1.5rem;
@@ -1740,7 +1740,7 @@ nav.desktop {
     font-weight: 400;
     font-size: 1rem;
     line-height: 1.3em;
-    color: #949A90;
+    color: #d7d4d3;
     transition: all .3s ease; }
     .sub-nav .sub-nav-item-el:hover {
       cursor: pointer;
@@ -1911,7 +1911,7 @@ HOME PAGE
     padding: 16px;
     margin-bottom: 16px; }
     .hp-addons > *.important {
-      background-color: #bdaa7c; }
+      background-color: #43474d; }
       .hp-addons > *.important h3 {
         color: white;
         margin-bottom: 0; }
@@ -1981,7 +1981,7 @@ NEWS PAGE
   align-items: center;
   margin-top: 80px; }
   .pagination .page-cta {
-    background-color: #bdaa7c;
+    background-color: #43474d;
     padding: 8px 16px;
     font-size: 32px;
     color: white; }
@@ -2037,7 +2037,7 @@ News detail / Programme detail
       margin-top: 3rem; } }
   .article-detail .article-intro {
     font-weight: 600;
-    color: #bdaa7c;
+    color: #43474d;
     margin-bottom: 2rem; }
   .article-detail h2 {
     color: #43474d;
@@ -2064,7 +2064,7 @@ News detail / Programme detail
       -webkit-font-smoothing: antialiased;
       font: var(--fa-font-sharp-solid);
       content: '\f10d';
-      color: #aba7a7;
+      color: #767b81;
       font-size: 3em;
       align-self: flex-start; }
     .article-detail blockquote:after {
@@ -2073,7 +2073,7 @@ News detail / Programme detail
       -webkit-font-smoothing: antialiased;
       font: var(--fa-font-sharp-solid);
       content: '\f10e';
-      color: #aba7a7;
+      color: #767b81;
       font-size: 3em;
       align-self: flex-end; }
     .article-detail blockquote p {
@@ -2188,7 +2188,7 @@ PROGRAMMES
   display: block; }
 
 /******************************
-FIELDS PAGE – Done
+FIELDS
 ******************************/
 .fields li {
   width: 100%; }
@@ -2229,14 +2229,14 @@ FIELDS PAGE – Done
 
 .field-desc {
   font-size: .875rem;
-  color: #bdaa7c; }
+  color: #43474d; }
 
 .field-address {
   margin-top: .5rem;
   line-height: 1.3em; }
 
 /******************************
-TOURNOI – Done
+TOURNOIS
 ******************************/
 .tournoi-tarifs {
   display: flex;
@@ -2284,7 +2284,7 @@ TOURNOI – Done
     font-weight: 700;
     font-size: 2rem;
     line-height: 1em;
-    color: #bdaa7c; }
+    color: #43474d; }
   .t-card-category {
     font-family: 'Source Sans 3', sans-serif;
     font-weight: 700;
@@ -2353,7 +2353,7 @@ RESSOURCES ENTRAINEURS
   text-transform: uppercase;
   letter-spacing: 1px;
   text-align: center;
-  background: #aba7a7;
+  background: #767b81;
   border: 1px solid #43474d;
   -webkit-border-radius: 1rem;
   -moz-border-radius: 1rem;

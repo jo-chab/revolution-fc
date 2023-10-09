@@ -321,7 +321,7 @@ h6 {
   color: #43474d; }
 
 .text-dates {
-  color: #aba7a7; }
+  color: #767b81; }
 
 .white {
   color: white; }
@@ -343,14 +343,14 @@ p {
     font-size: 1.25rem;
     line-height: 1.3em;
     margin-bottom: 1rem;
-    color: #aba7a7; }
+    color: #767b81; }
     @media (min-width: 768px) {
       p.intro {
         font-size: 1.375rem; } }
   p.article-intro {
     font-weight: 600;
     font-size: 1.25rem;
-    color: #949A90;
+    color: #767b81;
     margin-bottom: 1rem; }
     @media (min-width: 768px) {
       p.article-intro {
@@ -364,17 +364,17 @@ p {
     font-weight: 600;
     transition: all .3s ease; }
     p .inline-link:hover {
-      color: #c0a55b; }
+      color: #bdaa7c; }
   p.legend, p.input-legend {
     font-size: .875rem;
     color: #5f6369; }
   p.pwd-reset {
     font-size: .875rem; }
     p.pwd-reset a {
-      color: #949A90;
+      color: #d5c392;
       transition: all .3s ease; }
       p.pwd-reset a:hover {
-        color: #d5c392; }
+        color: #bdaa7c; }
   p.login-legend {
     margin-top: 1rem;
     text-align: center;
@@ -738,7 +738,7 @@ ALERT MESSAGES in Dashboard
   box-shadow: 0 5px 20px -6px rgba(18, 18, 18, 0.4); }
   .message-box .icon {
     padding: 1rem;
-    background-color: #fed624; }
+    background-color: #ffd743; }
     .message-box .icon:before {
       font: var(--fa-font-sharp-regular);
       content: "\f05a";
@@ -819,7 +819,7 @@ DESIGN SYSTEM – Alert message box
       .w-alert-message .alert-message {
         padding: 4rem; } }
     .w-alert-message .alert-message i {
-      color: #C2A031;
+      color: #ffb500;
       padding: 0 0 16px;
       font-size: 2em; }
     .w-alert-message .alert-message.alert-info {
@@ -829,14 +829,14 @@ DESIGN SYSTEM – Alert message box
       .w-alert-message .alert-message.alert-info i {
         color: white; }
     .w-alert-message .alert-message.alert-correct {
-      background-color: #1ecd28;
-      border-color: #0a480e;
+      background-color: #5c9f4f;
+      border-color: #21391c;
       color: white; }
       .w-alert-message .alert-message.alert-correct i {
         color: white; }
     .w-alert-message .alert-message.alert-error {
-      background-color: #FF1541;
-      border-color: #ae0021;
+      background-color: #ed323b;
+      border-color: #aa0f16;
       color: white; }
       .w-alert-message .alert-message.alert-error i {
         color: white; }
@@ -945,27 +945,27 @@ DESIGN SYSTEM – Buttons
       font-size: 1.25rem; } }
   @media (min-width: 768px) {
     .btn-primary:hover {
-      background-color: #b99a48; } }
+      background-color: #bdaa7c; } }
   .btn-primary.small {
     font-size: .875rem;
     padding: .75rem 1.25rem; }
   .btn-primary.btn-update {
-    background-color: #FF1541; }
+    background-color: #ed323b; }
     @media (min-width: 768px) {
       .btn-primary.btn-update:hover {
-        background-color: #ae0021; } }
+        background-color: #aa0f16; } }
   .btn-primary.btn-confirm, .btn-primary.cta-add {
-    background-color: #1ecd28;
+    background-color: #5c9f4f;
     justify-self: center; }
     @media (min-width: 768px) {
       .btn-primary.btn-confirm:hover, .btn-primary.cta-add:hover {
-        background-color: #117417; } }
+        background-color: #355b2d; } }
   .btn-primary.btn-delete, .btn-primary.btn-cancel, .btn-primary.btn-disable, .btn-primary.btn-activate, .btn-primary.btn-revert {
     background-color: #eef1f7;
     color: #434c57; }
     @media (min-width: 768px) {
       .btn-primary.btn-delete:hover, .btn-primary.btn-cancel:hover, .btn-primary.btn-disable:hover, .btn-primary.btn-activate:hover, .btn-primary.btn-revert:hover {
-        color: #FF1541; } }
+        color: #ed323b; } }
   .btn-primary.btn-card {
     color: #eef1f7;
     background-color: #434c57; }
@@ -973,11 +973,11 @@ DESIGN SYSTEM – Buttons
       .btn-primary.btn-card:hover {
         background-color: #22262c; } }
   .btn-primary.cta-back {
-    background-color: #fed624;
+    background-color: #ffd743;
     color: #181818; }
     @media (min-width: 768px) {
       .btn-primary.cta-back:hover {
-        background-color: #C2A031; } }
+        background-color: #ffb500; } }
     .btn-primary.cta-back:before {
       font: var(--fa-font-sharp-regular);
       content: '\f344';
@@ -991,8 +991,8 @@ DESIGN SYSTEM – Buttons
   font-weight: 400;
   font-size: 1.125em;
   line-height: 1em;
-  color: #bdaa7c;
-  border: 1px solid #bdaa7c; }
+  color: #43474d;
+  border: 1px solid #43474d; }
   @media (max-width: 767px) {
     .btn-secondary {
       padding: 1rem; } }
@@ -1001,8 +1001,8 @@ DESIGN SYSTEM – Buttons
       font-size: 1.25rem; } }
   @media (min-width: 768px) {
     .btn-secondary:hover {
-      border-color: #9d864f;
-      color: #9d864f; } }
+      border-color: #1f2124;
+      color: #1f2124; } }
   .btn-secondary.small {
     font-size: .875rem;
     padding: .75rem 1.25rem; }
@@ -1022,7 +1022,7 @@ DESIGN SYSTEM – Buttons
   margin: 1.5rem 0;
   border-radius: 0; }
   .btn-tertiary:hover {
-    color: #c0a55b; }
+    color: #bdaa7c; }
   .dashboard .btn-tertiary {
     margin: 0; }
   .btn-tertiary.btn-text {
@@ -1034,13 +1034,13 @@ DESIGN SYSTEM – Buttons
   .btn-tertiary.small {
     font-size: .875rem; }
   .btn-tertiary.cta-add {
-    color: #1ecd28; }
+    color: #5c9f4f; }
     .btn-tertiary.cta-add:hover {
-      color: #117417; }
+      color: #355b2d; }
   .btn-tertiary.btn-disable, .btn-tertiary.btn-delete, .btn-tertiary.btn-cancel, .btn-tertiary.btn-activate, .btn-tertiary.btn-revert {
     color: #aca9a9; }
     .btn-tertiary.btn-disable:hover, .btn-tertiary.btn-delete:hover, .btn-tertiary.btn-cancel:hover, .btn-tertiary.btn-activate:hover, .btn-tertiary.btn-revert:hover {
-      color: #FF1541; }
+      color: #ed323b; }
     @media (max-width: 767px) {
       .btn-tertiary.btn-disable, .btn-tertiary.btn-delete, .btn-tertiary.btn-cancel, .btn-tertiary.btn-activate, .btn-tertiary.btn-revert {
         background-color: #aca9a9;
@@ -1063,12 +1063,12 @@ DESIGN SYSTEM – Buttons
     color: #d5c392;
     text-transform: uppercase; }
     .btn-filter-select .btn-filter.is-inactive {
-      color: #949A90; }
+      color: #d7d4d3; }
       .btn-filter-select .btn-filter.is-inactive:hover {
         color: #d5c392; }
   .btn-filter.is-inactive {
     opacity: .5;
-    color: #949A90; }
+    color: #d7d4d3; }
     .btn-filter.is-inactive:hover {
       opacity: 1;
       color: #d5c392; }
@@ -1134,13 +1134,13 @@ select {
     top: .75rem;
     left: 1rem;
     z-index: 2;
-    color: #d5c392;
+    color: #43474d;
     letter-spacing: 2px; }
   .select-dropdown select {
     font-size: 1.125rem;
-    border-color: #434C57;
+    border-color: #43474d;
     color: #434C57;
-    background-color: #eef1f7;
+    background-color: #dccda4;
     padding: .75rem 4rem .75rem 1rem;
     background-image: url("https://clients.chabertdesign.com/panel/assets/img/chevron-down-black.svg");
     background-size: 24px 24px;
@@ -1301,14 +1301,14 @@ Lists
     font-weight: 400;
     font-size: 0.875rem;
     line-height: 1.5em;
-    color: #bdaa7c; }
+    color: #43474d; }
   .list-people .people-el .list-people-email {
     margin-top: .5rem;
     font-family: 'Source Sans 3', sans-serif;
     font-weight: 400;
     font-size: 1rem;
     line-height: 1em;
-    color: #aba7a7; }
+    color: #767b81; }
 
 /***** DOCUMENTS LISTS *****/
 .w-list-docs {
@@ -1342,7 +1342,7 @@ Lists
     font-weight: 400;
     font-size: 1rem;
     line-height: 1.5em;
-    color: #aba7a7;
+    color: #767b81;
     flex-grow: 1; }
 
 .list-jobs {
@@ -1364,7 +1364,7 @@ Lists
     -moz-border-radius: 1rem;
     border-radius: 1rem;
     background-color: white;
-    border: 1px solid #dbcca9; }
+    border: 1px solid #aba7a7; }
     @media (min-width: 768px) {
       .list-jobs .job-el {
         grid-gap: 2.5rem;
@@ -1373,7 +1373,7 @@ Lists
     font-weight: 300;
     font-size: 1rem;
     line-height: 1.3em;
-    color: #949A90;
+    color: #d7d4d3;
     display: -webkit-box;
     -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
@@ -1409,7 +1409,7 @@ LOGIN PAGE
   font-weight: 300;
   font-size: 1rem;
   line-height: 1.5em;
-  color: #FF1541; }
+  color: #ed323b; }
 
 /*
 *
@@ -1557,14 +1557,14 @@ FORMS ELEMENT - block, labels, input & cta
   font-weight: 400;
   font-size: 0.875rem;
   line-height: 1em;
-  color: white;
-  background-color: #d5c392; }
+  color: #43474d;
+  background-color: #ffd743; }
   @media (max-width: 767px) {
     .inputfile + label {
       padding: 1rem; } }
   @media (min-width: 768px) {
     .inputfile + label:hover {
-      background-color: #b99a48; } }
+      background-color: #ffb500; } }
   .inputfile + label:before {
     display: inline-block;
     text-rendering: auto;
@@ -1736,9 +1736,12 @@ ADMIN – CONTENT
     display: block;
     margin-bottom: 2rem; }
 
+.content-add {
+  border-bottom: 1px solid #767b81; }
+
 .content-update {
-  border: 1px solid #aba7a7;
-  background-color: #f2f2f2;
+  border: 1px solid #767b81;
+  background-color: #bec3ca;
   padding: 1rem; }
 
 form.content-delete {
@@ -1855,7 +1858,7 @@ USERS
   min-width: unset;
   text-align: center;
   padding: .5rem .75rem;
-  background-color: #d3d3d3;
+  background-color: #92a4d5;
   border-radius: 2rem;
   font-family: 'Poppins', sans-serif;
   font-weight: 400;
@@ -1864,7 +1867,7 @@ USERS
   color: #343741;
   transition: all .3s ease; }
   .cta-user input[type="submit"]:hover {
-    background-color: #bdaa7c; }
+    background-color: #0045a4; }
 
 .cta-user.activate input[type="submit"] {
   background-color: #d5c392;
@@ -1873,7 +1876,7 @@ USERS
     background-color: #bdaa7c; }
 
 .cta-user.delete input[type="submit"] {
-  background-color: #FF1541;
+  background-color: #ed323b;
   color: white; }
   .cta-user.delete input[type="submit"]:hover {
-    background-color: #ae0021; }
+    background-color: #aa0f16; }

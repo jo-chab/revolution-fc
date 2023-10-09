@@ -73,7 +73,7 @@ ADMIN – DEFAULT
         
         span {
             @include font-family-reading;
-            @include font-style(600, .75rem, 1.3em, $primary-color-2);
+            @include font-style(600, .75rem, 1.3em, $secondary-color-1);
             text-transform: uppercase;
             letter-spacing: 1px;
             text-align: center;
@@ -115,7 +115,7 @@ ADMIN – CONTENT
     }
     
     .dashboard-title {
-        background-color: $primary-color-2;
+        background-color: $secondary-color-1;
         padding: .5rem 1rem;
     }
     
@@ -143,9 +143,12 @@ ADMIN – CONTENT
         margin-bottom: 2rem;
     }
 }
+.content-add {
+    border-bottom: 1px solid $secondary-color-2;
+}
 .content-update {
     border: 1px solid $secondary-color-2;
-    background-color: $web-grey-1;
+    background-color: $secondary-color-0;
     padding: 1rem;
     
 }
@@ -226,7 +229,7 @@ form.content-delete {
         
         .element-title {
             @include font-family-reading;
-            @include font-style(400, 1.25rem, 1.5em, $primary-color-2);
+            @include font-style(400, 1.25rem, 1.5em, $secondary-color-1);
             text-align: center;
             @include tablet {
                 text-align: unset;
@@ -298,7 +301,7 @@ USERS
 .user-name {
     width: 100%;
     @include font-family-heading;
-    @include font-style(400, .875rem, 1em, $primary-color-2);
+    @include font-style(400, .875rem, 1em, $secondary-color-1);
     
     span {
         font-weight: 600;
@@ -310,14 +313,14 @@ USERS
         min-width: unset;
         text-align: center;
         padding: .5rem .75rem;
-        background-color: $web-grey-2;
+        background-color: $admin-color-1;
         border-radius: 2rem;
         @include font-family-heading;
         @include font-style(400, .75rem, 1em, $web-grey-5);
         transition: all .3s ease;
         
         &:hover {
-            background-color: $secondary-color-1;
+            background-color: $admin-color-3;
         }
     }
     
@@ -326,7 +329,7 @@ USERS
         color: white;
         
         &:hover {
-            background-color: $secondary-color-1;
+            background-color: $primary-color-3;
         }
     }
     

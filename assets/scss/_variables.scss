@@ -37,42 +37,57 @@ $web-grey-6: #181818;
 
 /* SPECIFIC BRAND */
 $primary-color-1: #d5c392;
-$primary-color-2: #43474d;
-//$primary-color-3: #FFCD00;
+$primary-color-2: #dbcca9;
+$primary-color-3: #bdaa7c;
+$primary-color-4: #b89c4b;
 
-$secondary-color-1: #bdaa7c;
-$secondary-color-2: #aba7a7;
-$secondary-color-3: #d7d4d3;
+$secondary-color-1: #43474d;
+$secondary-color-0: #bec3ca;
+$secondary-color-2: #767b81;
+$secondary-color-3: #22262b;
 
-$tertiary-color-1: #949A90;
-$tertiary-color-2: #dbcca9;
-//$tertiary-color-3: #63666A;
-//$tertiary-color-4: #D0D3D4;
+$tertiary-color-1: #d7d4d3;
+$tertiary-color-2: #aba7a7;
+$tertiary-color-3: #949A90;
+
+$accent-color-1: #92d5c3;
+$accent-color-2: #bce5da;
+$accent-color-3: #52b59a;
+
 
 
 
 /****** MESSAGES & ALERTS ******/
-$alert-1: #fed624;
-$alert-2: #C2A031;
-$alert-3: #9bce7c;
-$alert-4: #1ecd28;
-$alert-5: #293D1D;
-$alert-6: #FF1541;
-$alert-7: #BA0F2F;
+$alert-1: #ffd743;
+$alert-2: #ffb500;
+$alert-3: #90cc7b;
+$alert-4: #5c9f4f;
+$alert-5: #2c6832;
+$alert-6: #ed323b;
+$alert-7: #cc1d33;
 
 $color-info: $alert-1;
-$color-error: $alert-6;
-$color-correct: $alert-4;
+$color-info-0: #ffedb0;
+$color-info-1: $alert-1;
+$color-info-2: $alert-2;
 
-$admin-color-1: #072ac8;
+$color-error: $alert-6;
+$color-error-0: #fbcad2;
+$color-error-1: $alert-6;
+$color-error-2: $alert-7;
+
+$color-correct: $alert-4;
+$color-correct-0: #d7edcf;
+$color-correct-1: $alert-3;
+$color-correct-2: $alert-4;
 
 
 /****** HEADER & FOOTER ******/
 $header-height-small: 80px;
 $header-height-large: 120px;
 $bg-header-color: white;
-$bg-sidemenu-color: $primary-color-2;
-$bg-footer-color: $primary-color-2;
+$bg-sidemenu-color: $secondary-color-1;
+$bg-footer-color: $secondary-color-1;
 
 $side-menu-color: white;
 $side-submenu-color: $tertiary-color-1;
@@ -87,15 +102,18 @@ $reading-text: $web-grey-6;
 $popup-color: $primary-color-1;
 $popup-text-color: white;
 $popup-color-2: #f2f2f2;
-$popup-text-color-2: $primary-color-2;
+$popup-text-color-2: $secondary-color-1;
 $popup-width-small: 320px;
 $popup-width-large: 520px;
+
 
 
 /*******************************************************
 ADMIN
 *******************************************************/
-$admin-color-1 : $secondary-color-1;
+$admin-color-1: #92a4d5;
+$admin-color-2: #3f66b9;
+$admin-color-3: #0045a4;
 $admin-alert: $alert-1;
 $admin-confirm: $alert-4;
 $admin-delete: $alert-6;

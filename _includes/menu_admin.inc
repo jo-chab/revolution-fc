@@ -22,7 +22,7 @@
 
 <li class="menu-element icon i-soccer-1">Technique</li>
 <li class="ss-menu-element"><a href="?p=51">Gérer les Programmes</a></li>
-<li class="ss-menu-element not-active"><a href="?p=36">Gérer les Documents technique</a></li>
+<li class="ss-menu-element"><a href="?p=36">Gérer les Documents technique</a></li>
 <li class="ss-menu-element"><a href="?p=37">Gérer les catégories technique</a></li>
 <li class="ss-menu-element"><a href="?p=38">Gérer les sous-catégories technique</a></li>
 
