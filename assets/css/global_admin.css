@@ -1163,6 +1163,12 @@ FORMS ELEMENT - block, labels, input & cta
     margin: 0 auto; }
   .w-form .btn-primary {
     margin: 2rem auto 0; }
+  .contact .w-form {
+    width: 100%;
+    max-width: 700px; }
+    @media (max-width: 767px) {
+      .contact .w-form {
+        min-width: unset; } }
 
 .form-row {
   display: flex;
@@ -1559,7 +1565,8 @@ FORMS ELEMENT - block, labels, input & cta
       padding: 1rem; } }
   @media (min-width: 768px) {
     .inputfile + label:hover {
-      background-color: #e5a000; } }
+      background-color: #e5a000;
+      cursor: pointer; } }
   .inputfile + label:before {
     display: inline-block;
     text-rendering: auto;
@@ -1835,6 +1842,10 @@ span.logo-mini {
   margin-right: 1rem; }
   span.logo-mini img {
     width: 100%; }
+
+.team_logo-img-upload img {
+  width: 100%;
+  max-width: 320px; }
 
 /*************************************
 USERS

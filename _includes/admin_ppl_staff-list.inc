@@ -7,13 +7,13 @@
 
             <div class="dashboard-content">
                 
-                
                 <div class="btn-primary small cta-add icon mobile-icon-only i-more js-content-add"><span>Ajouter un.e membre du staff</span></div>
 
                 <div class="dashboard-content content-add">
 
                     <form method="post" action="action_ppl_staff_add" enctype="multipart/form-data">
                         <div class="d-form-wrapper">
+                            <h3>Ajouter un.e membre du staff</h3>
 
                             <div class="grid-layout-2">
                                 <div class="form-row column">

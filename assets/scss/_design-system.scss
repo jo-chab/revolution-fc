@@ -547,6 +547,13 @@ FORMS ELEMENT - block, labels, input & cta
     .btn-primary {
         margin: 2rem auto 0;
     }
+    .contact & {
+        width: 100%;
+        max-width: 700px;
+        @include mobile-max {
+            min-width: unset;
+        }
+    }
 }
 .form-row {
     display: flex;

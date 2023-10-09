@@ -23,11 +23,12 @@
             </div>
 
             <div class="dashboard-content">
+                <a class="btn-primary small cta-add icon i-more" href="index.php?p=90">Ajouter un commanditaire</a>
                 
                 <div class="grid-layout-2">
                     <div class="form-row column">
-                        <label>Selectionner le type</label>
                         <div class="select-dropdown">
+                            <label>Selectionner le type</label>
                             <select name="type" id="ld_type"  onchange="filterSponsors();">
                                 <?php
                                     $options = [

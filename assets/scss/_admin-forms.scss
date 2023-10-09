@@ -74,6 +74,7 @@ FORMS ELEMENT - block, labels, input & cta
     @include tablet {
         &:hover {
             background-color: $color-warning-dark;
+            cursor: pointer;
         }
     }
     

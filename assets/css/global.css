@@ -1018,6 +1018,12 @@ FORMS ELEMENT - block, labels, input & cta
     margin: 0 auto; }
   .w-form .btn-primary {
     margin: 2rem auto 0; }
+  .contact .w-form {
+    width: 100%;
+    max-width: 700px; }
+    @media (max-width: 767px) {
+      .contact .w-form {
+        min-width: unset; } }
 
 .form-row {
   display: flex;
@@ -1372,7 +1378,10 @@ article {
       padding: 0 2.5rem; } }
   @media (min-width: 1024px) {
     article {
-      padding: 0 5rem; } }
+      padding: 0 4rem; } }
+  @media (min-width: 1440px) {
+    article {
+      padding: 0 6rem; } }
   article.wrapper {
     display: flex;
     flex-direction: column;
@@ -2019,9 +2028,6 @@ News detail / Programme detail
       margin: 0 -2rem 1rem; } }
   .article-featured-img img {
     width: 100%; }
-
-.article-featured-img img {
-  width: 100%; }
 
 .article-detail {
   margin-top: 1.5rem;
