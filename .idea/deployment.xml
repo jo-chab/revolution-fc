@@ -1,16 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="PublishConfigData" autoUpload="Always" serverName="Revolution FC" confirmBeforeUploading="false" confirmBeforeDeletion="false" autoUploadExternalChanges="true" showAutoUploadSettingsWarning="false">
-    <option name="confirmBeforeDeletion" value="false" />
+  <component name="PublishConfigData" autoUpload="Always" serverName="Revolution" remoteFilesAllowedToDisappearOnAutoupload="false" confirmBeforeUploading="false">
     <option name="confirmBeforeUploading" value="false" />
     <serverData>
-      <paths name="Revolution FC">
+      <paths name="Revolution">
         <serverdata>
           <mappings>
             <mapping deploy="/" local="$PROJECT_DIR$" web="/" />
           </mappings>
           <excludedPaths>
-            <excludedPath local="true" path="$PROJECT_DIR$/node_modules" />
             <excludedPath local="true" path="$PROJECT_DIR$/docs" />
           </excludedPaths>
         </serverdata>

@@ -64,11 +64,16 @@ FORMS ELEMENT - block, labels, input & cta
 }
 .inputfile + label {
     @extend .button;
+    max-width: 420px;
     padding: 1.25rem 2rem;
     @include font-style(400, .875rem, 1em, $secondary-color);
     background-color: $color-warning;
     @include mobile-max {
         padding: 1rem;
+    }
+    
+    span {
+        @include line-clamp(1);
     }
     
     @include tablet {

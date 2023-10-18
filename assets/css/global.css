@@ -299,7 +299,9 @@ h4 {
     font-weight: 700; }
   .dashboard-title h4 {
     font-size: .875rem;
-    color: white; }
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 1px; }
   h4:has(+ p) {
     margin-bottom: .5rem; }
 
@@ -657,6 +659,7 @@ DESIGN SYSTEM – Alert message box
   background-color: rgba(255, 255, 255, 0.7);
   box-sizing: border-box; }
   .w-alert-message .alert-message {
+    width: 100%;
     max-width: 600px;
     padding: 2rem;
     box-sizing: border-box;
@@ -678,23 +681,23 @@ DESIGN SYSTEM – Alert message box
       padding: 0 0 16px;
       font-size: 2em; }
     .w-alert-message .alert-message.alert-info {
-      background-color: #d5c392;
-      border-color: #957c39;
-      color: white; }
+      background-color: #fffbeb;
+      border-color: #936f38;
+      color: #ffbe2e; }
       .w-alert-message .alert-message.alert-info i {
-        color: white; }
+        color: #ffbe2e; }
     .w-alert-message .alert-message.alert-correct {
-      background-color: #00E676;
+      background-color: #dafce4;
       border-color: #00732e;
-      color: white; }
+      color: #00bd60; }
       .w-alert-message .alert-message.alert-correct i {
-        color: white; }
+        color: #00bd60; }
     .w-alert-message .alert-message.alert-error {
-      background-color: #ff1540;
+      background-color: #ffdfe6;
       border-color: #c80004;
-      color: white; }
+      color: #ff1540; }
       .w-alert-message .alert-message.alert-error i {
-        color: white; }
+        color: #ff1540; }
     .w-alert-message .alert-message span {
       margin-top: 16px; }
   .w-alert-message .close-alert-box {
@@ -791,7 +794,7 @@ DESIGN SYSTEM – Buttons
   font-size: 1.125rem;
   line-height: 1em;
   color: white;
-  background-color: #a8956c; }
+  background-color: #d5c392; }
   @media (max-width: 767px) {
     .btn-primary {
       padding: 1rem; } }
@@ -800,7 +803,7 @@ DESIGN SYSTEM – Buttons
       font-size: 1.25rem; } }
   @media (min-width: 768px) {
     .btn-primary:hover {
-      background-color: #8a7b43; } }
+      background-color: #a8956c; } }
   .btn-primary.small {
     font-size: .875rem;
     padding: .75rem 1.25rem; }
@@ -1106,141 +1109,6 @@ textarea {
 
 .recaptcha div {
   margin: 0 auto; }
-
-/***********************
-Lists
-***********************/
-.list-text {
-  position: relative;
-  margin-block: 1rem 2rem;
-  margin-inline-start: 2rem;
-  list-style: none; }
-  .list-text li {
-    font-family: 'Source Sans 3', sans-serif;
-    font-weight: 400;
-    font-size: 1.125rem;
-    line-height: 1.5em;
-    color: #181818;
-    margin-bottom: .25rem;
-    display: flex;
-    align-items: baseline;
-    gap: .5rem; }
-    .list-text li:last-of-type {
-      margin-bottom: 0; }
-    .list-text li:before {
-      content: "\2022";
-      /* Unicode character for a bullet (circle) */
-      display: inline-flex; }
-
-.list-people .people-el {
-  display: flex;
-  flex-flow: column nowrap;
-  gap: .5rem; }
-  .list-people .people-el .list-people-function {
-    font-family: 'Poppins', sans-serif;
-    font-weight: 700;
-    font-size: 1.5rem;
-    line-height: 1em;
-    color: #43474d;
-    text-transform: uppercase;
-    margin-bottom: .5rem; }
-  .list-people .people-el .list-people-img {
-    margin-bottom: 1rem;
-    width: 100%;
-    aspect-ratio: 3/4;
-    background-position: top center;
-    background-repeat: no-repeat;
-    background-size: cover; }
-  .list-people .people-el .list-people-name {
-    font-family: 'Poppins', sans-serif;
-    font-weight: 700;
-    font-size: 1.125rem;
-    line-height: 1em;
-    color: #d5c392;
-    text-transform: capitalize; }
-  .list-people .people-el .list-people-legend {
-    font-family: 'Source Sans 3', sans-serif;
-    font-weight: 400;
-    font-size: 0.875rem;
-    line-height: 1.5em;
-    color: #43474d; }
-  .list-people .people-el .list-people-email {
-    margin-top: .5rem;
-    font-family: 'Source Sans 3', sans-serif;
-    font-weight: 400;
-    font-size: 1rem;
-    line-height: 1em;
-    color: #767b81; }
-
-/***** DOCUMENTS LISTS *****/
-.w-list-docs {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  width: 100%;
-  margin: 3rem 0; }
-
-.list-docs {
-  width: 100%;
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-  margin-block: 1rem 4rem; }
-  @media (min-width: 768px) {
-    .list-docs {
-      gap: 1rem; } }
-  .list-docs li {
-    display: inline-flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 1.25rem; }
-    @media (min-width: 768px) {
-      .list-docs li {
-        gap: 3rem; } }
-  .list-docs span.docs-title {
-    font-family: 'Poppins', sans-serif;
-    font-weight: 400;
-    font-size: 1rem;
-    line-height: 1.5em;
-    color: #767b81;
-    flex-grow: 1; }
-
-.list-jobs {
-  margin-block: 2rem;
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 3rem; }
-  .list-jobs .job-el {
-    display: grid;
-    align-items: center;
-    grid-template-columns: 1fr;
-    grid-gap: 1.5rem;
-    width: 100%;
-    max-width: 800px;
-    padding: 2rem;
-    -webkit-border-radius: 1rem;
-    -moz-border-radius: 1rem;
-    border-radius: 1rem;
-    background-color: white;
-    border: 1px solid #bec3ca; }
-    @media (min-width: 768px) {
-      .list-jobs .job-el {
-        grid-gap: 2.5rem;
-        grid-template-columns: 1fr auto; } }
-  .list-jobs .job-infos p {
-    font-weight: 300;
-    font-size: 1rem;
-    line-height: 1.3em;
-    color: #767b81;
-    display: -webkit-box;
-    -webkit-line-clamp: 3;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-    text-overflow: ellipsis; }
 
 /*
 *
@@ -1859,6 +1727,129 @@ MAIN CSS
 /***********************
 Lists
 ***********************/
+.list-text {
+  position: relative;
+  margin-block: 1rem 2rem;
+  margin-inline-start: 2rem;
+  list-style: none; }
+  .list-text li {
+    font-family: 'Source Sans 3', sans-serif;
+    font-weight: 400;
+    font-size: 1.125rem;
+    line-height: 1.5em;
+    color: #181818;
+    margin-bottom: .25rem;
+    display: flex;
+    align-items: baseline;
+    gap: .5rem; }
+    .list-text li:last-of-type {
+      margin-bottom: 0; }
+    .list-text li:before {
+      content: "\2022";
+      /* Unicode character for a bullet (circle) */
+      display: inline-flex; }
+
+.list-people .people-el {
+  display: flex;
+  flex-flow: column nowrap;
+  gap: .5rem; }
+  .list-people .people-el .list-people-function {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 1.5rem;
+    line-height: 1em;
+    color: #43474d;
+    text-transform: uppercase;
+    margin-bottom: .5rem; }
+  .list-people .people-el .list-people-img {
+    margin-bottom: 1rem;
+    width: 100%;
+    aspect-ratio: 3/4;
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: cover; }
+  .list-people .people-el .list-people-name {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 1.125rem;
+    line-height: 1em;
+    color: #d5c392;
+    text-transform: capitalize; }
+  .list-people .people-el .list-people-legend {
+    font-family: 'Source Sans 3', sans-serif;
+    font-weight: 400;
+    font-size: 0.875rem;
+    line-height: 1.5em;
+    color: #43474d; }
+  .list-people .people-el .list-people-email {
+    margin-top: .5rem;
+    font-family: 'Source Sans 3', sans-serif;
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 1em;
+    color: #767b81; }
+
+.list-docs {
+  width: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-block: 1rem 4rem; }
+  @media (min-width: 768px) {
+    .list-docs {
+      gap: 1rem; } }
+  .list-docs li {
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.25rem; }
+    @media (min-width: 768px) {
+      .list-docs li {
+        gap: 3rem; } }
+  .list-docs span.docs-title {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 1.5em;
+    color: #767b81;
+    flex-grow: 1; }
+
+.list-jobs {
+  margin-block: 2rem;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 3rem; }
+  .list-jobs .job-el {
+    display: grid;
+    align-items: center;
+    grid-template-columns: 1fr;
+    grid-gap: 1.5rem;
+    width: 100%;
+    max-width: 800px;
+    padding: 2rem;
+    -webkit-border-radius: 1rem;
+    -moz-border-radius: 1rem;
+    border-radius: 1rem;
+    background-color: white;
+    border: 1px solid #bec3ca; }
+    @media (min-width: 768px) {
+      .list-jobs .job-el {
+        grid-gap: 2.5rem;
+        grid-template-columns: 1fr auto; } }
+  .list-jobs .job-infos p {
+    font-weight: 300;
+    font-size: 1rem;
+    line-height: 1.3em;
+    color: #767b81;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis; }
+
 .list-people {
   margin-block: 3rem; }
   @media (min-width: 768px) {
@@ -1872,6 +1863,76 @@ Lists
     @media (min-width: 1024px) {
       .list-people.col-3 .list-people-header {
         grid-column: span 3; } }
+
+@media (max-width: 767px) {
+  .list-programs {
+    gap: 3rem; } }
+
+.list-programs .program-element {
+  position: relative;
+  opacity: 1;
+  transition: opacity .3s ease; }
+  .list-programs .program-element:hover {
+    opacity: .8; }
+  .list-programs .program-element h2 {
+    letter-spacing: 0;
+    margin-bottom: .5rem;
+    line-height: 1.3em;
+    text-align: unset;
+    color: #43474d; }
+
+.list-programs .program-img {
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  width: 100%;
+  aspect-ratio: 3/2;
+  margin-bottom: 1rem; }
+
+.list-programs .btn-overlay-content {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  display: block; }
+
+.list-sponsors {
+  display: flex;
+  flex-flow: row wrap;
+  gap: 0;
+  align-items: center;
+  justify-content: center; }
+  .list-sponsors .sponsors-logo {
+    padding: 16px;
+    flex: 1 1 auto;
+    max-width: 20%; }
+    .list-sponsors .sponsors-logo img {
+      max-width: 100%; }
+      @media (min-width: 768px) {
+        .list-sponsors .sponsors-logo img {
+          filter: grayscale(1);
+          opacity: .7;
+          transform: scale(0.9);
+          transition: all .3s ease; }
+          .list-sponsors .sponsors-logo img:hover {
+            filter: grayscale(0);
+            opacity: 1;
+            transform: scale(1);
+            transition: all .3s ease; } }
+  .list-sponsors.sponsors-tournament {
+    margin-bottom: 2rem; }
+    .list-sponsors.sponsors-tournament .sponsors-logo {
+      max-width: 80%; }
+      @media (min-width: 768px) {
+        .list-sponsors.sponsors-tournament .sponsors-logo {
+          max-width: 30%; } }
+      .list-sponsors.sponsors-tournament .sponsors-logo img {
+        transform: scale(1);
+        opacity: 1;
+        filter: none; }
 
 /******************************
 HOME PAGE
@@ -1912,32 +1973,6 @@ HOME PAGE
     .w-news {
       margin: 3rem auto; } }
 
-/* ADDONS SECTION */
-.hp-addons {
-  display: flex;
-  flex-direction: column; }
-  .hp-addons > * {
-    background-color: white;
-    padding: 16px;
-    margin-bottom: 16px; }
-    .hp-addons > *.important {
-      background-color: #43474d; }
-      .hp-addons > *.important h3 {
-        color: white;
-        margin-bottom: 0; }
-    .hp-addons > *.addon-img {
-      padding: 0; }
-    .hp-addons > *:last-child {
-      margin-bottom: 0; }
-  .hp-addons img {
-    width: 100%; }
-
-.addons-registration h3 {
-  text-align: center; }
-
-.addons-registration .secondary-btn {
-  margin-bottom: 16px; }
-
 /* JOBS SECTION */
 .w-jobs {
   border-top: 1px solid #d3d3d3; }
@@ -1946,41 +1981,6 @@ HOME PAGE
   margin-bottom: 24px; }
 
 /* Sponsors SECTION*/
-.sponsors-list {
-  display: flex;
-  flex-flow: row wrap;
-  gap: 0;
-  align-items: center;
-  justify-content: center; }
-  .sponsors-list .sponsors-logo {
-    padding: 16px;
-    flex: 1 1 auto;
-    max-width: 20%; }
-    .sponsors-list .sponsors-logo img {
-      max-width: 100%; }
-      @media (min-width: 768px) {
-        .sponsors-list .sponsors-logo img {
-          filter: grayscale(1);
-          opacity: .7;
-          transform: scale(0.9);
-          transition: all .3s ease; }
-          .sponsors-list .sponsors-logo img:hover {
-            filter: grayscale(0);
-            opacity: 1;
-            transform: scale(1);
-            transition: all .3s ease; } }
-  .sponsors-list.sponsors-tournament {
-    margin-bottom: 2rem; }
-    .sponsors-list.sponsors-tournament .sponsors-logo {
-      max-width: 80%; }
-      @media (min-width: 768px) {
-        .sponsors-list.sponsors-tournament .sponsors-logo {
-          max-width: 30%; } }
-      .sponsors-list.sponsors-tournament .sponsors-logo img {
-        transform: scale(1);
-        opacity: 1;
-        filter: none; }
-
 /******************************
 NEWS PAGE
 ******************************/
@@ -2105,8 +2105,11 @@ News detail / Programme detail
   .article-detail strong {
     font-weight: 700; }
   .article-detail ul, .article-detail ol {
-    margin-inline-start: 2rem;
+    margin-inline: 2rem;
     margin-block-end: 1.5rem; }
+    @media (min-width: 768px) {
+      .article-detail ul, .article-detail ol {
+        margin-inline: 3rem; } }
     .article-detail ul li, .article-detail ol li {
       font-family: 'Source Sans 3', sans-serif;
       font-weight: 400;
@@ -2163,40 +2166,16 @@ CLUB PAGE
 /******************************
 PROGRAMMES
 ******************************/
-@media (max-width: 767px) {
-  .list-programs {
-    gap: 3rem; } }
-
-.list-programs .program-element {
+/******************************
+DOCUMENTS
+******************************/
+.w-list-docs {
   position: relative;
-  opacity: 1;
-  transition: opacity .3s ease; }
-  .list-programs .program-element:hover {
-    opacity: .8; }
-  .list-programs .program-element h2 {
-    letter-spacing: 0;
-    margin-bottom: .5rem;
-    line-height: 1.3em;
-    text-align: unset;
-    color: #43474d; }
-
-.list-programs .program-img {
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   width: 100%;
-  aspect-ratio: 3/2;
-  margin-bottom: 1rem; }
-
-.list-programs .btn-overlay-content {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  display: block; }
+  margin: 3rem 0; }
 
 /******************************
 FIELDS

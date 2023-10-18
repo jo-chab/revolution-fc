@@ -90,8 +90,11 @@ strong {
 }
 
 ul, ol {
-    margin-inline-start: 2rem;
+    margin-inline: 2rem;
     margin-block-end: 1.5rem;
+    @include tablet {
+        margin-inline: 3rem;
+    }
     
     li {
         @include font-family-reading;

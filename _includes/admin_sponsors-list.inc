@@ -116,7 +116,7 @@
                                         </form>
                                     </div>
                                     <div class='element-title content-id'>
-                                        <span class='logo-mini'><img src='../$logo' alt='$nom' /></span> $nom
+                                        <span class='logo-mini'><img src='..$logo' alt='$nom' /></span> $nom
                                     </div>
                                     <div class='list-cta content-btn'>
                                         <form action='?p=92' method='post'>

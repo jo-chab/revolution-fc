@@ -32,6 +32,7 @@ DESIGN SYSTEM – Alert message box
     box-sizing: border-box;
     
     .alert-message {
+        width: 100%;
         max-width: 600px;
         padding: 2rem;
         box-sizing: border-box;
@@ -53,32 +54,32 @@ DESIGN SYSTEM – Alert message box
         }
         
         &.alert-info {
-            background-color: $popup-color;
-            border-color: darken($popup-color, 30%);
-            color: white;
+            background-color: $color-warning-lighter;
+            border-color: $color-warning-darker;
+            color: $color-warning;
             
             i {
-                color: white;
+                color: $color-warning;
             }
         }
         
         &.alert-correct {
-            background-color: $color-success;
+            background-color: $color-success-lighter;
             border-color: $color-success-darker;
-            color: white;
+            color: $color-success-dark;
             
             i {
-                color: white;
+                color: $color-success-dark;
             }
         }
         
         &.alert-error {
-            background-color: $color-error;
+            background-color: $color-error-lighter;
             border-color: $color-error-darker;
-            color: white;
+            color: $color-error;
             
             i {
-                color: white;
+                color: $color-error;
             }
         }
         
@@ -216,7 +217,7 @@ DESIGN SYSTEM – Buttons
     @extend .button;
     padding: 1.25rem 2rem;
     @include font-style(400, 1.125rem, 1em, white);
-    background-color: $primary-color-dark;
+    background-color: $primary-color;
     @include mobile-max {
         padding: 1rem;
     }
@@ -226,7 +227,7 @@ DESIGN SYSTEM – Buttons
     
     @include tablet {
         &:hover {
-            background-color: $primary-color-darker;
+            background-color: $primary-color-dark;
         }
     }
     
@@ -555,6 +556,7 @@ FORMS ELEMENT - block, labels, input & cta
         }
     }
 }
+
 .form-row {
     display: flex;
     align-items: flex-start;
@@ -646,163 +648,7 @@ textarea {
         background: #f2f2f2;
     }
 }
+
 .recaptcha div {
     margin:0 auto;
-}
-
-
-
-
-
-/***********************
-Lists
-***********************/
-.list-text {
-    position: relative;
-    margin-block: 1rem 2rem;
-    margin-inline-start: 2rem;
-    list-style: none;
-    
-    li {
-        @include font-family-reading;
-        @include font-style(400, 1.125rem, 1.5em, $reading-text);
-        margin-bottom: .25rem;
-        
-        display: flex;
-        align-items: baseline;
-        gap: .5rem;
-        
-        &:last-of-type {
-            margin-bottom: 0;
-        }
-        
-        &:before {
-            content: "\2022"; /* Unicode character for a bullet (circle) */
-            display: inline-flex;
-        }
-    }
-}
-
-.list-people {
-    
-    .people-el {
-        display: flex;
-        flex-flow: column nowrap;
-        gap: .5rem;
-        
-        .list-people-function {
-            @include font-family-heading();
-            @include font-style(700, 1.5rem, 1em, $secondary-color);
-            text-transform: uppercase;
-            margin-bottom: .5rem;
-        }
-        
-        .list-people-img {
-            margin-bottom: 1rem;
-            width: 100%;
-            aspect-ratio: 3/4;
-            
-            background-position: top center;
-            background-repeat: no-repeat;
-            background-size: cover;
-            @include tablet {
-                //max-width: 320px;
-            }
-        }
-        
-        .list-people-name {
-            @include font-family-heading();
-            @include font-style(700, 1.125rem, 1em, $primary-color);
-            text-transform: capitalize;
-        }
-        
-        .list-people-legend {
-            @include font-family-reading();
-            @include font-style(400, .875rem, 1.5em, $secondary-color);
-        }
-        
-        .list-people-email {
-            margin-top: .5rem;
-            @include font-family-reading();
-            @include font-style(400, 1rem, 1em, $secondary-color-light);
-        }
-    }
-}
-
-/***** DOCUMENTS LISTS *****/
-.w-list-docs {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    
-    width: 100%;
-    margin: 3rem 0;
-    
-}
-
-.list-docs {
-    width: 100%;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-    margin-block: 1rem 4rem;
-    @include tablet {
-        gap: 1rem;
-    }
-    
-    li {
-        display: inline-flex;
-        align-items: center;
-        justify-content: space-between;
-        gap: 1.25rem;
-        @include tablet {
-            gap: 3rem;
-        }
-    }
-    
-    span.docs-title {
-        @include font-family-heading();
-        @include font-style(400, 1rem, 1.5em, $secondary-color-light);
-        flex-grow: 1;
-    }
-}
-
-.list-jobs {
-    margin-block: $space-m;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 3rem;
-    
-    .job-el {
-        display: grid;
-        align-items: center;
-        grid-template-columns: 1fr;
-        grid-gap: 1.5rem;
-        width: 100%;
-        max-width: 800px;
-        
-        padding: 2rem;
-        @include border-radius-uniform(1rem);
-        background-color: white;
-        border: 1px solid $secondary-color-lighter;
-        
-        //-webkit-box-shadow: 4px 8px 16px 0 rgba(8,40,62,.1);
-        //-moz-box-shadow: 4px 8px 16px 0 rgba(8,40,62,.1);
-        //box-shadow: 4px 8px 16px 0 rgba(8,40,62,.1);
-        
-        @include tablet {
-            grid-gap: 2.5rem;
-            grid-template-columns: 1fr auto;
-        }
-    }
-    .job-infos {
-        p {
-            @include font-style(300, 1rem, 1.3em, $secondary-color-light);
-            @include line-clamp(3);
-        }
-    }
 }
