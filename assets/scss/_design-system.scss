@@ -652,3 +652,205 @@ textarea {
 .recaptcha div {
     margin:0 auto;
 }
+
+
+
+
+
+
+
+
+
+
+/***********************
+Lists
+***********************/
+.list-text {
+    position: relative;
+    margin-block: 1rem 2rem;
+    margin-inline-start: 2rem;
+    list-style: none;
+    
+    li {
+        @include font-family-reading;
+        @include font-style(400, 1.125rem, 1.5em, $reading-text);
+        margin-bottom: .25rem;
+        
+        display: flex;
+        align-items: baseline;
+        gap: .5rem;
+        
+        &:last-of-type {
+            margin-bottom: 0;
+        }
+        
+        &:before {
+            content: "\2022"; /* Unicode character for a bullet (circle) */
+            display: inline-flex;
+        }
+    }
+}
+
+.list-people {
+    
+    .people-el {
+        display: flex;
+        flex-flow: column nowrap;
+        gap: .5rem;
+        
+        .list-people-function {
+            @include font-family-heading();
+            @include font-style(700, 1.5rem, 1em, $secondary-color);
+            text-transform: uppercase;
+            margin-bottom: .5rem;
+        }
+        
+        .list-people-img {
+            margin-bottom: 1rem;
+            width: 100%;
+            aspect-ratio: 3/4;
+            
+            background-position: top center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        
+        .list-people-name {
+            @include font-family-heading();
+            @include font-style(700, 1.125rem, 1em, $primary-color);
+            text-transform: capitalize;
+        }
+        
+        .list-people-legend {
+            @include font-family-reading();
+            @include font-style(400, .875rem, 1.5em, $secondary-color);
+        }
+        
+        .list-people-email {
+            margin-top: .5rem;
+            @include font-family-reading();
+            @include font-style(400, 1rem, 1em, $secondary-color-light);
+        }
+    }
+}
+
+.list-docs {
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-block: 1rem 4rem;
+    @include tablet {
+        gap: 1rem;
+    }
+    
+    li {
+        display: inline-flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1.25rem;
+        @include tablet {
+            gap: 3rem;
+        }
+    }
+    
+    span.docs-title {
+        @include font-family-heading();
+        @include font-style(400, 1rem, 1.5em, $secondary-color-light);
+        flex-grow: 1;
+    }
+}
+
+
+
+.list-programs {
+    @include mobile-max {
+        gap: 3rem;
+    }
+    
+    .program-element {
+        position: relative;
+        opacity: 1;
+        transition: opacity .3s ease;
+        &:hover {
+            opacity: .8;
+        }
+        
+        h2 {
+            //text-transform: unset;
+            letter-spacing: 0;
+            margin-bottom :.5rem;
+            line-height: 1.3em;
+            text-align: unset;
+            color: $secondary-color;
+        }
+    }
+    
+    .program-img {
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+        width: 100%;
+        aspect-ratio: 3/2;
+        margin-bottom: 1rem;
+    }
+    
+    .btn-overlay-content {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        display: block;
+    }
+}
+
+.list-sponsors {
+    display: flex;
+    flex-flow: row wrap;
+    gap: 0;
+    
+    align-items: center;
+    justify-content: center;
+    
+    .sponsors-logo {
+        padding: 16px;
+        flex: 1 1 auto;
+        max-width: 20%;
+        img {
+            //max-height: 80px;
+            max-width: 100%;
+            @include tablet {
+                //max-height: 120px;
+                filter: grayscale(1);
+                opacity: .7;
+                transform: scale(.9);
+                transition: all .3s ease;
+                &:hover {
+                    filter: grayscale(0);
+                    opacity: 1;
+                    transform: scale(1);
+                    transition: all .3s ease;
+                }
+            }
+        }
+    }
+    
+    &.sponsors-tournament {
+        margin-bottom: 2rem;
+        .sponsors-logo {
+            max-width: 80%;
+            @include tablet {
+                max-width: 30%
+            }
+            img {
+                transform: scale(1);
+                opacity: 1;
+                filter: none;
+            }
+        }
+    }
+}

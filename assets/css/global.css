@@ -1110,6 +1110,167 @@ textarea {
 .recaptcha div {
   margin: 0 auto; }
 
+/***********************
+Lists
+***********************/
+.list-text {
+  position: relative;
+  margin-block: 1rem 2rem;
+  margin-inline-start: 2rem;
+  list-style: none; }
+  .list-text li {
+    font-family: 'Source Sans 3', sans-serif;
+    font-weight: 400;
+    font-size: 1.125rem;
+    line-height: 1.5em;
+    color: #181818;
+    margin-bottom: .25rem;
+    display: flex;
+    align-items: baseline;
+    gap: .5rem; }
+    .list-text li:last-of-type {
+      margin-bottom: 0; }
+    .list-text li:before {
+      content: "\2022";
+      /* Unicode character for a bullet (circle) */
+      display: inline-flex; }
+
+.list-people .people-el {
+  display: flex;
+  flex-flow: column nowrap;
+  gap: .5rem; }
+  .list-people .people-el .list-people-function {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 1.5rem;
+    line-height: 1em;
+    color: #43474d;
+    text-transform: uppercase;
+    margin-bottom: .5rem; }
+  .list-people .people-el .list-people-img {
+    margin-bottom: 1rem;
+    width: 100%;
+    aspect-ratio: 3/4;
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: cover; }
+  .list-people .people-el .list-people-name {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 1.125rem;
+    line-height: 1em;
+    color: #d5c392;
+    text-transform: capitalize; }
+  .list-people .people-el .list-people-legend {
+    font-family: 'Source Sans 3', sans-serif;
+    font-weight: 400;
+    font-size: 0.875rem;
+    line-height: 1.5em;
+    color: #43474d; }
+  .list-people .people-el .list-people-email {
+    margin-top: .5rem;
+    font-family: 'Source Sans 3', sans-serif;
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 1em;
+    color: #767b81; }
+
+.list-docs {
+  width: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-block: 1rem 4rem; }
+  @media (min-width: 768px) {
+    .list-docs {
+      gap: 1rem; } }
+  .list-docs li {
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.25rem; }
+    @media (min-width: 768px) {
+      .list-docs li {
+        gap: 3rem; } }
+  .list-docs span.docs-title {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 1.5em;
+    color: #767b81;
+    flex-grow: 1; }
+
+@media (max-width: 767px) {
+  .list-programs {
+    gap: 3rem; } }
+
+.list-programs .program-element {
+  position: relative;
+  opacity: 1;
+  transition: opacity .3s ease; }
+  .list-programs .program-element:hover {
+    opacity: .8; }
+  .list-programs .program-element h2 {
+    letter-spacing: 0;
+    margin-bottom: .5rem;
+    line-height: 1.3em;
+    text-align: unset;
+    color: #43474d; }
+
+.list-programs .program-img {
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  width: 100%;
+  aspect-ratio: 3/2;
+  margin-bottom: 1rem; }
+
+.list-programs .btn-overlay-content {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  display: block; }
+
+.list-sponsors {
+  display: flex;
+  flex-flow: row wrap;
+  gap: 0;
+  align-items: center;
+  justify-content: center; }
+  .list-sponsors .sponsors-logo {
+    padding: 16px;
+    flex: 1 1 auto;
+    max-width: 20%; }
+    .list-sponsors .sponsors-logo img {
+      max-width: 100%; }
+      @media (min-width: 768px) {
+        .list-sponsors .sponsors-logo img {
+          filter: grayscale(1);
+          opacity: .7;
+          transform: scale(0.9);
+          transition: all .3s ease; }
+          .list-sponsors .sponsors-logo img:hover {
+            filter: grayscale(0);
+            opacity: 1;
+            transform: scale(1);
+            transition: all .3s ease; } }
+  .list-sponsors.sponsors-tournament {
+    margin-bottom: 2rem; }
+    .list-sponsors.sponsors-tournament .sponsors-logo {
+      max-width: 80%; }
+      @media (min-width: 768px) {
+        .list-sponsors.sponsors-tournament .sponsors-logo {
+          max-width: 30%; } }
+      .list-sponsors.sponsors-tournament .sponsors-logo img {
+        transform: scale(1);
+        opacity: 1;
+        filter: none; }
+
 /*
 *
 * LOCATION: [core]
@@ -1727,94 +1888,6 @@ MAIN CSS
 /***********************
 Lists
 ***********************/
-.list-text {
-  position: relative;
-  margin-block: 1rem 2rem;
-  margin-inline-start: 2rem;
-  list-style: none; }
-  .list-text li {
-    font-family: 'Source Sans 3', sans-serif;
-    font-weight: 400;
-    font-size: 1.125rem;
-    line-height: 1.5em;
-    color: #181818;
-    margin-bottom: .25rem;
-    display: flex;
-    align-items: baseline;
-    gap: .5rem; }
-    .list-text li:last-of-type {
-      margin-bottom: 0; }
-    .list-text li:before {
-      content: "\2022";
-      /* Unicode character for a bullet (circle) */
-      display: inline-flex; }
-
-.list-people .people-el {
-  display: flex;
-  flex-flow: column nowrap;
-  gap: .5rem; }
-  .list-people .people-el .list-people-function {
-    font-family: 'Poppins', sans-serif;
-    font-weight: 700;
-    font-size: 1.5rem;
-    line-height: 1em;
-    color: #43474d;
-    text-transform: uppercase;
-    margin-bottom: .5rem; }
-  .list-people .people-el .list-people-img {
-    margin-bottom: 1rem;
-    width: 100%;
-    aspect-ratio: 3/4;
-    background-position: top center;
-    background-repeat: no-repeat;
-    background-size: cover; }
-  .list-people .people-el .list-people-name {
-    font-family: 'Poppins', sans-serif;
-    font-weight: 700;
-    font-size: 1.125rem;
-    line-height: 1em;
-    color: #d5c392;
-    text-transform: capitalize; }
-  .list-people .people-el .list-people-legend {
-    font-family: 'Source Sans 3', sans-serif;
-    font-weight: 400;
-    font-size: 0.875rem;
-    line-height: 1.5em;
-    color: #43474d; }
-  .list-people .people-el .list-people-email {
-    margin-top: .5rem;
-    font-family: 'Source Sans 3', sans-serif;
-    font-weight: 400;
-    font-size: 1rem;
-    line-height: 1em;
-    color: #767b81; }
-
-.list-docs {
-  width: 100%;
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-  margin-block: 1rem 4rem; }
-  @media (min-width: 768px) {
-    .list-docs {
-      gap: 1rem; } }
-  .list-docs li {
-    display: inline-flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 1.25rem; }
-    @media (min-width: 768px) {
-      .list-docs li {
-        gap: 3rem; } }
-  .list-docs span.docs-title {
-    font-family: 'Poppins', sans-serif;
-    font-weight: 400;
-    font-size: 1rem;
-    line-height: 1.5em;
-    color: #767b81;
-    flex-grow: 1; }
-
 .list-jobs {
   margin-block: 2rem;
   position: relative;
@@ -1863,76 +1936,6 @@ Lists
     @media (min-width: 1024px) {
       .list-people.col-3 .list-people-header {
         grid-column: span 3; } }
-
-@media (max-width: 767px) {
-  .list-programs {
-    gap: 3rem; } }
-
-.list-programs .program-element {
-  position: relative;
-  opacity: 1;
-  transition: opacity .3s ease; }
-  .list-programs .program-element:hover {
-    opacity: .8; }
-  .list-programs .program-element h2 {
-    letter-spacing: 0;
-    margin-bottom: .5rem;
-    line-height: 1.3em;
-    text-align: unset;
-    color: #43474d; }
-
-.list-programs .program-img {
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
-  width: 100%;
-  aspect-ratio: 3/2;
-  margin-bottom: 1rem; }
-
-.list-programs .btn-overlay-content {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  display: block; }
-
-.list-sponsors {
-  display: flex;
-  flex-flow: row wrap;
-  gap: 0;
-  align-items: center;
-  justify-content: center; }
-  .list-sponsors .sponsors-logo {
-    padding: 16px;
-    flex: 1 1 auto;
-    max-width: 20%; }
-    .list-sponsors .sponsors-logo img {
-      max-width: 100%; }
-      @media (min-width: 768px) {
-        .list-sponsors .sponsors-logo img {
-          filter: grayscale(1);
-          opacity: .7;
-          transform: scale(0.9);
-          transition: all .3s ease; }
-          .list-sponsors .sponsors-logo img:hover {
-            filter: grayscale(0);
-            opacity: 1;
-            transform: scale(1);
-            transition: all .3s ease; } }
-  .list-sponsors.sponsors-tournament {
-    margin-bottom: 2rem; }
-    .list-sponsors.sponsors-tournament .sponsors-logo {
-      max-width: 80%; }
-      @media (min-width: 768px) {
-        .list-sponsors.sponsors-tournament .sponsors-logo {
-          max-width: 30%; } }
-      .list-sponsors.sponsors-tournament .sponsors-logo img {
-        transform: scale(1);
-        opacity: 1;
-        filter: none; }
 
 /******************************
 HOME PAGE
@@ -2052,13 +2055,16 @@ News detail / Programme detail
     text-transform: none;
     letter-spacing: unset; }
   .article-detail h3 {
-    font-weight: 700;
-    font-size: 1.25rem;
-    line-height: 1.5em;
     color: #d5c392;
-    margin-bottom: .5rem;
+    margin-bottom: 1.25rem;
     text-transform: uppercase;
     letter-spacing: 2px; }
+  .article-detail h4 {
+    font-weight: 600;
+    font-size: 1.125rem;
+    line-height: 1.5em;
+    color: #767b81;
+    margin-bottom: .25rem; }
   .article-detail blockquote {
     display: flex;
     align-items: center;
@@ -2115,7 +2121,7 @@ News detail / Programme detail
       font-weight: 400;
       font-size: 1.125rem;
       line-height: 1.5em;
-      color: #43474d;
+      color: #767b81;
       margin-bottom: .25rem; }
       .article-detail ul li:last-of-type, .article-detail ol li:last-of-type {
         margin-bottom: 0; }
@@ -2130,8 +2136,7 @@ News detail / Programme detail
   .article-detail table {
     margin-bottom: 1.5rem; }
     .article-detail table thead {
-      background: #f6e9d5;
-      border-bottom: 2px solid #8a7b43; }
+      background: #f6e9d5; }
     .article-detail table tr:nth-child(even) {
       background: #f2f2f2; }
     .article-detail table th {
@@ -2240,6 +2245,126 @@ TOURNOIS
   @media (min-width: 768px) {
     .tournament-img {
       margin-bottom: 2rem; } }
+
+.tournament-desc {
+  /*
+*
+* LOCATION: [core]
+* FOLDER: [assets/scss]
+* FILE NAME: [_text-content.scss]
+* DESCRIPTION: text content formatting
+*
+*/ }
+  .tournament-desc .article-intro {
+    font-weight: 600;
+    color: #43474d;
+    margin-bottom: 2rem; }
+  .tournament-desc h2 {
+    color: #43474d;
+    margin-bottom: 1.5rem;
+    text-transform: none;
+    letter-spacing: unset; }
+  .tournament-desc h3 {
+    color: #d5c392;
+    margin-bottom: 1.25rem;
+    text-transform: uppercase;
+    letter-spacing: 2px; }
+  .tournament-desc h4 {
+    font-weight: 600;
+    font-size: 1.125rem;
+    line-height: 1.5em;
+    color: #767b81;
+    margin-bottom: .25rem; }
+  .tournament-desc blockquote {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 2rem;
+    margin: 2.5rem; }
+    .tournament-desc blockquote:before {
+      display: inline-block;
+      text-rendering: auto;
+      -webkit-font-smoothing: antialiased;
+      font: var(--fa-font-sharp-solid);
+      content: '\f10d';
+      color: #767b81;
+      font-size: 3em;
+      align-self: flex-start; }
+    .tournament-desc blockquote:after {
+      display: inline-block;
+      text-rendering: auto;
+      -webkit-font-smoothing: antialiased;
+      font: var(--fa-font-sharp-solid);
+      content: '\f10e';
+      color: #767b81;
+      font-size: 3em;
+      align-self: flex-end; }
+    .tournament-desc blockquote p {
+      font-family: 'Source Sans 3', sans-serif;
+      font-weight: 500;
+      font-size: 1.5rem;
+      line-height: 1.7em;
+      color: #d5c392;
+      font-style: italic;
+      padding: 2rem 1rem;
+      margin: 0; }
+      .tournament-desc blockquote p:before, .tournament-desc blockquote p:after {
+        content: ' – '; }
+  .tournament-desc p {
+    margin-bottom: 1.5rem; }
+  .tournament-desc a {
+    color: #d5c392;
+    font-weight: 600;
+    transition: all .3s ease; }
+    .tournament-desc a:hover {
+      color: #b99a48; }
+  .tournament-desc strong {
+    font-weight: 700; }
+  .tournament-desc ul, .tournament-desc ol {
+    margin-inline: 2rem;
+    margin-block-end: 1.5rem; }
+    @media (min-width: 768px) {
+      .tournament-desc ul, .tournament-desc ol {
+        margin-inline: 3rem; } }
+    .tournament-desc ul li, .tournament-desc ol li {
+      font-family: 'Source Sans 3', sans-serif;
+      font-weight: 400;
+      font-size: 1.125rem;
+      line-height: 1.5em;
+      color: #767b81;
+      margin-bottom: .25rem; }
+      .tournament-desc ul li:last-of-type, .tournament-desc ol li:last-of-type {
+        margin-bottom: 0; }
+  .tournament-desc ul li {
+    list-style-type: disc; }
+    .tournament-desc ul li li {
+      list-style: circle; }
+  .tournament-desc ol li {
+    list-style-type: decimal; }
+    .tournament-desc ol li li {
+      list-style: lower-alpha; }
+  .tournament-desc table {
+    margin-bottom: 1.5rem; }
+    .tournament-desc table thead {
+      background: #f6e9d5; }
+    .tournament-desc table tr:nth-child(even) {
+      background: #f2f2f2; }
+    .tournament-desc table th {
+      padding: 1rem;
+      font-family: 'Poppins', sans-serif;
+      font-weight: 700;
+      font-size: 0.875rem;
+      line-height: 1.5em;
+      color: #43474d;
+      text-transform: uppercase;
+      letter-spacing: 2px; }
+    .tournament-desc table td {
+      padding: 1rem;
+      font-family: 'Source Sans 3', sans-serif;
+      font-weight: 400;
+      font-size: 1rem;
+      line-height: 1.5em;
+      color: #43474d; }
 
 .t-card {
   display: flex;

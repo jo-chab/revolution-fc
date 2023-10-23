@@ -22,10 +22,15 @@ h2 {
 }
 
 h3 {
-    @include font-style(700, 1.25rem, 1.5em, $primary-color);
-    margin-bottom: .5rem;
+    color: $primary-color;
+    margin-bottom: 1.25rem;
     text-transform: uppercase;
     letter-spacing: 2px;
+}
+
+h4 {
+    @include font-style(600, 1.125rem, 1.5em, $secondary-color-light);
+    margin-bottom: .25rem;
 }
 
 blockquote {
@@ -98,7 +103,7 @@ ul, ol {
     
     li {
         @include font-family-reading;
-        @include font-style(400, 1.125rem, 1.5em, $secondary-color);
+        @include font-style(400, 1.125rem, 1.5em, $secondary-color-light);
         margin-bottom: .25rem;
         
         &:last-of-type {
@@ -126,7 +131,6 @@ table {
     
     thead {
         background: $primary-color-lighter;
-        border-bottom: 2px solid $primary-color-darker;
     }
     
     tr, td, th {
