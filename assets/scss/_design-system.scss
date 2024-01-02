@@ -32,6 +32,7 @@ DESIGN SYSTEM – Alert message box
     box-sizing: border-box;
     
     .alert-message {
+        width: 100%;
         max-width: 600px;
         padding: 2rem;
         box-sizing: border-box;
@@ -53,32 +54,32 @@ DESIGN SYSTEM – Alert message box
         }
         
         &.alert-info {
-            background-color: $popup-color;
-            border-color: darken($popup-color, 30%);
-            color: white;
+            background-color: $color-warning-lighter;
+            border-color: $color-warning-darker;
+            color: $color-warning;
             
             i {
-                color: white;
+                color: $color-warning;
             }
         }
         
         &.alert-correct {
-            background-color: $color-success;
+            background-color: $color-success-lighter;
             border-color: $color-success-darker;
-            color: white;
+            color: $color-success-dark;
             
             i {
-                color: white;
+                color: $color-success-dark;
             }
         }
         
         &.alert-error {
-            background-color: $color-error;
+            background-color: $color-error-lighter;
             border-color: $color-error-darker;
-            color: white;
+            color: $color-error;
             
             i {
-                color: white;
+                color: $color-error;
             }
         }
         
@@ -216,7 +217,7 @@ DESIGN SYSTEM – Buttons
     @extend .button;
     padding: 1.25rem 2rem;
     @include font-style(400, 1.125rem, 1em, white);
-    background-color: $primary-color-dark;
+    background-color: $primary-color;
     @include mobile-max {
         padding: 1rem;
     }
@@ -226,7 +227,7 @@ DESIGN SYSTEM – Buttons
     
     @include tablet {
         &:hover {
-            background-color: $primary-color-darker;
+            background-color: $primary-color-dark;
         }
     }
     
@@ -547,7 +548,15 @@ FORMS ELEMENT - block, labels, input & cta
     .btn-primary {
         margin: 2rem auto 0;
     }
+    .contact & {
+        width: 100%;
+        max-width: 700px;
+        @include mobile-max {
+            min-width: unset;
+        }
+    }
 }
+
 .form-row {
     display: flex;
     align-items: flex-start;
@@ -639,9 +648,15 @@ textarea {
         background: #f2f2f2;
     }
 }
+
 .recaptcha div {
     margin:0 auto;
 }
+
+
+
+
+
 
 
 
@@ -698,9 +713,6 @@ Lists
             background-position: top center;
             background-repeat: no-repeat;
             background-size: cover;
-            @include tablet {
-                //max-width: 320px;
-            }
         }
         
         .list-people-name {
@@ -720,18 +732,6 @@ Lists
             @include font-style(400, 1rem, 1em, $secondary-color-light);
         }
     }
-}
-
-/***** DOCUMENTS LISTS *****/
-.w-list-docs {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    
-    width: 100%;
-    margin: 3rem 0;
-    
 }
 
 .list-docs {
@@ -762,40 +762,95 @@ Lists
     }
 }
 
-.list-jobs {
-    margin-block: $space-m;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 3rem;
+
+
+.list-programs {
+    @include mobile-max {
+        gap: 3rem;
+    }
     
-    .job-el {
-        display: grid;
-        align-items: center;
-        grid-template-columns: 1fr;
-        grid-gap: 1.5rem;
-        width: 100%;
-        max-width: 800px;
+    .program-element {
+        position: relative;
+        opacity: 1;
+        transition: opacity .3s ease;
+        &:hover {
+            opacity: .8;
+        }
         
-        padding: 2rem;
-        @include border-radius-uniform(1rem);
-        background-color: white;
-        border: 1px solid $secondary-color-lighter;
-        
-        //-webkit-box-shadow: 4px 8px 16px 0 rgba(8,40,62,.1);
-        //-moz-box-shadow: 4px 8px 16px 0 rgba(8,40,62,.1);
-        //box-shadow: 4px 8px 16px 0 rgba(8,40,62,.1);
-        
-        @include tablet {
-            grid-gap: 2.5rem;
-            grid-template-columns: 1fr auto;
+        h2 {
+            //text-transform: unset;
+            letter-spacing: 0;
+            margin-bottom :.5rem;
+            line-height: 1.3em;
+            text-align: unset;
+            color: $secondary-color;
         }
     }
-    .job-infos {
-        p {
-            @include font-style(300, 1rem, 1.3em, $secondary-color-light);
-            @include line-clamp(3);
+    
+    .program-img {
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+        width: 100%;
+        aspect-ratio: 3/2;
+        margin-bottom: 1rem;
+    }
+    
+    .btn-overlay-content {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        display: block;
+    }
+}
+
+.list-sponsors {
+    display: flex;
+    flex-flow: row wrap;
+    gap: 0;
+    
+    align-items: center;
+    justify-content: center;
+    
+    .sponsors-logo {
+        padding: 16px;
+        flex: 1 1 auto;
+        max-width: 20%;
+        img {
+            //max-height: 80px;
+            max-width: 100%;
+            @include tablet {
+                //max-height: 120px;
+                filter: grayscale(1);
+                opacity: .7;
+                transform: scale(.9);
+                transition: all .3s ease;
+                &:hover {
+                    filter: grayscale(0);
+                    opacity: 1;
+                    transform: scale(1);
+                    transition: all .3s ease;
+                }
+            }
+        }
+    }
+    
+    &.sponsors-tournament {
+        margin-bottom: 2rem;
+        .sponsors-logo {
+            max-width: 80%;
+            @include tablet {
+                max-width: 30%
+            }
+            img {
+                transform: scale(1);
+                opacity: 1;
+                filter: none;
+            }
         }
     }
 }

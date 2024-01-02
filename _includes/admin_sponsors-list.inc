@@ -23,11 +23,12 @@
             </div>
 
             <div class="dashboard-content">
+                <a class="btn-primary small cta-add icon i-more" href="index.php?p=90">Ajouter un commanditaire</a>
                 
                 <div class="grid-layout-2">
                     <div class="form-row column">
-                        <label>Selectionner le type</label>
                         <div class="select-dropdown">
+                            <label>Selectionner le type</label>
                             <select name="type" id="ld_type"  onchange="filterSponsors();">
                                 <?php
                                     $options = [
@@ -115,7 +116,7 @@
                                         </form>
                                     </div>
                                     <div class='element-title content-id'>
-                                        <span class='logo-mini'><img src='../$logo' alt='$nom' /></span> $nom
+                                        <span class='logo-mini'><img src='..$logo' alt='$nom' /></span> $nom
                                     </div>
                                     <div class='list-cta content-btn'>
                                         <form action='?p=92' method='post'>

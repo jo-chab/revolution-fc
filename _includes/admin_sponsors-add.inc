@@ -22,8 +22,8 @@
                 
                 <div class="grid-layout-3">
                     <div class="form-row column">
-                        <label>Commanditaire principal du club?</label>
                         <div class="select-dropdown">
+                            <label>Club?</label>
                             <select name="ld_club" required>
                                 <option value='1'>Oui</option>
                                 <option value='0'>Non</option>
@@ -31,8 +31,8 @@
                         </div>
                     </div>
                     <div class="form-row column">
-                        <label>Commanditaire pour tournoi &eacute;t&eacute;?</label>
                         <div class="select-dropdown">
+                            <label>Tournoi &eacute;t&eacute;?</label>
                             <select name="ld_tournoi_summer" required>
                                 <option value='1'>Oui</option>
                                 <option value='0'>Non</option>
@@ -40,8 +40,8 @@
                         </div>
                     </div>
                     <div class="form-row column">
-                        <label>Commanditaire pour tournoi hiver?</label>
                         <div class="select-dropdown">
+                            <label>Tournoi hiver?</label>
                             <select name="ld_tournoi_winter" required>
                                 <option value='1'>Oui</option>
                                 <option value='0'>Non</option>

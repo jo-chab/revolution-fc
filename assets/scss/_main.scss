@@ -17,6 +17,41 @@ MAIN CSS
 /***********************
 Lists
 ***********************/
+
+.list-jobs {
+	margin-block: $space-m;
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	gap: 3rem;
+	
+	.job-el {
+		display: grid;
+		align-items: center;
+		grid-template-columns: 1fr;
+		grid-gap: 1.5rem;
+		width: 100%;
+		max-width: 800px;
+		
+		padding: 2rem;
+		@include border-radius-uniform(1rem);
+		background-color: white;
+		border: 1px solid $secondary-color-lighter;
+		
+		@include tablet {
+			grid-gap: 2.5rem;
+			grid-template-columns: 1fr auto;
+		}
+	}
+	.job-infos {
+		p {
+			@include font-style(300, 1rem, 1.3em, $secondary-color-light);
+			@include line-clamp(3);
+		}
+	}
+}
+
 .list-people {
 	@extend .web-layout;
 	margin-block: 3rem;
@@ -101,111 +136,18 @@ HOME PAGE
 }
 
 
-
-/* ADDONS SECTION */
-.hp-addons {
-	display: flex;
-	flex-direction: column;
-	
-	> * {
-		background-color: white;
-		padding:16px;
-		margin-bottom: 16px;
-		&.important {
-			background-color: $secondary-color;
-			h3 {
-				color: white;
-				margin-bottom:0;
-			}
-		}
-		&.addon-img {
-			padding: 0;
-		}
-		&:last-child {
-			margin-bottom: 0;
-		}
-	}
-	
-	img {
-		width: 100%;
-	}
-}
-.addons-registration {
-	h3 {
-		text-align: center;
-	}
-	.secondary-btn {
-		margin-bottom: 16px;
-	}
-}
-
-
 /* JOBS SECTION */
 .w-jobs {
 	border-top: 1px solid $web-grey-2;
 }
 
-
 .hp-contact-info {
-	.contact-info-details {
-		margin-bottom: 24px;
-	}
+	display: grid;
+	grid-gap: 1.5rem;
 }
 
 
 /* Sponsors SECTION*/
-.sponsors-list {
-	display: flex;
-	flex-flow: row wrap;
-	gap: 0;
-	
-	align-items: center;
-	justify-content: center;
-	
-	.sponsors-logo {
-		padding: 16px;
-		flex: 1 1 auto;
-		max-width: 20%;
-		img {
-			//max-height: 80px;
-			max-width: 100%;
-			@include tablet {
-				//max-height: 120px;
-				filter: grayscale(1);
-				opacity: .7;
-				transform: scale(.9);
-				transition: all .3s ease;
-				&:hover {
-					filter: grayscale(0);
-					opacity: 1;
-					transform: scale(1);
-					transition: all .3s ease;
-				}
-			}
-		}
-	}
-	
-	&.sponsors-tournament {
-		margin-bottom: 2rem;
-		.sponsors-logo {
-			max-width: 80%;
-			@include tablet {
-				max-width: 30%
-			}
-			img {
-				transform: scale(1);
-				opacity: 1;
-				filter: none;
-			}
-		}
-	}
-}
-
-
-
-
-
-
 
 
 
@@ -279,12 +221,6 @@ News detail / Programme detail
 	}
 }
 
-.article-featured-img {
-	img {
-		width: 100%;
-	}
-}
-
 .article-detail {
 	margin-top: 1.5rem;
 	@include tablet {
@@ -326,50 +262,26 @@ CLUB PAGE
 /******************************
 PROGRAMMES
 ******************************/
-.list-programs {
-	@include mobile-max {
-		gap: 3rem;
-	}
-	
-	.program-element {
-		position: relative;
-		opacity: 1;
-		transition: opacity .3s ease;
-		&:hover {
-			opacity: .8;
-		}
-		
-		h2 {
-			//text-transform: unset;
-			letter-spacing: 0;
-			margin-bottom :.5rem;
-			line-height: 1.3em;
-			text-align: unset;
-			color: $secondary-color;
-		}
-	}
-	
-	.program-img {
-		background-repeat: no-repeat;
-		background-position: center center;
-		background-size: cover;
-		width: 100%;
-		aspect-ratio: 3/2;
-		margin-bottom: 1rem;
-	}
 
-	.btn-overlay-content {
-		position: absolute;
-		top: 0;
-		right: 0;
-		bottom: 0;
-		left: 0;
-		height: 100%;
-		width: 100%;
-		display: block;
-	}
+
+
+
+
+
+
+/******************************
+DOCUMENTS
+******************************/
+.w-list-docs {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	
+	width: 100%;
+	margin: 3rem 0;
+	
 }
-
 
 
 
@@ -406,6 +318,7 @@ FIELDS
 	flex-flow: row wrap;
 	gap: 1rem;
 }
+
 .list-fields {
 	margin-bottom: 6rem;
 }
@@ -461,7 +374,7 @@ TOURNOIS
 		}
 	}
 	&-desc {
-
+		@import "text-content";
 	}
 }
 

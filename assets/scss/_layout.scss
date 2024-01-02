@@ -191,6 +191,9 @@ article {
     @include desktop {
         padding: 0 $space-d;
     }
+    @include desktop-large {
+        padding: 0 $space-dl;
+    }
     
     &.wrapper {
         display: flex;

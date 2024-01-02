@@ -131,6 +131,8 @@ h4 {
     .dashboard-title & {
         font-size: .875rem;
         color: white;
+        text-transform: uppercase;
+        letter-spacing: 1px;
     }
     
     &:has(+ p) {

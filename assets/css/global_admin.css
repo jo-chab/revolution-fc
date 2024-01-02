@@ -299,7 +299,9 @@ h4 {
     font-weight: 700; }
   .dashboard-title h4 {
     font-size: .875rem;
-    color: white; }
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 1px; }
   h4:has(+ p) {
     margin-bottom: .5rem; }
 
@@ -802,6 +804,7 @@ DESIGN SYSTEM – Alert message box
   background-color: rgba(255, 255, 255, 0.7);
   box-sizing: border-box; }
   .w-alert-message .alert-message {
+    width: 100%;
     max-width: 600px;
     padding: 2rem;
     box-sizing: border-box;
@@ -823,23 +826,23 @@ DESIGN SYSTEM – Alert message box
       padding: 0 0 16px;
       font-size: 2em; }
     .w-alert-message .alert-message.alert-info {
-      background-color: #d5c392;
-      border-color: #957c39;
-      color: white; }
+      background-color: #fffbeb;
+      border-color: #936f38;
+      color: #ffbe2e; }
       .w-alert-message .alert-message.alert-info i {
-        color: white; }
+        color: #ffbe2e; }
     .w-alert-message .alert-message.alert-correct {
-      background-color: #00E676;
+      background-color: #dafce4;
       border-color: #00732e;
-      color: white; }
+      color: #00bd60; }
       .w-alert-message .alert-message.alert-correct i {
-        color: white; }
+        color: #00bd60; }
     .w-alert-message .alert-message.alert-error {
-      background-color: #ff1540;
+      background-color: #ffdfe6;
       border-color: #c80004;
-      color: white; }
+      color: #ff1540; }
       .w-alert-message .alert-message.alert-error i {
-        color: white; }
+        color: #ff1540; }
     .w-alert-message .alert-message span {
       margin-top: 16px; }
   .w-alert-message .close-alert-box {
@@ -936,7 +939,7 @@ DESIGN SYSTEM – Buttons
   font-size: 1.125rem;
   line-height: 1em;
   color: white;
-  background-color: #a8956c; }
+  background-color: #d5c392; }
   @media (max-width: 767px) {
     .btn-primary {
       padding: 1rem; } }
@@ -945,7 +948,7 @@ DESIGN SYSTEM – Buttons
       font-size: 1.25rem; } }
   @media (min-width: 768px) {
     .btn-primary:hover {
-      background-color: #8a7b43; } }
+      background-color: #a8956c; } }
   .btn-primary.small {
     font-size: .875rem;
     padding: .75rem 1.25rem; }
@@ -1163,6 +1166,12 @@ FORMS ELEMENT - block, labels, input & cta
     margin: 0 auto; }
   .w-form .btn-primary {
     margin: 2rem auto 0; }
+  .contact .w-form {
+    width: 100%;
+    max-width: 700px; }
+    @media (max-width: 767px) {
+      .contact .w-form {
+        min-width: unset; } }
 
 .form-row {
   display: flex;
@@ -1311,15 +1320,6 @@ Lists
     line-height: 1em;
     color: #767b81; }
 
-/***** DOCUMENTS LISTS *****/
-.w-list-docs {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  width: 100%;
-  margin: 3rem 0; }
-
 .list-docs {
   width: 100%;
   position: relative;
@@ -1346,40 +1346,75 @@ Lists
     color: #767b81;
     flex-grow: 1; }
 
-.list-jobs {
-  margin-block: 2rem;
+@media (max-width: 767px) {
+  .list-programs {
+    gap: 3rem; } }
+
+.list-programs .program-element {
   position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 3rem; }
-  .list-jobs .job-el {
-    display: grid;
-    align-items: center;
-    grid-template-columns: 1fr;
-    grid-gap: 1.5rem;
-    width: 100%;
-    max-width: 800px;
-    padding: 2rem;
-    -webkit-border-radius: 1rem;
-    -moz-border-radius: 1rem;
-    border-radius: 1rem;
-    background-color: white;
-    border: 1px solid #bec3ca; }
-    @media (min-width: 768px) {
-      .list-jobs .job-el {
-        grid-gap: 2.5rem;
-        grid-template-columns: 1fr auto; } }
-  .list-jobs .job-infos p {
-    font-weight: 300;
-    font-size: 1rem;
+  opacity: 1;
+  transition: opacity .3s ease; }
+  .list-programs .program-element:hover {
+    opacity: .8; }
+  .list-programs .program-element h2 {
+    letter-spacing: 0;
+    margin-bottom: .5rem;
     line-height: 1.3em;
-    color: #767b81;
-    display: -webkit-box;
-    -webkit-line-clamp: 3;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-    text-overflow: ellipsis; }
+    text-align: unset;
+    color: #43474d; }
+
+.list-programs .program-img {
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  width: 100%;
+  aspect-ratio: 3/2;
+  margin-bottom: 1rem; }
+
+.list-programs .btn-overlay-content {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  display: block; }
+
+.list-sponsors {
+  display: flex;
+  flex-flow: row wrap;
+  gap: 0;
+  align-items: center;
+  justify-content: center; }
+  .list-sponsors .sponsors-logo {
+    padding: 16px;
+    flex: 1 1 auto;
+    max-width: 20%; }
+    .list-sponsors .sponsors-logo img {
+      max-width: 100%; }
+      @media (min-width: 768px) {
+        .list-sponsors .sponsors-logo img {
+          filter: grayscale(1);
+          opacity: .7;
+          transform: scale(0.9);
+          transition: all .3s ease; }
+          .list-sponsors .sponsors-logo img:hover {
+            filter: grayscale(0);
+            opacity: 1;
+            transform: scale(1);
+            transition: all .3s ease; } }
+  .list-sponsors.sponsors-tournament {
+    margin-bottom: 2rem; }
+    .list-sponsors.sponsors-tournament .sponsors-logo {
+      max-width: 80%; }
+      @media (min-width: 768px) {
+        .list-sponsors.sponsors-tournament .sponsors-logo {
+          max-width: 30%; } }
+      .list-sponsors.sponsors-tournament .sponsors-logo img {
+        transform: scale(1);
+        opacity: 1;
+        filter: none; }
 
 /*
 *
@@ -1468,7 +1503,7 @@ SIDEBAR - IN PROGRESS
   flex-flow: column nowrap;
   width: 320px;
   height: 100vh;
-  overflow-x: scroll;
+  overflow-y: scroll;
   padding: 2rem 1rem;
   background-color: #15171a; }
   @media (max-width: 767px) {
@@ -1548,6 +1583,7 @@ FORMS ELEMENT - block, labels, input & cta
   z-index: -1; }
 
 .inputfile + label {
+  max-width: 420px;
   padding: 1.25rem 2rem;
   font-weight: 400;
   font-size: 0.875rem;
@@ -1557,9 +1593,16 @@ FORMS ELEMENT - block, labels, input & cta
   @media (max-width: 767px) {
     .inputfile + label {
       padding: 1rem; } }
+  .inputfile + label span {
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis; }
   @media (min-width: 768px) {
     .inputfile + label:hover {
-      background-color: #e5a000; } }
+      background-color: #e5a000;
+      cursor: pointer; } }
   .inputfile + label:before {
     display: inline-block;
     text-rendering: auto;
@@ -1835,6 +1878,10 @@ span.logo-mini {
   margin-right: 1rem; }
   span.logo-mini img {
     width: 100%; }
+
+.team_logo-img-upload img {
+  width: 100%;
+  max-width: 320px; }
 
 /*************************************
 USERS

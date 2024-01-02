@@ -60,7 +60,7 @@ SIDEBAR - IN PROGRESS
     flex-flow: column nowrap;
     width: $sidemenu-width;
     height: 100vh;
-    overflow-x: scroll;
+    overflow-y: scroll;
     padding: 2rem 1rem;
 
     background-color: $secondary-color-darker;

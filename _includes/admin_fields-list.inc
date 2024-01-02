@@ -12,6 +12,7 @@
             
             <form method="post" action="action_field_add" enctype="multipart/form-data">
                 <div class="d-form-wrapper">
+                    <h3>Ajouter un terrain</h3>
                     
                     <div class="grid-layout-2">
                         <div class="form-row column">
@@ -73,7 +74,7 @@
                     </div>
                     
                     <div class="d-form-cta">
-                        <div class="btn-primary small btn-confirm icon mobile-icon-only"><span>Ajouter</span></div>
+                        <div class="btn-primary small btn-confirm icon mobile-icon-only"><span>Enregistrer</span></div>
                     </div>
                 </div>
             </form>
