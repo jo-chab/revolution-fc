@@ -232,12 +232,23 @@ News detail / Programme detail
 }
 
 .article-footer {
+	display: flex;
+	flex-direction: column-reverse;
+	gap: 1.5rem;
+	
 	border-top: 1px solid #E6E6E6;
-	margin-top: 24px;
-	padding-top: 24px;
+	margin-top: 1.5rem;
+	padding-top: 1.5rem;
 	@include tablet {
-		padding-top: 32px;
-		margin-top: 32px;
+		flex-direction: row;
+		justify-content: flex-end;
+		padding-top: 2rem;
+		margin-top: 2rem;
+	}
+	
+	.btn-tertiary {
+		margin: .875rem 0;
+		padding: 0;
 	}
 }
 
