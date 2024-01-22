@@ -14,9 +14,9 @@ COLORS
 *******************************************************/
 /* BASICS */
 /* SPECIFIC BRAND */
+/****** TITLES & TEXTS ******/
 /****** MESSAGES & ALERTS ******/
 /****** HEADER & FOOTER ******/
-/****** TITLES & TEXTS ******/
 /****** POPUP ******/
 /*******************************************************
 ADMIN
@@ -401,7 +401,7 @@ p {
   font-weight: 400;
   font-size: 1.125rem;
   line-height: 1.7em;
-  color: #181818;
+  color: #43474d;
   max-width: 960px;
   margin-bottom: 1.5rem;
 }
@@ -600,6 +600,18 @@ p:has(+ p) {
 .i-send:after {
   font: var(--fa-font-regular);
   content: "\f1d8";
+}
+
+.icon.alert-error:before {
+  content: "\f06a";
+}
+
+.icon.alert-correct:before {
+  content: "\f058";
+}
+
+.icon.alert-info:before {
+  content: "\f06a";
 }
 
 /******************************************
@@ -803,13 +815,9 @@ DESIGN SYSTEM – Alert message box
   box-sizing: border-box;
   display: flex;
   flex-flow: column;
+  gap: 2rem;
   align-items: center;
   justify-content: center;
-  font-family: "Source Sans 3", sans-serif;
-  font-weight: 400;
-  font-size: 1.25rem;
-  line-height: 1.5em;
-  color: #181818;
   border: 1px solid #2e2e2e;
 }
 @media (min-width: 1024px) {
@@ -817,17 +825,24 @@ DESIGN SYSTEM – Alert message box
     padding: 4rem;
   }
 }
-.w-alert-message .alert-message i {
-  color: #ffbe2e;
-  padding: 0 0 16px;
-  font-size: 2em;
+.w-alert-message .alert-message p {
+  font-family: "Source Sans 3", sans-serif;
+  font-weight: 400;
+  font-size: 1.25rem;
+  line-height: 1.5em;
+  color: #181818;
+  margin: 0;
+}
+.w-alert-message .alert-message p.icon:before {
+  font: var(--fa-font-sharp-regular);
+  font-size: 2rem;
 }
 .w-alert-message .alert-message.alert-info {
   background-color: #fffbeb;
-  border-color: #936f38;
+  border-color: #e5a000;
   color: #ffbe2e;
 }
-.w-alert-message .alert-message.alert-info i {
+.w-alert-message .alert-message.alert-info p {
   color: #ffbe2e;
 }
 .w-alert-message .alert-message.alert-correct {
@@ -835,7 +850,7 @@ DESIGN SYSTEM – Alert message box
   border-color: #00732e;
   color: #00bd60;
 }
-.w-alert-message .alert-message.alert-correct i {
+.w-alert-message .alert-message.alert-correct p {
   color: #00bd60;
 }
 .w-alert-message .alert-message.alert-error {
@@ -843,7 +858,7 @@ DESIGN SYSTEM – Alert message box
   border-color: #c80004;
   color: #ff1540;
 }
-.w-alert-message .alert-message.alert-error i {
+.w-alert-message .alert-message.alert-error p {
   color: #ff1540;
 }
 .w-alert-message .alert-message span {
@@ -853,6 +868,9 @@ DESIGN SYSTEM – Alert message box
   grid-column: span 2;
   cursor: pointer;
   text-decoration: underline;
+}
+.w-alert-message .close-alert-box:hover {
+  opacity: 0.8;
 }
 
 /***********************
@@ -958,6 +976,12 @@ DESIGN SYSTEM – Buttons
   border-radius: 0.5rem;
 }
 
+.cta-back:before {
+  font: var(--fa-font-sharp-regular);
+  content: "\f344";
+  font-size: 0.875em;
+}
+
 .btn-primary {
   padding: 1.25rem 2rem;
   font-weight: 400;
@@ -1030,11 +1054,6 @@ DESIGN SYSTEM – Buttons
     background-color: #e5a000;
   }
 }
-.btn-primary.cta-back:before {
-  font: var(--fa-font-sharp-regular);
-  content: "\f344";
-  font-size: 0.875em;
-}
 @media (max-width: 767px) {
   .btn-primary span.is-hide-mobile {
     display: none;
@@ -1076,6 +1095,30 @@ DESIGN SYSTEM – Buttons
 .btn-secondary.ghost-white:hover {
   background-color: white;
   color: #43474d;
+}
+.alert-message.alert-error .btn-secondary {
+  color: #ff1540;
+  border-color: #ff1540;
+}
+.alert-message.alert-error .btn-secondary:hover {
+  background-color: #ff1540;
+  color: white;
+}
+.alert-message.alert-info .btn-secondary {
+  color: #ffbe2e;
+  border-color: #ffbe2e;
+}
+.alert-message.alert-info .btn-secondary:hover {
+  background-color: #ffbe2e;
+  color: #181818;
+}
+.alert-message.alert-correct .btn-secondary {
+  color: #00E676;
+  border-color: #00E676;
+}
+.alert-message.alert-correct .btn-secondary:hover {
+  background-color: #00E676;
+  color: #00732e;
 }
 
 .btn-tertiary {
@@ -1387,7 +1430,7 @@ Lists
   font-weight: 400;
   font-size: 1.125rem;
   line-height: 1.5em;
-  color: #181818;
+  color: #43474d;
   margin-bottom: 0.25rem;
   display: flex;
   align-items: baseline;
@@ -2654,7 +2697,7 @@ News detail / Programme detail
   font-weight: 400;
   font-size: 1.125rem;
   line-height: 1.5em;
-  color: #767b81;
+  color: #43474d;
   margin-bottom: 0.25rem;
 }
 .article-detail ul li:last-of-type, .article-detail ol li:last-of-type {
@@ -2909,7 +2952,7 @@ TOURNOIS
   font-weight: 400;
   font-size: 1.125rem;
   line-height: 1.5em;
-  color: #767b81;
+  color: #43474d;
   margin-bottom: 0.25rem;
 }
 .tournament-desc ul li:last-of-type, .tournament-desc ol li:last-of-type {
