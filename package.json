@@ -7,7 +7,7 @@
     "doc": "docs"
   },
   "scripts": {
-    "sass": "node-sass -w assets/scss/ -o assets/css/ --recursive"
+    "sass": "sass --watch assets/scss:assets/css"
   },
   "author": "Jonathan",
   "license": "ISC",
