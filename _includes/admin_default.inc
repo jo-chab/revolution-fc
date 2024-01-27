@@ -2,7 +2,9 @@
 
 <ul class="list-dashboard-menu grid-system">
     
-    <li><a class="icon icon-atop i-config-superadmin" href="?p=2"><span>Config ADMIN</span></a></li>
+    <?php if (isset($_SESSION['auth']) && $_SESSION['type'] == 6): ?>
+        <li><a class="icon icon-atop i-config-superadmin" href="?p=2"><span>Config ADMIN</span></a></li>
+    <?php endif ?>
     <li><a class="icon icon-atop i-config-site" href="?p=3"><span>Config website</span></a></li>
     <li><a class="icon icon-atop i-config-club" href="?p=5"><span>Config Infos club</span></a></li>
     <li><a class="icon icon-atop i-config-home" href="?p=4"><span>Config page accueil</span></a></li>

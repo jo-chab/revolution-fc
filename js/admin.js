@@ -7,6 +7,25 @@
     });
 
 
+    // Get all menu-element items
+    const menuElements = document.querySelectorAll('.menu-element');
+
+    // Loop through each menu-element
+    menuElements.forEach(menuElement => {
+        // Add click event listener to each menu-element
+        menuElement.addEventListener('click', function() {
+            // Hide all sub-menu items
+            document.querySelectorAll('.sub-menu').forEach(subMenu => {
+                subMenu.style.display = 'none';
+            });
+
+            // Show the associated sub-menu for the clicked menu-element
+            const subMenu = this.querySelector('.sub-menu');
+            subMenu.style.display = 'block';
+        });
+    });
+
+
 
     function toggleContentAdd() {
         const addButton = document.querySelector('.js-content-add');
