@@ -16,11 +16,6 @@
 <ul class="sidebar-menu">
     <!--For testing purpose-->
     <?php if (isset($_SESSION['auth']) && $_SESSION['type'] == 6): ?>
-        <li class="menu-element icon i-events">Evenements
-            <ul class="sub-nav">
-                <li class="sub-nav-item"><a class="sub-nav-item-el" href="?p=63">Voir les events</a></li>
-            </ul>
-        </li>
     <?php endif ?>
     
     
@@ -69,6 +64,13 @@
     <li class="menu-element icon i-tournament">Tournois
         <ul class="sub-nav">
             <li class="sub-nav-item"><a class="sub-nav-item-el" href="?p=81">Gérer les tournois</a></li>
+        </ul>
+    </li>
+    
+    <li class="menu-element icon i-events">Evenements
+        <ul class="sub-nav">
+            <li class="sub-nav-item"><a class="sub-nav-item-el" href="?p=63">Gérer les évènements</a></li>
+            <li class="sub-nav-item"><a class="sub-nav-item-el" href="?p=64">Créer un évènement</a></li>
         </ul>
     </li>
     
