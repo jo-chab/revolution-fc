@@ -975,6 +975,16 @@ DESIGN SYSTEM – CARDS
   text-transform: uppercase;
 }
 
+@media (min-width: 768px) {
+  .card-events {
+    transform: translateY(0);
+    transition: transform 0.5s ease;
+  }
+  .card-events:hover {
+    transform: translateY(-1rem);
+  }
+}
+
 /***********************
 DESIGN SYSTEM – Buttons
 ***********************/
@@ -1153,7 +1163,6 @@ DESIGN SYSTEM – Buttons
   font-size: 1.25em;
   line-height: 1em;
   color: #a8956c;
-  padding: 1.25rem 2rem;
   margin: 1.5rem 0;
   border-radius: 0;
 }
@@ -2545,6 +2554,76 @@ HOME PAGE
   }
 }
 
+.w-events {
+  border-top: 1px solid #d3d3d3;
+}
+.w-events .wrapper {
+  gap: 1rem;
+}
+@media (min-width: 768px) {
+  .w-events .wrapper {
+    gap: 0;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
+.w-events .w-btn {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+  flex: 1;
+}
+@media (min-width: 768px) {
+  .w-events .w-btn {
+    margin-top: 3rem;
+  }
+}
+.w-events h3 {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 700;
+  font-size: 1.25rem;
+}
+@media (max-width: 767px) {
+  .w-events h3 {
+    text-align: center;
+  }
+}
+@media (min-width: 768px) {
+  .w-events h3 {
+    width: 25%;
+    margin-bottom: 0;
+    padding-right: 2rem;
+  }
+}
+.w-events .w-cards {
+  display: grid;
+  gap: 1rem;
+  width: 100%;
+}
+@media (min-width: 768px) {
+  .w-events .w-cards {
+    width: 75%;
+    gap: 2rem;
+    grid-template-columns: repeat(3, 1fr);
+    padding-left: 2rem;
+    border-left: 1px solid #d3d3d3;
+  }
+}
+@media (min-width: 1024px) {
+  .w-events .w-cards {
+    gap: 3rem;
+  }
+}
+.w-events .w-cards #title-no-event {
+  margin: 0;
+}
+@media (min-width: 768px) {
+  .w-events .w-cards #title-no-event {
+    grid-column: span 3;
+  }
+}
+
 /* JOBS SECTION */
 .w-jobs {
   border-top: 1px solid #d3d3d3;
@@ -3183,7 +3262,7 @@ Events
   width: 100%;
 }
 .table-event thead {
-  background: #f5f9fa;
+  background: #bec3ca;
 }
 @media (max-width: 767px) {
   .table-event thead {
@@ -3224,7 +3303,7 @@ Events
   }
 }
 .table-event tr:nth-of-type(even) {
-  background: #f5f9fa;
+  background: #f2f2f2;
 }
 .table-event tr:hover td {
   color: #d5c392;
@@ -3318,7 +3397,7 @@ Events
   text-transform: capitalize;
 }
 .card-events .event-title {
-  color: #43474d;
+  color: #767b81;
   margin-bottom: 0.25rem;
   font-size: 1.5rem;
 }
@@ -3333,8 +3412,7 @@ Events
 
 .card-events .event-venue {
   font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 2px;
+  color: #15171a;
 }
 
 .event-date {
@@ -3342,7 +3420,7 @@ Events
 }
 .card-events .event-date {
   margin-bottom: 1rem;
-  color: #d5c392;
+  color: #a8956c;
   font-size: 0.75rem;
 }
 @media (max-width: 767px) {
@@ -3355,10 +3433,11 @@ Events
 }
 
 .event-content {
+  display: grid;
+  align-items: baseline;
   width: 100%;
   padding: 4rem 0;
-  display: grid;
-  border-top: 1px solid #767b81;
+  border-top: 1px solid #bec3ca;
   /* For subgrid only*/
   /* For fallback */
   gap: 1rem;
@@ -3369,6 +3448,7 @@ Events
   }
 }
 .event-content h4 {
+  color: #767b81;
   /* For subgrid only*/
 }
 .event-content .event-detail {
@@ -3388,7 +3468,7 @@ Events
   font-weight: 700;
   font-size: 0.875rem;
   line-height: 1em;
-  color: #15171a;
+  color: #767b81;
   margin-bottom: 0.5rem;
 }
 .event-content .event-detail-text {
@@ -3396,7 +3476,7 @@ Events
   font-weight: 700;
   font-size: 1.25rem;
   line-height: 1.3em;
-  color: #d5c392;
+  color: #363b41;
 }
 
 /*# sourceMappingURL=global.css.map */

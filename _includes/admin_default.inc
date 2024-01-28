@@ -1,7 +1,3 @@
-<div class='message-box maintenance'>
-    <div class='icon i-alert'></div>
-    <p>Il y a une maintenance en cours entre le 27 janvier 8:00 AM et dimanche 28 janvier 4:00 PM. Certaines fonctionalités seront limitées.<br/>Merci de votre patience</p>
-</div>
 
 <ul class="list-dashboard-menu grid-system">
     

@@ -16,7 +16,7 @@
     width: 100%;
     
     thead {
-        background: #f5f9fa;
+        background: $secondary-color-lighter;
         @include mobile-max {
             display: none;
         }
@@ -57,7 +57,7 @@
         }
         
         &:nth-of-type(even) {
-            background: #f5f9fa;
+            background: $web-grey-1;
         }
         
         &:hover td {
@@ -157,7 +157,7 @@
     text-transform: capitalize;
     
     .card-events & {
-        color: $secondary-color;
+        color: $secondary-color-light;
         margin-bottom: .25rem;
         font-size: 1.5rem;
         
@@ -176,8 +176,9 @@
 .event-venue {
     .card-events & {
         font-weight: 700;
-        text-transform: uppercase;
-        letter-spacing: 2px;
+        color: $secondary-color-darker;
+        //text-transform: uppercase;
+        //letter-spacing: 2px;
     }
 }
 
@@ -186,7 +187,7 @@
     
     .card-events & {
         margin-bottom: 1rem;
-        color: $primary-color;
+        color: $primary-color-dark;
         font-size: .75rem;
         @include mobile-max {
             margin-bottom: .25rem;
@@ -199,10 +200,14 @@
 }
 
 .event-content {
+    display: grid;
+    align-items: baseline;
+    
     width: 100%;
     padding: 4rem 0;
-    display: grid;
-    border-top: 1px solid $secondary-color-light;
+    
+    border-top: 1px solid $secondary-color-lighter;
+    
     /* For subgrid only*/
     //grid-column: 1 / 12;
     //grid-template-columns: subgrid;
@@ -214,6 +219,7 @@
     }
     
     h4 {
+        color: $secondary-color-light;
         /* For subgrid only*/
         //grid-column: 1 / 3;
     }
@@ -235,13 +241,13 @@
         
         &-label {
             @include font-family-reading();
-            @include font-style(700, .875rem, 1em, $secondary-color-darker);
+            @include font-style(700, .875rem, 1em, $secondary-color-light);
             margin-bottom: .5rem;
         }
         
         &-text {
             @include font-family-reading();
-            @include font-style(700, 1.25rem, 1.3em, $primary-color);
+            @include font-style(700, 1.25rem, 1.3em, $secondary-color-dark);
         }
     }
 }

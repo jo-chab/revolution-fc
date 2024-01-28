@@ -42,7 +42,7 @@
                             <label>Lieu</label>
                             <select name="ld_city" required>
                                 <?php
-                                    $stmt4 = $db->prepare("SELECT * FROM TERRAINS order by id_field ASC");
+                                    $stmt4 = $db->prepare("SELECT * FROM FIELDS order by id_field ASC");
                                     $stmt4->execute();
                                     
                                     while ($curseur4 = $stmt4->fetch()) {

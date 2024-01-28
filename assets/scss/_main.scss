@@ -136,6 +136,66 @@ HOME PAGE
 }
 
 
+.w-events {
+	border-top: 1px solid $web-grey-2;
+	.wrapper {
+		gap: 1rem;
+		@include tablet {
+			gap: 0;
+			flex-direction: row;
+			flex-wrap: wrap;
+		}
+	}
+	
+	.w-btn {
+		display: flex;
+		justify-content: center;
+		margin-top: 2rem;
+		flex: 1;
+		@include tablet {
+			margin-top: 3rem;
+		}
+	}
+	
+	h3 {
+		text-transform: uppercase;
+		letter-spacing: 2px;
+		font-weight: 700;
+		font-size: 1.25rem;
+		@include mobile-max {
+			text-align: center;
+		}
+		@include tablet {
+			width: 25%;
+			margin-bottom: 0;
+			padding-right: 2rem;
+		}
+	}
+	
+	.w-cards {
+		display: grid;
+		gap: 1rem;
+		width: 100%;
+		@include tablet {
+			width: 75%;
+			gap: 2rem;
+			grid-template-columns: repeat(3, 1fr);
+			padding-left: 2rem;
+			border-left: 1px solid $web-grey-2;
+		}
+		@include desktop {
+			gap: 3rem;
+		}
+		
+		#title-no-event {
+			margin: 0;
+			@include tablet {
+				grid-column: span 3;
+			}
+		}
+	}
+}
+
 /* JOBS SECTION */
 .w-jobs {
 	border-top: 1px solid $web-grey-2;

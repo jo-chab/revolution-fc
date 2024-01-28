@@ -953,6 +953,7 @@ ALERT MESSAGES in Dashboard
   bottom: unset;
   left: unset;
   transform: none;
+  margin-bottom: 3rem;
 }
 .message-box.maintenance p {
   width: 100%;
@@ -1174,6 +1175,16 @@ DESIGN SYSTEM – CARDS
   text-transform: uppercase;
 }
 
+@media (min-width: 768px) {
+  .card-events {
+    transform: translateY(0);
+    transition: transform 0.5s ease;
+  }
+  .card-events:hover {
+    transform: translateY(-1rem);
+  }
+}
+
 /***********************
 DESIGN SYSTEM – Buttons
 ***********************/
@@ -1352,7 +1363,6 @@ DESIGN SYSTEM – Buttons
   font-size: 1.25em;
   line-height: 1em;
   color: #a8956c;
-  padding: 1.25rem 2rem;
   margin: 1.5rem 0;
   border-radius: 0;
 }
@@ -2294,7 +2304,7 @@ ADMIN – CONTENT
 .dashboard-container .dashboard-main {
   border: 1px solid #d3d3d3;
   background-color: white;
-  margin-bottom: 2rem;
+  margin-bottom: 3rem;
 }
 .dashboard-container .dashboard-title {
   background-color: #363b41;

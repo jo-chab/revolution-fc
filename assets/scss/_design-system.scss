@@ -181,7 +181,15 @@ DESIGN SYSTEM – CARDS
     text-transform: uppercase;
 }
 
-
+.card-events {
+    @include tablet {
+        transform: translateY(0);
+        transition: transform .5s ease;
+        &:hover {
+            transform: translateY(-1rem);
+        }
+    }
+}
 
 
 
@@ -376,7 +384,6 @@ DESIGN SYSTEM – Buttons
     @extend .button;
     
     @include font-style(400, 1.25em, 1em, $primary-color-dark);
-    padding: 1.25rem 2rem;
     margin: 1.5rem 0;
     border-radius: 0;
     &:hover {
