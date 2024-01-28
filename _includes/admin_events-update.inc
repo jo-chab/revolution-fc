@@ -14,7 +14,7 @@
         $date = $event_date;
         $date_end = $event_date_end;
         $start = $event_start_time;
-        $end = $revent_end_time;
+        $end = $event_end_time;
     }
     
     
@@ -39,10 +39,10 @@
                 <div class="grid-layout-2">
                     <div class="form-row column">
                         <div class="select-dropdown">
-                            <label>Ville / Arrondissement</label>
+                            <label>Lieu</label>
                             <select name="ld_city" required>
                                 <?php
-                                    $stmt4 = $db->prepare("SELECT * FROM FIELDS order by id_field ASC");
+                                    $stmt4 = $db->prepare("SELECT * FROM TERRAINS order by id_field ASC");
                                     $stmt4->execute();
                                     
                                     while ($curseur4 = $stmt4->fetch()) {

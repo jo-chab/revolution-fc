@@ -586,6 +586,17 @@ p:has(+ p) {
   font: var(--fa-font-regular);
   content: "\e487";
 }
+.i-homepage:hover:before {
+  font: var(--fa-font-solid);
+}
+
+.i-homepage-2:before {
+  font-family: "Font Awesome Kit";
+  content: "\e016";
+}
+.i-homepage-2:hover:before {
+  content: "\e018";
+}
 
 .i-facebook:before {
   font: var(--fa-font-brands);
@@ -617,6 +628,13 @@ p:has(+ p) {
 /******************************************
 ADMIN ICONS
 ******************************************/
+.has-sub:after {
+  font: var(--fa-font-sharp-regular);
+  content: "\f078";
+  transform: rotate(0);
+  transition: transform 0.3s ease;
+}
+
 .i-config-superadmin:before {
   font-family: "Font Awesome Kit";
   content: "\e012";
@@ -680,6 +698,15 @@ ADMIN ICONS
   content: "\f81d";
 }
 .i-sponsors-manage:before {
+  font-family: "Font Awesome Kit";
+  content: "\e009";
+}
+
+.i-events:before {
+  font: var(--fa-font-light);
+  content: "\f073";
+}
+.i-events-manage:before {
   font-family: "Font Awesome Kit";
   content: "\e009";
 }
@@ -919,6 +946,17 @@ ALERT MESSAGES in Dashboard
   -webkit-box-shadow: 0 5px 20px -6px rgba(18, 18, 18, 0.4);
   -moz-box-shadow: 0 5px 20px -6px rgba(18, 18, 18, 0.4);
   box-shadow: 0 5px 20px -6px rgba(18, 18, 18, 0.4);
+}
+.message-box.maintenance {
+  width: 100%;
+  position: relative;
+  bottom: unset;
+  left: unset;
+  transform: none;
+}
+.message-box.maintenance p {
+  width: 100%;
+  max-width: inherit;
 }
 .message-box .icon {
   padding: 1rem;
@@ -1840,54 +1878,7 @@ LOGIN PAGE
 *
 */
 /*************************************
-HEADER - DONE
-*************************************/
-header {
-  width: 100%;
-}
-
-.top-header {
-  background-color: #bec3ca;
-  padding: 16px 8px;
-}
-@media (min-width: 768px) {
-  .top-header {
-    padding: 8px 40px;
-  }
-}
-.top-header ul {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  justify-content: center;
-  align-items: center;
-  gap: 2rem;
-}
-@media (min-width: 768px) {
-  .top-header ul {
-    justify-content: flex-end;
-  }
-}
-.top-header ul li {
-  font-family: "Source Sans 3", sans-serif;
-  font-weight: 400;
-  font-size: 1.25rem;
-  line-height: 1.5em;
-  color: #43474d;
-  padding: 0;
-}
-@media (min-width: 768px) {
-  .top-header ul li {
-    font-size: 0.875rem;
-  }
-}
-.top-header ul li:hover {
-  color: #767b81;
-  cursor: pointer;
-}
-
-/*************************************
-SIDEBAR
+HEADER ADMIN - SIDEBAR
 *************************************/
 .sidebar {
   position: fixed;
@@ -1900,7 +1891,11 @@ SIDEBAR
   height: 100vh;
   overflow-y: scroll;
   padding: 2rem 1rem;
-  background-color: #15171a;
+  background-color: white;
+  border-right: 3px solid #d5c392;
+}
+.dashboard.small .sidebar {
+  width: 60px;
 }
 @media (max-width: 767px) {
   .sidebar {
@@ -1912,39 +1907,90 @@ SIDEBAR
     transform: translateX(0);
   }
 }
-.sidebar .sidebar-menu li {
+.sidebar .username-title {
+  margin-bottom: 0.5rem;
   font-family: "Source Sans 3", sans-serif;
-  color: white;
-  padding: 0.25rem 0.5rem;
-}
-.sidebar .sidebar-menu li.ss-menu-element {
-  display: none;
-  padding-left: 2.5rem;
+  font-weight: 400;
   font-size: 0.875rem;
-  font-weight: 300;
+  line-height: 1.3em;
+  color: #43474d;
 }
-.sidebar .sidebar-menu li.ss-menu-element:hover {
+.sidebar .username-title span {
+  font-weight: 600;
+  color: #6300ee;
+}
+
+.top-header {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+.top-header li {
+  height: 100%;
+}
+.top-header .nav-element {
+  height: 100%;
+  min-width: 3rem;
+  justify-content: center;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1em;
   color: #d5c392;
+  padding: 0.5rem;
+  border: 1px solid #d5c392;
+  -webkit-border-radius: 0.25rem;
+  -moz-border-radius: 0.25rem;
+  border-radius: 0.25rem;
   transition: all 0.3s ease;
 }
-.sidebar .sidebar-menu li.ss-menu-element.not-active {
-  color: #15171a;
+.top-header .nav-element:hover {
+  background-color: #f6e9d5;
+  color: #8a7b43;
+  cursor: pointer;
 }
-.sidebar .sidebar-menu li.menu-element {
-  font-size: 18px;
-  padding-top: 16px;
+
+.sidebar-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
 }
-.sidebar .sidebar-menu li.menu-element:first-of-type {
-  padding-top: 0;
+.sidebar-menu .menu-element {
+  display: grid;
+  grid-template-columns: 24px 1fr auto;
+  align-items: baseline;
+  gap: 1rem 0.5rem;
+  font-family: "Source Sans 3", sans-serif;
+  font-weight: 600;
+  font-size: 1rem;
+  line-height: 1.3em;
+  color: #43474d;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.sidebar-menu .menu-element:last-of-type {
+  margin-bottom: 0;
+}
+.sidebar-menu .menu-element:hover, .sidebar-menu .menu-element.selected {
+  cursor: pointer;
+  color: #a8956c;
+}
+.sidebar-menu .menu-element.selected:after {
+  transform: rotate(180deg);
+  transition: all 0.3s ease;
 }
 
 .sub-nav {
-  display: flex;
+  display: none;
   flex-flow: column nowrap;
   position: relative;
-  margin-block: 0 1rem;
-  margin-inline-start: 2rem;
   gap: 0.5rem;
+  grid-row: 2;
+  grid-column: span 3;
+  border-top: 1px solid #d5c392;
+  padding: 1rem 2rem;
 }
 .sub-nav .sub-nav-item {
   position: relative;
@@ -1954,16 +2000,22 @@ SIDEBAR
   flex-grow: 1;
 }
 .sub-nav .sub-nav-item-el {
-  font-family: "Poppins", sans-serif;
+  font-family: "Source Sans 3", sans-serif;
   font-weight: 400;
-  font-size: 1rem;
+  font-size: 0.875rem;
   line-height: 1.3em;
-  color: #d7d4d3;
+  color: #767b81;
   transition: all 0.3s ease;
+  text-transform: none;
+  letter-spacing: unset;
 }
 .sub-nav .sub-nav-item-el:hover {
   cursor: pointer;
-  color: #d5c392;
+  color: #a8956c;
+}
+.sub-nav .sub-nav-item-el.not-active {
+  pointer-events: none;
+  color: #767b81;
 }
 
 /*
@@ -2215,9 +2267,12 @@ ADMIN – CONTENT
 }
 @media (min-width: 768px) {
   .dashboard {
-    grid-template-columns: 320px auto;
+    grid-template-columns: 320px 1fr;
     grid-gap: 1.5rem;
     padding: 2rem 2rem 1rem 0;
+  }
+  .dashboard.small {
+    grid-template-columns: 60px 1fr;
   }
 }
 @media (min-width: 1024px) {
@@ -2229,7 +2284,6 @@ ADMIN – CONTENT
 .dashboard-container {
   position: relative;
   width: 100%;
-  max-width: 1080px;
   margin: 0 auto;
 }
 @media (min-width: 768px) {

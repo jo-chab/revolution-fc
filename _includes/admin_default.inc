@@ -1,4 +1,7 @@
-
+<div class='message-box maintenance'>
+    <div class='icon i-alert'></div>
+    <p>Il y a une maintenance en cours entre le 27 janvier 8:00 AM et dimanche 28 janvier 4:00 PM. Certaines fonctionalités seront limitées.<br/>Merci de votre patience</p>
+</div>
 
 <ul class="list-dashboard-menu grid-system">
     
@@ -12,5 +15,5 @@
     <li><a class="icon icon-atop i-news" href="?p=11"><span>Gérer les actualités</span></a></li>
     <li><a class="icon icon-atop i-doc-add" href="?p=30"><span>Ajouter un document</span></a></li>
     <li><a class="icon icon-atop i-doc" href="?p=31"><span>Gérer les documents</span></a></li>
-    
+
 </ul>

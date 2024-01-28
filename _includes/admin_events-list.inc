@@ -6,7 +6,7 @@
     
     <div class="dashboard-content">
         
-        <a class="btn-primary cta-add small icon i-more mobile-icon-only" href="?content=64"><span>Ajouter un évènement</span></a>
+        <a class="btn-primary cta-add small icon i-more mobile-icon-only" href="?p=64"><span>Ajouter un évènement</span></a>
         
         <ul class="dashboard-list">
             <?php
@@ -39,7 +39,7 @@
                                     <input type='hidden' name='element' value='$event'>
                                     <div class='btn-primary $btnClass small icon mobile-icon-only'><span>$update</span></div>
                                 </form>
-                                <form action='?content=85' method='post'>
+                                <form action='?p=65' method='post'>
                                     <input type='hidden' name='element' value='$event'>
                                     <div class='btn-primary btn-update small icon mobile-icon-only'><span>Modifier</span></div>
                                 </form>

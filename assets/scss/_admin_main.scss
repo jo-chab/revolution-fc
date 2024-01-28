@@ -90,9 +90,12 @@ ADMIN – CONTENT
     grid-template-columns: 1fr;
     padding: 3rem 2rem 1rem;
     @include tablet {
-        grid-template-columns: $sidemenu-width auto;
+        grid-template-columns: $sidemenu-width 1fr;
         grid-gap: 1.5rem;
         padding: 2rem 2rem 1rem 0;
+        &.small {
+            grid-template-columns: $sidemenu-width-small 1fr;
+        }
     }
     @include desktop {
         grid-gap: 2rem;
@@ -102,7 +105,7 @@ ADMIN – CONTENT
 .dashboard-container {
     position: relative;
     width: 100%;
-    max-width: 1080px;
+    //max-width: 1080px;
     margin: 0 auto;
     @include tablet {
         grid-column: 2;
