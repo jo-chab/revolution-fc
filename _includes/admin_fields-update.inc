@@ -2,7 +2,7 @@
     $element = $_POST['element'];
     unset($_POST);
     
-    $sql1 = $db->prepare("SELECT * FROM TERRAINS WHERE id_field = '$element'");
+    $sql1 = $db->prepare("SELECT * FROM FIELDS WHERE id_field = '$element'");
     $sql1->execute();
     
     while ($curseur1 = $sql1->fetch()) {
@@ -37,7 +37,7 @@
                             <label>Type de terrain</label>
                             <select name="ld_type" required>
                                 <?php
-                                    $stmt3 = $db->prepare("SELECT * FROM TERRAINS_type order by id_genre_terrain ASC");
+                                    $stmt3 = $db->prepare("SELECT * FROM FIELDS_type order by id_genre_terrain ASC");
                                     $stmt3->execute();
                                     
                                     while ($curseur3 = $stmt3->fetch()) {
@@ -59,7 +59,7 @@
                             <label>Ville</label>
                             <select name="ld_city" required>
                                 <?php
-                                    $stmt4 = $db->prepare("SELECT * FROM TERRAINS_cities order by id_city ASC");
+                                    $stmt4 = $db->prepare("SELECT * FROM FIELDS_cities order by id_city ASC");
                                     $stmt4->execute();
                                     
                                     while ($curseur4 = $stmt4->fetch()) {

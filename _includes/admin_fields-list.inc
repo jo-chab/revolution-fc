@@ -21,7 +21,7 @@
                                 <select name="ld_city" required>
                                     <option value="">Sélectionner un choix</option>
                                     <?php
-                                        $stmt = $db->prepare("SELECT * FROM TERRAINS_cities order by id_city ASC");
+                                        $stmt = $db->prepare("SELECT * FROM FIELDS_cities order by id_city ASC");
                                         $stmt->execute();
                                         
                                         while ($curseur = $stmt->fetch()) {
@@ -40,7 +40,7 @@
                                 <select name="ld_type" required>
                                     <option value="">Sélectionner un choix</option>
                                     <?php
-                                        $stmt = $db->prepare("SELECT * FROM TERRAINS_type order by id_genre_terrain ASC");
+                                        $stmt = $db->prepare("SELECT * FROM FIELDS_type order by id_genre_terrain ASC");
                                         $stmt->execute();
                                         
                                         while ($curseur = $stmt->fetch()) {
@@ -84,7 +84,7 @@
         <ul class="dashboard-list">
             <?php
                 
-                $sql1 = $db->prepare('select * from TERRAINS order by id_field ASC');
+                $sql1 = $db->prepare('select * from FIELDS order by id_field ASC');
                 $sql1->execute();
                 
                 $results = $sql1->fetchAll(PDO::FETCH_ASSOC);

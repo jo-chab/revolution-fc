@@ -6,6 +6,25 @@
         });
     });
 
+    //Fonction qui ajoute l'icone quand il y a un sous-menu
+    $('.menu-element').each(function() {
+        if ($(this).children('.sub-nav').length > 0) {
+            $(this).addClass('has-sub');
+        }
+    });
+
+
+    //Fonction qui ajoute la classe SELECTED quand on clique et qui active ou desactive le sous-menu
+    $('.menu-element').click(function() {
+        if ($(this).hasClass('selected')) {
+            $(this).removeClass('selected');
+            $(this).children('.sub-nav').slideUp(400); // Slide up the sub-nav if the menu-element is already selected
+        } else {
+            $(this).addClass('selected').siblings().removeClass("selected");
+            $('.sub-nav').not($(this).children('.sub-nav')).slideUp(400); // Slide up all other sub-nav elements
+            $(this).children('.sub-nav').slideDown(400).css('display', 'flex'); // Slide down the sub-nav of the clicked element and set display to flex
+        }
+    });
 
 
     function toggleContentAdd() {

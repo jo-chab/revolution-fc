@@ -586,6 +586,17 @@ p:has(+ p) {
   font: var(--fa-font-regular);
   content: "\e487";
 }
+.i-homepage:hover:before {
+  font: var(--fa-font-solid);
+}
+
+.i-homepage-2:before {
+  font-family: "Font Awesome Kit";
+  content: "\e016";
+}
+.i-homepage-2:hover:before {
+  content: "\e018";
+}
 
 .i-facebook:before {
   font: var(--fa-font-brands);
@@ -617,6 +628,13 @@ p:has(+ p) {
 /******************************************
 ADMIN ICONS
 ******************************************/
+.has-sub:after {
+  font: var(--fa-font-sharp-regular);
+  content: "\f078";
+  transform: rotate(0);
+  transition: transform 0.3s ease;
+}
+
 .i-config-superadmin:before {
   font-family: "Font Awesome Kit";
   content: "\e012";
@@ -680,6 +698,15 @@ ADMIN ICONS
   content: "\f81d";
 }
 .i-sponsors-manage:before {
+  font-family: "Font Awesome Kit";
+  content: "\e009";
+}
+
+.i-events:before {
+  font: var(--fa-font-light);
+  content: "\f073";
+}
+.i-events-manage:before {
   font-family: "Font Awesome Kit";
   content: "\e009";
 }
@@ -948,6 +975,16 @@ DESIGN SYSTEM – CARDS
   text-transform: uppercase;
 }
 
+@media (min-width: 768px) {
+  .card-events {
+    transform: translateY(0);
+    transition: transform 0.5s ease;
+  }
+  .card-events:hover {
+    transform: translateY(-1rem);
+  }
+}
+
 /***********************
 DESIGN SYSTEM – Buttons
 ***********************/
@@ -1126,7 +1163,6 @@ DESIGN SYSTEM – Buttons
   font-size: 1.25em;
   line-height: 1em;
   color: #a8956c;
-  padding: 1.25rem 2rem;
   margin: 1.5rem 0;
   border-radius: 0;
 }
@@ -2253,7 +2289,7 @@ nav.desktop .menu .arrowed.selected:after {
   display: flex;
   flex-flow: column nowrap;
   position: relative;
-  margin-block: 0rem 1rem;
+  margin-block: 0 1rem;
   margin-inline-start: 2rem;
   gap: 1rem;
 }
@@ -2515,6 +2551,76 @@ HOME PAGE
 @media (min-width: 768px) {
   .w-news {
     margin: 3rem auto;
+  }
+}
+
+.w-events {
+  border-top: 1px solid #d3d3d3;
+}
+.w-events .wrapper {
+  gap: 1rem;
+}
+@media (min-width: 768px) {
+  .w-events .wrapper {
+    gap: 0;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
+.w-events .w-btn {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+  flex: 1;
+}
+@media (min-width: 768px) {
+  .w-events .w-btn {
+    margin-top: 3rem;
+  }
+}
+.w-events h3 {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 700;
+  font-size: 1.25rem;
+}
+@media (max-width: 767px) {
+  .w-events h3 {
+    text-align: center;
+  }
+}
+@media (min-width: 768px) {
+  .w-events h3 {
+    width: 25%;
+    margin-bottom: 0;
+    padding-right: 2rem;
+  }
+}
+.w-events .w-cards {
+  display: grid;
+  gap: 1rem;
+  width: 100%;
+}
+@media (min-width: 768px) {
+  .w-events .w-cards {
+    width: 75%;
+    gap: 2rem;
+    grid-template-columns: repeat(3, 1fr);
+    padding-left: 2rem;
+    border-left: 1px solid #d3d3d3;
+  }
+}
+@media (min-width: 1024px) {
+  .w-events .w-cards {
+    gap: 3rem;
+  }
+}
+.w-events .w-cards #title-no-event {
+  margin: 0;
+}
+@media (min-width: 768px) {
+  .w-events .w-cards #title-no-event {
+    grid-column: span 3;
   }
 }
 
@@ -3136,6 +3242,241 @@ RESSOURCES ENTRAINEURS
 }
 .list-subcategory .subcategory-element.is-active {
   background: #d5c392;
+}
+
+/******************************
+Events
+******************************/
+/*
+*
+* LOCATION: [modules]
+* FOLDER: [scss]
+* FILE NAME: [events.scss]
+* DESCRIPTION: Styling for the events pages
+*
+*/
+.table-event {
+  border-collapse: collapse;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+.table-event thead {
+  background: #bec3ca;
+}
+@media (max-width: 767px) {
+  .table-event thead {
+    display: none;
+  }
+}
+.table-event th {
+  padding: 1rem 1.5rem;
+  font-family: "Source Sans 3", sans-serif;
+  font-weight: 700;
+  font-size: 1rem;
+  line-height: 1em;
+  color: #15171a;
+  text-align: left;
+}
+.table-event th:nth-child(1) {
+  width: 20%;
+}
+.table-event th:nth-child(2) {
+  width: 50%;
+}
+.table-event th:nth-child(3) {
+  width: 20%;
+}
+.table-event th:nth-child(4) {
+  width: 10%;
+}
+.table-event tr {
+  display: table;
+  position: relative;
+  width: 100%;
+  transition: all 0.3s ease;
+}
+@media (max-width: 767px) {
+  .table-event tr {
+    display: block;
+    padding: 1.5rem 0;
+  }
+}
+.table-event tr:nth-of-type(even) {
+  background: #f2f2f2;
+}
+.table-event tr:hover td {
+  color: #d5c392;
+}
+.table-event tr:hover td .i-long-arrow-table {
+  transform: translateX(8px);
+}
+.table-event td {
+  padding: 2rem 1.5rem;
+  font-family: "Source Sans 3", sans-serif;
+  font-weight: 500;
+  font-size: 1rem;
+  line-height: 1.3em;
+  color: #15171a;
+  text-align: left;
+  transition: all 0.3s ease;
+}
+@media (max-width: 767px) {
+  .table-event td {
+    display: block;
+    padding: 0.25rem 2rem;
+  }
+}
+.table-event td:nth-child(1) {
+  width: 20%;
+}
+.table-event td:nth-child(2) {
+  width: 50%;
+}
+.table-event td:nth-child(3) {
+  width: 20%;
+}
+.table-event td:nth-child(4) {
+  width: 10%;
+}
+@media (max-width: 767px) {
+  .table-event td:nth-child(1), .table-event td:nth-child(2), .table-event td:nth-child(3), .table-event td:nth-child(4) {
+    width: 100%;
+  }
+}
+.table-event td.table-list-title {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-size: 1.25rem;
+  line-height: 1.3em;
+  color: #15171a;
+}
+@media (min-width: 768px) {
+  .table-event td.table-list-title {
+    font-size: 2rem;
+  }
+}
+.table-event .btn-table {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  display: block;
+}
+.table-event .i-long-arrow-table {
+  transform: translateX(0);
+  transition: transform 0.3s ease;
+}
+
+.event-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem 0;
+}
+@media (min-width: 768px) {
+  .event-header {
+    padding: 3rem 0;
+  }
+}
+@media (min-width: 1024px) {
+  .event-header {
+    padding: 4rem 0;
+  }
+}
+.event-header * {
+  text-align: center;
+}
+
+.event-title {
+  line-height: 1.3em;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+.card-events .event-title {
+  color: #767b81;
+  margin-bottom: 0.25rem;
+  font-size: 1.5rem;
+}
+.card-events .event-title:hover {
+  color: #d5c392;
+}
+.event-header .event-title {
+  font-weight: 700;
+  color: #d5c392;
+  margin-bottom: 2.5rem;
+}
+
+.card-events .event-venue {
+  font-weight: 700;
+  color: #15171a;
+}
+
+.event-date {
+  font-weight: 700;
+}
+.card-events .event-date {
+  margin-bottom: 1rem;
+  color: #a8956c;
+  font-size: 0.75rem;
+}
+@media (max-width: 767px) {
+  .card-events .event-date {
+    margin-bottom: 0.25rem;
+  }
+}
+.event-header .event-date {
+  font-size: 1rem;
+}
+
+.event-content {
+  display: grid;
+  align-items: baseline;
+  width: 100%;
+  padding: 4rem 0;
+  border-top: 1px solid #bec3ca;
+  /* For subgrid only*/
+  /* For fallback */
+  gap: 1rem;
+}
+@media (min-width: 768px) {
+  .event-content {
+    grid-template-columns: 200px 1fr;
+  }
+}
+.event-content h4 {
+  color: #767b81;
+  /* For subgrid only*/
+}
+.event-content .event-detail {
+  /* For subgrid only*/
+  /* For fallback */
+  display: grid;
+  gap: 2rem;
+}
+@media (min-width: 768px) {
+  .event-content .event-detail {
+    gap: 2rem;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+.event-content .event-detail-label {
+  font-family: "Source Sans 3", sans-serif;
+  font-weight: 700;
+  font-size: 0.875rem;
+  line-height: 1em;
+  color: #767b81;
+  margin-bottom: 0.5rem;
+}
+.event-content .event-detail-text {
+  font-family: "Source Sans 3", sans-serif;
+  font-weight: 700;
+  font-size: 1.25rem;
+  line-height: 1.3em;
+  color: #363b41;
 }
 
 /*# sourceMappingURL=global.css.map */

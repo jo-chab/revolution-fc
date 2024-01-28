@@ -34,7 +34,7 @@ $(document).ready(function () {
     $('.nav-item').each(function() {
         if ($(this).next().is('.sub-nav')) {
             $(this).addClass('arrowed');
-        } else {};
+        } else {}
     });
 
 
@@ -43,13 +43,13 @@ $(document).ready(function () {
         $(this).toggleClass('selected');
         $(this).siblings().removeClass("selected");
         $('.sub-nav').each(function() {
-            $(this).slideUp("900");
+            $(this).slideDown("400");
         });
         if ($(this).next('.sub-nav').is(':visible')) {
-            $(this).next('.sub-nav').slideUp('900');
+            $(this).next('.sub-nav').slideDown('400');
         } else {
-            $(this).next('.sub-nav').slideDown('900');
-        };
+            $(this).next('.sub-nav').slideUp('400');
+        }
     });
 
     $(".close-alert-box").click(function(){

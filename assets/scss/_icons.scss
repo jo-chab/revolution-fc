@@ -134,9 +134,25 @@
     content: '\f08b';
 }
 
-.i-homepage:before {
-    font: var(--fa-font-regular);
-    content: '\e487';
+.i-homepage {
+    &:before {
+        font: var(--fa-font-regular);
+        content: '\e487';
+    }
+    
+    &:hover:before {
+        font: var(--fa-font-solid);
+    }
+}
+.i-homepage-2 {
+    &:before {
+        font-family: "Font Awesome Kit";
+        content: '\e016';
+    }
+    
+    &:hover:before {
+        content: '\e018';
+    }
 }
 
 .i-facebook:before {
@@ -168,6 +184,12 @@
 /******************************************
 ADMIN ICONS
 ******************************************/
+.has-sub:after {
+    font: var(--fa-font-sharp-regular);
+    content: '\f078';
+    transform: rotate(0);
+    transition: transform .3s ease;
+}
 // DEFAULT page
 .i-config-superadmin:before {
     font-family: "Font Awesome Kit";
@@ -242,6 +264,19 @@ ADMIN ICONS
     &:before {
         font: var(--fa-font-light);
         content: '\f81d';
+    }
+    
+    &-manage:before {
+        font-family: "Font Awesome Kit";
+        content: '\e009';
+    }
+}
+
+// Events
+.i-events {
+    &:before {
+        font: var(--fa-font-light);
+        content: '\f073';
     }
     
     &-manage:before {

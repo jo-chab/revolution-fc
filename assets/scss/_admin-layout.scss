@@ -16,6 +16,7 @@
 Variables ADMIN CSS
 ************************/
 $sidemenu-width: 320px;
+$sidemenu-width-small: 60px;
 $popup-width-small: 420px;
 $popup-width-large: 600px;
 
@@ -161,6 +162,18 @@ ALERT MESSAGES in Dashboard
     -webkit-box-shadow: 0 5px 20px -6px rgba(18,18,18,.4);
     -moz-box-shadow: 0 5px 20px -6px rgba(18,18,18,.4);
     box-shadow: 0 5px 20px -6px rgba(18,18,18,.4);
+    
+    &.maintenance {
+        width: 100%;
+        position: relative;
+        bottom: unset; left: unset;
+        transform: none;
+        margin-bottom: 3rem;
+        p {
+            width: 100%;
+            max-width: inherit;
+        }
+    }
     
     .icon {
         padding: 1rem;
