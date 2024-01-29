@@ -4,9 +4,9 @@ $(document).ready(function () {
 
     'use strict';
 
-    // Fonction pour faire disparaitre le menu lors du scroll down et le faire reapparaitre lors du scoll up
-    var c, currentScrollTop = 0,
-        navbar = $('.top-header');
+    var currentScrollTop = 0;
+    var navbar = $('.top-header');
+    var c = 0; // Initialize the "c" variable
 
     var heroHeight = $('.hp-hero').outerHeight();
 
@@ -42,14 +42,9 @@ $(document).ready(function () {
     $('.arrowed').click(function() {
         $(this).toggleClass('selected');
         $(this).siblings().removeClass("selected");
-        $('.sub-nav').each(function() {
-            $(this).slideDown("400");
-        });
-        if ($(this).next('.sub-nav').is(':visible')) {
-            $(this).next('.sub-nav').slideDown('400');
-        } else {
-            $(this).next('.sub-nav').slideUp('400');
-        }
+        var subNav = $(this).next('.sub-nav');
+        $('.sub-nav').not(subNav).slideUp('400');
+        subNav.slideToggle('400');
     });
 
     $(".close-alert-box").click(function(){

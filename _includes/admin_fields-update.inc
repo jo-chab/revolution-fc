@@ -64,7 +64,7 @@
                                     
                                     while ($curseur4 = $stmt4->fetch()) {
                                         extract($curseur4);
-                                        if ($id_city == $data_city) {
+                                        if ($id_city == $field_data_city) {
                                             $selected_city = "selected";
                                         } else {
                                             $selected_city = "";
