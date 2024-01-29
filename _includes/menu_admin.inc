@@ -67,7 +67,7 @@
         </ul>
     </li>
     
-    <li class="menu-element icon i-events">Evenements
+    <li class="menu-element icon i-events"><span class="icon new-feature">Evenements</span>
         <ul class="sub-nav">
             <li class="sub-nav-item"><a class="sub-nav-item-el" href="?p=63">Gérer les évènements</a></li>
             <li class="sub-nav-item"><a class="sub-nav-item-el" href="?p=64">Créer un évènement</a></li>

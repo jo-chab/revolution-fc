@@ -20,7 +20,7 @@ include("../_includes/_revolutionfc.inc");
 
     <article class="wrapper-text doc-container">
 
-        <h2 class="section-title">Le Revolution FC fait partie des clubs reconnus par la fondation Bon départ de Canadian Tire. </h2>
+        <h4 class="section-title" style="margin-bottom: 1.5rem;">Le Revolution FC fait partie des clubs reconnus par la fondation Bon départ de Canadian Tire. </h4>
 
         <p>La Fondation Bon Départ aide à payer les frais d’inscription, d’équipement et/ou de transport.</p>
         <p>Le programme de soutien aux activités sportives a pour but d’offrir à des enfants de familles financièrement défavorisées la même chance de participer à des activités sportives et récréatives. </p>

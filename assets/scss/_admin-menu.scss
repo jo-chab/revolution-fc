@@ -99,6 +99,12 @@ HEADER ADMIN - SIDEBAR
         text-transform: uppercase;
         letter-spacing: 1px;
         
+        span.new-feature:after {
+            font: var(--fa-font-sharp-regular);
+            content: '\f06d';
+            color: $color-warning;
+        }
+        
         &:last-of-type {
             margin-bottom: 0;
         }

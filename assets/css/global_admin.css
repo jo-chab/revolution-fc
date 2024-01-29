@@ -1980,6 +1980,11 @@ HEADER ADMIN - SIDEBAR
   text-transform: uppercase;
   letter-spacing: 1px;
 }
+.sidebar-menu .menu-element span.new-feature:after {
+  font: var(--fa-font-sharp-regular);
+  content: "\f06d";
+  color: #ffbe2e;
+}
 .sidebar-menu .menu-element:last-of-type {
   margin-bottom: 0;
 }
