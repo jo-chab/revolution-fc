@@ -63,7 +63,7 @@
 
 .add {
     &-basic:after {
-        font: var(--fa-font-sharp-solid);
+        font: var(--fa-font-light);
         content: '\2b';
         font-size: 1.25em;
     }
@@ -97,7 +97,7 @@
 
 .i-more {
     &:before {
-        font: var(--fa-font-sharp-light);
+        font: var(--fa-font-light);
         content: '\f055';
         
         .dashboard & {
@@ -108,7 +108,7 @@
 }
 .i-more-2 {
     &:after {
-        font: var(--fa-font-sharp-light);
+        font: var(--fa-font-light);
         content: '\f138';
         
         .dashboard & {
@@ -130,7 +130,7 @@
 }
 
 .i-logout:before {
-    font: var(--fa-font-solid);
+    font: var(--fa-font-light);
     content: '\f08b';
 }
 
@@ -166,18 +166,20 @@
 }
 
 .i-send:after {
-    font: var(--fa-font-regular);
+    font: var(--fa-font-light);
     content: '\f1d8';
 }
 
-.icon.alert-error:before {
-    content: '\f06a';
-}
-.icon.alert-correct:before {
-    content: '\f058';
-}
-.icon.alert-info:before {
-    content: '\f06a';
+.icon.alert {
+    &-error:before {
+        content: '\f06a';
+    }
+    &-correct:before {
+        content: '\f058';
+    }
+    &-info:before {
+        content: '\f06a';
+    }
 }
 
 
@@ -185,71 +187,50 @@
 ADMIN ICONS
 ******************************************/
 .has-sub:after {
-    font: var(--fa-font-sharp-regular);
+    font: var(--fa-font-regular);
     content: '\f078';
     transform: rotate(0);
     transition: transform .3s ease;
 }
-// DEFAULT page
-.i-config-superadmin:before {
-    font-family: "Font Awesome Kit";
-    content: '\e012';
+
+.i-test:before {
+    font: var(--fa-font-regular);
+    content: '\e5f1';
 }
 
-.i-config-site:before {
-    font-family: "Font Awesome Kit";
-    content: '\e011';
-}
 
-.i-config-club:before {
-    font-family: "Font Awesome Kit";
-    content: '\e015';
-}
-
-.i-config-home:before {
-    font-family: "Font Awesome Kit";
-    content: '\e010';
-}
-
-.i-news-add:before {
-    font-family: "Font Awesome Kit";
-    content: '\e001';
-}
-
-.i-doc-add:before {
-    font-family: "Font Awesome Kit";
-    content: '\e013';
-}
-
-.i-doc:before {
-    font-family: "Font Awesome Kit";
-    content: '\e014';
+.i-doc {
+    &:before {
+        font-family: "Font Awesome Kit";
+        content: '\e014';
+    }
+    &-add:before {
+        font-family: "Font Awesome Kit";
+        content: '\e013';
+    }
 }
 
 
 // NEWS
 .i-news {
     &:before {
-        font: var(--fa-font-sharp-light);
+        font: var(--fa-font-regular);
         content: '\f1ea';
     }
-    
+    &-add:before {
+        font-family: "Font Awesome Kit";
+        content: '\e001';
+    }
     &-manage:before {
         font-family: "Font Awesome Kit";
         content: '\e003';
     }
 }
 
-// Tournament
-.i-tournament:before {
-    font: var(--fa-font-sharp-light);
-    content: '\f5a2';
-}
-
 // Users
 .i-user {
     &:before {
-        font: var(--fa-font-light);
+        font: var(--fa-font-regular);
         content: '\f0c0';
     }
     
@@ -259,11 +240,26 @@ ADMIN ICONS
     }
 }
 
-// Sponsors
-.i-sponsors {
+.i-club-house {
     &:before {
-        font: var(--fa-font-light);
-        content: '\f81d';
+        font: var(--fa-font-regular);
+        content: '\e1b4';
+    }
+}
+
+// Tournament
+.i-tournament {
+    &:before {
+        font: var(--fa-font-regular);
+        content: '\f5a2';
+    }
+}
+
+// Events
+.i-events {
+    &:before {
+        font: var(--fa-font-regular);
+        content: '\f073';
     }
     
     &-manage:before {
@@ -272,11 +268,11 @@ ADMIN ICONS
     }
 }
 
-// Events
-.i-events {
+// Sponsors
+.i-sponsors {
     &:before {
-        font: var(--fa-font-light);
-        content: '\f073';
+        font: var(--fa-font-regular);
+        content: '\f81d';
     }
     
     &-manage:before {
@@ -291,16 +287,34 @@ ADMIN ICONS
     font-size: 1.75rem;
 }
 
-.i-config:before {
-    font: var(--fa-font-light);
-    content: '\f013';
+// CONFIG
+.i-config {
+    &:before {
+        font: var(--fa-font-regular);
+        content: '\f013';
+    }
+    &-home:before {
+        font-family: "Font Awesome Kit";
+        content: '\e010';
+    }
+    &-superadmin:before {
+        font-family: "Font Awesome Kit";
+        content: '\e012';
+    }
+    &-site:before {
+        font-family: "Font Awesome Kit";
+        content: '\e011';
+    }
+    &-club:before {
+        font-family: "Font Awesome Kit";
+        content: '\e015';
+    }
 }
-
 
 .i-flash {
     &:before,
     &:after {
-        font: var(--fa-font-sharp-solid);
+        font: var(--fa-font-regular);
         content: '\f0e7';
         font-size: 1.25em;
     }
@@ -308,7 +322,7 @@ ADMIN ICONS
 
 .i-info {
     &:before {
-        font: var(--fa-font-solid);
+        font: var(--fa-font-regular);
         content: '\f05a';
         font-size: 1.25em;
     }
@@ -317,7 +331,7 @@ ADMIN ICONS
 .i-emergency {
     &:before,
     &:after {
-        font: var(--fa-font-light);
+        font: var(--fa-font-regular);
         content: '\e02e';
         font-size: 1.25em;
     }
@@ -329,17 +343,17 @@ ADMIN ICONS
 }
 
 .i-arrow:after {
-    font: var(--fa-font-sharp-regular);
+    font: var(--fa-font-regular);
     content: '\f178';
 }
 
 .i-map:before {
-    font: var(--fa-font-sharp-solid);
+    font: var(--fa-font-regular);
     content: '\f3c5';
 }
 
 .i-download:before {
-    font: var(--fa-font-sharp-regular);
+    font: var(--fa-font-regular);
     content: '\f33d';
 }
 

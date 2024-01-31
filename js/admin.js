@@ -7,22 +7,23 @@
     });
 
     //Fonction qui ajoute l'icone quand il y a un sous-menu
-    $('.menu-element').each(function() {
+    $('.admin-nav').each(function() {
         if ($(this).children('.sub-nav').length > 0) {
-            $(this).addClass('has-sub');
+            $(this).children('.menu-element').addClass('has-sub');
         }
     });
 
 
     //Fonction qui ajoute la classe SELECTED quand on clique et qui active ou desactive le sous-menu
-    $('.menu-element').click(function() {
-        if ($(this).hasClass('selected')) {
-            $(this).removeClass('selected');
-            $(this).children('.sub-nav').slideUp(400); // Slide up the sub-nav if the menu-element is already selected
+    $('.admin-nav').click(function() {
+        if ($(this).children('.menu-element').hasClass('selected')) {
+            $(this).children('.menu-element').removeClass('selected');
+            $(this).children('.sub-nav').slideUp(400);
         } else {
-            $(this).addClass('selected').siblings().removeClass("selected");
-            $('.sub-nav').not($(this).children('.sub-nav')).slideUp(400); // Slide up all other sub-nav elements
-            $(this).children('.sub-nav').slideDown(400).css('display', 'flex'); // Slide down the sub-nav of the clicked element and set display to flex
+            $('.menu-element').removeClass('selected');
+            $(this).children('.menu-element').addClass('selected');
+            $('.sub-nav').not($(this).children('.sub-nav')).slideUp(400);
+            $(this).children('.sub-nav').slideDown(400).css('display', 'flex');
         }
     });
 

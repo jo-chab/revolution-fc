@@ -16,24 +16,33 @@
 <ul class="sidebar-menu">
     <!--For testing purpose-->
     <?php if (isset($_SESSION['auth']) && $_SESSION['type'] == 6): ?>
+        <li class="admin-nav">
+            <div class="menu-element icon i-test">Menu en cours de test</div>
+            <ul class="sub-nav">
+                <li class="sub-nav-item"><a class="sub-nav-item-el" href="?p=">Albums photos</a></li>
+            </ul>
+        </li>
     <?php endif ?>
     
     
-    <li class="menu-element icon i-config">Configuration
+    <li class="admin-nav">
+        <div class="menu-element icon i-config">Configuration</div>
         <ul class="sub-nav">
             <li class="sub-nav-item"><a class="sub-nav-item-el" href="?p=2">Config ADMIN – Jonathan</a></li>
-            <li class="sub-nav-item"><a class="sub-nav-item-el" href="?p=3">Config générale</a></li>
-            <li class="sub-nav-item"><a class="sub-nav-item-el" href="?p=4">Page d'accueil</a></li>
+            <li class="sub-nav-item"><a class="sub-nav-item-el" href="?p=3">Config Liens du site</a></li>
+            <li class="sub-nav-item"><a class="sub-nav-item-el" href="?p=4">Configuration page d'accueil</a></li>
         </ul>
     </li>
     
-    <li class="menu-element icon i-news">Actualités
+    <li class="admin-nav">
+        <div class="menu-element icon i-news">Actualités</div>
         <ul class="sub-nav">
             <li class="sub-nav-item"><a class="sub-nav-item-el" href="index.php?p=11">Gérer les actualités</a></li>
         </ul>
     </li>
     
-    <li class="menu-element icon i-rfc-logo">Club
+    <li class="admin-nav">
+        <div class="menu-element icon i-rfc-logo">Club</div>
         <ul class="sub-nav">
             <li class="sub-nav-item"><a class="sub-nav-item-el" href="?p=5">Informations générales</a></li>
             <li class="sub-nav-item"><a class="sub-nav-item-el" href="?p=31">Gérer les documents</a></li>
@@ -43,7 +52,8 @@
         </ul>
     </li>
     
-    <li class="menu-element icon i-user">Personnes
+    <li class="admin-nav">
+        <div class="menu-element icon i-user">Personnes</div>
         <ul class="sub-nav">
             <li class="sub-nav-item"><a class="sub-nav-item-el" href="?p=21">Membres du CA</a></li>
             <li class="sub-nav-item"><a class="sub-nav-item-el" href="?p=23">Membres de l'administration</a></li>
@@ -52,7 +62,8 @@
         </ul>
     </li>
     
-    <li class="menu-element icon i-soccer-1">Technique
+    <li class="admin-nav">
+        <div class="menu-element icon i-soccer-1">Technique</div>
         <ul class="sub-nav">
             <li class="sub-nav-item"><a class="sub-nav-item-el" href="?p=51">Gérer les Programmes</a></li>
             <li class="sub-nav-item"><a class="sub-nav-item-el" href="?p=35">Gérer les Documents technique</a></li>
@@ -61,22 +72,17 @@
         </ul>
     </li>
     
-    <li class="menu-element icon i-tournament">Tournois
-        <ul class="sub-nav">
-            <li class="sub-nav-item"><a class="sub-nav-item-el" href="?p=81">Gérer les tournois</a></li>
-        </ul>
-    </li>
+    <li class="admin-nav"><div class="menu-element icon i-tournament"><a class="" href="?p=81">Tournois</a></div></li>
     
-    <li class="menu-element icon i-events"><span class="icon new-feature">Evenements</span>
+    <li class="admin-nav">
+        <div class="menu-element icon i-events"><span class="icon new-feature">Evenements</span></div>
         <ul class="sub-nav">
             <li class="sub-nav-item"><a class="sub-nav-item-el" href="?p=63">Gérer les évènements</a></li>
             <li class="sub-nav-item"><a class="sub-nav-item-el" href="?p=64">Créer un évènement</a></li>
         </ul>
     </li>
     
-    <li class="menu-element icon i-sponsors">Sponsors
-        <ul class="sub-nav">
-            <li class="sub-nav-item"><a class="sub-nav-item-el" href="?p=91">Gérer les sponsors</a></li>
-        </ul>
-    </li>
+    <li class="admin-nav"><div class="menu-element icon i-sponsors"><a class="" href="?p=91">Sponsors</a></div></li>
+    
+    
 </ul>

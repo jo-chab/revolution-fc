@@ -388,7 +388,7 @@ h6 {
 }
 
 .text-dates {
-  color: #767b81;
+  color: #d3d3d3;
 }
 
 .white {
@@ -414,7 +414,7 @@ p.intro {
   font-size: 1.25rem;
   line-height: 1.3em;
   margin-bottom: 1rem;
-  color: #767b81;
+  color: #d3d3d3;
 }
 @media (min-width: 768px) {
   p.intro {
@@ -424,7 +424,7 @@ p.intro {
 p.article-intro {
   font-weight: 600;
   font-size: 1.25rem;
-  color: #767b81;
+  color: #d3d3d3;
   margin-bottom: 1rem;
 }
 @media (min-width: 768px) {
@@ -521,7 +521,7 @@ p:has(+ p) {
 }
 
 .add-basic:after {
-  font: var(--fa-font-sharp-solid);
+  font: var(--fa-font-light);
   content: "+";
   font-size: 1.25em;
 }
@@ -549,7 +549,7 @@ p:has(+ p) {
 }
 
 .i-more:before {
-  font: var(--fa-font-sharp-light);
+  font: var(--fa-font-light);
   content: "\f055";
 }
 .dashboard .i-more:before {
@@ -558,7 +558,7 @@ p:has(+ p) {
 }
 
 .i-more-2:after {
-  font: var(--fa-font-sharp-light);
+  font: var(--fa-font-light);
   content: "\f138";
 }
 .dashboard .i-more-2:after {
@@ -578,7 +578,7 @@ p:has(+ p) {
 }
 
 .i-logout:before {
-  font: var(--fa-font-solid);
+  font: var(--fa-font-light);
   content: "\f08b";
 }
 
@@ -609,18 +609,16 @@ p:has(+ p) {
 }
 
 .i-send:after {
-  font: var(--fa-font-regular);
+  font: var(--fa-font-light);
   content: "\f1d8";
 }
 
 .icon.alert-error:before {
   content: "\f06a";
 }
-
 .icon.alert-correct:before {
   content: "\f058";
 }
-
 .icon.alert-info:before {
   content: "\f06a";
 }
@@ -629,63 +627,41 @@ p:has(+ p) {
 ADMIN ICONS
 ******************************************/
 .has-sub:after {
-  font: var(--fa-font-sharp-regular);
+  font: var(--fa-font-regular);
   content: "\f078";
   transform: rotate(0);
   transition: transform 0.3s ease;
 }
 
-.i-config-superadmin:before {
-  font-family: "Font Awesome Kit";
-  content: "\e012";
-}
-
-.i-config-site:before {
-  font-family: "Font Awesome Kit";
-  content: "\e011";
-}
-
-.i-config-club:before {
-  font-family: "Font Awesome Kit";
-  content: "\e015";
-}
-
-.i-config-home:before {
-  font-family: "Font Awesome Kit";
-  content: "\e010";
-}
-
-.i-news-add:before {
-  font-family: "Font Awesome Kit";
-  content: "\e001";
-}
-
-.i-doc-add:before {
-  font-family: "Font Awesome Kit";
-  content: "\e013";
+.i-test:before {
+  font: var(--fa-font-regular);
+  content: "\e5f1";
 }
 
 .i-doc:before {
   font-family: "Font Awesome Kit";
   content: "\e014";
 }
+.i-doc-add:before {
+  font-family: "Font Awesome Kit";
+  content: "\e013";
+}
 
 .i-news:before {
-  font: var(--fa-font-sharp-light);
+  font: var(--fa-font-regular);
   content: "\f1ea";
+}
+.i-news-add:before {
+  font-family: "Font Awesome Kit";
+  content: "\e001";
 }
 .i-news-manage:before {
   font-family: "Font Awesome Kit";
   content: "\e003";
 }
 
-.i-tournament:before {
-  font: var(--fa-font-sharp-light);
-  content: "\f5a2";
-}
-
 .i-user:before {
-  font: var(--fa-font-light);
+  font: var(--fa-font-regular);
   content: "\f0c0";
 }
 .i-user-manage:before {
@@ -693,20 +669,30 @@ ADMIN ICONS
   content: "\e005";
 }
 
-.i-sponsors:before {
-  font: var(--fa-font-light);
-  content: "\f81d";
+.i-club-house:before {
+  font: var(--fa-font-regular);
+  content: "\e1b4";
 }
-.i-sponsors-manage:before {
+
+.i-tournament:before {
+  font: var(--fa-font-regular);
+  content: "\f5a2";
+}
+
+.i-events:before {
+  font: var(--fa-font-regular);
+  content: "\f073";
+}
+.i-events-manage:before {
   font-family: "Font Awesome Kit";
   content: "\e009";
 }
 
-.i-events:before {
-  font: var(--fa-font-light);
-  content: "\f073";
+.i-sponsors:before {
+  font: var(--fa-font-regular);
+  content: "\f81d";
 }
-.i-events-manage:before {
+.i-sponsors-manage:before {
   font-family: "Font Awesome Kit";
   content: "\e009";
 }
@@ -718,24 +704,40 @@ ADMIN ICONS
 }
 
 .i-config:before {
-  font: var(--fa-font-light);
+  font: var(--fa-font-regular);
   content: "\f013";
+}
+.i-config-home:before {
+  font-family: "Font Awesome Kit";
+  content: "\e010";
+}
+.i-config-superadmin:before {
+  font-family: "Font Awesome Kit";
+  content: "\e012";
+}
+.i-config-site:before {
+  font-family: "Font Awesome Kit";
+  content: "\e011";
+}
+.i-config-club:before {
+  font-family: "Font Awesome Kit";
+  content: "\e015";
 }
 
 .i-flash:before, .i-flash:after {
-  font: var(--fa-font-sharp-solid);
+  font: var(--fa-font-regular);
   content: "\f0e7";
   font-size: 1.25em;
 }
 
 .i-info:before {
-  font: var(--fa-font-solid);
+  font: var(--fa-font-regular);
   content: "\f05a";
   font-size: 1.25em;
 }
 
 .i-emergency:before, .i-emergency:after {
-  font: var(--fa-font-light);
+  font: var(--fa-font-regular);
   content: "\e02e";
   font-size: 1.25em;
 }
@@ -746,17 +748,17 @@ ADMIN ICONS
 }
 
 .i-arrow:after {
-  font: var(--fa-font-sharp-regular);
+  font: var(--fa-font-regular);
   content: "\f178";
 }
 
 .i-map:before {
-  font: var(--fa-font-sharp-solid);
+  font: var(--fa-font-regular);
   content: "\f3c5";
 }
 
 .i-download:before {
-  font: var(--fa-font-sharp-regular);
+  font: var(--fa-font-regular);
   content: "\f33d";
 }
 
@@ -1404,7 +1406,7 @@ DESIGN SYSTEM – Buttons
   }
 }
 .btn-tertiary.btn-update {
-  color: #9965f4;
+  color: #a67cf3;
 }
 .btn-tertiary.btn-update:hover {
   color: #6300ee;
@@ -1723,7 +1725,7 @@ Lists
   font-weight: 400;
   font-size: 1rem;
   line-height: 1em;
-  color: #767b81;
+  color: #d3d3d3;
 }
 
 .list-docs {
@@ -1755,7 +1757,7 @@ Lists
   font-weight: 400;
   font-size: 1rem;
   line-height: 1.5em;
-  color: #767b81;
+  color: #d3d3d3;
   flex-grow: 1;
 }
 
@@ -1895,14 +1897,13 @@ HEADER ADMIN - SIDEBAR
   top: 0;
   left: 0;
   z-index: 10;
-  display: flex;
-  flex-flow: column nowrap;
+  display: grid;
+  grid-template-rows: auto auto 1fr auto;
   width: 320px;
   height: 100vh;
   overflow-y: scroll;
-  padding: 2rem 1rem;
   background-color: white;
-  border-right: 3px solid #d5c392;
+  border-right: 3px solid #5300e8;
 }
 .dashboard.small .sidebar {
   width: 60px;
@@ -1917,15 +1918,16 @@ HEADER ADMIN - SIDEBAR
     transform: translateX(0);
   }
 }
-.sidebar .username-title {
-  margin-bottom: 0.5rem;
+
+.username-title {
+  padding: 1rem 2rem;
   font-family: "Source Sans 3", sans-serif;
   font-weight: 400;
   font-size: 0.875rem;
   line-height: 1.3em;
   color: #43474d;
 }
-.sidebar .username-title span {
+.username-title span {
   font-weight: 600;
   color: #6300ee;
 }
@@ -1936,7 +1938,7 @@ HEADER ADMIN - SIDEBAR
   justify-content: flex-start;
   align-items: center;
   gap: 1rem;
-  margin-bottom: 2rem;
+  padding: 1rem 2rem;
 }
 .top-header li {
   height: 100%;
@@ -1948,37 +1950,42 @@ HEADER ADMIN - SIDEBAR
   font-weight: 400;
   font-size: 1rem;
   line-height: 1em;
-  color: #d5c392;
+  color: #6300ee;
   padding: 0.5rem;
-  border: 1px solid #d5c392;
+  border: 1px solid #6300ee;
   -webkit-border-radius: 0.25rem;
   -moz-border-radius: 0.25rem;
   border-radius: 0.25rem;
   transition: all 0.3s ease;
 }
 .top-header .nav-element:hover {
-  background-color: #f6e9d5;
-  color: #8a7b43;
+  background-color: #f6efff;
+  color: #3700b3;
   cursor: pointer;
 }
 
 .sidebar-menu {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  padding: 3rem 1rem;
+  border-top: 3px solid #5300e8;
 }
 .sidebar-menu .menu-element {
   display: grid;
-  grid-template-columns: 24px 1fr auto;
+  grid-template-columns: minmax(32px, auto) 1fr auto;
   align-items: baseline;
-  gap: 1rem 0.5rem;
+  gap: 1rem;
+  padding: 0.5rem;
+  border: 1px solid transparent;
+  -webkit-border-radius: 0.5rem;
+  -moz-border-radius: 0.5rem;
+  border-radius: 0.5rem;
   font-family: "Source Sans 3", sans-serif;
   font-weight: 600;
   font-size: 1rem;
   line-height: 1.3em;
-  color: #43474d;
-  text-transform: uppercase;
-  letter-spacing: 1px;
+  color: #5f6369;
+  transition: all 0.3s ease;
 }
 .sidebar-menu .menu-element span.new-feature:after {
   font: var(--fa-font-sharp-regular);
@@ -1988,13 +1995,33 @@ HEADER ADMIN - SIDEBAR
 .sidebar-menu .menu-element:last-of-type {
   margin-bottom: 0;
 }
-.sidebar-menu .menu-element:hover, .sidebar-menu .menu-element.selected {
+.sidebar-menu .menu-element:hover {
   cursor: pointer;
-  color: #a8956c;
+  color: #181818;
+}
+.sidebar-menu .menu-element.icon:before {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem;
+  border: 1px solid #bec3ca;
+  -webkit-border-radius: 0.25rem;
+  -moz-border-radius: 0.25rem;
+  border-radius: 0.25rem;
+}
+.sidebar-menu .menu-element.selected {
+  cursor: pointer;
+  color: #181818;
+  border-color: #d3d3d3;
+  background: #f2f2f2;
 }
 .sidebar-menu .menu-element.selected:after {
   transform: rotate(180deg);
   transition: all 0.3s ease;
+}
+.sidebar-menu .menu-element.selected.icon:before {
+  background: white;
+  border-color: #d3d3d3;
 }
 
 .sub-nav {
@@ -2004,8 +2031,8 @@ HEADER ADMIN - SIDEBAR
   gap: 0.5rem;
   grid-row: 2;
   grid-column: span 3;
-  border-top: 1px solid #d5c392;
-  padding: 1rem 2rem;
+  padding: 1rem 1rem 2rem;
+  margin-inline-start: 2rem;
 }
 .sub-nav .sub-nav-item {
   position: relative;
@@ -2019,18 +2046,18 @@ HEADER ADMIN - SIDEBAR
   font-weight: 400;
   font-size: 0.875rem;
   line-height: 1.3em;
-  color: #767b81;
+  color: #5f6369;
   transition: all 0.3s ease;
   text-transform: none;
   letter-spacing: unset;
 }
 .sub-nav .sub-nav-item-el:hover {
   cursor: pointer;
-  color: #a8956c;
+  color: #43474d;
 }
 .sub-nav .sub-nav-item-el.not-active {
   pointer-events: none;
-  color: #767b81;
+  color: #f6efff;
 }
 
 /*
@@ -2339,7 +2366,7 @@ ADMIN – CONTENT
 }
 
 .content-add {
-  border-bottom: 1px solid #767b81;
+  border-bottom: 1px solid #d3d3d3;
 }
 
 .content-update {
@@ -2506,7 +2533,7 @@ USERS
   min-width: unset;
   text-align: center;
   padding: 0.5rem 0.75rem;
-  background-color: #efe5fd;
+  background-color: #f6efff;
   border-radius: 2rem;
   font-family: "Poppins", sans-serif;
   font-weight: 400;
@@ -2516,7 +2543,7 @@ USERS
   transition: all 0.3s ease;
 }
 .cta-user input[type=submit]:hover {
-  background-color: #9965f4;
+  background-color: #a67cf3;
   color: white;
 }
 .cta-user.activate input[type=submit] {

@@ -17,15 +17,14 @@ HEADER ADMIN - SIDEBAR
     left: 0;
     z-index: 10;
     
-    display: flex;
-    flex-flow: column nowrap;
+    display: grid;
+    grid-template-rows: auto auto 1fr auto;
     width: $sidemenu-width;
     height: 100vh;
     overflow-y: scroll;
-    padding: 2rem 1rem;
     
     background-color: white;
-    border-right: 3px solid $primary-color;
+    border-right: 3px solid $admin-primary-dark;
     
     .dashboard.small & {
         width: $sidemenu-width-small;
@@ -40,17 +39,20 @@ HEADER ADMIN - SIDEBAR
         }
     }
     
-    .username-title {
-        margin-bottom: .5rem;
-        @include font-family-reading;
-        @include font-style(400, .875rem, 1.3em, $reading-text);
-        span {
-            font-weight: 600;
-            color: $admin-primary;
-        }
-    }
-    
 }
+
+
+
+.username-title {
+    padding: 1rem 2rem;
+    @include font-family-reading;
+    @include font-style(400, .875rem, 1.3em, $reading-text);
+    span {
+        font-weight: 600;
+        color: $admin-primary;
+    }
+}
+
 .top-header {
     display: flex;
     flex-flow: row wrap;
@@ -58,7 +60,7 @@ HEADER ADMIN - SIDEBAR
     align-items: center;
     gap: 1rem;
     
-    margin-bottom: 2rem;
+    padding: 1rem 2rem;
     
     li {
         height: 100%;
@@ -68,15 +70,15 @@ HEADER ADMIN - SIDEBAR
         height: 100%;
         min-width: 3rem;
         justify-content: center;
-        @include font-style(400, 1rem, 1em, $primary-color);
+        @include font-style(400, 1rem, 1em, $admin-primary);
         padding: .5rem;
-        border: 1px solid $primary-color;
+        border: 1px solid $admin-primary;
         @include border-radius-uniform(.25rem);
         transition: all .3s ease;
         
         &:hover {
-            background-color: $primary-color-lighter;
-            color: $primary-color-darker;
+            background-color: $admin-primary-lighter;
+            color: $admin-primary-darker;
             cursor: pointer;
         }
     }
@@ -86,18 +88,22 @@ HEADER ADMIN - SIDEBAR
 .sidebar-menu {
     display: flex;
     flex-direction: column;
-    gap: 2rem;
+    padding: 3rem 1rem;
+    border-top: 3px solid $admin-primary-dark;
     
     .menu-element {
         display: grid;
-        grid-template-columns: 24px 1fr auto;
+        grid-template-columns: minmax(32px, auto) 1fr auto;
         align-items: baseline;
-        gap: 1rem .5rem;
+        gap: 1rem;
+        padding: .5rem;
+        
+        border: 1px solid transparent;
+        @include border-radius-uniform(.5rem);
         
         @include font-family-reading;
-        @include font-style(600, 1rem, 1.3em, $secondary-color);
-        text-transform: uppercase;
-        letter-spacing: 1px;
+        @include font-style(600, 1rem, 1.3em, $web-grey-4);
+        transition: all .3s ease;
         
         span.new-feature:after {
             font: var(--fa-font-sharp-regular);
@@ -109,15 +115,33 @@ HEADER ADMIN - SIDEBAR
             margin-bottom: 0;
         }
         
-        &:hover,
+        &:hover {
+            cursor: pointer;
+            color: $web-grey-6;
+        }
+        
+        &.icon:before {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding:.5rem;
+            border: 1px solid $secondary-color-lighter;
+            @include border-radius-uniform(.25rem);
+        }
         &.selected {
             cursor: pointer;
-            color: $primary-color-dark;
+            color: $web-grey-6;
+            border-color: $web-grey-2;
+            background: $web-grey-1;
         }
         
         &.selected:after {
             transform: rotate(180deg);
             transition: all .3s ease;
+        }
+        &.selected.icon:before {
+            background: white;
+            border-color: $web-grey-2;
         }
     }
 }
@@ -129,8 +153,8 @@ HEADER ADMIN - SIDEBAR
     gap: .5rem;
     grid-row: 2;
     grid-column: span 3;
-    border-top: 1px solid $primary-color;
-    padding: 1rem 2rem;
+    padding: 1rem 1rem 2rem;
+    margin-inline-start: 2rem;
     
     .sub-nav-item {
         position: relative;
@@ -142,19 +166,19 @@ HEADER ADMIN - SIDEBAR
     
     .sub-nav-item-el {
         @include font-family-reading();
-        @include font-style(400, .875rem, 1.3em, $secondary-color-light);
+        @include font-style(400, .875rem, 1.3em, $web-grey-4);
         transition: all .3s ease;
         text-transform: none;
         letter-spacing: unset;
         
         &:hover {
             cursor: pointer;
-            color: $primary-color-dark;;
+            color: $secondary-color;;
         }
         
         &.not-active {
             pointer-events: none;
-            color: $secondary-color-light;
+            color: $admin-primary-lighter;
         }
     }
 }
