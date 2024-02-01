@@ -15,15 +15,15 @@
 
 
     //Fonction qui ajoute la classe SELECTED quand on clique et qui active ou desactive le sous-menu
-    $('.admin-nav').click(function() {
-        if ($(this).children('.menu-element').hasClass('selected')) {
-            $(this).children('.menu-element').removeClass('selected');
-            $(this).children('.sub-nav').slideUp(400);
+    $('.menu-element').click(function(event) {
+        if ($(this).hasClass('selected')) {
+            $(this).removeClass('selected');
+            $(this).siblings('.sub-nav').slideUp(400);
         } else {
             $('.menu-element').removeClass('selected');
-            $(this).children('.menu-element').addClass('selected');
-            $('.sub-nav').not($(this).children('.sub-nav')).slideUp(400);
-            $(this).children('.sub-nav').slideDown(400).css('display', 'flex');
+            $(this).addClass('selected');
+            $('.sub-nav').not($(this).siblings('.sub-nav')).slideUp(400);
+            $(this).siblings('.sub-nav').slideDown(400).css('display', 'flex');
         }
     });
 
@@ -64,3 +64,41 @@
         contentUpdate.removeClass('is-active');
         updateButton.classList.remove('is-not-active');
     });
+
+
+
+
+    document.addEventListener('DOMContentLoaded', function() {
+        // Retrieve the last selected menu item from localStorage
+        var lastSelectedItem = localStorage.getItem('selectedMenuItem');
+
+        // If there was a last selected item, mark it as active
+        if (lastSelectedItem) {
+            var menuItem = document.querySelector(`.sidebar-menu a[href*="${lastSelectedItem}"]`);
+            if (menuItem) {
+                menuItem.classList.add('active');
+                // If the selected menu item has a parent with sub-menu, open it
+                var parentNav = menuItem.closest('.admin-nav');
+                if (parentNav) {
+                    parentNav.classList.add('open');
+                }
+            }
+        }
+
+        // Event listener for clicks on menu items
+        document.querySelectorAll('.sidebar-menu a').forEach(item => {
+            item.addEventListener('click', function(event) {
+                // Remove the "active" class from all menu items
+                document.querySelectorAll('.sidebar-menu a').forEach(item => {
+                    item.classList.remove('active');
+                });
+
+                // Add the "active" class to the clicked menu item
+                this.classList.add('active');
+
+                // Store the selected menu item in localStorage
+                localStorage.setItem('selectedMenuItem', this.getAttribute('href'));
+            });
+        });
+    });
+

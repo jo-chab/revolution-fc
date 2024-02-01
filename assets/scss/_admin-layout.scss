@@ -169,9 +169,12 @@ ALERT MESSAGES in Dashboard
         bottom: unset; left: unset;
         transform: none;
         margin-bottom: 3rem;
+        border: 1px solid $color-warning-light;
         p {
             width: 100%;
             max-width: inherit;
+            background: $color-warning-lighter;
+            color: $web-grey-6;
         }
     }
     
@@ -184,6 +187,7 @@ ALERT MESSAGES in Dashboard
             font-size: 2rem;
         }
     }
+    
     p {
         padding: 1rem;
         background: $web-grey-6;

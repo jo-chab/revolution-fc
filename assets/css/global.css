@@ -388,7 +388,7 @@ h6 {
 }
 
 .text-dates {
-  color: #d3d3d3;
+  color: #9a9ea4;
 }
 
 .white {
@@ -414,7 +414,7 @@ p.intro {
   font-size: 1.25rem;
   line-height: 1.3em;
   margin-bottom: 1rem;
-  color: #d3d3d3;
+  color: #9a9ea4;
 }
 @media (min-width: 768px) {
   p.intro {
@@ -424,7 +424,7 @@ p.intro {
 p.article-intro {
   font-weight: 600;
   font-size: 1.25rem;
-  color: #d3d3d3;
+  color: #9a9ea4;
   margin-bottom: 1rem;
 }
 @media (min-width: 768px) {
@@ -1056,13 +1056,25 @@ DESIGN SYSTEM – Buttons
     background-color: #e4001b;
   }
 }
-.btn-primary.btn-confirm, .btn-primary.cta-add {
+.btn-primary.cta-add {
+  background-color: #dafce4;
+  border: 1px solid #69F0AE;
+  color: #00bd60;
+  justify-self: center;
+}
+@media (min-width: 768px) {
+  .btn-primary.cta-add:hover {
+    background-color: #00E676;
+    color: #00732e;
+  }
+}
+.btn-primary.btn-confirm {
   background-color: #00E676;
   color: #00732e;
   justify-self: center;
 }
 @media (min-width: 768px) {
-  .btn-primary.btn-confirm:hover, .btn-primary.cta-add:hover {
+  .btn-primary.btn-confirm:hover {
     background-color: #00bd60;
   }
 }
@@ -1525,7 +1537,7 @@ Lists
   font-weight: 400;
   font-size: 1rem;
   line-height: 1em;
-  color: #d3d3d3;
+  color: #9a9ea4;
 }
 
 .list-docs {
@@ -1557,7 +1569,7 @@ Lists
   font-weight: 400;
   font-size: 1rem;
   line-height: 1.5em;
-  color: #d3d3d3;
+  color: #9a9ea4;
   flex-grow: 1;
 }
 
@@ -2466,7 +2478,7 @@ Lists
   -moz-border-radius: 1rem;
   border-radius: 1rem;
   background-color: white;
-  border: 1px solid #bec3ca;
+  border: 1px solid #d3d3d3;
 }
 @media (min-width: 768px) {
   .list-jobs .job-el {
@@ -2478,7 +2490,7 @@ Lists
   font-weight: 300;
   font-size: 1rem;
   line-height: 1.3em;
-  color: #d3d3d3;
+  color: #9a9ea4;
   display: -webkit-box;
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
@@ -2734,7 +2746,7 @@ News detail / Programme detail
   font-weight: 600;
   font-size: 1.125rem;
   line-height: 1.5em;
-  color: #d3d3d3;
+  color: #9a9ea4;
   margin-bottom: 0.25rem;
 }
 .article-detail blockquote {
@@ -2750,7 +2762,7 @@ News detail / Programme detail
   -webkit-font-smoothing: antialiased;
   font: var(--fa-font-sharp-solid);
   content: "\f10d";
-  color: #d3d3d3;
+  color: #9a9ea4;
   font-size: 3em;
   align-self: flex-start;
 }
@@ -2760,7 +2772,7 @@ News detail / Programme detail
   -webkit-font-smoothing: antialiased;
   font: var(--fa-font-sharp-solid);
   content: "\f10e";
-  color: #d3d3d3;
+  color: #9a9ea4;
   font-size: 3em;
   align-self: flex-end;
 }
@@ -2998,7 +3010,7 @@ TOURNOIS
   font-weight: 600;
   font-size: 1.125rem;
   line-height: 1.5em;
-  color: #d3d3d3;
+  color: #9a9ea4;
   margin-bottom: 0.25rem;
 }
 .tournament-desc blockquote {
@@ -3014,7 +3026,7 @@ TOURNOIS
   -webkit-font-smoothing: antialiased;
   font: var(--fa-font-sharp-solid);
   content: "\f10d";
-  color: #d3d3d3;
+  color: #9a9ea4;
   font-size: 3em;
   align-self: flex-start;
 }
@@ -3024,7 +3036,7 @@ TOURNOIS
   -webkit-font-smoothing: antialiased;
   font: var(--fa-font-sharp-solid);
   content: "\f10e";
-  color: #d3d3d3;
+  color: #9a9ea4;
   font-size: 3em;
   align-self: flex-end;
 }
@@ -3230,7 +3242,7 @@ RESSOURCES ENTRAINEURS
   text-transform: uppercase;
   letter-spacing: 1px;
   text-align: center;
-  background: #d3d3d3;
+  background: #9a9ea4;
   border: 1px solid #43474d;
   -webkit-border-radius: 1rem;
   -moz-border-radius: 1rem;
@@ -3264,7 +3276,7 @@ Events
   width: 100%;
 }
 .table-event thead {
-  background: #bec3ca;
+  background: #d3d3d3;
 }
 @media (max-width: 767px) {
   .table-event thead {
@@ -3399,7 +3411,7 @@ Events
   text-transform: capitalize;
 }
 .card-events .event-title {
-  color: #d3d3d3;
+  color: #9a9ea4;
   margin-bottom: 0.25rem;
   font-size: 1.5rem;
 }
@@ -3439,7 +3451,7 @@ Events
   align-items: baseline;
   width: 100%;
   padding: 4rem 0;
-  border-top: 1px solid #bec3ca;
+  border-top: 1px solid #d3d3d3;
   /* For subgrid only*/
   /* For fallback */
   gap: 1rem;
@@ -3450,7 +3462,7 @@ Events
   }
 }
 .event-content h4 {
-  color: #d3d3d3;
+  color: #9a9ea4;
   /* For subgrid only*/
 }
 .event-content .event-detail {
@@ -3470,7 +3482,7 @@ Events
   font-weight: 700;
   font-size: 0.875rem;
   line-height: 1em;
-  color: #d3d3d3;
+  color: #9a9ea4;
   margin-bottom: 0.5rem;
 }
 .event-content .event-detail-text {

@@ -267,8 +267,19 @@ DESIGN SYSTEM – Buttons
         }
     }
     
-    &.btn-confirm,
     &.cta-add {
+        background-color: $color-success-lighter;
+        border: 1px solid $color-success-light;
+        color: $color-success-dark;
+        justify-self: center;
+        @include tablet {
+            &:hover {
+                background-color: $color-success;
+                color: $color-success-darker;
+            }
+        }
+    }
+    &.btn-confirm {
         background-color: $color-success;
         color: $color-success-darker;
         justify-self: center;

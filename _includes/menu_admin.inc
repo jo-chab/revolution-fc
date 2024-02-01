@@ -1,16 +1,16 @@
-
-<div class="username-title">Bonjour <span><?php echo $_SESSION['username']; ?></span></div>
-
-<ul class="top-header">
-    <li class="menu-toggle-admin nav-element icon only-mobile"><span>Menu</span></li>
-    <li><a class="nav-element icon i-homepage icon-only" href="/" title="Accueil Site"><span>Accueil site</span></a></li>
-    <li><a class="nav-element icon i-homepage-2 icon-only" href="/admin/index?p=1" title="Accueil Admin"><span>Accueil admin</span></a></li>
-    <?php if (isset($_SESSION['auth']) && $_SESSION['type'] == 6): ?>
-        <li class="only-tablet"><a class="nav-element icon i-bdd" href="https://hp341.servername.online:2083/cpsess5111029340/frontend/paper_lantern/sql/PhpMyAdmin.html" target="_blank"></a></li>
-    <?php else : ?>
-    <?php endif ?>
-    <li><a class="nav-element icon i-logout icon-only" href="action-logout" title="Logout"></a></li>
-</ul>
+<div class="top-header">
+    <div class="username-title">Bonjour <span><?php echo $_SESSION['username']; ?></span></div>
+    <ul class="top-header-nav">
+        <li class="menu-toggle-admin nav-element icon only-mobile"><span>Menu</span></li>
+        <li><a class="nav-element icon i-homepage icon-only" href="/" title="Accueil Site"><span>Accueil site</span></a></li>
+        <li><a class="nav-element icon i-homepage-2 icon-only" href="/admin/index?p=1" title="Accueil Admin"><span>Accueil admin</span></a></li>
+        <?php if (isset($_SESSION['auth']) && $_SESSION['type'] == 6): ?>
+            <li class="only-tablet"><a class="nav-element icon i-bdd" href="https://hp341.servername.online:2083/cpsess5111029340/frontend/paper_lantern/sql/PhpMyAdmin.html" target="_blank"></a></li>
+        <?php else : ?>
+        <?php endif ?>
+        <li><a class="nav-element icon i-logout icon-only" href="action-logout" title="Logout"></a></li>
+    </ul>
+</div>
 
 
 <ul class="sidebar-menu">
@@ -20,6 +20,7 @@
             <div class="menu-element icon i-test">Menu en cours de test</div>
             <ul class="sub-nav">
                 <li class="sub-nav-item"><a class="sub-nav-item-el" href="?p=">Albums photos</a></li>
+                <li class="sub-nav-item"><a class="sub-nav-item-el not-active" href="?p=">Ajouter images</a></li>
             </ul>
         </li>
     <?php endif ?>
@@ -35,14 +36,11 @@
     </li>
     
     <li class="admin-nav">
-        <div class="menu-element icon i-news">Actualités</div>
-        <ul class="sub-nav">
-            <li class="sub-nav-item"><a class="sub-nav-item-el" href="index.php?p=11">Gérer les actualités</a></li>
-        </ul>
+        <div class="menu-element icon i-news"><a href="index.php?p=11">Actualités</a></div>
     </li>
     
     <li class="admin-nav">
-        <div class="menu-element icon i-rfc-logo">Club</div>
+        <div class="menu-element icon i-club-house">Club</div>
         <ul class="sub-nav">
             <li class="sub-nav-item"><a class="sub-nav-item-el" href="?p=5">Informations générales</a></li>
             <li class="sub-nav-item"><a class="sub-nav-item-el" href="?p=31">Gérer les documents</a></li>
@@ -72,7 +70,9 @@
         </ul>
     </li>
     
-    <li class="admin-nav"><div class="menu-element icon i-tournament"><a class="" href="?p=81">Tournois</a></div></li>
+    <li class="admin-nav">
+        <div class="menu-element icon i-tournament"><a class="" href="?p=81">Tournois</a></div>
+    </li>
     
     <li class="admin-nav">
         <div class="menu-element icon i-events"><span class="icon new-feature">Evenements</span></div>
@@ -82,7 +82,9 @@
         </ul>
     </li>
     
-    <li class="admin-nav"><div class="menu-element icon i-sponsors"><a class="" href="?p=91">Sponsors</a></div></li>
+    <li class="admin-nav">
+        <div class="menu-element icon i-sponsors"><a class="" href="?p=91">Sponsors</a></div>
+    </li>
     
     
 </ul>
