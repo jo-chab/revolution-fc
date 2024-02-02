@@ -961,8 +961,8 @@ ALERT MESSAGES in Dashboard
   transform: none;
   margin-bottom: 3rem;
 }
-.message-box.maintenance.legend {
-  width: fit-content;
+.message-box.maintenance:has(+ .maintenance) {
+  margin-bottom: 1rem;
 }
 .message-box.maintenance p {
   width: 100%;
@@ -972,8 +972,6 @@ ALERT MESSAGES in Dashboard
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  text-transform: uppercase;
-  letter-spacing: 2px;
 }
 .message-box.maintenance span.construction:before {
   font: var(--fa-font-light);

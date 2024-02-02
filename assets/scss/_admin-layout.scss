@@ -39,13 +39,11 @@ body {
     }
 }
 
-
 section {
     width:100%;
     margin:0 auto;
     padding: 0;
 }
-
 
 *[class*='grid-layout-'] {
     display: grid;
@@ -169,8 +167,8 @@ ALERT MESSAGES in Dashboard
         bottom: unset; left: unset;
         transform: none;
         margin-bottom: 3rem;
-        &.legend {
-            width: fit-content;
+        &:has(+ .maintenance) {
+            margin-bottom: 1rem;
         }
         
         p {
@@ -182,20 +180,19 @@ ALERT MESSAGES in Dashboard
             display: inline-flex;
             align-items: center;
             gap: .5rem;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-        }
-        span.construction:before {
-            font: var(--fa-font-light);
-            content: '\f85d';
-            font-size: 1.25em;
-            color: $color-warning;
-        }
-        span.new-feature:before {
-            font: var(--fa-font-sharp-regular);
-            content: '\f06d';
-            font-size: 1.25em;
-            color: $color-error;
+            
+            &.construction:before {
+                font: var(--fa-font-light);
+                content: '\f85d';
+                font-size: 1.25em;
+                color: $color-warning;
+            }
+            &.new-feature:before {
+                font: var(--fa-font-sharp-regular);
+                content: '\f06d';
+                font-size: 1.25em;
+                color: $color-error;
+            }
         }
         .icon {
             background-color: $color-error;

@@ -1,17 +1,17 @@
 // Website layout dependencies SCSS
-@import "modules/variables";
-@import "modules/reset";
-@import "modules/mixins";
-@import "modules/media-queries";
-@import "animations";
+@import "basics/variables";
+@import "basics/reset";
+@import "basics/mixins";
+@import "basics/media-queries";
+@import "basics/animations";
 
 
-@import "fonts";
-@import "icons";
-@import "design-system";
+@import "basics/fonts";
+@import "basics/icons";
+@import "modules/design-system";
 @import "layout";
-@import "header";
-@import "footer";
+@import "modules/header";
+@import "modules/footer";
 @import "main";
 
 

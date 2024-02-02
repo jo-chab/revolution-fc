@@ -287,7 +287,7 @@ News detail / Programme detail
 		margin-top: 3rem;
 	}
 	
-	@import "modules/text-content";
+	@import "basics/text-content";
 	
 }
 
@@ -445,7 +445,7 @@ TOURNOIS
 		}
 	}
 	&-desc {
-		@import "modules/text-content";
+		@import "basics/text-content";
 	}
 }
 
