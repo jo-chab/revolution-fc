@@ -24,7 +24,7 @@ HEADER ADMIN - SIDEBAR
     overflow-y: scroll;
     
     background-color: white;
-    border-right: 3px solid $admin-primary-dark;
+    border-right: 3px solid $primary-color;
     
     .dashboard.small & {
         width: $sidemenu-width-small;
@@ -55,7 +55,7 @@ HEADER ADMIN - SIDEBAR
     @include font-style(400, .875rem, 1.3em, $reading-text);
     span {
         font-weight: 600;
-        color: $admin-primary;
+        color: $primary-color;
     }
 }
 .top-header-nav {
@@ -73,15 +73,15 @@ HEADER ADMIN - SIDEBAR
         height: 100%;
         min-width: 3rem;
         justify-content: center;
-        @include font-style(400, 1rem, 1em, $admin-primary);
+        @include font-style(400, 1rem, 1em, $primary-color);
         padding: .5rem;
-        border: 1px solid $admin-primary;
+        border: 1px solid $primary-color;
         @include border-radius-uniform(.25rem);
         transition: all .3s ease;
         
         &:hover {
-            background-color: $admin-primary-lighter;
-            color: $admin-primary-darker;
+            background-color: $primary-color-lighter;
+            color: $primary-color-darker;
             cursor: pointer;
         }
     }
@@ -92,7 +92,7 @@ HEADER ADMIN - SIDEBAR
     display: flex;
     flex-direction: column;
     padding: 1rem 1rem 3rem;
-    border-top: 3px solid $admin-primary-dark;
+    border-top: 3px solid $primary-color;
     
     .menu-element {
         display: grid;
@@ -184,7 +184,7 @@ HEADER ADMIN - SIDEBAR
             font: var(--fa-font-solid);
             font-size: .5rem;
             content: '\f0c8';
-            color: $admin-primary;
+            color: $primary-color;
         }
         
         &:hover {

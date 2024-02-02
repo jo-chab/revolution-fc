@@ -230,7 +230,7 @@ h1 {
   font-weight: 700;
   font-size: 2rem;
   line-height: 1.3em;
-  color: #43474d;
+  color: #8d949b;
   text-align: center;
   margin-bottom: 2rem;
 }
@@ -279,7 +279,7 @@ h2 {
   }
 }
 h2.section-title {
-  color: #43474d;
+  color: #8d949b;
   margin-bottom: 2rem;
   text-align: center;
 }
@@ -299,7 +299,7 @@ h3 {
   font-weight: 600;
   font-size: 1.25rem;
   line-height: 1.3em;
-  color: #43474d;
+  color: #8d949b;
   margin-bottom: 1rem;
 }
 @media (min-width: 620px) {
@@ -336,7 +336,7 @@ h4 {
   font-weight: 600;
   font-size: 1.125rem;
   line-height: 1.5em;
-  color: #43474d;
+  color: #8d949b;
 }
 @media (min-width: 620px) {
   h4 {
@@ -371,7 +371,7 @@ h5 {
   font-weight: 400;
   font-size: 0.875rem;
   line-height: 1.5em;
-  color: #43474d;
+  color: #8d949b;
 }
 @media (min-width: 620px) {
   h5 {
@@ -384,11 +384,11 @@ h6 {
   font-weight: 400;
   font-size: 0.75rem;
   line-height: 1.5em;
-  color: #43474d;
+  color: #8d949b;
 }
 
 .text-dates {
-  color: #9a9ea4;
+  color: #D0D3D4;
 }
 
 .white {
@@ -401,7 +401,7 @@ p {
   font-weight: 400;
   font-size: 1.125rem;
   line-height: 1.7em;
-  color: #43474d;
+  color: #8d949b;
   max-width: 960px;
   margin-bottom: 1.5rem;
 }
@@ -414,7 +414,7 @@ p.intro {
   font-size: 1.25rem;
   line-height: 1.3em;
   margin-bottom: 1rem;
-  color: #9a9ea4;
+  color: #D0D3D4;
 }
 @media (min-width: 768px) {
   p.intro {
@@ -424,7 +424,7 @@ p.intro {
 p.article-intro {
   font-weight: 600;
   font-size: 1.25rem;
-  color: #9a9ea4;
+  color: #D0D3D4;
   margin-bottom: 1rem;
 }
 @media (min-width: 768px) {
@@ -722,6 +722,10 @@ ADMIN ICONS
 .i-config-club:before {
   font-family: "Font Awesome Kit";
   content: "\e015";
+}
+.i-config-link:before {
+  font-family: "Font Awesome Kit";
+  content: "\e01d";
 }
 
 .i-flash:before, .i-flash:after {
@@ -1116,8 +1120,8 @@ DESIGN SYSTEM – Buttons
   font-weight: 400;
   font-size: 1.125em;
   line-height: 1em;
-  color: #43474d;
-  border: 1px solid #43474d;
+  color: #8d949b;
+  border: 1px solid #8d949b;
 }
 @media (max-width: 767px) {
   .btn-secondary {
@@ -1131,8 +1135,8 @@ DESIGN SYSTEM – Buttons
 }
 @media (min-width: 768px) {
   .btn-secondary:hover {
-    border-color: #1f2124;
-    color: #1f2124;
+    border-color: #676e75;
+    color: #676e75;
   }
 }
 .btn-secondary.small {
@@ -1145,7 +1149,7 @@ DESIGN SYSTEM – Buttons
 }
 .btn-secondary.ghost-white:hover {
   background-color: white;
-  color: #43474d;
+  color: #8d949b;
 }
 .alert-message.alert-error .btn-secondary {
   color: #ff1540;
@@ -1324,12 +1328,12 @@ select {
   top: 0.75rem;
   left: 1rem;
   z-index: 2;
-  color: #43474d;
+  color: #8d949b;
   letter-spacing: 2px;
 }
 .select-dropdown select {
   font-size: 1.125rem;
-  border-color: #43474d;
+  border-color: #8d949b;
   color: #434C57;
   background-color: #dccda4;
   padding: 0.75rem 4rem 0.75rem 1rem;
@@ -1385,7 +1389,7 @@ label {
   font-weight: 600;
   font-size: 0.75rem;
   line-height: 1em;
-  color: #43474d;
+  color: #8d949b;
   text-transform: uppercase;
   padding: 0;
 }
@@ -1480,7 +1484,7 @@ Lists
   font-weight: 400;
   font-size: 1.125rem;
   line-height: 1.5em;
-  color: #43474d;
+  color: #8d949b;
   margin-bottom: 0.25rem;
   display: flex;
   align-items: baseline;
@@ -1504,7 +1508,7 @@ Lists
   font-weight: 700;
   font-size: 1.5rem;
   line-height: 1em;
-  color: #43474d;
+  color: #8d949b;
   text-transform: uppercase;
   margin-bottom: 0.5rem;
 }
@@ -1529,7 +1533,7 @@ Lists
   font-weight: 400;
   font-size: 0.875rem;
   line-height: 1.5em;
-  color: #43474d;
+  color: #8d949b;
 }
 .list-people .people-el .list-people-email {
   margin-top: 0.5rem;
@@ -1537,7 +1541,7 @@ Lists
   font-weight: 400;
   font-size: 1rem;
   line-height: 1em;
-  color: #9a9ea4;
+  color: #D0D3D4;
 }
 
 .list-docs {
@@ -1569,7 +1573,7 @@ Lists
   font-weight: 400;
   font-size: 1rem;
   line-height: 1.5em;
-  color: #9a9ea4;
+  color: #D0D3D4;
   flex-grow: 1;
 }
 
@@ -1591,7 +1595,7 @@ Lists
   margin-bottom: 0.5rem;
   line-height: 1.3em;
   text-align: unset;
-  color: #43474d;
+  color: #8d949b;
 }
 .list-programs .program-img {
   background-repeat: no-repeat;
@@ -1967,7 +1971,7 @@ COOKIES Popup
   }
 }
 .cookie-popup p {
-  color: #43474d;
+  color: #8d949b;
 }
 
 .cookie-cta {
@@ -2054,7 +2058,7 @@ HEADER CSS -
 }
 .top-header ul.header-social {
   grid-area: social;
-  background: #43474d;
+  background: #8d949b;
   justify-self: flex-end;
   width: fit-content;
   justify-content: flex-end;
@@ -2080,7 +2084,7 @@ HEADER CSS -
   font-weight: 600;
   font-size: 1rem;
   line-height: 1.5em;
-  color: #43474d;
+  color: #8d949b;
   text-transform: uppercase;
   letter-spacing: 1px;
   transition: all 0.3s ease;
@@ -2119,7 +2123,7 @@ HEADER CSS -
   color: white;
 }
 .top-header .nav-item.lock-content a {
-  color: #43474d;
+  color: #8d949b;
 }
 .top-header .nav-item .icon {
   font-size: 1.5rem;
@@ -2208,7 +2212,7 @@ nav.desktop {
   align-items: center;
   width: 100%;
   height: 100vh;
-  background-color: #43474d;
+  background-color: #8d949b;
   overflow-y: scroll;
   transform: translateX(-1000px);
   transition: all 0.5s ease;
@@ -2358,7 +2362,7 @@ FOOTER
 *******************************************************/
 footer {
   padding: 32px 24px 120px;
-  background-color: #43474d;
+  background-color: #8d949b;
   box-sizing: border-box;
 }
 @media (min-width: 768px) {
@@ -2478,7 +2482,7 @@ Lists
   -moz-border-radius: 1rem;
   border-radius: 1rem;
   background-color: white;
-  border: 1px solid #d3d3d3;
+  border: 1px solid #ebf2fa;
 }
 @media (min-width: 768px) {
   .list-jobs .job-el {
@@ -2490,7 +2494,7 @@ Lists
   font-weight: 300;
   font-size: 1rem;
   line-height: 1.3em;
-  color: #9a9ea4;
+  color: #D0D3D4;
   display: -webkit-box;
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
@@ -2536,9 +2540,9 @@ HOME PAGE
   display: flex;
   align-items: flex-end;
   justify-content: center;
-  background-color: #43474d;
-  background: -webkit-linear-gradient(top, rgba(67, 71, 77, 0), #43474d);
-  background: linear-gradient(to bottom, rgba(67, 71, 77, 0), #43474d);
+  background-color: #8d949b;
+  background: -webkit-linear-gradient(top, rgba(141, 148, 155, 0), #8d949b);
+  background: linear-gradient(to bottom, rgba(141, 148, 155, 0), #8d949b);
 }
 .w-hero .hero-overlay-content {
   z-index: 3;
@@ -2660,7 +2664,7 @@ NEWS PAGE
   margin-top: 80px;
 }
 .pagination .page-cta {
-  background-color: #43474d;
+  background-color: #8d949b;
   padding: 8px 16px;
   font-size: 32px;
   color: white;
@@ -2727,11 +2731,11 @@ News detail / Programme detail
 }
 .article-detail .article-intro {
   font-weight: 600;
-  color: #43474d;
+  color: #8d949b;
   margin-bottom: 2rem;
 }
 .article-detail h2 {
-  color: #43474d;
+  color: #8d949b;
   margin-bottom: 1.5rem;
   text-transform: none;
   letter-spacing: unset;
@@ -2746,7 +2750,7 @@ News detail / Programme detail
   font-weight: 600;
   font-size: 1.125rem;
   line-height: 1.5em;
-  color: #9a9ea4;
+  color: #D0D3D4;
   margin-bottom: 0.25rem;
 }
 .article-detail blockquote {
@@ -2762,7 +2766,7 @@ News detail / Programme detail
   -webkit-font-smoothing: antialiased;
   font: var(--fa-font-sharp-solid);
   content: "\f10d";
-  color: #9a9ea4;
+  color: #D0D3D4;
   font-size: 3em;
   align-self: flex-start;
 }
@@ -2772,7 +2776,7 @@ News detail / Programme detail
   -webkit-font-smoothing: antialiased;
   font: var(--fa-font-sharp-solid);
   content: "\f10e";
-  color: #9a9ea4;
+  color: #D0D3D4;
   font-size: 3em;
   align-self: flex-end;
 }
@@ -2817,7 +2821,7 @@ News detail / Programme detail
   font-weight: 400;
   font-size: 1.125rem;
   line-height: 1.5em;
-  color: #43474d;
+  color: #8d949b;
   margin-bottom: 0.25rem;
 }
 .article-detail ul li:last-of-type, .article-detail ol li:last-of-type {
@@ -2850,7 +2854,7 @@ News detail / Programme detail
   font-weight: 700;
   font-size: 0.875rem;
   line-height: 1.5em;
-  color: #43474d;
+  color: #8d949b;
   text-transform: uppercase;
   letter-spacing: 2px;
 }
@@ -2860,7 +2864,7 @@ News detail / Programme detail
   font-weight: 400;
   font-size: 1rem;
   line-height: 1.5em;
-  color: #43474d;
+  color: #8d949b;
 }
 
 .article-footer {
@@ -2953,7 +2957,7 @@ FIELDS
 }
 .field-desc {
   font-size: 0.875rem;
-  color: #43474d;
+  color: #8d949b;
 }
 .field-address {
   margin-top: 0.5rem;
@@ -2991,11 +2995,11 @@ TOURNOIS
 }
 .tournament-desc .article-intro {
   font-weight: 600;
-  color: #43474d;
+  color: #8d949b;
   margin-bottom: 2rem;
 }
 .tournament-desc h2 {
-  color: #43474d;
+  color: #8d949b;
   margin-bottom: 1.5rem;
   text-transform: none;
   letter-spacing: unset;
@@ -3010,7 +3014,7 @@ TOURNOIS
   font-weight: 600;
   font-size: 1.125rem;
   line-height: 1.5em;
-  color: #9a9ea4;
+  color: #D0D3D4;
   margin-bottom: 0.25rem;
 }
 .tournament-desc blockquote {
@@ -3026,7 +3030,7 @@ TOURNOIS
   -webkit-font-smoothing: antialiased;
   font: var(--fa-font-sharp-solid);
   content: "\f10d";
-  color: #9a9ea4;
+  color: #D0D3D4;
   font-size: 3em;
   align-self: flex-start;
 }
@@ -3036,7 +3040,7 @@ TOURNOIS
   -webkit-font-smoothing: antialiased;
   font: var(--fa-font-sharp-solid);
   content: "\f10e";
-  color: #9a9ea4;
+  color: #D0D3D4;
   font-size: 3em;
   align-self: flex-end;
 }
@@ -3081,7 +3085,7 @@ TOURNOIS
   font-weight: 400;
   font-size: 1.125rem;
   line-height: 1.5em;
-  color: #43474d;
+  color: #8d949b;
   margin-bottom: 0.25rem;
 }
 .tournament-desc ul li:last-of-type, .tournament-desc ol li:last-of-type {
@@ -3114,7 +3118,7 @@ TOURNOIS
   font-weight: 700;
   font-size: 0.875rem;
   line-height: 1.5em;
-  color: #43474d;
+  color: #8d949b;
   text-transform: uppercase;
   letter-spacing: 2px;
 }
@@ -3124,7 +3128,7 @@ TOURNOIS
   font-weight: 400;
   font-size: 1rem;
   line-height: 1.5em;
-  color: #43474d;
+  color: #8d949b;
 }
 
 .t-card {
@@ -3165,21 +3169,21 @@ TOURNOIS
   font-weight: 700;
   font-size: 2rem;
   line-height: 1em;
-  color: #43474d;
+  color: #8d949b;
 }
 .t-card-category {
   font-family: "Source Sans 3", sans-serif;
   font-weight: 700;
   font-size: 1.25rem;
   line-height: 1em;
-  color: #43474d;
+  color: #8d949b;
 }
 .t-card-price {
   font-family: "Source Sans 3", sans-serif;
   font-weight: 700;
   font-size: 3rem;
   line-height: 1em;
-  color: #43474d;
+  color: #8d949b;
 }
 .t-card-price span {
   font-weight: 400;
@@ -3203,7 +3207,7 @@ RESSOURCES ENTRAINEURS
   font-weight: 600;
   font-size: 1.25rem;
   line-height: 1.3em;
-  color: #43474d;
+  color: #8d949b;
   text-transform: uppercase;
   letter-spacing: 1px;
   text-align: center;
@@ -3242,8 +3246,8 @@ RESSOURCES ENTRAINEURS
   text-transform: uppercase;
   letter-spacing: 1px;
   text-align: center;
-  background: #9a9ea4;
-  border: 1px solid #43474d;
+  background: #D0D3D4;
+  border: 1px solid #8d949b;
   -webkit-border-radius: 1rem;
   -moz-border-radius: 1rem;
   border-radius: 1rem;
@@ -3251,7 +3255,7 @@ RESSOURCES ENTRAINEURS
 }
 .list-subcategory .subcategory-element:hover {
   cursor: pointer;
-  background: #43474d;
+  background: #8d949b;
   transition: all 0.3s ease;
 }
 .list-subcategory .subcategory-element.is-active {
@@ -3276,7 +3280,7 @@ Events
   width: 100%;
 }
 .table-event thead {
-  background: #d3d3d3;
+  background: #ebf2fa;
 }
 @media (max-width: 767px) {
   .table-event thead {
@@ -3289,7 +3293,7 @@ Events
   font-weight: 700;
   font-size: 1rem;
   line-height: 1em;
-  color: #15171a;
+  color: #141a1f;
   text-align: left;
 }
 .table-event th:nth-child(1) {
@@ -3331,7 +3335,7 @@ Events
   font-weight: 500;
   font-size: 1rem;
   line-height: 1.3em;
-  color: #15171a;
+  color: #141a1f;
   text-align: left;
   transition: all 0.3s ease;
 }
@@ -3363,7 +3367,7 @@ Events
   font-weight: 700;
   font-size: 1.25rem;
   line-height: 1.3em;
-  color: #15171a;
+  color: #141a1f;
 }
 @media (min-width: 768px) {
   .table-event td.table-list-title {
@@ -3411,7 +3415,7 @@ Events
   text-transform: capitalize;
 }
 .card-events .event-title {
-  color: #9a9ea4;
+  color: #D0D3D4;
   margin-bottom: 0.25rem;
   font-size: 1.5rem;
 }
@@ -3426,7 +3430,7 @@ Events
 
 .card-events .event-venue {
   font-weight: 700;
-  color: #15171a;
+  color: #141a1f;
 }
 
 .event-date {
@@ -3434,7 +3438,7 @@ Events
 }
 .card-events .event-date {
   margin-bottom: 1rem;
-  color: #a8956c;
+  color: #d5c392;
   font-size: 0.75rem;
 }
 @media (max-width: 767px) {
@@ -3451,7 +3455,7 @@ Events
   align-items: baseline;
   width: 100%;
   padding: 4rem 0;
-  border-top: 1px solid #d3d3d3;
+  border-top: 1px solid #ebf2fa;
   /* For subgrid only*/
   /* For fallback */
   gap: 1rem;
@@ -3462,7 +3466,7 @@ Events
   }
 }
 .event-content h4 {
-  color: #9a9ea4;
+  color: #D0D3D4;
   /* For subgrid only*/
 }
 .event-content .event-detail {
@@ -3482,7 +3486,7 @@ Events
   font-weight: 700;
   font-size: 0.875rem;
   line-height: 1em;
-  color: #9a9ea4;
+  color: #D0D3D4;
   margin-bottom: 0.5rem;
 }
 .event-content .event-detail-text {
@@ -3490,7 +3494,7 @@ Events
   font-weight: 700;
   font-size: 1.25rem;
   line-height: 1.3em;
-  color: #363b41;
+  color: #52585f;
 }
 
 /*# sourceMappingURL=global.css.map */
