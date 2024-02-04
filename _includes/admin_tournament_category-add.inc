@@ -1,11 +1,13 @@
 
 
-            <div class="dashboard-content content-add">
+            <div class="content-add">
 
                 <form method="post" action="action_tournoi_category_add" enctype="multipart/form-data">
                     <div class="d-form-wrapper">
 
                         <input name="num_tournoi" type="hidden" value="<?php echo $element ?>">
+                        
+                        <h3>Ajouter une categorie</h3>
 
                         <div class="grid-layout-2">
                             <div class="form-row column">

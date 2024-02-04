@@ -29,24 +29,25 @@
 
 
     function toggleContentAdd() {
-        const addButton = document.querySelector('.js-content-add');
-        const contentAdd = document.querySelector('.content-add');
+        const addButton = $('.js-content-add');
+        const contentAdd = $('.content-add');
 
-        addButton.addEventListener('click', () => {
-            contentAdd.classList.toggle('is-active');
-            addButton.classList.toggle('is-hide');
+        addButton.on('click', () => {
+            contentAdd.slideToggle(400);
+            addButton.toggleClass('is-hide');
         });
     }
+
     function toggleContentUpdate() {
-        const updateButtons = document.querySelectorAll('.js-content-update');
+        const updateButtons = $('.js-content-update');
 
-        updateButtons.forEach(updateButton => {
-            updateButton.addEventListener('click', () => {
-                const categoryId = updateButton.getAttribute('data-category');
-                const contentUpdate = document.querySelector(`.content-update-${categoryId}`);
+        updateButtons.each((index, updateButton) => {
+            $(updateButton).on('click', () => {
+                const categoryId = $(updateButton).attr('data-category');
+                const contentUpdate = $(`.content-update-${categoryId}`);
 
-                contentUpdate.classList.toggle('is-active');
-                updateButton.classList.toggle('is-not-active');
+                contentUpdate.slideToggle(400);
+                $(updateButton).toggleClass('is-not-active');
             });
         });
     }
@@ -54,6 +55,7 @@
     // Call the function to enable the toggle behavior
     toggleContentAdd();
     toggleContentUpdate();
+
 
     // Handle the "Cancel" button click event
     $('.js-cancel-update').click(function () {

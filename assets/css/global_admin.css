@@ -968,28 +968,47 @@ ALERT MESSAGES in Dashboard
   width: 100%;
   max-width: inherit;
 }
-.message-box.maintenance span {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-}
-.message-box.maintenance span.construction:before {
-  font: var(--fa-font-light);
-  content: "\f85d";
-  font-size: 1.25em;
-  color: #ffbe2e;
-}
-.message-box.maintenance span.new-feature:before {
-  font: var(--fa-font-sharp-regular);
-  content: "\f06d";
-  font-size: 1.25em;
-  color: #ff1540;
-}
 .message-box.maintenance .icon {
   background-color: #ff1540;
 }
 .message-box.maintenance .icon:before {
   color: white;
+}
+.message-box.maintenance.legend {
+  margin-bottom: 0.5rem;
+  box-shadow: none;
+}
+.message-box.maintenance.legend .text-content {
+  border: 1px solid #6300ee;
+  -webkit-border-radius: 0.5rem;
+  -moz-border-radius: 0.5rem;
+  border-radius: 0.5rem;
+  background: #f6efff;
+}
+.message-box.maintenance.legend span {
+  display: grid;
+  grid-template-columns: 24px 1fr;
+  align-items: center;
+  gap: 0.5rem;
+  line-height: 1.3em;
+  color: #6300ee;
+  margin-bottom: 0.5rem;
+}
+.message-box.maintenance.legend span:before {
+  display: inline-grid;
+  justify-content: center;
+}
+.message-box.maintenance.legend span.construction:before {
+  font: var(--fa-font-light);
+  content: "\f85d";
+  font-size: 1.25em;
+  color: #ffbe2e;
+}
+.message-box.maintenance.legend span.new-feature:before {
+  font: var(--fa-font-sharp-regular);
+  content: "\f06d";
+  font-size: 1.25em;
+  color: #ff1540;
 }
 .message-box .icon {
   padding: 1rem;
@@ -1945,6 +1964,8 @@ HEADER ADMIN - SIDEBAR
   width: 320px;
   height: 100vh;
   overflow-y: scroll;
+  scrollbar-width: thin;
+  scrollbar-color: #8a7b43;
   background-color: white;
   border-right: 3px solid #d5c392;
 }
@@ -2032,7 +2053,7 @@ HEADER ADMIN - SIDEBAR
   font-weight: 600;
   font-size: 1rem;
   line-height: 1.3em;
-  color: #5f6369;
+  color: #52585f;
   transition: all 0.3s ease;
 }
 .sidebar-menu .menu-element span.new-feature:after {
@@ -2097,7 +2118,7 @@ HEADER ADMIN - SIDEBAR
   font-weight: 400;
   font-size: 0.875rem;
   line-height: 1.3em;
-  color: #D0D3D4;
+  color: #8d949b;
   transition: all 0.3s ease;
   text-transform: none;
   letter-spacing: unset;
@@ -2113,11 +2134,11 @@ HEADER ADMIN - SIDEBAR
 }
 .sub-nav .sub-nav-item-el:hover {
   cursor: pointer;
-  color: #141a1f;
+  color: #d5c392;
 }
 .sub-nav .sub-nav-item-el.not-active {
   pointer-events: none;
-  color: #ebf2fa;
+  color: #D0D3D4;
 }
 .sub-nav .sub-nav-item-el.not-active:after {
   content: " (pas dispo)";
@@ -2190,7 +2211,7 @@ FORMS ELEMENT - block, labels, input & cta
   font-weight: 400;
   font-size: 0.875rem;
   line-height: 1em;
-  color: #8d949b;
+  color: #141a1f;
   background-color: #ffbe2e;
 }
 @media (max-width: 767px) {
@@ -2236,6 +2257,14 @@ input[type=date] {
   gap: 1rem;
 }
 
+/************************************
+ADMIN switch buttons
+************************************/
+form.switch-status {
+  display: grid;
+  gap: 0.25rem;
+}
+
 /* Hide the default checkbox */
 .switch-checkbox {
   display: none;
@@ -2245,10 +2274,10 @@ input[type=date] {
 .switch-container {
   display: inline-block;
   position: relative;
-  width: 60px;
-  height: 30px;
+  width: 64px;
+  height: 32px;
   background-color: #ccc; /* Default background color */
-  border-radius: 15px;
+  border-radius: 16px;
   cursor: pointer;
 }
 
@@ -2257,8 +2286,8 @@ input[type=date] {
   position: absolute;
   top: 3px;
   left: 3px;
-  width: 24px;
-  height: 24px;
+  width: 26px;
+  height: 26px;
   background-color: #fff;
   border-radius: 50%;
   transition: transform 0.3s, background-color 0.3s;

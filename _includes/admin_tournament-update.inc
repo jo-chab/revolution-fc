@@ -129,6 +129,10 @@
     
     <div class="dashboard-content">
         
+        <div class="btn-primary cta-add small icon mobile-icon-only i-more js-content-add"><a>Ajouter une categorie</a></div>
+        
+        <?php include("../_includes/admin_tournament_category-add.inc"); ?>
+        
         <ul class="dashboard-list">
             
             <?php
@@ -164,10 +168,6 @@
                     
                 }
             ?>
-            
-            <div class="btn-primary cta-add small icon mobile-icon-only i-more js-content-add"><a>Ajouter une categorie</a></div>
-            
-            <?php include("../_includes/admin_tournament_category-add.inc"); ?>
         
         </ul>
     

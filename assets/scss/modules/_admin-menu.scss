@@ -22,6 +22,8 @@ HEADER ADMIN - SIDEBAR
     width: $sidemenu-width;
     height: 100vh;
     overflow-y: scroll;
+    scrollbar-width: thin;
+    scrollbar-color: $primary-color-darker;
     
     background-color: white;
     border-right: 3px solid $primary-color;
@@ -105,7 +107,7 @@ HEADER ADMIN - SIDEBAR
         @include border-radius-uniform(.5rem);
         
         @include font-family-reading;
-        @include font-style(600, 1rem, 1.3em, $web-grey-4);
+        @include font-style(600, 1rem, 1.3em, $secondary-color-dark);
         transition: all .3s ease;
         
         span.new-feature:after {
@@ -172,7 +174,7 @@ HEADER ADMIN - SIDEBAR
         gap: .5rem;
         
         @include font-family-reading();
-        @include font-style(400, .875rem, 1.3em, $secondary-color-light);
+        @include font-style(400, .875rem, 1.3em, $secondary-color);
         transition: all .3s ease;
         text-transform: none;
         letter-spacing: unset;
@@ -189,12 +191,12 @@ HEADER ADMIN - SIDEBAR
         
         &:hover {
             cursor: pointer;
-            color: $secondary-color-darker;
+            color: $primary-color;
         }
         
         &.not-active {
             pointer-events: none;
-            color: $secondary-color-lighter;
+            color: $secondary-color-light;
             &:after {
                 content: ' (pas dispo)';
             }

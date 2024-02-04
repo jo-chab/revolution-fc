@@ -175,11 +175,34 @@ ALERT MESSAGES in Dashboard
             width: 100%;
             max-width: inherit;
         }
-        
+        .icon {
+            background-color: $color-error;
+            &:before {
+                color: white;
+            }
+        }
+    }
+    &.maintenance.legend {
+        margin-bottom: .5rem;
+        box-shadow: none;
+        .text-content {
+            border: 1px solid $admin-primary;
+            @include border-radius-uniform(.5rem);
+            background: $admin-primary-lighter;
+        }
         span {
-            display: inline-flex;
+            display: grid;
+            grid-template-columns: 24px 1fr;
             align-items: center;
             gap: .5rem;
+            line-height: 1.3em;
+            color: $admin-primary;
+            margin-bottom: .5rem;
+            
+            &:before {
+                display: inline-grid;
+                justify-content: center;
+            }
             
             &.construction:before {
                 font: var(--fa-font-light);
@@ -192,12 +215,6 @@ ALERT MESSAGES in Dashboard
                 content: '\f06d';
                 font-size: 1.25em;
                 color: $color-error;
-            }
-        }
-        .icon {
-            background-color: $color-error;
-            &:before {
-                color: white;
             }
         }
     }

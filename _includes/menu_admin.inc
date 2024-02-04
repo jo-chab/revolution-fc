@@ -14,6 +14,16 @@
 
 
 <ul class="sidebar-menu">
+    
+    <div class='message-box maintenance legend'>
+        <div class="text-content">
+            <p>
+                <span class="new-feature">indique les nouveautés</span>
+                <span class="construction">indique ce qui est en cours mais non fonctionnel !!</span>
+            </p>
+        </div>
+    </div>
+    
     <!--For testing purpose-->
     <?php if (isset($_SESSION['auth']) && $_SESSION['type'] == 6): ?>
         <li class="admin-nav">
@@ -43,10 +53,10 @@
         <div class="menu-element icon i-club-house">Club</div>
         <ul class="sub-nav">
             <li class="sub-nav-item"><a class="sub-nav-item-el" href="?p=5">Informations générales</a></li>
+            <li class="sub-nav-item"><a class="sub-nav-item-el" href="?p=301">Offres d'emplois</a></li>
+            <li class="sub-nav-item"><a class="sub-nav-item-el" href="?p=61">Terrains</a></li>
             <li class="sub-nav-item"><a class="sub-nav-item-el" href="?p=31">Gérer les documents</a></li>
             <li class="sub-nav-item"><a class="sub-nav-item-el" href="?p=33">Gérer les catégories de documents</a></li>
-            <li class="sub-nav-item"><a class="sub-nav-item-el" href="?p=301">Gérer les offres d'emplois</a></li>
-            <li class="sub-nav-item"><a class="sub-nav-item-el" href="?p=61">Gérer les Terrains</a></li>
         </ul>
     </li>
     
