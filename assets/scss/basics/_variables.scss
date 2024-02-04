@@ -66,7 +66,7 @@ $accent-color-darker: #52b59a;
 
 
 /****** TITLES & TEXTS ******/
-$reading-text: $secondary-color;
+$reading-text: $secondary-color-dark;
 
 
 
@@ -95,8 +95,8 @@ $color-error-darker: #c80004;
 $header-height-small: 80px;
 $header-height-large: 120px;
 $bg-header-color: white;
-$bg-sidemenu-color: $secondary-color;
-$bg-footer-color: $secondary-color;
+$bg-sidemenu-color: $secondary-color-dark;
+$bg-footer-color: $secondary-color-darker;
 
 $side-menu-color: white;
 $side-submenu-color: $tertiary-color-1;

@@ -71,10 +71,10 @@
     </li>
     
     <li class="admin-nav">
-        <div class="menu-element icon i-soccer-1">Technique</div>
+        <div class="menu-element icon i-soccer-1"><span class="icon wip">Technique</span></div>
         <ul class="sub-nav">
-            <li class="sub-nav-item"><a class="sub-nav-item-el" href="?p=51">Gérer les Programmes</a></li>
-            <li class="sub-nav-item"><a class="sub-nav-item-el" href="?p=35">Gérer les Documents technique</a></li>
+            <li class="sub-nav-item"><a class="sub-nav-item-el" href="?p=51"><span class="icon wip">Programmes</span></a></li>
+            <li class="sub-nav-item"><a class="sub-nav-item-el" href="?p=35">Documents technique</a></li>
             <li class="sub-nav-item"><a class="sub-nav-item-el" href="?p=37">Gérer les catégories technique</a></li>
             <li class="sub-nav-item"><a class="sub-nav-item-el" href="?p=38">Gérer les sous-catégories technique</a></li>
         </ul>

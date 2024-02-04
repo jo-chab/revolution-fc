@@ -401,7 +401,7 @@ p {
   font-weight: 400;
   font-size: 1.125rem;
   line-height: 1.7em;
-  color: #8d949b;
+  color: #52585f;
   max-width: 960px;
   margin-bottom: 1.5rem;
 }
@@ -964,15 +964,48 @@ ALERT MESSAGES in Dashboard
 .message-box.maintenance:has(+ .maintenance) {
   margin-bottom: 1rem;
 }
-.message-box.maintenance p {
-  width: 100%;
-  max-width: inherit;
-}
 .message-box.maintenance .icon {
   background-color: #ff1540;
 }
 .message-box.maintenance .icon:before {
   color: white;
+}
+.message-box.maintenance p {
+  width: 100%;
+  max-width: inherit;
+}
+.message-box.maintenance p:has(+ p) {
+  margin-bottom: 0.5rem;
+}
+.message-box.maintenance p:has(+ ul) {
+  margin-bottom: 0;
+}
+.message-box.maintenance ul, .message-box.maintenance ol {
+  margin-inline: 1rem;
+  margin-block: 0.25rem;
+}
+.message-box.maintenance ul li, .message-box.maintenance ol li {
+  font-family: "Source Sans 3", sans-serif;
+  font-weight: 400;
+  font-size: 0.875rem;
+  line-height: 1.3em;
+  color: white;
+  margin-bottom: 0.25rem;
+}
+.message-box.maintenance ul li:last-of-type, .message-box.maintenance ol li:last-of-type {
+  margin-bottom: 0;
+}
+.message-box.maintenance ul li {
+  list-style-type: disc;
+}
+.message-box.maintenance ul li li {
+  list-style: circle;
+}
+.message-box.maintenance ol li {
+  list-style-type: decimal;
+}
+.message-box.maintenance ol li li {
+  list-style: lower-alpha;
 }
 .message-box.maintenance.legend {
   margin-bottom: 0.5rem;
@@ -1730,7 +1763,7 @@ Lists
   font-weight: 400;
   font-size: 1.125rem;
   line-height: 1.5em;
-  color: #8d949b;
+  color: #52585f;
   margin-bottom: 0.25rem;
   display: flex;
   align-items: baseline;
@@ -1995,7 +2028,7 @@ HEADER ADMIN - SIDEBAR
   font-weight: 400;
   font-size: 0.875rem;
   line-height: 1.3em;
-  color: #8d949b;
+  color: #52585f;
 }
 .username-title span {
   font-weight: 600;
@@ -2056,11 +2089,6 @@ HEADER ADMIN - SIDEBAR
   color: #52585f;
   transition: all 0.3s ease;
 }
-.sidebar-menu .menu-element span.new-feature:after {
-  font: var(--fa-font-sharp-regular);
-  content: "\f06d";
-  color: #ff1540;
-}
 .sidebar-menu .menu-element:last-of-type {
   margin-bottom: 0;
 }
@@ -2091,6 +2119,16 @@ HEADER ADMIN - SIDEBAR
 .sidebar-menu .menu-element.selected.icon:before {
   background: white;
   border-color: #d3d3d3;
+}
+.sidebar-menu .menu-element span.new-feature:after {
+  font: var(--fa-font-sharp-regular);
+  content: "\f06d";
+  color: #ff1540;
+}
+.sidebar-menu .menu-element span.wip:after {
+  font: var(--fa-font-light);
+  content: "\f85d";
+  color: #ffbe2e;
 }
 
 .sub-nav {
@@ -2142,6 +2180,16 @@ HEADER ADMIN - SIDEBAR
 }
 .sub-nav .sub-nav-item-el.not-active:after {
   content: " (pas dispo)";
+}
+.sub-nav .sub-nav-item-el span.new-feature:after {
+  font: var(--fa-font-sharp-regular);
+  content: "\f06d";
+  color: #ff1540;
+}
+.sub-nav .sub-nav-item-el span.wip:after {
+  font: var(--fa-font-light);
+  content: "\f85d";
+  color: #ffbe2e;
 }
 
 /*
@@ -2276,7 +2324,7 @@ form.switch-status {
   position: relative;
   width: 56px;
   height: 32px;
-  background-color: #ccc; /* Default background color */
+  background-color: #f6e9d5; /* Default background color */
   border-radius: 16px;
   cursor: pointer;
 }
@@ -2294,7 +2342,7 @@ form.switch-status {
 }
 
 .switch-container:has(.switch-checkbox:checked) {
-  background-color: #6300ee;
+  background-color: #a8956c;
 }
 
 .switch-checkbox:checked + .switch-knob {

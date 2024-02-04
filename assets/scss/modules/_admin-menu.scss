@@ -110,12 +110,6 @@ HEADER ADMIN - SIDEBAR
         @include font-style(600, 1rem, 1.3em, $secondary-color-dark);
         transition: all .3s ease;
         
-        span.new-feature:after {
-            font: var(--fa-font-sharp-regular);
-            content: '\f06d';
-            color: $color-error;
-        }
-        
         &:last-of-type {
             margin-bottom: 0;
         }
@@ -147,7 +141,19 @@ HEADER ADMIN - SIDEBAR
                 border-color: $web-grey-2;
             }
         }
+        
+        span.new-feature:after {
+            font: var(--fa-font-sharp-regular);
+            content: '\f06d';
+            color: $color-error;
+        }
+        span.wip:after {
+            font: var(--fa-font-light);
+            content: '\f85d';
+            color: $color-warning;
+        }
     }
+    
 }
 
 .sub-nav {
@@ -201,5 +207,17 @@ HEADER ADMIN - SIDEBAR
                 content: ' (pas dispo)';
             }
         }
+        
+        span.new-feature:after {
+            font: var(--fa-font-sharp-regular);
+            content: '\f06d';
+            color: $color-error;
+        }
+        span.wip:after {
+            font: var(--fa-font-light);
+            content: '\f85d';
+            color: $color-warning;
+        }
+        
     }
 }

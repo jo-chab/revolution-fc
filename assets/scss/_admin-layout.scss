@@ -171,16 +171,54 @@ ALERT MESSAGES in Dashboard
             margin-bottom: 1rem;
         }
         
-        p {
-            width: 100%;
-            max-width: inherit;
-        }
         .icon {
             background-color: $color-error;
             &:before {
                 color: white;
             }
         }
+        
+        p {
+            width: 100%;
+            max-width: inherit;
+            
+            &:has(+ p) {
+                margin-bottom: .5rem;
+            }
+            &:has(+ ul) {
+                margin-bottom: 0;
+            }
+        }
+        
+        ul, ol {
+            margin-inline: 1rem;
+            margin-block: .25rem;
+            
+            li {
+                @include font-family-reading;
+                @include font-style(400, .875rem, 1.3em, white);
+                margin-bottom: .25rem;
+                
+                &:last-of-type {
+                    margin-bottom: 0;
+                }
+            }
+        }
+        
+        ul li {
+            list-style-type: disc;
+            li {
+                list-style: circle;
+            }
+        }
+        
+        ol li {
+            list-style-type: decimal;
+            li {
+                list-style: lower-alpha;
+            }
+        }
+        
     }
     &.maintenance.legend {
         margin-bottom: .5rem;

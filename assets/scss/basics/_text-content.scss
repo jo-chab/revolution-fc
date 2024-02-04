@@ -143,14 +143,16 @@ table {
     th {
         padding: 1rem;
         @include font-family-heading;
-        @include font-style(700, .875rem, 1.5em, $secondary-color);
+        @include font-style(700, .875rem, 1.5em, $secondary-color-darker);
         text-transform: uppercase;
         letter-spacing: 2px;
+        text-align: left;
+        vertical-align: top;
     }
     
     td {
         padding: 1rem;
         @include font-family-reading;
-        @include font-style(400, 1rem, 1.5em, $secondary-color);
+        @include font-style(400, 1rem, 1.5em, $secondary-color-dark);
     }
 }
