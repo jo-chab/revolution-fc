@@ -2274,7 +2274,7 @@ form.switch-status {
 .switch-container {
   display: inline-block;
   position: relative;
-  width: 64px;
+  width: 56px;
   height: 32px;
   background-color: #ccc; /* Default background color */
   border-radius: 16px;
@@ -2298,7 +2298,7 @@ form.switch-status {
 }
 
 .switch-checkbox:checked + .switch-knob {
-  transform: translateX(30px);
+  transform: translateX(23px);
 }
 
 /*
