@@ -21,6 +21,15 @@
         margin-bottom: 3rem;
     }
     
+    &.split-full {
+        justify-content: space-between;
+        margin:0 0 2rem;
+        * {
+            margin: 0 !important;
+            margin: 0 !important;
+        }
+    }
+    
 }
 
 .inactive > * {
@@ -170,6 +179,7 @@ form.content-delete {
     display: flex;
     flex-direction: column;
     gap: 2rem;
+    position: relative;
     @include tablet {
         gap: 1rem;
     }
@@ -246,6 +256,29 @@ form.content-delete {
         
         &.user-hide {
             display: none;
+        }
+    }
+    
+    li.is-draggable {
+        padding-left: 2rem;
+        opacity: .6;
+        cursor: move;
+        
+        &:before {
+            position: absolute;
+            left: 0;
+            
+            display: inline-flex;
+            text-rendering: auto;
+            -webkit-font-smoothing: antialiased;
+            font-size: 1em;
+            
+            font: var(--fa-font-sharp-solid);
+            content: '\f0b2';
+        }
+        
+        .list-cta {
+            pointer-events: none;
         }
     }
     

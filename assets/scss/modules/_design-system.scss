@@ -294,7 +294,8 @@ DESIGN SYSTEM – Buttons
     &.btn-cancel,
     &.btn-disable,
     &.btn-activate,
-    &.btn-revert {
+    &.btn-revert,
+    &.btn-edit {
         background-color: rgb(238, 241, 247);
         color: rgb(67, 76, 87);
         @include tablet {
@@ -302,6 +303,11 @@ DESIGN SYSTEM – Buttons
                 color: $color-error;
             }
         }
+    }
+    
+    &.btn-edit.is-active {
+        background: $color-error;
+        color: white;
     }
     
     &.btn-card {

@@ -623,6 +623,27 @@ p:has(+ p) {
   content: "\f06a";
 }
 
+.i-winter:before {
+  font: var(--fa-font-sharp-light);
+  content: "\f2dc";
+  padding: 0.5rem;
+  background: #03dac4;
+  color: white;
+}
+
+.i-summer:before {
+  font: var(--fa-font-sharp-light);
+  content: "\e28f";
+  padding: 0.5rem;
+  background: #ffbe2e;
+  color: white;
+}
+
+.i-summer.i-winter:before {
+  content: "\f111";
+  background: linear-gradient(#03dac4, #ffbe2e);
+}
+
 /******************************************
 ADMIN ICONS
 ******************************************/
@@ -812,6 +833,15 @@ ADMIN ICONS
   font: var(--fa-font-regular);
   content: "\f058";
   font-size: 1.25em;
+}
+
+.i-edit:before {
+  font: var(--fa-font-regular);
+  content: "\f0dc";
+  font-size: 1.25em;
+}
+.i-edit.is-active:before {
+  content: "\f0c7";
 }
 
 /*
@@ -1082,14 +1112,18 @@ DESIGN SYSTEM – Buttons
     background-color: #00bd60;
   }
 }
-.btn-primary.btn-delete, .btn-primary.btn-cancel, .btn-primary.btn-disable, .btn-primary.btn-activate, .btn-primary.btn-revert {
+.btn-primary.btn-delete, .btn-primary.btn-cancel, .btn-primary.btn-disable, .btn-primary.btn-activate, .btn-primary.btn-revert, .btn-primary.btn-edit {
   background-color: rgb(238, 241, 247);
   color: rgb(67, 76, 87);
 }
 @media (min-width: 768px) {
-  .btn-primary.btn-delete:hover, .btn-primary.btn-cancel:hover, .btn-primary.btn-disable:hover, .btn-primary.btn-activate:hover, .btn-primary.btn-revert:hover {
+  .btn-primary.btn-delete:hover, .btn-primary.btn-cancel:hover, .btn-primary.btn-disable:hover, .btn-primary.btn-activate:hover, .btn-primary.btn-revert:hover, .btn-primary.btn-edit:hover {
     color: #ff1540;
   }
+}
+.btn-primary.btn-edit.is-active {
+  background: #ff1540;
+  color: white;
 }
 .btn-primary.btn-card {
   color: rgb(238, 241, 247);

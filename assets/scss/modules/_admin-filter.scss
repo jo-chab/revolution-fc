@@ -7,3 +7,46 @@
 *
 */
 
+.w-filter {
+    display: flex;
+    gap: .5rem;
+    align-items: center;
+    justify-content: flex-start;
+    padding-bottom: 2rem;
+    border-bottom: 2px solid $secondary-color-light;
+    margin-bottom:2rem;
+}
+
+.filter-label {
+    @extend .button;
+    gap: .5rem;
+    padding: .5rem 1rem;
+    
+    @include font-style(600, 1.125rem, 1em, $admin-primary);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border: 1px solid $admin-primary;
+    @include border-radius-uniform(.25rem);
+    
+    &:hover {
+        color: $admin-primary-dark;
+        background: $admin-primary-lighter;
+        border-color: $admin-primary-dark;
+    }
+    
+    &.is-active {
+        background: $admin-primary-dark;
+        border-color: $admin-primary-dark;
+        color: white;
+        &:hover {
+            background: $admin-primary-darker;
+            border-color: $admin-primary-darker;
+        }
+        &:before {
+            font: var(--fa-font-sharp-regular);
+            content: '\f00d';
+            font-size: 1em;
+        }
+    }
+    
+}

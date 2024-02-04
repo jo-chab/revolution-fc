@@ -182,6 +182,25 @@
     }
 }
 
+.i-winter:before {
+    font: var(--fa-font-sharp-light);
+    content: '\f2dc';
+    padding: .5rem;
+    background: $admin-secondary;
+    color: white;
+}
+.i-summer:before {
+    font: var(--fa-font-sharp-light);
+    content: '\e28f';
+    padding: .5rem;
+    background: $color-warning;
+    color: white;
+}
+.i-summer.i-winter:before {
+    content: '\f111';
+    background: linear-gradient($admin-secondary, $color-warning);
+}
+
 
 /******************************************
 ADMIN ICONS
@@ -409,5 +428,16 @@ ADMIN ICONS
     font: var(--fa-font-regular);
     content: '\f058';
     font-size: 1.25em;
+}
+
+.i-edit {
+    &:before {
+        font: var(--fa-font-regular);
+        content: '\f0dc';
+        font-size: 1.25em;
+    }
+    &.is-active:before {
+        content: '\f0c7';
+    }
 }
 
