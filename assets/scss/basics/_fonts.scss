@@ -88,7 +88,7 @@ h2 {
 
 h3 {
     @include font-family-heading();
-    @include font-style(600, 1.25rem, 1.3em, $secondary-color);
+    @include font-style(600, 1.25rem, 1.3em, $secondary-color-dark);
     @include mobile-xlarge {
         font-size: 1.5rem;
     }
@@ -111,7 +111,7 @@ h3 {
 
 h4 {
     @include font-family-heading();
-    @include font-style(600, 1.125rem, 1.5em, $secondary-color);
+    @include font-style(600, 1.125rem, 1.5em, $secondary-color-dark);
     @include mobile-xlarge {
         font-size: 1.25rem;
     }
@@ -142,7 +142,7 @@ h4 {
 
 h5 {
     @include font-family-reading();
-    @include font-style(400, .875rem, 1.5em, $secondary-color);
+    @include font-style(400, .875rem, 1.5em, $secondary-color-dark);
     @include mobile-xlarge {
         font-size: 1rem;
     }
@@ -150,7 +150,7 @@ h5 {
 
 h6 {
     @include font-family-reading();
-    @include font-style(400, .75rem, 1.5em, $secondary-color);
+    @include font-style(400, .75rem, 1.5em, $secondary-color-darker);
 }
 
 

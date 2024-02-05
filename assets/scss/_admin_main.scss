@@ -287,6 +287,7 @@ form.content-delete {
         flex-direction: row;
         gap: 1rem;
         align-items: center;
+        pointer-events: initial;
         @include mobile-max {
             justify-content: center;
         }
@@ -343,10 +344,11 @@ USERS
 .user-name {
     width: 100%;
     @include font-family-heading;
-    @include font-style(400, .875rem, 1em, $secondary-color);
+    @include font-style(400, .875rem, 1em, $secondary-color-dark);
     
     span {
         font-weight: 600;
+        color: $secondary-color-darker;
     }
 }
 
@@ -358,7 +360,7 @@ USERS
         background-color: $admin-primary-lighter;
         border-radius: 2rem;
         @include font-family-heading;
-        @include font-style(400, .75rem, 1em, $secondary-color);
+        @include font-style(400, .75rem, 1em, $admin-primary);
         transition: all .3s ease;
         
         &:hover {

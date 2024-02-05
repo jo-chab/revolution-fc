@@ -206,14 +206,14 @@
 ADMIN ICONS
 ******************************************/
 .has-sub:after {
-    font: var(--fa-font-regular);
+    font: var(--fa-font-light);
     content: '\f078';
     transform: rotate(0);
     transition: transform .3s ease;
 }
 
 .i-test:before {
-    font: var(--fa-font-regular);
+    font: var(--fa-font-light);
     content: '\e5f1';
 }
 
@@ -233,7 +233,7 @@ ADMIN ICONS
 // NEWS
 .i-news {
     &:before {
-        font: var(--fa-font-regular);
+        font: var(--fa-font-light);
         content: '\f1ea';
     }
     &-add:before {
@@ -249,7 +249,7 @@ ADMIN ICONS
 // Users
 .i-user {
     &:before {
-        font: var(--fa-font-regular);
+        font: var(--fa-font-light);
         content: '\f0c0';
     }
     
@@ -261,7 +261,7 @@ ADMIN ICONS
 
 .i-club-house {
     &:before {
-        font: var(--fa-font-regular);
+        font: var(--fa-font-light);
         content: '\e1b4';
     }
 }
@@ -269,7 +269,7 @@ ADMIN ICONS
 // Tournament
 .i-tournament {
     &:before {
-        font: var(--fa-font-regular);
+        font: var(--fa-font-light);
         content: '\f5a2';
     }
 }
@@ -277,7 +277,7 @@ ADMIN ICONS
 // Events
 .i-events {
     &:before {
-        font: var(--fa-font-regular);
+        font: var(--fa-font-light);
         content: '\f073';
     }
     
@@ -290,7 +290,7 @@ ADMIN ICONS
 // Sponsors
 .i-sponsors {
     &:before {
-        font: var(--fa-font-regular);
+        font: var(--fa-font-light);
         content: '\f81d';
     }
     
@@ -309,7 +309,7 @@ ADMIN ICONS
 // CONFIG
 .i-config {
     &:before {
-        font: var(--fa-font-regular);
+        font: var(--fa-font-light);
         content: '\f013';
     }
     &-home:before {
@@ -337,7 +337,7 @@ ADMIN ICONS
 .i-flash {
     &:before,
     &:after {
-        font: var(--fa-font-regular);
+        font: var(--fa-font-light);
         content: '\f0e7';
         font-size: 1.25em;
     }
@@ -345,7 +345,7 @@ ADMIN ICONS
 
 .i-info {
     &:before {
-        font: var(--fa-font-regular);
+        font: var(--fa-font-light);
         content: '\f05a';
         font-size: 1.25em;
     }
@@ -354,7 +354,7 @@ ADMIN ICONS
 .i-emergency {
     &:before,
     &:after {
-        font: var(--fa-font-regular);
+        font: var(--fa-font-light);
         content: '\e02e';
         font-size: 1.25em;
     }
@@ -366,17 +366,17 @@ ADMIN ICONS
 }
 
 .i-arrow:after {
-    font: var(--fa-font-regular);
+    font: var(--fa-font-light);
     content: '\f178';
 }
 
 .i-map:before {
-    font: var(--fa-font-regular);
+    font: var(--fa-font-light);
     content: '\f3c5';
 }
 
 .i-download:before {
-    font: var(--fa-font-regular);
+    font: var(--fa-font-light);
     content: '\f33d';
 }
 
@@ -388,51 +388,51 @@ ADMIN ICONS
 
 // BTN icon on ADMIN
 .btn-disable:before {
-    font: var(--fa-font-regular);
+    font: var(--fa-font-light);
     content: '\f070';
     font-size: 1.25em;
 }
 
 .btn-activate:before {
-    font: var(--fa-font-regular);
+    font: var(--fa-font-light);
     content: '\f06e';
     font-size: 1.25em;
 }
 
 .btn-delete:before {
-    font: var(--fa-font-regular);
+    font: var(--fa-font-light);
     content: '\f2ed';
     font-size: 1.25em;
 }
 
 .btn-cancel:before {
-    font: var(--fa-font-regular);
+    font: var(--fa-font-light);
     content: '\f057';
     font-size: 1.25em;
 }
 
 .btn-update:before {
-    font: var(--fa-font-regular);
+    font: var(--fa-font-light);
     content: '\f044';
     font-size: 1.25em;
 }
 
 .btn-revert:before {
-    font: var(--fa-font-regular);
+    font: var(--fa-font-light);
     content: '\f12d';
     font-size: 1.25em;
 }
 
 .btn-confirm:before,
 .btn-validate:before {
-    font: var(--fa-font-regular);
+    font: var(--fa-font-light);
     content: '\f058';
     font-size: 1.25em;
 }
 
 .i-edit {
     &:before {
-        font: var(--fa-font-regular);
+        font: var(--fa-font-light);
         content: '\f0dc';
         font-size: 1.25em;
     }

@@ -16,7 +16,7 @@
     width: 100%;
     
     thead {
-        background: $secondary-color-lighter;
+        background: $primary-color-lighter;
         @include mobile-max {
             display: none;
         }

@@ -67,3 +67,38 @@
         updateButton.classList.remove('is-not-active');
     });
 
+
+
+
+    function confirmDelete() {
+        return confirm("Êtes-vous sûr de vouloir supprimer cet élément ? Cette action est irréversible !");
+    }
+
+
+    const inputs = document.querySelectorAll(".prefilled");
+    function handleClick(event) {
+        event.target.classList.remove("prefilled");
+    }
+    inputs.forEach((input) => {
+        input.addEventListener("click", handleClick);
+    });
+
+    $(document).ready(function() {
+        $('.btn-update, .btn-disable, .btn-activate, .btn-validate, .btn-confirm').click(function() {
+            $(this).closest('form').submit();
+        });
+
+        $('.btn-delete').click(function() {
+            if (confirmDelete()) {
+                $(this).closest('form').submit();
+            }
+        });
+
+        // Handle the click event for the "Revert" button
+        $('.btn-revert').click(function() {
+            // Reset the form to its initial state
+            $(this).closest('form')[0].reset();
+        });
+
+    });
+

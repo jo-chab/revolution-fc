@@ -46,7 +46,7 @@ Lists
 	}
 	.job-infos {
 		p {
-			@include font-style(300, 1rem, 1.3em, $secondary-color-light);
+			@include font-style(300, 1rem, 1.3em, $secondary-color);
 			@include line-clamp(3);
 		}
 	}

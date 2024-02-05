@@ -62,6 +62,17 @@ section {
         grid-template-columns: 1fr 1fr 1fr;
     }
 }
+.flex-layout {
+    display: flex;
+    gap: 2.5rem;
+    
+    &.column {
+        flex-direction: column;
+    }
+    &.row {
+        flex-flow: row wrap;
+    }
+}
 
 
 

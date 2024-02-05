@@ -18,8 +18,8 @@
     <div class='message-box maintenance legend'>
         <div class="text-content">
             <p>
-                <span class="new-feature">indique les nouveautés</span>
-                <span class="construction">indique ce qui est en cours mais non fonctionnel !!</span>
+                <span class="new-feature">Nouvelle fonctionnalité</span>
+                <span class="construction">Fonctionnalité en développement</span>
             </p>
         </div>
     </div>
@@ -71,9 +71,9 @@
     </li>
     
     <li class="admin-nav">
-        <div class="menu-element icon i-soccer-1"><span class="icon wip">Technique</span></div>
+        <div class="menu-element icon i-soccer-1"><span class="icon new-feature">Technique</span></div>
         <ul class="sub-nav">
-            <li class="sub-nav-item"><a class="sub-nav-item-el" href="?p=51"><span class="icon wip">Programmes</span></a></li>
+            <li class="sub-nav-item"><a class="sub-nav-item-el" href="?p=51"><span class="icon new-feature">Programmes</span></a></li>
             <li class="sub-nav-item"><a class="sub-nav-item-el" href="?p=35">Documents technique</a></li>
             <li class="sub-nav-item"><a class="sub-nav-item-el" href="?p=37">Gérer les catégories technique</a></li>
             <li class="sub-nav-item"><a class="sub-nav-item-el" href="?p=38">Gérer les sous-catégories technique</a></li>

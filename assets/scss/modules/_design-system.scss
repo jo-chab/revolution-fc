@@ -238,13 +238,12 @@ DESIGN SYSTEM – Buttons
 .btn-primary {
     @extend .button;
     padding: 1.25rem 2rem;
-    @include font-style(400, 1.125rem, 1em, white);
+    @include font-style(400, 1rem, 1em, white);
     background-color: $primary-color;
+    text-transform: uppercase;
+    letter-spacing: 2px;
     @include mobile-max {
         padding: 1rem;
-    }
-    @include tablet {
-        font-size: 1.25rem;
     }
     
     @include tablet {
@@ -259,10 +258,10 @@ DESIGN SYSTEM – Buttons
     }
     
     &.btn-update {
-        background-color: $color-error;
+        background-color: $admin-primary;
         @include tablet {
             &:hover {
-                background-color: $color-error-dark;
+                background-color: $admin-primary-darker;
             }
         }
     }
@@ -279,7 +278,8 @@ DESIGN SYSTEM – Buttons
             }
         }
     }
-    &.btn-confirm {
+    &.btn-confirm,
+    &.btn-validate {
         background-color: $color-success;
         color: $color-success-darker;
         justify-self: center;
@@ -296,8 +296,8 @@ DESIGN SYSTEM – Buttons
     &.btn-activate,
     &.btn-revert,
     &.btn-edit {
-        background-color: rgb(238, 241, 247);
-        color: rgb(67, 76, 87);
+        background-color: $admin-update;
+        color: $admin-update-2;
         @include tablet {
             &:hover {
                 color: $color-error;
@@ -329,6 +329,11 @@ DESIGN SYSTEM – Buttons
                 background-color: $color-warning-dark;
             }
         }
+        &:before {
+            font: var(--fa-font-sharp-regular);
+            content: '\f344';
+            font-size: .875em;
+        }
     }
     
     span.is-hide-mobile {
@@ -339,8 +344,11 @@ DESIGN SYSTEM – Buttons
 }
 .btn-secondary {
     @extend .button;
+    
     padding: 1.25rem 2rem;
-    @include font-style(400, 1.125em, 1em, $secondary-color);
+    @include font-style(400, 1rem, 1em, $secondary-color);
+    text-transform: uppercase;
+    letter-spacing: 2px;
     border: 1px solid $secondary-color;
     @include mobile-max {
         padding: 1rem;
@@ -351,23 +359,67 @@ DESIGN SYSTEM – Buttons
     
     @include tablet {
         &:hover {
-            border-color: darken($secondary-color, 15%);
-            color: darken($secondary-color, 15%);
+            border-color: $secondary-color-darker;
+            color: $secondary-color-darker;
         }
     }
     
     &.small {
-        font-size: .875rem;
+        font-size: .75rem;
         padding: .75rem 1.25rem;
     }
+    &.large {
+        font-size: 1.25rem;
+    }
     
+    &.btn-brand {
+        border-color: $primary-color;
+        color: $primary-color;
+        
+        &:hover {
+            border-color: $primary-color-darker;
+            color: $primary-color-darker;
+        }
+    }
+    &.ghost-brand {
+        border-color: $primary-color;
+        color: $primary-color;
+        
+        &:hover {
+            background: $primary-color-darker;
+            border-color: $primary-color-darker;
+            color: white;
+        }
+    }
     &.ghost-white {
         color: white;
         border-color: white;
         
         &:hover {
             background-color: white;
-            color: $secondary-color;
+            color: $secondary-color-dark;
+        }
+    }
+    
+    &.cta-add {
+        border-color: $color-success;
+        color: $color-success;
+        &:hover {
+            border-color: $color-success-darker;
+            color: $color-success-darker;
+        }
+    }
+    
+    &.btn-delete,
+    &.btn-cancel,
+    &.btn-disable,
+    &.btn-activate,
+    &.btn-revert {
+        border-color: $secondary-color;
+        color: $secondary-color;
+        &:hover {
+            border-color: $color-error;
+            color: $color-error;
         }
     }
     

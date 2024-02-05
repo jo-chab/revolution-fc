@@ -2,31 +2,50 @@
 *
 * LOCATION: [scss]
 * FOLDER: [modules]
-* FILE NAME: [admin-filter.scss]
+* FILE NAME: [admin-tollbar.scss]
 * DESCRIPTION: Styling for the filter tag in the admin section
 *
 */
 
-.w-filter {
-    display: flex;
-    gap: .5rem;
-    align-items: center;
-    justify-content: flex-start;
+
+.w-toolbar {
+    display: grid;
+    gap: 1rem
+;
     padding-bottom: 2rem;
     border-bottom: 2px solid $secondary-color-light;
     margin-bottom:2rem;
+    
+    .toolbar-title {
+        flex-grow: 1;
+        flex-basis: 100%;
+        margin: 0;
+    }
 }
 
+
+
+.w-filter,
+.w-legend {
+    display: flex;
+    flex-flow: row wrap;
+    gap: 1rem;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+
+
+
+// Filter
 .filter-label {
     @extend .button;
     gap: .5rem;
-    padding: .5rem 1rem;
+    padding: .75rem 1.25rem;
     
-    @include font-style(600, 1.125rem, 1em, $admin-primary);
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    border: 1px solid $admin-primary;
-    @include border-radius-uniform(.25rem);
+    @include font-style(400, 1.125rem, 1em, $secondary-color);
+    border: 1px solid $secondary-color;
+    @include border-radius-uniform(.5rem);
     
     &:hover {
         color: $admin-primary-dark;
@@ -49,4 +68,14 @@
         }
     }
     
+}
+
+
+
+// Legend
+.legend-title {
+    @include font-family-reading;
+    @include font-style(400, .75rem, 1em, $secondary-color);
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }

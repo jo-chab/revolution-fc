@@ -299,7 +299,7 @@ h3 {
   font-weight: 600;
   font-size: 1.25rem;
   line-height: 1.3em;
-  color: #8d949b;
+  color: #52585f;
   margin-bottom: 1rem;
 }
 @media (min-width: 620px) {
@@ -336,7 +336,7 @@ h4 {
   font-weight: 600;
   font-size: 1.125rem;
   line-height: 1.5em;
-  color: #8d949b;
+  color: #52585f;
 }
 @media (min-width: 620px) {
   h4 {
@@ -371,7 +371,7 @@ h5 {
   font-weight: 400;
   font-size: 0.875rem;
   line-height: 1.5em;
-  color: #8d949b;
+  color: #52585f;
 }
 @media (min-width: 620px) {
   h5 {
@@ -384,7 +384,7 @@ h6 {
   font-weight: 400;
   font-size: 0.75rem;
   line-height: 1.5em;
-  color: #8d949b;
+  color: #141a1f;
 }
 
 .text-dates {
@@ -648,14 +648,14 @@ p:has(+ p) {
 ADMIN ICONS
 ******************************************/
 .has-sub:after {
-  font: var(--fa-font-regular);
+  font: var(--fa-font-light);
   content: "\f078";
   transform: rotate(0);
   transition: transform 0.3s ease;
 }
 
 .i-test:before {
-  font: var(--fa-font-regular);
+  font: var(--fa-font-light);
   content: "\e5f1";
 }
 
@@ -669,7 +669,7 @@ ADMIN ICONS
 }
 
 .i-news:before {
-  font: var(--fa-font-regular);
+  font: var(--fa-font-light);
   content: "\f1ea";
 }
 .i-news-add:before {
@@ -682,7 +682,7 @@ ADMIN ICONS
 }
 
 .i-user:before {
-  font: var(--fa-font-regular);
+  font: var(--fa-font-light);
   content: "\f0c0";
 }
 .i-user-manage:before {
@@ -691,17 +691,17 @@ ADMIN ICONS
 }
 
 .i-club-house:before {
-  font: var(--fa-font-regular);
+  font: var(--fa-font-light);
   content: "\e1b4";
 }
 
 .i-tournament:before {
-  font: var(--fa-font-regular);
+  font: var(--fa-font-light);
   content: "\f5a2";
 }
 
 .i-events:before {
-  font: var(--fa-font-regular);
+  font: var(--fa-font-light);
   content: "\f073";
 }
 .i-events-manage:before {
@@ -710,7 +710,7 @@ ADMIN ICONS
 }
 
 .i-sponsors:before {
-  font: var(--fa-font-regular);
+  font: var(--fa-font-light);
   content: "\f81d";
 }
 .i-sponsors-manage:before {
@@ -725,7 +725,7 @@ ADMIN ICONS
 }
 
 .i-config:before {
-  font: var(--fa-font-regular);
+  font: var(--fa-font-light);
   content: "\f013";
 }
 .i-config-home:before {
@@ -750,19 +750,19 @@ ADMIN ICONS
 }
 
 .i-flash:before, .i-flash:after {
-  font: var(--fa-font-regular);
+  font: var(--fa-font-light);
   content: "\f0e7";
   font-size: 1.25em;
 }
 
 .i-info:before {
-  font: var(--fa-font-regular);
+  font: var(--fa-font-light);
   content: "\f05a";
   font-size: 1.25em;
 }
 
 .i-emergency:before, .i-emergency:after {
-  font: var(--fa-font-regular);
+  font: var(--fa-font-light);
   content: "\e02e";
   font-size: 1.25em;
 }
@@ -773,17 +773,17 @@ ADMIN ICONS
 }
 
 .i-arrow:after {
-  font: var(--fa-font-regular);
+  font: var(--fa-font-light);
   content: "\f178";
 }
 
 .i-map:before {
-  font: var(--fa-font-regular);
+  font: var(--fa-font-light);
   content: "\f3c5";
 }
 
 .i-download:before {
-  font: var(--fa-font-regular);
+  font: var(--fa-font-light);
   content: "\f33d";
 }
 
@@ -793,50 +793,50 @@ ADMIN ICONS
 }
 
 .btn-disable:before {
-  font: var(--fa-font-regular);
+  font: var(--fa-font-light);
   content: "\f070";
   font-size: 1.25em;
 }
 
 .btn-activate:before {
-  font: var(--fa-font-regular);
+  font: var(--fa-font-light);
   content: "\f06e";
   font-size: 1.25em;
 }
 
 .btn-delete:before {
-  font: var(--fa-font-regular);
+  font: var(--fa-font-light);
   content: "\f2ed";
   font-size: 1.25em;
 }
 
 .btn-cancel:before {
-  font: var(--fa-font-regular);
+  font: var(--fa-font-light);
   content: "\f057";
   font-size: 1.25em;
 }
 
 .btn-update:before {
-  font: var(--fa-font-regular);
+  font: var(--fa-font-light);
   content: "\f044";
   font-size: 1.25em;
 }
 
 .btn-revert:before {
-  font: var(--fa-font-regular);
+  font: var(--fa-font-light);
   content: "\f12d";
   font-size: 1.25em;
 }
 
 .btn-confirm:before,
 .btn-validate:before {
-  font: var(--fa-font-regular);
+  font: var(--fa-font-light);
   content: "\f058";
   font-size: 1.25em;
 }
 
 .i-edit:before {
-  font: var(--fa-font-regular);
+  font: var(--fa-font-light);
   content: "\f0dc";
   font-size: 1.25em;
 }
@@ -890,6 +890,17 @@ section {
   .grid-layout-3 {
     grid-template-columns: 1fr 1fr 1fr;
   }
+}
+
+.flex-layout {
+  display: flex;
+  gap: 2.5rem;
+}
+.flex-layout.column {
+  flex-direction: column;
+}
+.flex-layout.row {
+  flex-flow: row wrap;
 }
 
 /*******************************************************
@@ -1337,19 +1348,16 @@ DESIGN SYSTEM – Buttons
 .btn-primary {
   padding: 1.25rem 2rem;
   font-weight: 400;
-  font-size: 1.125rem;
+  font-size: 1rem;
   line-height: 1em;
   color: white;
   background-color: #d5c392;
+  text-transform: uppercase;
+  letter-spacing: 2px;
 }
 @media (max-width: 767px) {
   .btn-primary {
     padding: 1rem;
-  }
-}
-@media (min-width: 768px) {
-  .btn-primary {
-    font-size: 1.25rem;
   }
 }
 @media (min-width: 768px) {
@@ -1362,11 +1370,11 @@ DESIGN SYSTEM – Buttons
   padding: 0.75rem 1.25rem;
 }
 .btn-primary.btn-update {
-  background-color: #ff1540;
+  background-color: #6300ee;
 }
 @media (min-width: 768px) {
   .btn-primary.btn-update:hover {
-    background-color: #e4001b;
+    background-color: #3700b3;
   }
 }
 .btn-primary.cta-add {
@@ -1381,19 +1389,19 @@ DESIGN SYSTEM – Buttons
     color: #00732e;
   }
 }
-.btn-primary.btn-confirm {
+.btn-primary.btn-confirm, .btn-primary.btn-validate {
   background-color: #00E676;
   color: #00732e;
   justify-self: center;
 }
 @media (min-width: 768px) {
-  .btn-primary.btn-confirm:hover {
+  .btn-primary.btn-confirm:hover, .btn-primary.btn-validate:hover {
     background-color: #00bd60;
   }
 }
 .btn-primary.btn-delete, .btn-primary.btn-cancel, .btn-primary.btn-disable, .btn-primary.btn-activate, .btn-primary.btn-revert, .btn-primary.btn-edit {
-  background-color: rgb(238, 241, 247);
-  color: rgb(67, 76, 87);
+  background-color: #eef1f7;
+  color: #434C57;
 }
 @media (min-width: 768px) {
   .btn-primary.btn-delete:hover, .btn-primary.btn-cancel:hover, .btn-primary.btn-disable:hover, .btn-primary.btn-activate:hover, .btn-primary.btn-revert:hover, .btn-primary.btn-edit:hover {
@@ -1422,6 +1430,11 @@ DESIGN SYSTEM – Buttons
     background-color: #e5a000;
   }
 }
+.btn-primary.cta-back:before {
+  font: var(--fa-font-sharp-regular);
+  content: "\f344";
+  font-size: 0.875em;
+}
 @media (max-width: 767px) {
   .btn-primary span.is-hide-mobile {
     display: none;
@@ -1431,9 +1444,11 @@ DESIGN SYSTEM – Buttons
 .btn-secondary {
   padding: 1.25rem 2rem;
   font-weight: 400;
-  font-size: 1.125em;
+  font-size: 1rem;
   line-height: 1em;
   color: #8d949b;
+  text-transform: uppercase;
+  letter-spacing: 2px;
   border: 1px solid #8d949b;
 }
 @media (max-width: 767px) {
@@ -1448,13 +1463,33 @@ DESIGN SYSTEM – Buttons
 }
 @media (min-width: 768px) {
   .btn-secondary:hover {
-    border-color: #676e75;
-    color: #676e75;
+    border-color: #141a1f;
+    color: #141a1f;
   }
 }
 .btn-secondary.small {
-  font-size: 0.875rem;
+  font-size: 0.75rem;
   padding: 0.75rem 1.25rem;
+}
+.btn-secondary.large {
+  font-size: 1.25rem;
+}
+.btn-secondary.btn-brand {
+  border-color: #d5c392;
+  color: #d5c392;
+}
+.btn-secondary.btn-brand:hover {
+  border-color: #8a7b43;
+  color: #8a7b43;
+}
+.btn-secondary.ghost-brand {
+  border-color: #d5c392;
+  color: #d5c392;
+}
+.btn-secondary.ghost-brand:hover {
+  background: #8a7b43;
+  border-color: #8a7b43;
+  color: white;
 }
 .btn-secondary.ghost-white {
   color: white;
@@ -1462,7 +1497,23 @@ DESIGN SYSTEM – Buttons
 }
 .btn-secondary.ghost-white:hover {
   background-color: white;
+  color: #52585f;
+}
+.btn-secondary.cta-add {
+  border-color: #00E676;
+  color: #00E676;
+}
+.btn-secondary.cta-add:hover {
+  border-color: #00732e;
+  color: #00732e;
+}
+.btn-secondary.btn-delete, .btn-secondary.btn-cancel, .btn-secondary.btn-disable, .btn-secondary.btn-activate, .btn-secondary.btn-revert {
+  border-color: #8d949b;
   color: #8d949b;
+}
+.btn-secondary.btn-delete:hover, .btn-secondary.btn-cancel:hover, .btn-secondary.btn-disable:hover, .btn-secondary.btn-activate:hover, .btn-secondary.btn-revert:hover {
+  border-color: #ff1540;
+  color: #ff1540;
 }
 .alert-message.alert-error .btn-secondary {
   color: #ff1540;
@@ -2387,33 +2438,43 @@ form.switch-status {
 *
 * LOCATION: [scss]
 * FOLDER: [modules]
-* FILE NAME: [admin-filter.scss]
+* FILE NAME: [admin-tollbar.scss]
 * DESCRIPTION: Styling for the filter tag in the admin section
 *
 */
-.w-filter {
-  display: flex;
-  gap: 0.5rem;
-  align-items: center;
-  justify-content: flex-start;
+.w-toolbar {
+  display: grid;
+  gap: 1rem;
   padding-bottom: 2rem;
   border-bottom: 2px solid #D0D3D4;
   margin-bottom: 2rem;
 }
+.w-toolbar .toolbar-title {
+  flex-grow: 1;
+  flex-basis: 100%;
+  margin: 0;
+}
+
+.w-filter,
+.w-legend {
+  display: flex;
+  flex-flow: row wrap;
+  gap: 1rem;
+  align-items: center;
+  justify-content: flex-start;
+}
 
 .filter-label {
   gap: 0.5rem;
-  padding: 0.5rem 1rem;
-  font-weight: 600;
+  padding: 0.75rem 1.25rem;
+  font-weight: 400;
   font-size: 1.125rem;
   line-height: 1em;
-  color: #6300ee;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  border: 1px solid #6300ee;
-  -webkit-border-radius: 0.25rem;
-  -moz-border-radius: 0.25rem;
-  border-radius: 0.25rem;
+  color: #8d949b;
+  border: 1px solid #8d949b;
+  -webkit-border-radius: 0.5rem;
+  -moz-border-radius: 0.5rem;
+  border-radius: 0.5rem;
 }
 .filter-label:hover {
   color: #5300e8;
@@ -2433,6 +2494,16 @@ form.switch-status {
   font: var(--fa-font-sharp-regular);
   content: "\f00d";
   font-size: 1em;
+}
+
+.legend-title {
+  font-family: "Source Sans 3", sans-serif;
+  font-weight: 400;
+  font-size: 0.75rem;
+  line-height: 1em;
+  color: #8d949b;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
 /*
@@ -2721,6 +2792,7 @@ form.content-delete {
   flex-direction: row;
   gap: 1rem;
   align-items: center;
+  pointer-events: initial;
 }
 @media (max-width: 767px) {
   .dashboard-list .list-cta {
@@ -2776,10 +2848,11 @@ USERS
   font-weight: 400;
   font-size: 0.875rem;
   line-height: 1em;
-  color: #8d949b;
+  color: #52585f;
 }
 .user-name span {
   font-weight: 600;
+  color: #141a1f;
 }
 
 .cta-user input[type=submit] {
@@ -2792,7 +2865,7 @@ USERS
   font-weight: 400;
   font-size: 0.75rem;
   line-height: 1em;
-  color: #8d949b;
+  color: #6300ee;
   transition: all 0.3s ease;
 }
 .cta-user input[type=submit]:hover {
