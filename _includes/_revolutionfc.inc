@@ -8,14 +8,24 @@
     
     
     try {
-        
         $db = new PDO("mysql:host={$host};dbname=$base;charset=utf8", $login, $pass);
     } catch (PDOException $e) {
-        
         echo 'Error connecting to the Database';
-        
     }
     
+    
+    
+    // Config club du site
+    $stmtConfig = "SELECT * FROM CONFIG_admin LIMIT 1";
+    $resultConfig = $db->query($stmtConfig);
+    
+    if ($resultConfig->rowCount() > 0) {
+        $row3 = $resultConfig->fetch(PDO::FETCH_ASSOC);
+        extract($row3);
+        
+        $websiteUrl = $config_url;
+        $root = $config_path;
+    }
     
     // Config info du club
     $stmtG1 = "SELECT * FROM CONFIG_contact LIMIT 1";
