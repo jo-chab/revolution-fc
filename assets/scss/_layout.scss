@@ -31,31 +31,39 @@ img {
     max-width: $website-max-width;
     margin: 0 auto;
     position: relative;
-    
-    
-    &.flex-layout {
-        display: flex;
+    box-sizing: border-box;
+}
+
+.flex-layout {
+    display: flex;
+}
+
+/*******************************************************
+GRID SYSTEM
+*******************************************************/
+.grid-system,
+.grid-layout {
+    width: 100%;
+    display: grid;
+    gap: 1rem;
+    @include tablet {
+        gap: 1.5rem;
     }
-    &.grid-layout {
-        display: grid;
-        gap:1rem;
+    @include desktop {
+        gap: 2.5rem;
+    }
+    
+    &.field-filter {
+        gap: .5rem;
+    }
+    
+    &.list-people {
+        gap: 2rem;
         @include tablet {
-            gap: 1.5rem;
+            gap: 2.5rem 1.5rem;
         }
         @include desktop {
-            gap: 2.5rem;
-        }
-        &.field-filter {
-            gap: .5rem;
-        }
-    }
-    &.col-12 {
-        grid-template-columns: repeat(4, 1fr);
-        @include tablet {
-            grid-template-columns: repeat(6, 1fr);
-        }
-        @include desktop {
-            grid-template-columns: repeat(12, 1fr);
+            gap: 3.5rem 2.5rem;
         }
     }
     
@@ -74,69 +82,38 @@ img {
         @include desktop {
             grid-template-columns: repeat(3, 1fr);
         }
+        
+        &.t1 {
+            @include tablet {
+                grid-template-columns: 1fr;
+            }
+        }
+    }
+    
+    &.col-12 {
+        grid-template-columns: repeat(4, 1fr);
+        @include tablet {
+            grid-template-columns: repeat(6, 1fr);
+        }
+        @include desktop {
+            grid-template-columns: repeat(12, 1fr);
+        }
     }
 }
-
-
 
 
 /*******************************************************
-GRID SYSTEM
+VARIABLES
 *******************************************************/
-.grid-system {
-    width: 100%;
-    display: grid;
-    gap: 1rem;
-    @include tablet {
-        gap: 1.5rem;
-    }
-    @include desktop {
-        gap: 2.5rem;
-    }
-    
-    &.grid-col-2 {
-        grid-template-columns: 1fr;
-        @include tablet {
-            grid-template-columns: repeat(2, 1fr);
-        }
-    }
-    
-    &.grid-col-3 {
-        grid-template-columns: 1fr;
-        @include tablet {
-            grid-template-columns: repeat(2, 1fr);
-        }
-        @include desktop {
-            grid-template-columns: repeat(3, 1fr);
-        }
-        
-        &.t1 {
-            @include tablet {
-                grid-template-columns: 1fr;
-            }
-        }
-        
-    }
-    
-    &.grid-col-4 {
-        grid-template-columns: 1fr 1fr;
-        @include desktop {
-            grid-template-columns: repeat(4, 1fr);
-        }
-        
-        &.t1 {
-            @include tablet {
-                grid-template-columns: 1fr;
-            }
-        }
-        
-    }
-    
-}
+$space-m: 2rem;
+$space-t: 3rem;
+$space-d: 5rem;
+$space-dl: 8rem;
 
 
 main.w-content {
     padding-top: 6rem;
+    
     .w-home & {
         @include mobile-max {
             padding-top: 0;
@@ -145,20 +122,19 @@ main.w-content {
 }
 
 
-
-
 /*******************************************************
 LAYOUT ELEMENTS
 *******************************************************/
 section {
-    width:100%;
-    margin:0 auto;
+    width: 100%;
+    margin: 0 auto;
     padding: 2rem 0;
     @include mobile-xlarge {
         padding: 4rem 0;
     }
     
-    &.w-hero {
+    &.w-hero,
+    &.wrapper-full {
         padding: 0;
     }
     
@@ -181,7 +157,8 @@ article {
     
     padding: 0 $space-m;
     margin-bottom: 4rem;
-    &[class]:last-of-type {
+    
+    &:last-child {
         margin-bottom: 0;
     }
     
@@ -190,9 +167,6 @@ article {
     }
     @include desktop {
         padding: 0 $space-d;
-    }
-    @include desktop-large {
-        padding: 0 $space-dl;
     }
     
     &.wrapper {
@@ -218,7 +192,8 @@ article {
             background-size: cover;
         }
         
-        .w-hero & {
+        .w-hero &,
+        .wrapper-full & {
             max-width: inherit;
             
             &:not(:only-child) {
@@ -226,47 +201,45 @@ article {
             }
             
             &.bg-img-content {
-                justify-content: flex-end;
-                height: 60dvh;
+                justify-content: center;
+                height: 80dvh;
                 @include tablet {
-                    min-height: 580px;
-                    max-height: 80dvh;
+                    min-height: 520px;
+                    max-height: 70dvh;
                     justify-content: flex-end;
+                }
+                @include desktop-large {
+                    height: 70dvh;
                 }
             }
         }
         
-        &.flash-alert {
-            background: $primary-color;
-            display: grid;
-            gap: .5rem;
-            
-            padding: 1.5rem;
-            @include tablet {
-                padding: 0 5rem;
-                grid-template-columns: auto 1fr;
-            }
-            
-            &.urgent {
-                background: $color-error;
-            }
-        }
+        
     }
     
     &.wrapper-full {
         max-width: unset;
-        padding: 1.5rem;
-        
-        @include tablet {
-            padding: 1.5rem 2.5rem;
-        }
-        @include desktop {
-            padding: 2rem 5rem;
-        }
     }
     
     &.wrapper-text {
         max-width: $text-content-max-width;
+    }
+}
+
+.flash-alert {
+    max-width: unset;
+    background: $primary-color;
+    display: grid;
+    gap: .5rem;
+    
+    padding: 1.5rem;
+    @include tablet {
+        padding: 0 5rem;
+        grid-template-columns: auto 1fr;
+    }
+    
+    &.urgent {
+        background: $color-error;
     }
 }
 
@@ -277,8 +250,6 @@ figure {
         width: 100%;
     }
 }
-
-
 
 
 /*******************************************************
@@ -301,9 +272,9 @@ COOKIES Popup
     background: $popup-color-2;
     border: 1px solid $primary-color;
     
-    -webkit-box-shadow: 0 5px 20px -6px rgba(18,18,18,.4);
-    -moz-box-shadow: 0 5px 20px -6px rgba(18,18,18,.4);
-    box-shadow: 0 5px 20px -6px rgba(18,18,18,.4);
+    -webkit-box-shadow: 0 5px 20px -6px rgba(18, 18, 18, .4);
+    -moz-box-shadow: 0 5px 20px -6px rgba(18, 18, 18, .4);
+    box-shadow: 0 5px 20px -6px rgba(18, 18, 18, .4);
     
     @include mobile-max {
         right: 2rem;
@@ -312,8 +283,10 @@ COOKIES Popup
     
     p {
         color: $popup-text-color-2;
+        margin-bottom: .25rem;
     }
 }
+
 .cookie-cta {
     display: flex;
     gap: 2rem;
@@ -324,8 +297,6 @@ COOKIES Popup
         margin: 0;
     }
 }
-
-
 
 
 /*******************************************************

@@ -129,7 +129,7 @@
     
     <div class="dashboard-content">
         
-        <div class="btn-primary cta-add small icon mobile-icon-only i-more js-content-add"><a>Ajouter une categorie</a></div>
+        <div class="btn-primary btn-add small icon mobile-icon-only i-more js-content-add"><a>Ajouter une categorie</a></div>
         
         <?php include("../_includes/admin_tournament_category-add.inc"); ?>
         

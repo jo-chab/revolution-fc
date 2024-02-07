@@ -6,7 +6,7 @@
     
     <div class="dashboard-content">
         
-        <a class="btn-primary cta-add small icon i-more mobile-icon-only" href="?p=64"><span>Ajouter un évènement</span></a>
+        <a class="btn-primary btn-add small icon i-more mobile-icon-only" href="?p=64"><span>Ajouter un évènement</span></a>
         
         <ul class="dashboard-list">
             <?php

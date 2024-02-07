@@ -29,8 +29,7 @@
         <li class="admin-nav">
             <div class="menu-element icon i-test">Menu en cours de test</div>
             <ul class="sub-nav">
-                <li class="sub-nav-item"><a class="sub-nav-item-el" href="?p=">Albums photos</a></li>
-                <li class="sub-nav-item"><a class="sub-nav-item-el not-active" href="?p=">Ajouter images</a></li>
+                <li class="sub-nav-item"><a class="sub-nav-item-el" href="?p=66">Albums photos</a></li>
             </ul>
         </li>
     <?php endif ?>

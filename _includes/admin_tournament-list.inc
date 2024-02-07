@@ -5,7 +5,7 @@
     
     <div class="dashboard-content">
         
-<!--        <div class="btn-primary cta-add small icon mobile-icon-only i-more js-content-add">Ajouter un tournoi</div>-->
+<!--        <div class="btn-primary btn-add small icon mobile-icon-only i-more js-content-add">Ajouter un tournoi</div>-->
 <!--        -->
 <!--        <div class="dashboard-content content-add" style="margin-top: 3rem;">-->
 <!--            -->

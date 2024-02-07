@@ -246,6 +246,7 @@ h1 {
 }
 h1.article-title {
   font-family: "Source Sans 3", sans-serif;
+  color: #141a1f;
 }
 @media (min-width: 620px) {
   h1.article-title {
@@ -317,17 +318,12 @@ h3.news-card-headline {
 }
 @media (min-width: 768px) {
   h3.news-card-headline {
-    font-size: 2rem;
+    font-size: 1.5rem;
     display: -webkit-box;
     -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
     overflow: hidden;
     text-overflow: ellipsis;
-  }
-}
-@media (min-width: 1024px) {
-  h3.news-card-headline {
-    font-size: 1.5rem;
   }
 }
 
@@ -388,7 +384,7 @@ h6 {
 }
 
 .text-dates {
-  color: #D0D3D4;
+  color: #8d949b;
 }
 
 .white {
@@ -414,7 +410,7 @@ p.intro {
   font-size: 1.25rem;
   line-height: 1.3em;
   margin-bottom: 1rem;
-  color: #D0D3D4;
+  color: #8d949b;
 }
 @media (min-width: 768px) {
   p.intro {
@@ -424,7 +420,7 @@ p.intro {
 p.article-intro {
   font-weight: 600;
   font-size: 1.25rem;
-  color: #D0D3D4;
+  color: #8d949b;
   margin-bottom: 1rem;
 }
 @media (min-width: 768px) {
@@ -844,6 +840,36 @@ ADMIN ICONS
   content: "\f0c7";
 }
 
+.i-image:before {
+  font: var(--fa-font-light);
+  content: "\f03e";
+  font-size: 1.25em;
+}
+
+.i-image-check:before {
+  font-family: "Font Awesome Kit";
+  content: "\e01b";
+  font-size: 1.25em;
+}
+
+.i-image-remove:before {
+  font-family: "Font Awesome Kit";
+  content: "\e01c";
+  font-size: 1.25em;
+}
+
+.i-image-library:before {
+  font-family: "Font Awesome Kit";
+  content: "\e01a";
+  font-size: 1.25em;
+}
+
+.i-image-select:before {
+  font-family: "Font Awesome Kit";
+  content: "\e019";
+  font-size: 1.25em;
+}
+
 /*
 *
 * LOCATION: [admin]
@@ -959,10 +985,6 @@ GRID SYSTEM
   .grid-system.grid-col-4.t1 {
     grid-template-columns: 1fr;
   }
-}
-
-.file-upload {
-  margin-top: 3rem;
 }
 
 .footer-dashboard {
@@ -1237,7 +1259,6 @@ DESIGN SYSTEM – CARDS
   height: auto;
   opacity: 1;
   transition: all 0.3s ease;
-  transform: translateY(0);
 }
 @media (min-width: 768px) {
   .news-card {
@@ -1259,7 +1280,6 @@ DESIGN SYSTEM – CARDS
 }
 @media (min-width: 1024px) {
   .news-card:hover {
-    transform: translateY(-0.5rem);
     transition: all 0.3s ease;
   }
 }
@@ -1322,6 +1342,7 @@ DESIGN SYSTEM – Buttons
   gap: 0.5rem;
   font-family: "Source Sans 3", sans-serif;
   text-align: center;
+  border-radius: 3rem;
   transition: all 0.3s ease;
 }
 .button:hover, .filter-label:hover, .inputfile + label:hover, .btn-download:hover, .btn-filter:hover, .btn-tertiary:hover, .btn-secondary:hover, .btn-primary:hover {
@@ -1377,14 +1398,14 @@ DESIGN SYSTEM – Buttons
     background-color: #3700b3;
   }
 }
-.btn-primary.cta-add {
+.btn-primary.btn-add {
   background-color: #dafce4;
   border: 1px solid #69F0AE;
   color: #00bd60;
   justify-self: center;
 }
 @media (min-width: 768px) {
-  .btn-primary.cta-add:hover {
+  .btn-primary.btn-add:hover {
     background-color: #00E676;
     color: #00732e;
   }
@@ -1443,7 +1464,7 @@ DESIGN SYSTEM – Buttons
 
 .btn-secondary {
   padding: 1.25rem 2rem;
-  font-weight: 400;
+  font-weight: 600;
   font-size: 1rem;
   line-height: 1em;
   color: #8d949b;
@@ -1454,11 +1475,6 @@ DESIGN SYSTEM – Buttons
 @media (max-width: 767px) {
   .btn-secondary {
     padding: 1rem;
-  }
-}
-@media (min-width: 768px) {
-  .btn-secondary {
-    font-size: 1.25rem;
   }
 }
 @media (min-width: 768px) {
@@ -1479,16 +1495,16 @@ DESIGN SYSTEM – Buttons
   color: #d5c392;
 }
 .btn-secondary.btn-brand:hover {
-  border-color: #8a7b43;
-  color: #8a7b43;
+  border-color: #5b512a;
+  color: #5b512a;
 }
 .btn-secondary.ghost-brand {
   border-color: #d5c392;
   color: #d5c392;
 }
 .btn-secondary.ghost-brand:hover {
-  background: #8a7b43;
-  border-color: #8a7b43;
+  background: #5b512a;
+  border-color: #5b512a;
   color: white;
 }
 .btn-secondary.ghost-white {
@@ -1499,11 +1515,11 @@ DESIGN SYSTEM – Buttons
   background-color: white;
   color: #52585f;
 }
-.btn-secondary.cta-add {
+.btn-secondary.btn-add {
   border-color: #00E676;
   color: #00E676;
 }
-.btn-secondary.cta-add:hover {
+.btn-secondary.btn-add:hover {
   border-color: #00732e;
   color: #00732e;
 }
@@ -1544,12 +1560,12 @@ DESIGN SYSTEM – Buttons
   font-weight: 400;
   font-size: 1.25em;
   line-height: 1em;
-  color: #a8956c;
+  color: #8d949b;
   margin: 1.5rem 0;
   border-radius: 0;
 }
 .btn-tertiary:hover {
-  color: #8a7b43;
+  color: #a8956c;
 }
 .dashboard .btn-tertiary {
   margin: 0;
@@ -1559,8 +1575,8 @@ DESIGN SYSTEM – Buttons
 }
 .btn-tertiary.btn-text {
   margin: 0;
-  padding: 0;
   justify-content: flex-start;
+  color: #52585f;
 }
 .btn-tertiary.btn-light {
   color: white;
@@ -1568,10 +1584,10 @@ DESIGN SYSTEM – Buttons
 .btn-tertiary.small {
   font-size: 0.875rem;
 }
-.btn-tertiary.cta-add {
+.btn-tertiary.btn-add {
   color: #69F0AE;
 }
-.btn-tertiary.cta-add:hover {
+.btn-tertiary.btn-add:hover {
   color: #00E676;
 }
 .btn-tertiary.btn-disable, .btn-tertiary.btn-delete, .btn-tertiary.btn-cancel, .btn-tertiary.btn-activate, .btn-tertiary.btn-revert {
@@ -1620,7 +1636,7 @@ DESIGN SYSTEM – Buttons
 }
 
 .btn-download {
-  background: #D0D3D4;
+  background: #8d949b;
   font-weight: 400;
   font-size: 0.875rem;
   line-height: 1em;
@@ -1634,6 +1650,7 @@ DESIGN SYSTEM – Buttons
 }
 .btn-download:hover {
   background: #d5c392;
+  color: #5b512a;
 }
 
 .is-inactive > * {
@@ -1937,7 +1954,7 @@ Lists
   font-weight: 400;
   font-size: 1rem;
   line-height: 1.5em;
-  color: #D0D3D4;
+  color: #52585f;
   flex-grow: 1;
 }
 
@@ -2083,7 +2100,7 @@ HEADER ADMIN - SIDEBAR
   height: 100vh;
   overflow-y: scroll;
   scrollbar-width: thin;
-  scrollbar-color: #8a7b43;
+  scrollbar-color: #5b512a;
   background-color: white;
   border-right: 3px solid #d5c392;
 }
@@ -2147,7 +2164,7 @@ HEADER ADMIN - SIDEBAR
 }
 .top-header-nav .nav-element:hover {
   background-color: #f6e9d5;
-  color: #8a7b43;
+  color: #5b512a;
   cursor: pointer;
 }
 
@@ -2526,6 +2543,13 @@ form.switch-status {
   justify-content: center;
   margin-bottom: 3rem;
 }
+.d-form-cta.header {
+  margin: 0 0 3rem;
+  justify-content: flex-start;
+}
+.d-form-cta.header [class*=btn-] {
+  margin-bottom: 0;
+}
 .d-form-cta.split-full {
   justify-content: space-between;
   margin: 0 0 2rem;
@@ -2655,7 +2679,7 @@ ADMIN – CONTENT
     padding: 1.5rem;
   }
 }
-.dashboard-container .dashboard-content .cta-add {
+.dashboard-container .dashboard-content .btn-add {
   margin-bottom: 1.5rem;
 }
 
@@ -2668,6 +2692,10 @@ ADMIN – CONTENT
 .content-update.is-active {
   display: block;
   margin-bottom: 2rem;
+}
+.content-add:has(+ .dashboard-list),
+.content-update:has(+ .dashboard-list) {
+  margin-bottom: 2.5rem;
 }
 
 .content-add {
@@ -2834,11 +2862,6 @@ span.logo-mini img {
   width: 100%;
 }
 
-.team_logo-img-upload img {
-  width: 100%;
-  max-width: 320px;
-}
-
 /*************************************
 USERS
 *************************************/
@@ -2885,6 +2908,37 @@ USERS
 }
 .cta-user.delete input[type=submit]:hover {
   background-color: #c80004;
+}
+
+/*************************************
+ALBUMS
+*************************************/
+.list-img-album {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-block: 2rem 4rem;
+}
+@media (min-width: 768px) {
+  .list-img-album {
+    grid-template-columns: repeat(5, 1fr);
+    gap: 2rem;
+  }
+}
+.list-img-album .img-vignette {
+  width: 100%;
+  position: relative;
+}
+.list-img-album .img-vignette .btn-delete {
+  position: absolute;
+  top: 0.5rem;
+  left: 0.5rem;
+  z-index: 2;
+  padding: 0.5rem;
+}
+.list-img-album img {
+  width: 100%;
+  max-width: 100%;
 }
 
 /*# sourceMappingURL=global_admin.css.map */

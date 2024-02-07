@@ -441,3 +441,30 @@ ADMIN ICONS
     }
 }
 
+
+.i-image:before {
+    font: var(--fa-font-light);
+    content: '\f03e';
+    font-size: 1.25em;
+}
+.i-image-check:before {
+    font-family: "Font Awesome Kit";
+    content: '\e01b';
+    font-size: 1.25em;
+}
+.i-image-remove:before {
+    font-family: "Font Awesome Kit";
+    content: '\e01c';
+    font-size: 1.25em;
+}
+.i-image-library:before {
+    font-family: "Font Awesome Kit";
+    content: '\e01a';
+    font-size: 1.25em;
+}
+.i-image-select:before {
+    font-family: "Font Awesome Kit";
+    content: '\e019';
+    font-size: 1.25em;
+}
+

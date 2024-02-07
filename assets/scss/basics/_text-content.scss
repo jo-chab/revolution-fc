@@ -10,12 +10,12 @@
 
 .article-intro {
     font-weight: 600;
-    color: $secondary-color;
+    color: $secondary-color-dark;
     margin-bottom: 2rem;
 }
 
 h2 {
-    color: $secondary-color;
+    color: $secondary-color-darker;
     margin-bottom: 1.5rem;
     text-transform: none;
     letter-spacing: unset;
@@ -29,7 +29,7 @@ h3 {
 }
 
 h4 {
-    @include font-style(600, 1.125rem, 1.5em, $secondary-color-light);
+    @include font-style(600, 1.125rem, 1.5em, $secondary-color);
     margin-bottom: .25rem;
 }
 
@@ -86,7 +86,7 @@ a {
     transition: all .3s ease;
     
     &:hover {
-        color: darken($primary-color, 20%);
+        color: $primary-color-dark;
     }
 }
 

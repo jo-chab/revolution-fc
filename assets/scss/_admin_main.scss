@@ -21,6 +21,15 @@
         margin-bottom: 3rem;
     }
     
+    &.header {
+        margin: 0 0 3rem;
+        justify-content: flex-start;
+        
+        [class*='btn-'] {
+            margin-bottom: 0;
+        }
+    }
+    
     &.split-full {
         justify-content: space-between;
         margin:0 0 2rem;
@@ -114,7 +123,6 @@ ADMIN – CONTENT
 .dashboard-container {
     position: relative;
     width: 100%;
-    //max-width: 1080px;
     margin: 0 auto;
     @include tablet {
         grid-column: 2;
@@ -137,7 +145,7 @@ ADMIN – CONTENT
             padding: 1.5rem;
         }
         
-        .cta-add {
+        .btn-add {
             margin-bottom: 1.5rem;
         }
     }
@@ -153,6 +161,10 @@ ADMIN – CONTENT
     &.is-active {
         display: block;
         margin-bottom: 2rem;
+    }
+    
+    &:has(+ .dashboard-list) {
+        margin-bottom: 2.5rem;
     }
 }
 .content-add {
@@ -330,12 +342,6 @@ span.logo-mini {
         width: 100%;
     }
 }
-.team_logo-img-upload {
-    img {
-        width: 100%;
-        max-width: 320px;
-    }
-}
 
 
 /*************************************
@@ -388,3 +394,40 @@ USERS
     }
 }
 
+
+
+
+
+
+
+/*************************************
+ALBUMS
+*************************************/
+.list-img-album {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin-block: 2rem 4rem;
+    @include tablet {
+        grid-template-columns: repeat(5, 1fr);
+        gap: 2rem;
+    }
+    
+    .img-vignette {
+        width: 100%;
+        position: relative;
+        
+        .btn-delete {
+            position: absolute;
+            top: .5rem;
+            left: .5rem;
+            z-index: 2;
+            padding: .5rem;
+        }
+    }
+    
+    img {
+        width: 100%;
+        max-width: 100%;
+    }
+}

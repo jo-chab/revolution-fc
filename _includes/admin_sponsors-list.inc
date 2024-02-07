@@ -23,7 +23,7 @@
             </div>
 
             <div class="dashboard-content">
-                <a class="btn-primary small cta-add icon i-more" href="index.php?p=90">Ajouter un commanditaire</a>
+                <a class="btn-primary small btn-add icon i-more" href="index.php?p=90">Ajouter un commanditaire</a>
                 
                 <div class="grid-layout-2">
                     <div class="form-row column">

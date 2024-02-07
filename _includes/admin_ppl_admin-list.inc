@@ -7,7 +7,7 @@
 
             <div class="dashboard-content">
                 
-                <div class="btn-primary small cta-add icon mobile-icon-only i-more js-content-add"><span>Ajouter un.e membre de l'administration</span></div>
+                <div class="btn-primary small btn-add icon mobile-icon-only i-more js-content-add"><span>Ajouter un.e membre de l'administration</span></div>
 
                 <div class="dashboard-content content-add">
 

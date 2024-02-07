@@ -41,6 +41,7 @@ h1 {
     
     &.article-title {
         @include font-family-reading();
+        color: $secondary-color-darker;
         @include mobile-xlarge {
             font-size: 3rem;
         }
@@ -99,11 +100,8 @@ h3 {
         
         @include line-clamp(2);
         @include tablet {
-            font-size: 2rem;
-            @include line-clamp(3);
-        }
-        @include desktop {
             font-size: 1.5rem;
+            @include line-clamp(3);
         }
     }
     
@@ -155,7 +153,7 @@ h6 {
 
 
 .text-dates {
-    color: $secondary-color-light;
+    color: $secondary-color
 }
 .white {
     color: white;
@@ -177,7 +175,7 @@ p {
         font-size: 1.25rem;
         line-height: 1.3em;
         margin-bottom: 1rem;
-        color: $secondary-color-light;
+        color: $secondary-color;
         @include tablet {
             font-size: 1.375rem;
         }
@@ -185,7 +183,7 @@ p {
     &.article-intro {
         font-weight: 600;
         font-size: 1.25rem;
-        color: $secondary-color-light;
+        color: $secondary-color;
         margin-bottom: 1rem;
         @include tablet {
             font-size: 1.375rem;
