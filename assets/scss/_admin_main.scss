@@ -167,14 +167,15 @@ ADMIN – CONTENT
         margin-bottom: 2.5rem;
     }
 }
+
 .content-add {
     border-bottom: 1px solid $secondary-color-light;
 }
+
 .content-update {
     border: 1px solid $admin-secondary;
     background-color: $web-grey-1;
     padding: 1rem;
-    
 }
 
 form.content-delete {
@@ -185,6 +186,8 @@ form.content-delete {
         margin: 0;
     }
 }
+
+
 
 
 .dashboard-list {
@@ -198,32 +201,30 @@ form.content-delete {
     
     li {
         display: grid;
+        grid-template-columns: 1fr;
         gap: 1rem;
         align-items: center;
-        @include tablet {
-            grid-template-columns: 1fr auto;
-        }
-        &.layout-delete {
-            grid-template-columns: auto 1fr auto;
-            grid-template-rows: auto;
+        
+        &.layout-col-2 {
             grid-template-areas:
-                    "delete name buttons";
-            @include mobile-max {
-                grid-template-columns: 1fr auto auto;
+                "element"
+                "button";
+            @include tablet {
+                grid-template-columns: 1fr auto;
                 grid-template-areas:
-                    "name delete buttons";
+                    "element button";
             }
+        }
+        &.layout-col-3 {
+            grid-template-columns: auto auto;
+            grid-template-areas:
+                "element element"
+                "icon button";
             
-            .content-delete {
-                grid-area: delete;
-            }
-            
-            .content-id {
-                grid-area: name;
-            }
-            
-            .content-btn {
-                grid-area: buttons;
+            @include tablet {
+                grid-template-columns: auto 1fr auto;
+                grid-template-areas:
+                    "icon element button";
             }
         }
         
@@ -250,6 +251,18 @@ form.content-delete {
             .list-user-type {
                 grid-area: buttons;
             }
+        }
+        
+        .content-icon {
+            grid-area: icon;
+        }
+        
+        .content-element {
+            grid-area: element;
+        }
+        
+        .content-btn {
+            grid-area: button;
         }
         
         .element-title {

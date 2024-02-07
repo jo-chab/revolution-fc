@@ -29,7 +29,7 @@
         <li class="admin-nav">
             <div class="menu-element icon i-test">Menu en cours de test</div>
             <ul class="sub-nav">
-                <li class="sub-nav-item"><a class="sub-nav-item-el" href="?p=66">Albums photos</a></li>
+                <li class="sub-nav-item"><a class="sub-nav-item-el" href="?p=">Menu test #1</a></li>
             </ul>
         </li>
     <?php endif ?>
@@ -88,6 +88,7 @@
         <ul class="sub-nav">
             <li class="sub-nav-item"><a class="sub-nav-item-el" href="?p=63">Gérer les évènements</a></li>
             <li class="sub-nav-item"><a class="sub-nav-item-el" href="?p=64">Créer un évènement</a></li>
+            <li class="sub-nav-item"><a class="sub-nav-item-el" href="?p=66"><span class="icon new-feature">Albums photos</span></a></li>
         </ul>
     </li>
     

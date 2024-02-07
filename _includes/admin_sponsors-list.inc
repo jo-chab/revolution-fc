@@ -108,14 +108,14 @@
                             $class="";
                         }
 
-                        echo "<li class='dashboard-list-elements layout-delete'>
-                                    <div class='list-cta'>
+                        echo "<li class='dashboard-list-elements layout-col-3'>
+                                    <div class='list-cta content-icon'>
                                         <form action='action_sponsors_delete' method='post'>
                                             <input type='hidden' name='element' value='$id_sponsors'>
                                             <div class='btn-tertiary btn-text small btn-delete icon mobile-icon-only'></div>
                                         </form>
                                     </div>
-                                    <div class='element-title content-id'>
+                                    <div class='element-title content-element'>
                                         <span class='logo-mini'><img src='..$logo' alt='$nom' /></span> $nom
                                     </div>
                                     <div class='list-cta content-btn'>

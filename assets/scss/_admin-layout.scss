@@ -45,6 +45,13 @@ section {
     padding: 0;
 }
 
+
+
+
+
+/*******************************************************
+GRID SYSTEM
+*******************************************************/
 *[class*='grid-layout-'] {
     display: grid;
     grid-template-columns: 1fr;
@@ -59,9 +66,32 @@ section {
 }
 .grid-layout-3 {
     @include tablet {
-        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-columns: repeat(2, 1fr);
+    }
+    @include desktop {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    &.t1 {
+        @include tablet {
+            grid-template-columns: 1fr;
+        }
     }
 }
+.grid-layout-4 {
+    grid-template-columns: 1fr 1fr;
+    @include desktop {
+        grid-template-columns: repeat(4, 1fr);
+    }
+    
+    &.t1 {
+        @include tablet {
+            grid-template-columns: 1fr;
+        }
+    }
+}
+
+
 .flex-layout {
     display: flex;
     gap: 2.5rem;
@@ -73,13 +103,6 @@ section {
         flex-flow: row wrap;
     }
 }
-
-
-
-
-/*******************************************************
-GRID SYSTEM
-*******************************************************/
 .grid-system {
     width: 100%;
     display: grid;

@@ -1,5 +1,5 @@
 
-<ul class="list-dashboard-menu grid-system">
+<ul class="list-dashboard-menu grid-layout-4">
     
     <?php if (isset($_SESSION['auth']) && $_SESSION['type'] == 6): ?>
         <li><a class="icon icon-atop i-config-superadmin" href="?p=2"><span>ADMIN</span></a></li>

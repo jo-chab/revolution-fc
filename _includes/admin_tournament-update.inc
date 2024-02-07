@@ -147,15 +147,15 @@
                     $category = nl2br(stripslashes($result['t_category_age']));
                     
                     echo "
-            <li class='dashboard-list-elements layout-delete'>
-                <div class='list-cta content-delete'>
+            <li class='dashboard-list-elements layout-col-3'>
+                <div class='list-cta content-icon'>
                       <form action='action_tournoi_category_delete' method='post'>
                         <input type='hidden' name='num_category' value='$id_category'>
                         <input type='hidden' name='num_tournoi' value='$element'>
                         <div class='btn-tertiary btn-text small btn-delete icon mobile-icon-only'></div>
                     </form>
                 </div>
-                <div class='element-title'>$category – $soccer</div>
+                <div class='element-title content-element'>$category – $soccer</div>
                 <div class='list-cta content-btn'>
                     <form action='index.php?p=83' method='post'>
                         <input type='hidden' name='num_category' value='$id_category'>

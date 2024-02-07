@@ -30,11 +30,11 @@
                         $btnClass="btn-activate";
                     }
                     
-                    echo "<li class='dashboard-list-elements'>
-                            <div class='element-title'>
+                    echo "<li class='dashboard-list-elements layout-col-2'>
+                            <div class='element-title content-element'>
                                 $name
                             </div>
-                            <div class='list-cta'>
+                            <div class='list-cta content-btn'>
                                 <form action='action_events_disable' method='post'>
                                     <input type='hidden' name='element' value='$event'>
                                     <div class='btn-primary $btnClass small icon mobile-icon-only'><span>$update</span></div>

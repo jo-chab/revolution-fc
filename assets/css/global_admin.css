@@ -898,6 +898,9 @@ section {
   padding: 0;
 }
 
+/*******************************************************
+GRID SYSTEM
+*******************************************************/
 *[class*=grid-layout-] {
   display: grid;
   grid-template-columns: 1fr;
@@ -914,7 +917,31 @@ section {
 
 @media (min-width: 768px) {
   .grid-layout-3 {
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width: 1024px) {
+  .grid-layout-3 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (min-width: 768px) {
+  .grid-layout-3.t1 {
+    grid-template-columns: 1fr;
+  }
+}
+
+.grid-layout-4 {
+  grid-template-columns: 1fr 1fr;
+}
+@media (min-width: 1024px) {
+  .grid-layout-4 {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+@media (min-width: 768px) {
+  .grid-layout-4.t1 {
+    grid-template-columns: 1fr;
   }
 }
 
@@ -929,9 +956,6 @@ section {
   flex-flow: row wrap;
 }
 
-/*******************************************************
-GRID SYSTEM
-*******************************************************/
 .grid-system {
   width: 100%;
   display: grid;
@@ -2729,33 +2753,28 @@ form.content-delete {
 }
 .dashboard-list li {
   display: grid;
+  grid-template-columns: 1fr;
   gap: 1rem;
   align-items: center;
 }
+.dashboard-list li.layout-col-2 {
+  grid-template-areas: "element" "button";
+}
 @media (min-width: 768px) {
-  .dashboard-list li {
+  .dashboard-list li.layout-col-2 {
     grid-template-columns: 1fr auto;
+    grid-template-areas: "element button";
   }
 }
-.dashboard-list li.layout-delete {
-  grid-template-columns: auto 1fr auto;
-  grid-template-rows: auto;
-  grid-template-areas: "delete name buttons";
+.dashboard-list li.layout-col-3 {
+  grid-template-columns: auto auto;
+  grid-template-areas: "element element" "icon button";
 }
-@media (max-width: 767px) {
-  .dashboard-list li.layout-delete {
-    grid-template-columns: 1fr auto auto;
-    grid-template-areas: "name delete buttons";
+@media (min-width: 768px) {
+  .dashboard-list li.layout-col-3 {
+    grid-template-columns: auto 1fr auto;
+    grid-template-areas: "icon element button";
   }
-}
-.dashboard-list li.layout-delete .content-delete {
-  grid-area: delete;
-}
-.dashboard-list li.layout-delete .content-id {
-  grid-area: name;
-}
-.dashboard-list li.layout-delete .content-btn {
-  grid-area: buttons;
 }
 .dashboard-list li.list-user {
   grid-template-columns: auto 1fr auto;
@@ -2776,6 +2795,15 @@ form.content-delete {
 }
 .dashboard-list li.list-user .list-user-type {
   grid-area: buttons;
+}
+.dashboard-list li .content-icon {
+  grid-area: icon;
+}
+.dashboard-list li .content-element {
+  grid-area: element;
+}
+.dashboard-list li .content-btn {
+  grid-area: button;
 }
 .dashboard-list li .element-title {
   font-family: "Source Sans 3", sans-serif;

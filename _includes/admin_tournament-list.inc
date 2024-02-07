@@ -78,20 +78,16 @@
                     }
                     
                     echo "
-                                <li class='dashboard-list-elements'>
-                                    <div class='element-title'>$name</div>
-                                    <div class='list-cta'>
-                                        <div>
-                                            <form action='action_tournament_disable.php' method='post'>
-                                                <input type='hidden' name='element' value='$id_tournament'>
-                                                <div class='btn-primary $btnClass small icon mobile-icon-only'><span>$texte_bouton</span></div>
-                                            </form>
-                                        </div>
-                                        <div>
-                                            <form action='index.php?p=82&t=$id_tournament' method='post'>
-                                                <div class='btn-primary btn-update small icon mobile-icon-only'><span>Modifier</span></div>
-                                            </form>
-                                        </div>
+                                <li class='dashboard-list-elements layout-col-2'>
+                                    <div class='element-title content-element'>$name</div>
+                                    <div class='list-cta content-btn'>
+                                        <form action='action_tournament_disable.php' method='post'>
+                                            <input type='hidden' name='element' value='$id_tournament'>
+                                            <div class='btn-primary $btnClass small icon mobile-icon-only'><span>$texte_bouton</span></div>
+                                        </form>
+                                        <form action='index.php?p=82&t=$id_tournament' method='post'>
+                                            <div class='btn-primary btn-update small icon mobile-icon-only'><span>Modifier</span></div>
+                                        </form>
                                     </div>
                                 </li>
                                 ";

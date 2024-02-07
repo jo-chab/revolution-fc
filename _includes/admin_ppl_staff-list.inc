@@ -81,11 +81,9 @@
                         $name = nl2br(stripslashes($result['member_name']));
 
                         echo "
-                    <li class='dashboard-list-elements'>
-                        <div class='element-title'>
-                            <span>$function</span> – $name
-                        </div>
-                        <div class='list-cta'>
+                    <li class='dashboard-list-elements layout-col-2'>
+                        <div class='element-title content-element'><span>$function</span> – $name</div>
+                        <div class='list-cta content-btn'>
                         ";
 
                         // Check if member_function is "Administrateur" before displaying the delete form
