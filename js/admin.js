@@ -43,11 +43,11 @@
 
         updateButtons.each((index, updateButton) => {
             $(updateButton).on('click', () => {
-                const categoryId = $(updateButton).attr('data-category');
+                const categoryId = $(updateButton).attr('data-album');
                 const contentUpdate = $(`.content-update-${categoryId}`);
 
-                contentUpdate.slideToggle(400);
-                $(updateButton).toggleClass('is-not-active');
+                contentUpdate.slideDown(400);
+                updateButton.classList.add('is-not-active');
             });
         });
     }
@@ -63,7 +63,7 @@
         const categoryId = contentUpdate.attr('class').match(/content-update-(\d+)/)[1]; // Extract categoryId
         const updateButton = document.querySelector(`.js-content-update[data-category="${categoryId}"]`);
 
-        contentUpdate.removeClass('is-active');
+        contentUpdate.slideUp(400);
         updateButton.classList.remove('is-not-active');
     });
 

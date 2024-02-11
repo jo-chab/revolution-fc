@@ -1996,6 +1996,7 @@ Lists
   opacity: 0.8;
 }
 .list-programs .program-element h2 {
+  font-size: 1.5rem;
   letter-spacing: 0;
   margin-bottom: 0.5rem;
   line-height: 1.3em;
@@ -2555,6 +2556,9 @@ form.switch-status {
 * DESCRIPTION: admin css file
 *
 */
+/*************************************
+ADMIN – FORM buttons
+*************************************/
 .d-form-cta {
   display: flex;
   align-items: center;
@@ -2588,7 +2592,7 @@ form.switch-status {
 }
 
 /*************************************
-ADMIN – DEFAULT
+ADMIN – DEFAULT HOME PAGE
 *************************************/
 .list-dashboard-menu {
   margin-block: 3rem;
@@ -2653,7 +2657,7 @@ ADMIN – DEFAULT
 }
 
 /*************************************
-ADMIN – CONTENT
+ADMIN – DASHBOARD content
 *************************************/
 .dashboard {
   display: grid;
@@ -2703,9 +2707,6 @@ ADMIN – CONTENT
     padding: 1.5rem;
   }
 }
-.dashboard-container .dashboard-content .btn-add {
-  margin-bottom: 1.5rem;
-}
 
 /*** INTERACTION CONTENT ***/
 .content-add,
@@ -2727,9 +2728,12 @@ ADMIN – CONTENT
 }
 
 .content-update {
-  border: 1px solid #03dac4;
+  border: 1px solid #6300ee;
   background-color: #f2f2f2;
   padding: 1rem;
+}
+.dashboard-list-elements.layout-col-3 .content-update {
+  grid-column: span 3;
 }
 
 form.content-delete {
@@ -2745,103 +2749,12 @@ form.content-delete {
   flex-direction: column;
   gap: 2rem;
   position: relative;
+  margin-top: 3rem;
 }
 @media (min-width: 768px) {
   .dashboard-list {
     gap: 1rem;
   }
-}
-.dashboard-list li {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 1rem;
-  align-items: center;
-}
-.dashboard-list li.layout-col-2 {
-  grid-template-areas: "element" "button";
-}
-@media (min-width: 768px) {
-  .dashboard-list li.layout-col-2 {
-    grid-template-columns: 1fr auto;
-    grid-template-areas: "element button";
-  }
-}
-.dashboard-list li.layout-col-3 {
-  grid-template-columns: auto auto;
-  grid-template-areas: "element element" "icon button";
-}
-@media (min-width: 768px) {
-  .dashboard-list li.layout-col-3 {
-    grid-template-columns: auto 1fr auto;
-    grid-template-areas: "icon element button";
-  }
-}
-.dashboard-list li.list-user {
-  grid-template-columns: auto 1fr auto;
-  grid-template-rows: auto;
-  grid-template-areas: "delete name buttons";
-}
-@media (max-width: 767px) {
-  .dashboard-list li.list-user {
-    grid-template-columns: auto 1fr;
-    grid-template-areas: "delete name" "buttons buttons";
-  }
-}
-.dashboard-list li.list-user .list-user-delete {
-  grid-area: delete;
-}
-.dashboard-list li.list-user .user-name {
-  grid-area: name;
-}
-.dashboard-list li.list-user .list-user-type {
-  grid-area: buttons;
-}
-.dashboard-list li .content-icon {
-  grid-area: icon;
-}
-.dashboard-list li .content-element {
-  grid-area: element;
-}
-.dashboard-list li .content-btn {
-  grid-area: button;
-}
-.dashboard-list li .element-title {
-  font-family: "Source Sans 3", sans-serif;
-  font-weight: 400;
-  font-size: 1.25rem;
-  line-height: 1.5em;
-  color: #8d949b;
-  text-align: center;
-}
-@media (min-width: 768px) {
-  .dashboard-list li .element-title {
-    text-align: unset;
-    font-size: 1rem;
-  }
-}
-.dashboard-list li .element-title span {
-  font-weight: 700;
-}
-.dashboard-list li.user-hide {
-  display: none;
-}
-.dashboard-list li.is-draggable {
-  padding-left: 2rem;
-  opacity: 0.6;
-  cursor: move;
-}
-.dashboard-list li.is-draggable:before {
-  position: absolute;
-  left: 0;
-  display: inline-flex;
-  text-rendering: auto;
-  -webkit-font-smoothing: antialiased;
-  font-size: 1em;
-  font: var(--fa-font-sharp-solid);
-  content: "\f0b2";
-}
-.dashboard-list li.is-draggable .list-cta {
-  pointer-events: none;
 }
 .dashboard-list .list-cta {
   display: flex;
@@ -2860,6 +2773,99 @@ form.content-delete {
 }
 .dashboard-list .list-cta.list-user-type > * {
   flex-grow: 1;
+}
+
+.dashboard-list-elements {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  align-items: center;
+}
+.dashboard-list-elements.layout-col-2 {
+  grid-template-areas: "element" "button";
+}
+@media (min-width: 768px) {
+  .dashboard-list-elements.layout-col-2 {
+    grid-template-columns: 1fr auto;
+    grid-template-areas: "element button";
+  }
+}
+.dashboard-list-elements.layout-col-3 {
+  grid-template-columns: auto auto;
+  grid-template-areas: "element element" "icon button";
+}
+@media (min-width: 768px) {
+  .dashboard-list-elements.layout-col-3 {
+    grid-template-columns: auto 1fr auto;
+    grid-template-areas: "icon element button";
+  }
+}
+.dashboard-list-elements.is-draggable {
+  padding-left: 2rem;
+  opacity: 0.6;
+  cursor: move;
+}
+.dashboard-list-elements.is-draggable:before {
+  position: absolute;
+  left: 0;
+  display: inline-flex;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  font-size: 1em;
+  font: var(--fa-font-sharp-solid);
+  content: "\f0b2";
+}
+.dashboard-list-elements.is-draggable .list-cta {
+  pointer-events: none;
+}
+.dashboard-list-elements.list-user {
+  grid-template-columns: auto 1fr auto;
+  grid-template-rows: auto;
+  grid-template-areas: "delete name buttons";
+}
+@media (max-width: 767px) {
+  .dashboard-list-elements.list-user {
+    grid-template-columns: auto 1fr;
+    grid-template-areas: "delete name" "buttons buttons";
+  }
+}
+.dashboard-list-elements.list-user .list-user-delete {
+  grid-area: delete;
+}
+.dashboard-list-elements.list-user .user-name {
+  grid-area: name;
+}
+.dashboard-list-elements.list-user .list-user-type {
+  grid-area: buttons;
+}
+.dashboard-list-elements .content-icon {
+  grid-area: icon;
+}
+.dashboard-list-elements .content-element {
+  grid-area: element;
+}
+.dashboard-list-elements .content-btn {
+  grid-area: button;
+}
+.dashboard-list-elements .element-title {
+  font-family: "Source Sans 3", sans-serif;
+  font-weight: 400;
+  font-size: 1.25rem;
+  line-height: 1.5em;
+  color: #8d949b;
+  text-align: center;
+}
+@media (min-width: 768px) {
+  .dashboard-list-elements .element-title {
+    text-align: unset;
+    font-size: 1rem;
+  }
+}
+.dashboard-list-elements .element-title span {
+  font-weight: 700;
+}
+.dashboard-list-elements.user-hide {
+  display: none;
 }
 
 .d-form-wrapper {

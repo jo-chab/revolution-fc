@@ -1686,6 +1686,7 @@ Lists
   opacity: 0.8;
 }
 .list-programs .program-element h2 {
+  font-size: 1.5rem;
   letter-spacing: 0;
   margin-bottom: 0.5rem;
   line-height: 1.3em;
