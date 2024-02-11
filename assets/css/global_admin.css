@@ -1025,143 +1025,6 @@ GRID SYSTEM
   }
 }
 
-/************************
-ALERT MESSAGES in Dashboard
-************************/
-.message-box {
-  display: flex;
-  flex-flow: row nowrap;
-  position: fixed;
-  bottom: 4rem;
-  left: 50%;
-  transform: translate(-50%, 0);
-  z-index: 10;
-  -webkit-box-shadow: 0 5px 20px -6px rgba(18, 18, 18, 0.4);
-  -moz-box-shadow: 0 5px 20px -6px rgba(18, 18, 18, 0.4);
-  box-shadow: 0 5px 20px -6px rgba(18, 18, 18, 0.4);
-}
-.message-box.maintenance {
-  width: 100%;
-  position: relative;
-  bottom: unset;
-  left: unset;
-  transform: none;
-  margin-bottom: 3rem;
-}
-.message-box.maintenance:has(+ .maintenance) {
-  margin-bottom: 1rem;
-}
-.message-box.maintenance .icon {
-  background-color: #ff1540;
-}
-.message-box.maintenance .icon:before {
-  color: white;
-}
-.message-box.maintenance p {
-  width: 100%;
-  max-width: inherit;
-}
-.message-box.maintenance p:has(+ p) {
-  margin-bottom: 0.5rem;
-}
-.message-box.maintenance p:has(+ ul) {
-  margin-bottom: 0;
-}
-.message-box.maintenance ul, .message-box.maintenance ol {
-  margin-inline: 1rem;
-  margin-block: 0.25rem;
-}
-.message-box.maintenance ul li, .message-box.maintenance ol li {
-  font-family: "Source Sans 3", sans-serif;
-  font-weight: 400;
-  font-size: 0.875rem;
-  line-height: 1.3em;
-  color: white;
-  margin-bottom: 0.25rem;
-}
-.message-box.maintenance ul li:last-of-type, .message-box.maintenance ol li:last-of-type {
-  margin-bottom: 0;
-}
-.message-box.maintenance ul li {
-  list-style-type: disc;
-}
-.message-box.maintenance ul li li {
-  list-style: circle;
-}
-.message-box.maintenance ol li {
-  list-style-type: decimal;
-}
-.message-box.maintenance ol li li {
-  list-style: lower-alpha;
-}
-.message-box.maintenance.legend {
-  margin-bottom: 0.5rem;
-  box-shadow: none;
-}
-.message-box.maintenance.legend .text-content {
-  border: 1px solid #6300ee;
-  -webkit-border-radius: 0.5rem;
-  -moz-border-radius: 0.5rem;
-  border-radius: 0.5rem;
-  background: #f6efff;
-}
-.message-box.maintenance.legend span {
-  display: grid;
-  grid-template-columns: 24px 1fr;
-  align-items: center;
-  gap: 0.5rem;
-  line-height: 1.3em;
-  color: #6300ee;
-  margin-bottom: 0.5rem;
-}
-.message-box.maintenance.legend span:before {
-  display: inline-grid;
-  justify-content: center;
-}
-.message-box.maintenance.legend span.construction:before {
-  font: var(--fa-font-light);
-  content: "\f85d";
-  font-size: 1.25em;
-  color: #ffbe2e;
-}
-.message-box.maintenance.legend span.new-feature:before {
-  font: var(--fa-font-sharp-regular);
-  content: "\f06d";
-  font-size: 1.25em;
-  color: #ff1540;
-}
-.message-box .icon {
-  padding: 1rem;
-  background-color: #ffbe2e;
-}
-.message-box .icon:before {
-  font: var(--fa-font-sharp-regular);
-  content: "\f05a";
-  font-size: 2rem;
-}
-.message-box .text-content {
-  width: 100%;
-  padding: 1rem;
-  background: #181818;
-}
-.message-box p {
-  color: white;
-  font-size: 0.875rem;
-}
-.message-box .message-box-close {
-  position: absolute;
-  top: 0;
-  right: 0;
-  font-family: "Font Awesome 6 Pro";
-  font-weight: 300;
-  color: #2e2e2e;
-  content: "\f00d";
-}
-.message-box.fade-out {
-  opacity: 1;
-  transition: all 0.5s ease-in-out;
-}
-
 /********* FONCTIONS *********/
 .is-hide,
 .is-hidden {
@@ -2432,50 +2295,6 @@ input[type=date] {
   gap: 1rem;
 }
 
-/************************************
-ADMIN switch buttons
-************************************/
-form.switch-status {
-  display: grid;
-  gap: 0.25rem;
-}
-
-/* Hide the default checkbox */
-.switch-checkbox {
-  display: none;
-}
-
-/* Style the switch container */
-.switch-container {
-  display: inline-block;
-  position: relative;
-  width: 56px;
-  height: 32px;
-  background-color: #f6e9d5; /* Default background color */
-  border-radius: 16px;
-  cursor: pointer;
-}
-
-/* Style the switch knob */
-.switch-knob {
-  position: absolute;
-  top: 3px;
-  left: 3px;
-  width: 26px;
-  height: 26px;
-  background-color: #fff;
-  border-radius: 50%;
-  transition: transform 0.3s, background-color 0.3s;
-}
-
-.switch-container:has(.switch-checkbox:checked) {
-  background-color: #a8956c;
-}
-
-.switch-checkbox:checked + .switch-knob {
-  transform: translateX(23px);
-}
-
 /*
 *
 * LOCATION: [scss]
@@ -2556,6 +2375,146 @@ form.switch-status {
 * DESCRIPTION: admin css file
 *
 */
+/************************
+ALERT MESSAGES in Dashboard
+************************/
+.message-box {
+  display: flex;
+  flex-flow: row nowrap;
+  position: fixed;
+  bottom: 4rem;
+  left: 50%;
+  transform: translate(-50%, 0);
+  z-index: 10;
+  -webkit-box-shadow: 0 5px 20px -6px rgba(18, 18, 18, 0.4);
+  -moz-box-shadow: 0 5px 20px -6px rgba(18, 18, 18, 0.4);
+  box-shadow: 0 5px 20px -6px rgba(18, 18, 18, 0.4);
+}
+.message-box.maintenance {
+  width: 100%;
+  position: relative;
+  bottom: unset;
+  left: unset;
+  transform: none;
+  margin-bottom: 3rem;
+}
+.message-box.maintenance:has(+ .maintenance) {
+  margin-bottom: 1rem;
+}
+.message-box.maintenance .icon {
+  background-color: #ff1540;
+}
+.message-box.maintenance .icon:before {
+  color: white;
+}
+.message-box.maintenance p {
+  width: 100%;
+  max-width: inherit;
+}
+.message-box.maintenance p:has(+ p) {
+  margin-bottom: 0.5rem;
+}
+.message-box.maintenance p:has(+ ul) {
+  margin-bottom: 0;
+}
+.message-box.maintenance ul, .message-box.maintenance ol {
+  margin-inline: 1rem;
+  margin-block: 0.25rem;
+}
+.message-box.maintenance ul li, .message-box.maintenance ol li {
+  font-family: "Source Sans 3", sans-serif;
+  font-weight: 400;
+  font-size: 0.875rem;
+  line-height: 1.3em;
+  color: white;
+  margin-bottom: 0.25rem;
+}
+.message-box.maintenance ul li:last-of-type, .message-box.maintenance ol li:last-of-type {
+  margin-bottom: 0;
+}
+.message-box.maintenance ul li {
+  list-style-type: disc;
+}
+.message-box.maintenance ul li li {
+  list-style: circle;
+}
+.message-box.maintenance ol li {
+  list-style-type: decimal;
+}
+.message-box.maintenance ol li li {
+  list-style: lower-alpha;
+}
+.message-box.maintenance.legend {
+  margin-bottom: 0.5rem;
+  box-shadow: none;
+}
+.message-box.maintenance.legend .text-content {
+  border: 1px solid #6300ee;
+  -webkit-border-radius: 0.5rem;
+  -moz-border-radius: 0.5rem;
+  border-radius: 0.5rem;
+  background: #f6efff;
+}
+.message-box.maintenance.legend span {
+  display: grid;
+  grid-template-columns: 24px 1fr;
+  align-items: center;
+  gap: 0.5rem;
+  line-height: 1.3em;
+  color: #6300ee;
+  margin-bottom: 0.5rem;
+}
+.message-box.maintenance.legend span:before {
+  display: inline-grid;
+  justify-content: center;
+}
+.message-box.maintenance.legend span.construction:before {
+  font: var(--fa-font-light);
+  content: "\f85d";
+  font-size: 1.25em;
+  color: #ffbe2e;
+}
+.message-box.maintenance.legend span.new-feature:before {
+  font: var(--fa-font-sharp-regular);
+  content: "\f06d";
+  font-size: 1.25em;
+  color: #ff1540;
+}
+.message-box.maintenance.legend span:last-child {
+  margin-bottom: 0;
+}
+.message-box .icon {
+  padding: 1rem;
+  background-color: #ffbe2e;
+}
+.message-box .icon:before {
+  font: var(--fa-font-sharp-regular);
+  content: "\f05a";
+  font-size: 2rem;
+}
+.message-box .text-content {
+  width: 100%;
+  padding: 1rem;
+  background: #181818;
+}
+.message-box p {
+  color: white;
+  font-size: 0.875rem;
+}
+.message-box .message-box-close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-family: "Font Awesome 6 Pro";
+  font-weight: 300;
+  color: #2e2e2e;
+  content: "\f00d";
+}
+.message-box.fade-out {
+  opacity: 1;
+  transition: all 0.5s ease-in-out;
+}
+
 /*************************************
 ADMIN – FORM buttons
 *************************************/
@@ -2587,8 +2546,70 @@ ADMIN – FORM buttons
   margin: 0 !important;
 }
 
+.list-cta {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  align-items: center;
+  pointer-events: initial;
+}
+@media (max-width: 767px) {
+  .list-cta {
+    justify-content: center;
+  }
+}
+.list-cta.list-user-type {
+  gap: 0.5rem;
+}
+.list-cta.list-user-type > * {
+  flex-grow: 1;
+}
+
 .inactive > * {
   opacity: 0.2;
+}
+
+/************************************
+ADMIN switch buttons
+************************************/
+form.switch-status {
+  display: grid;
+  gap: 0.25rem;
+}
+
+/* Hide the default checkbox */
+.switch-checkbox {
+  display: none;
+}
+
+/* Style the switch container */
+.switch-container {
+  display: inline-block;
+  position: relative;
+  width: 56px;
+  height: 32px;
+  background-color: #dafce4; /* Default background color */
+  border-radius: 16px;
+  cursor: pointer;
+}
+.switch-container:has(.switch-checkbox:checked) {
+  background-color: #00bd60;
+}
+
+/* Style the switch knob */
+.switch-knob {
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 26px;
+  height: 26px;
+  background-color: #fff;
+  border-radius: 50%;
+  transition: transform 0.3s, background-color 0.3s;
+}
+
+.switch-checkbox:checked + .switch-knob {
+  transform: translateX(23px);
 }
 
 /*************************************
@@ -2755,24 +2776,6 @@ form.content-delete {
   .dashboard-list {
     gap: 1rem;
   }
-}
-.dashboard-list .list-cta {
-  display: flex;
-  flex-direction: row;
-  gap: 1rem;
-  align-items: center;
-  pointer-events: initial;
-}
-@media (max-width: 767px) {
-  .dashboard-list .list-cta {
-    justify-content: center;
-  }
-}
-.dashboard-list .list-cta.list-user-type {
-  gap: 0.5rem;
-}
-.dashboard-list .list-cta.list-user-type > * {
-  flex-grow: 1;
 }
 
 .dashboard-list-elements {

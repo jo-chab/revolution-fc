@@ -9,6 +9,164 @@
 
 
 
+
+
+
+
+
+/************************
+ALERT MESSAGES in Dashboard
+************************/
+.message-box {
+    display: flex;
+    flex-flow: row nowrap;
+    
+    position: fixed;
+    bottom: 4rem; left: 50%;
+    transform: translate(-50%, 0);
+    z-index: 10;
+    
+    -webkit-box-shadow: 0 5px 20px -6px rgba(18,18,18,.4);
+    -moz-box-shadow: 0 5px 20px -6px rgba(18,18,18,.4);
+    box-shadow: 0 5px 20px -6px rgba(18,18,18,.4);
+    
+    &.maintenance {
+        width: 100%;
+        position: relative;
+        bottom: unset; left: unset;
+        transform: none;
+        margin-bottom: 3rem;
+        &:has(+ .maintenance) {
+            margin-bottom: 1rem;
+        }
+        
+        .icon {
+            background-color: $color-error;
+            &:before {
+                color: white;
+            }
+        }
+        
+        p {
+            width: 100%;
+            max-width: inherit;
+            
+            &:has(+ p) {
+                margin-bottom: .5rem;
+            }
+            &:has(+ ul) {
+                margin-bottom: 0;
+            }
+        }
+        
+        ul, ol {
+            margin-inline: 1rem;
+            margin-block: .25rem;
+            
+            li {
+                @include font-family-reading;
+                @include font-style(400, .875rem, 1.3em, white);
+                margin-bottom: .25rem;
+                
+                &:last-of-type {
+                    margin-bottom: 0;
+                }
+            }
+        }
+        
+        ul li {
+            list-style-type: disc;
+            li {
+                list-style: circle;
+            }
+        }
+        
+        ol li {
+            list-style-type: decimal;
+            li {
+                list-style: lower-alpha;
+            }
+        }
+        
+    }
+    &.maintenance.legend {
+        margin-bottom: .5rem;
+        box-shadow: none;
+        .text-content {
+            border: 1px solid $admin-primary;
+            @include border-radius-uniform(.5rem);
+            background: $admin-primary-lighter;
+        }
+        span {
+            display: grid;
+            grid-template-columns: 24px 1fr;
+            align-items: center;
+            gap: .5rem;
+            line-height: 1.3em;
+            color: $admin-primary;
+            margin-bottom: .5rem;
+            
+            &:before {
+                display: inline-grid;
+                justify-content: center;
+            }
+            
+            &.construction:before {
+                font: var(--fa-font-light);
+                content: '\f85d';
+                font-size: 1.25em;
+                color: $color-warning;
+            }
+            &.new-feature:before {
+                font: var(--fa-font-sharp-regular);
+                content: '\f06d';
+                font-size: 1.25em;
+                color: $color-error;
+            }
+            
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+    
+    .icon {
+        padding: 1rem;
+        background-color: $color-warning;
+        &:before {
+            font: var(--fa-font-sharp-regular);
+            content: "\f05a";
+            font-size: 2rem;
+        }
+    }
+    .text-content {
+        width: 100%;
+        padding: 1rem;
+        background: $web-grey-6;
+    }
+    p {
+        color: white;
+        font-size: .875rem;
+    }
+    
+    .message-box-close {
+        position: absolute;
+        top: 0;
+        right: 0;
+        font-family: "Font Awesome 6 Pro";
+        font-weight: 300;
+        color: #2e2e2e;
+        content: "\f00d";
+    }
+    
+    &.fade-out {
+        opacity: 1;
+        transition: all 0.5s ease-in-out;
+    }
+    
+}
+
+
 /*************************************
 ADMIN – FORM buttons
 *************************************/
@@ -45,10 +203,76 @@ ADMIN – FORM buttons
     
 }
 
+.list-cta {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    align-items: center;
+    pointer-events: initial;
+    @include mobile-max {
+        justify-content: center;
+    }
+    
+    &.list-user-type {
+        gap: .5rem;
+        
+        > * {
+            flex-grow: 1;
+        }
+    }
+}
+
 .inactive > * {
     opacity: 0.2;
 }
 
+
+
+
+
+
+/************************************
+ADMIN switch buttons
+************************************/
+form.switch-status {
+    display: grid;
+    gap: .25rem;
+}
+
+/* Hide the default checkbox */
+.switch-checkbox {
+    display: none;
+}
+
+/* Style the switch container */
+.switch-container {
+    display: inline-block;
+    position: relative;
+    width: 56px;
+    height: 32px;
+    background-color: $color-success-lighter; /* Default background color */
+    border-radius: 16px;
+    cursor: pointer;
+    &:has(.switch-checkbox:checked) {
+        background-color: $color-success-dark;
+    }
+}
+
+/* Style the switch knob */
+.switch-knob {
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    width: 26px;
+    height: 26px;
+    background-color: #fff;
+    border-radius: 50%;
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+.switch-checkbox:checked + .switch-knob {
+    transform: translateX(23px);
+}
 
 
 
@@ -206,25 +430,6 @@ form.content-delete {
     margin-top: 3rem;
     @include tablet {
         gap: 1rem;
-    }
-    
-    .list-cta {
-        display: flex;
-        flex-direction: row;
-        gap: 1rem;
-        align-items: center;
-        pointer-events: initial;
-        @include mobile-max {
-            justify-content: center;
-        }
-        
-        &.list-user-type {
-            gap: .5rem;
-            
-            > * {
-                flex-grow: 1;
-            }
-        }
     }
     
 }
