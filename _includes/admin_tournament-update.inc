@@ -67,9 +67,9 @@
                         style_formats: [
                             {
                                 title: 'Texte', items: [
-                                    { title: 'titre', format: 'h3' },
-                                    { title: 'Titre de liste', format: 'h4' },
-                                    { title: 'Paragraphe', format: 'p' }
+                                    {title: 'titre', format: 'h3'},
+                                    {title: 'Titre de liste', format: 'h4'},
+                                    {title: 'Paragraphe', format: 'p'}
                                 ]
                             },
                             {
@@ -135,7 +135,9 @@
     
     <div class="dashboard-content">
         
-        <a class="btn-primary btn-add small icon i-more mobile-icon-only js-content-add" href="?p=90"><span>Ajouter un commanditaire</span></a>
+        <div class="d-form-cta header">
+            <a class="btn-primary btn-add small icon i-more mobile-icon-only" href="?p=90"><span>Ajouter un commanditaire</span></a>
+        </div>
         
         <form method="post" action="action_tournament-sponsors_check" enctype="multipart/form-data">
             
@@ -178,7 +180,9 @@
     
     <div class="dashboard-content">
         
-        <div class="btn-primary btn-add small icon mobile-icon-only i-more js-content-add"><a>Ajouter une categorie</a></div>
+        <div class="d-form-cta header">
+            <div class="btn-primary btn-add small icon mobile-icon-only i-more js-content-add"><a>Ajouter une categorie</a></div>
+        </div>
         
         <?php include("../_includes/admin_tournament_category-add.inc"); ?>
         
