@@ -19,37 +19,6 @@
                     </div>
                 </div>
                 
-                
-                <div class="grid-layout-3">
-                    <div class="form-row column">
-                        <div class="select-dropdown">
-                            <label>Club?</label>
-                            <select name="ld_club" required>
-                                <option value='1'>Oui</option>
-                                <option value='0'>Non</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="form-row column">
-                        <div class="select-dropdown">
-                            <label>Tournoi &eacute;t&eacute;?</label>
-                            <select name="ld_tournoi_summer" required>
-                                <option value='1'>Oui</option>
-                                <option value='0'>Non</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="form-row column">
-                        <div class="select-dropdown">
-                            <label>Tournoi hiver?</label>
-                            <select name="ld_tournoi_winter" required>
-                                <option value='1'>Oui</option>
-                                <option value='0'>Non</option>
-                            </select>
-                        </div>
-                    </div>
-                </div>
-                
                 <div class="form-row column">
                     <label>Télécharger l'image du logo</label>
                     

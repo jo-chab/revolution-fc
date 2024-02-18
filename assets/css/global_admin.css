@@ -2110,12 +2110,12 @@ HEADER ADMIN - SIDEBAR
   background: white;
   border-color: #d3d3d3;
 }
-.sidebar-menu .menu-element span.new-feature:after {
+.sidebar-menu .menu-element .new-feature:after {
   font: var(--fa-font-sharp-regular);
   content: "\f06d";
   color: #ff1540;
 }
-.sidebar-menu .menu-element span.wip:after {
+.sidebar-menu .menu-element .wip:after {
   font: var(--fa-font-light);
   content: "\f85d";
   color: #ffbe2e;

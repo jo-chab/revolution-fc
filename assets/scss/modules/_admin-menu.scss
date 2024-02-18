@@ -142,12 +142,12 @@ HEADER ADMIN - SIDEBAR
             }
         }
         
-        span.new-feature:after {
+        .new-feature:after {
             font: var(--fa-font-sharp-regular);
             content: '\f06d';
             color: $color-error;
         }
-        span.wip:after {
+        .wip:after {
             font: var(--fa-font-light);
             content: '\f85d';
             color: $color-warning;

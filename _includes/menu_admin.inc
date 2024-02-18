@@ -93,7 +93,7 @@
     </li>
     
     <li class="admin-nav">
-        <div class="menu-element icon i-sponsors"><a class="" href="?p=91">Sponsors</a></div>
+        <div class="menu-element icon i-sponsors"><a class="icon wip" href="?p=91">Sponsors</a></div>
     </li>
     
     
