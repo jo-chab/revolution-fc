@@ -806,6 +806,12 @@ ADMIN ICONS
   font-size: 1.25em;
 }
 
+.btn-delete.remove:before {
+  font: var(--fa-font-solid);
+  content: "\e59b";
+  font-size: 1.25em;
+}
+
 .btn-cancel:before {
   font: var(--fa-font-light);
   content: "\f057";
@@ -954,61 +960,6 @@ GRID SYSTEM
 }
 .flex-layout.row {
   flex-flow: row wrap;
-}
-
-.grid-system {
-  width: 100%;
-  display: grid;
-  gap: 1rem;
-}
-@media (min-width: 768px) {
-  .grid-system {
-    gap: 1.5rem;
-  }
-}
-@media (min-width: 1024px) {
-  .grid-system {
-    gap: 2.5rem;
-  }
-}
-.grid-system.grid-col-2 {
-  grid-template-columns: 1fr;
-}
-@media (min-width: 768px) {
-  .grid-system.grid-col-2 {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-.grid-system.grid-col-3 {
-  grid-template-columns: 1fr;
-}
-@media (min-width: 768px) {
-  .grid-system.grid-col-3 {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-@media (min-width: 1024px) {
-  .grid-system.grid-col-3 {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-@media (min-width: 768px) {
-  .grid-system.grid-col-3.t1 {
-    grid-template-columns: 1fr;
-  }
-}
-.grid-system.grid-col-4 {
-  grid-template-columns: 1fr 1fr;
-}
-@media (min-width: 1024px) {
-  .grid-system.grid-col-4 {
-    grid-template-columns: repeat(4, 1fr);
-  }
-}
-@media (min-width: 768px) {
-  .grid-system.grid-col-4.t1 {
-    grid-template-columns: 1fr;
-  }
 }
 
 .footer-dashboard {
@@ -2612,6 +2563,58 @@ form.switch-status {
   transform: translateX(23px);
 }
 
+/************************************
+ADMIN custom checkbox
+************************************/
+.list-checklist {
+  width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  gap: 1rem 2rem;
+  margin-block: 1.5rem;
+}
+
+.custom-checkbox {
+  display: block;
+  padding: 1rem;
+  -webkit-border-radius: 0.5rem;
+  -moz-border-radius: 0.5rem;
+  border-radius: 0.5rem;
+  border: 1px solid #D0D3D4;
+  color: #D0D3D4;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.custom-checkbox:hover {
+  border-color: #52585f;
+  color: #52585f;
+}
+.custom-checkbox.sponsors {
+  width: 100%;
+  max-height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.custom-checkbox.sponsors img {
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: 100%;
+}
+[class*=list-img-] .custom-checkbox:has(input[type=checkbox]) {
+  opacity: 0.4;
+}
+.custom-checkbox:has(input[type=checkbox]:checked) {
+  border-color: #3700b3;
+  background-color: #f6efff;
+  color: #3700b3;
+  opacity: 1;
+}
+.custom-checkbox input[type=checkbox] {
+  display: none;
+}
+
 /*************************************
 ADMIN – DEFAULT HOME PAGE
 *************************************/
@@ -2770,7 +2773,6 @@ form.content-delete {
   flex-direction: column;
   gap: 2rem;
   position: relative;
-  margin-top: 3rem;
 }
 @media (min-width: 768px) {
   .dashboard-list {
@@ -2976,6 +2978,43 @@ ALBUMS
 .list-img-album img {
   width: 100%;
   max-width: 100%;
+}
+
+/*************************************
+ALBUMS
+*************************************/
+.list-img-sponsors {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-block: 2rem 4rem;
+}
+@media (min-width: 768px) {
+  .list-img-sponsors {
+    grid-template-columns: repeat(5, 1fr);
+    gap: 2rem;
+  }
+}
+.list-img-sponsors .img-vignette {
+  width: 100%;
+  max-height: 120px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.list-img-sponsors .img-vignette .btn-delete {
+  position: absolute;
+  top: 0.5rem;
+  left: 0.5rem;
+  z-index: 2;
+  padding: 0.5rem;
+}
+.list-img-sponsors img {
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: 100%;
 }
 
 /*# sourceMappingURL=global_admin.css.map */

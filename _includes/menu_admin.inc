@@ -65,14 +65,14 @@
             <li class="sub-nav-item"><a class="sub-nav-item-el" href="?p=21">Membres du CA</a></li>
             <li class="sub-nav-item"><a class="sub-nav-item-el" href="?p=23">Membres de l'administration</a></li>
             <li class="sub-nav-item"><a class="sub-nav-item-el" href="?p=25">Membres du staff technique</a></li>
-            <li class="sub-nav-item"><a class="sub-nav-item-el" href="?p=93">Gérer les Utlisateurs</a></li>
+            <li class="sub-nav-item"><a class="sub-nav-item-el" href="?p=94">Gérer les Utlisateurs</a></li>
         </ul>
     </li>
     
     <li class="admin-nav">
-        <div class="menu-element icon i-soccer-1"><span class="icon new-feature">Technique</span></div>
+        <div class="menu-element icon i-soccer-1"><span class="">Technique</span></div>
         <ul class="sub-nav">
-            <li class="sub-nav-item"><a class="sub-nav-item-el" href="?p=51"><span class="icon new-feature">Programmes</span></a></li>
+            <li class="sub-nav-item"><a class="sub-nav-item-el" href="?p=51">Programmes</a></li>
             <li class="sub-nav-item"><a class="sub-nav-item-el" href="?p=35">Documents technique</a></li>
             <li class="sub-nav-item"><a class="sub-nav-item-el" href="?p=37">Gérer les catégories technique</a></li>
             <li class="sub-nav-item"><a class="sub-nav-item-el" href="?p=38">Gérer les sous-catégories technique</a></li>
@@ -80,20 +80,24 @@
     </li>
     
     <li class="admin-nav">
-        <div class="menu-element icon i-tournament"><a class="" href="?p=81">Tournois</a></div>
+        <div class="menu-element icon i-tournament"><a class="icon wip" href="?p=81">Tournois</a></div>
     </li>
     
     <li class="admin-nav">
-        <div class="menu-element icon i-events"><span class="icon new-feature">Evenements</span></div>
+        <div class="menu-element icon i-events"><span class="">Evenements</span></div>
         <ul class="sub-nav">
             <li class="sub-nav-item"><a class="sub-nav-item-el" href="?p=63">Gérer les évènements</a></li>
             <li class="sub-nav-item"><a class="sub-nav-item-el" href="?p=64">Créer un évènement</a></li>
-            <li class="sub-nav-item"><a class="sub-nav-item-el" href="?p=66"><span class="icon new-feature">Albums photos</span></a></li>
+            <li class="sub-nav-item"><a class="sub-nav-item-el" href="?p=66">Albums photos</a></li>
         </ul>
     </li>
     
     <li class="admin-nav">
-        <div class="menu-element icon i-sponsors"><a class="icon wip" href="?p=91">Sponsors</a></div>
+        <div class="menu-element icon i-sponsors"><span class="icon wip">Sponsors</span></div>
+        <ul class="sub-nav">
+            <li class="sub-nav-item"><a class="sub-nav-item-el" href="?p=91">Gérer les sponsors</a></li>
+            <li class="sub-nav-item"><a class="sub-nav-item-el" href="?p=93">Gérer les sponsors club</a></li>
+        </ul>
     </li>
     
     

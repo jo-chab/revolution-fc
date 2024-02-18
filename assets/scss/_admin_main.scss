@@ -280,6 +280,71 @@ form.switch-status {
 
 
 
+
+
+/************************************
+ADMIN custom checkbox
+************************************/
+.list-checklist {
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    gap: 1rem 2rem;
+    margin-block: 1.5rem;
+}
+.custom-checkbox {
+    display: block;
+    padding: 1rem;
+    @include border-radius-uniform(.5rem);
+    border: 1px solid $secondary-color-light;
+    color: $secondary-color-light;
+    cursor: pointer;
+    
+    transition: all .3s ease;
+    
+    &:hover {
+        border-color: $secondary-color-dark;
+        color: $secondary-color-dark;
+    }
+    
+    &.sponsors {
+        width: 100%;
+        max-height: 120px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        
+        img {
+            width: auto;
+            height: auto;
+            max-width: 100%;
+            max-height: 100%;
+        }
+    }
+    
+    &:has(input[type="checkbox"]) {
+        [class*='list-img-'] & {
+            opacity: .4;
+        }
+    }
+    
+    &:has(input[type="checkbox"]:checked) {
+        border-color: $admin-primary-darker;
+        background-color: $admin-primary-lighter;
+        color: $admin-primary-darker;
+        opacity: 1;
+    }
+    
+    input[type="checkbox"] {
+        display: none;
+    }
+}
+
+
+
+
+
+
 /*************************************
 ADMIN – DEFAULT HOME PAGE
 *************************************/
@@ -430,7 +495,6 @@ form.content-delete {
     flex-direction: column;
     gap: 2rem;
     position: relative;
-    margin-top: 3rem;
     @include tablet {
         gap: 1rem;
     }
@@ -659,5 +723,49 @@ ALBUMS
     img {
         width: 100%;
         max-width: 100%;
+    }
+}
+
+
+
+
+
+
+
+/*************************************
+ALBUMS
+*************************************/
+.list-img-sponsors {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin-block: 2rem 4rem;
+    @include tablet {
+        grid-template-columns: repeat(5, 1fr);
+        gap: 2rem;
+    }
+    
+    .img-vignette {
+        width: 100%;
+        max-height: 120px;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        
+        .btn-delete {
+            position: absolute;
+            top: .5rem;
+            left: .5rem;
+            z-index: 2;
+            padding: .5rem;
+        }
+    }
+    
+    img {
+        width: auto;
+        height: auto;
+        max-width: 100%;
+        max-height: 100%;
     }
 }

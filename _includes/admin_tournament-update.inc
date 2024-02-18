@@ -5,20 +5,26 @@
     $sql1 = $db->prepare("SELECT * FROM TOURNAMENT WHERE id_tournament = ? ");
     $sql1->execute([$element]);
     
-    while ($curseur1 = $sql1->fetch()) {
-        extract($curseur1);
-        
-        $name = nl2br(stripslashes($tournament_name));
-        $desc = nl2br(stripslashes($tournament_desc));
-        $texte = nl2br(stripslashes($tournament_text));
+    // Check if the tournament exists
+    if ($curseur1 = $sql1->fetch()) {
+        // Extract data if available
+        $name = nl2br(stripslashes($curseur1['tournament_name']));
+        $desc = nl2br(stripslashes($curseur1['tournament_desc']));
+        $tournament_img = nl2br(stripslashes($curseur1['tournament_img']));
+        $texte = nl2br(stripslashes($curseur1['tournament_text']));
         $texte = str_replace("<br /><br />", "", $texte);
         $texte = str_replace("<br />", "", $texte);
+    } else {
+        $name = "Tournament Not Found";
+        $desc = "";
+        $texte = "";
     }
     
     $supprElement = 1;
-    $actionForm = "action_tournament_delete.php";
+    $actionForm = "action_tournament_update.php"; // Corrected the action file name
     $supprText = 'Supprimer le tournoi';
 ?>
+
 
 <div class="dashboard-main">
     <div class="dashboard-title">
@@ -89,7 +95,7 @@
                 <div class="form-row column">
                     <label>Photo actuelle</label>
                     <?php
-                        echo "<div class='actu-img-upload'><img src='../$tournament_img' alt='$name' /></div>";
+                        echo "<div class='actu-img-upload'><img src='$tournament_img' alt='$name' /></div>";
                     ?>
                 </div>
                 
@@ -124,7 +130,50 @@
 
 <div class="dashboard-main">
     <div class="dashboard-title">
-        <h4 class="white">Gérer les catégories pour <?php echo $name ?></h4>
+        <h4 class="white">Gérer les commanditaires du <?php echo $name ?></h4>
+    </div>
+    
+    <div class="dashboard-content">
+        
+        <a class="btn-primary btn-add small icon i-more mobile-icon-only js-content-add" href="?p=90"><span>Ajouter un commanditaire</span></a>
+        
+        <form method="post" action="action_tournament-sponsors_check" enctype="multipart/form-data">
+            
+            <input type='hidden' name='element' value='<?php echo $element ?>'>
+            
+            <ul class="list-img-sponsors">
+                <?php
+                    $stmt2 = $db->prepare('SELECT sponsor_id FROM SPONSORS_event WHERE sponsor_event = ?');
+                    $stmt2->execute([$element]);
+                    $selectedSponsors = $stmt2->fetchAll(PDO::FETCH_COLUMN, 0);
+                    
+                    $sql1 = $db->prepare('SELECT * FROM SPONSORS ORDER BY name_sponsors DESC');
+                    $sql1->execute();
+                    
+                    while ($row = $sql1->fetch(PDO::FETCH_ASSOC)) {
+                        $id_sponsors = $row['id_sponsors'];
+                        $img = urldecode($row['logo_sponsors']);
+                        $isChecked = in_array($id_sponsors, $selectedSponsors) ? 'checked' : '';
+                        echo "
+                        <label class='custom-checkbox sponsors'>
+                    <input type='checkbox' name='selected_sponsors[]' value='$id_sponsors' $isChecked>
+                    <img src='$img' width='' height='' />
+                </label>
+                        ";
+                    }
+                ?>
+            </ul>
+            
+            <div class="d-form-cta">
+                <div class="btn-primary btn-confirm icon mobile-icon-only"><span>Valider la selection</span></div>
+            </div>
+        </form>
+    </div>
+</div>
+
+<div class="dashboard-main">
+    <div class="dashboard-title">
+        <h4 class="white">Gérer les catégories du <?php echo $name ?></h4>
     </div>
     
     <div class="dashboard-content">

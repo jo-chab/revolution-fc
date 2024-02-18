@@ -404,6 +404,11 @@ ADMIN ICONS
     content: '\f2ed';
     font-size: 1.25em;
 }
+.btn-delete.remove:before {
+    font: var(--fa-font-solid);
+    content: '\e59b';
+    font-size: 1.25em;
+}
 
 .btn-cancel:before {
     font: var(--fa-font-light);

@@ -66,6 +66,11 @@
         header('Location: https://www.revolutionfc.ca/admin/index.php?p=' . $page . '&m=' . $code_erreur);
         exit;
     }
+    function retour_erreur_content($page, $code_erreur, $parameter, $value)
+    {
+        header('Location: https://www.revolutionfc.ca/admin/index.php?p=' . $page . '&m=' . $code_erreur. '&' . $parameter. '=' . $value);
+        exit;
+    }
 
 
 

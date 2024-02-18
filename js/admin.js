@@ -35,6 +35,11 @@
         addButton.on('click', () => {
             contentAdd.slideToggle(400);
             addButton.toggleClass('is-hide');
+
+            // Check if the parent has the class 'd-form-cta' before toggling the class 'is-hide'
+            if (addButton.parent().hasClass('d-form-cta')) {
+                addButton.parent().toggleClass('is-hide');
+            }
         });
     }
 
