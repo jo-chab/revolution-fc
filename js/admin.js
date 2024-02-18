@@ -48,7 +48,7 @@
 
         updateButtons.each((index, updateButton) => {
             $(updateButton).on('click', () => {
-                const categoryId = $(updateButton).attr('data-album');
+                const categoryId = $(updateButton).attr('data-element');
                 const contentUpdate = $(`.content-update-${categoryId}`);
 
                 contentUpdate.slideDown(400);
@@ -66,7 +66,7 @@
     $('.js-cancel-update').click(function () {
         const contentUpdate = $(this).closest('.content-update');
         const categoryId = contentUpdate.attr('class').match(/content-update-(\d+)/)[1]; // Extract categoryId
-        const updateButton = document.querySelector(`.js-content-update[data-category="${categoryId}"]`);
+        const updateButton = document.querySelector(`.js-content-update[data-element="${categoryId}"]`);
 
         contentUpdate.slideUp(400);
         updateButton.classList.remove('is-not-active');
