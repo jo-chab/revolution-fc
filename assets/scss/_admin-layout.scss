@@ -113,7 +113,6 @@ GRID SYSTEM
     justify-content: flex-end;
     gap: 2rem;
     width: 100%;
-    margin-bottom: 8rem;
     @include mobile-max {
         flex-direction: column;
     }
