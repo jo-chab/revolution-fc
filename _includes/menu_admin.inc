@@ -95,8 +95,8 @@
     <li class="admin-nav">
         <div class="menu-element icon i-sponsors"><span class="icon wip">Sponsors</span></div>
         <ul class="sub-nav">
-            <li class="sub-nav-item"><a class="sub-nav-item-el" href="?p=91">Gérer les sponsors</a></li>
-            <li class="sub-nav-item"><a class="sub-nav-item-el" href="?p=93">Gérer les sponsors club</a></li>
+            <li class="sub-nav-item"><a class="sub-nav-item-el" href="?p=91">Gérer tous les sponsors</a></li>
+            <li class="sub-nav-item"><a class="sub-nav-item-el" href="?p=93">Gérer la liste des sponsors club</a></li>
         </ul>
     </li>
     
