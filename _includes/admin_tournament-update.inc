@@ -136,7 +136,7 @@
     <div class="dashboard-content">
         
         <div class="d-form-cta header">
-            <a class="btn-primary btn-add small icon i-more mobile-icon-only" href="?p=90"><span>Ajouter un commanditaire</span></a>
+            <a class="btn-primary btn-add small icon i-more" href="?p=90"><span>Ajouter un commanditaire</span></a>
         </div>
         
         <form method="post" action="action_tournament-sponsors_check" enctype="multipart/form-data">
@@ -167,7 +167,7 @@
             </ul>
             
             <div class="d-form-cta">
-                <div class="btn-primary btn-confirm icon mobile-icon-only"><span>Valider la selection</span></div>
+                <div class="btn-primary btn-confirm small icon mobile-icon-only"><span>Valider la selection</span></div>
             </div>
         </form>
     </div>
@@ -181,7 +181,7 @@
     <div class="dashboard-content">
         
         <div class="d-form-cta header">
-            <div class="btn-primary btn-add small icon mobile-icon-only i-more js-content-add"><a>Ajouter une categorie</a></div>
+            <div class="btn-primary btn-add small icon i-more js-content-add"><a>Ajouter une categorie</a></div>
         </div>
         
         <?php include("../_includes/admin_tournament_category-add.inc"); ?>

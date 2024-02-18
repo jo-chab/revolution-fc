@@ -80,7 +80,7 @@
     </li>
     
     <li class="admin-nav">
-        <div class="menu-element icon i-tournament"><a class="icon wip" href="?p=81">Tournois</a></div>
+        <div class="menu-element icon i-tournament"><a class="icon new-feature" href="?p=81">Tournois</a></div>
     </li>
     
     <li class="admin-nav">
@@ -93,7 +93,7 @@
     </li>
     
     <li class="admin-nav">
-        <div class="menu-element icon i-sponsors"><span class="icon wip">Sponsors</span></div>
+        <div class="menu-element icon i-sponsors"><span class="icon new-feature">Sponsors</span></div>
         <ul class="sub-nav">
             <li class="sub-nav-item"><a class="sub-nav-item-el" href="?p=91">Gérer tous les sponsors</a></li>
             <li class="sub-nav-item"><a class="sub-nav-item-el" href="?p=93">Gérer la liste des sponsors club</a></li>
