@@ -968,7 +968,6 @@ GRID SYSTEM
   justify-content: flex-end;
   gap: 2rem;
   width: 100%;
-  margin-bottom: 8rem;
 }
 @media (max-width: 767px) {
   .footer-dashboard {
@@ -1787,6 +1786,9 @@ Lists
     gap: 3rem;
   }
 }
+.list-docs li [class*=btn-] {
+  width: fit-content;
+}
 .list-docs span.docs-title {
   font-family: "Poppins", sans-serif;
   font-weight: 400;
@@ -1794,6 +1796,7 @@ Lists
   line-height: 1.5em;
   color: #52585f;
   flex-grow: 1;
+  flex-basis: 100%;
 }
 
 @media (max-width: 767px) {
@@ -2686,13 +2689,13 @@ ADMIN – DASHBOARD content
 .dashboard {
   display: grid;
   grid-template-columns: 1fr;
-  padding: 3rem 2rem 1rem;
+  padding: 3rem 2rem 3rem;
 }
 @media (min-width: 768px) {
   .dashboard {
     grid-template-columns: 320px 1fr;
     grid-gap: 1.5rem;
-    padding: 2rem 2rem 1rem 0;
+    padding: 2rem 2rem 3rem 0;
   }
   .dashboard.small {
     grid-template-columns: 60px 1fr;

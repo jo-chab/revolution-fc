@@ -1,0 +1,70 @@
+/*
+*
+* LOCATION: [pages]
+* FOLDER: [scss]
+* FILE NAME: [fields.scss]
+* DESCRIPTION: Styling for the fields pages
+*
+*/
+
+
+
+
+.fields li {
+    width: 100%;
+}
+
+.filter-select {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: .5rem;
+    justify-content: center;
+    align-items: baseline;
+    
+    @include tablet {
+        grid-template-columns: auto 1fr;
+        gap: 1rem;
+    }
+    
+    .btn-filter-select {
+        display: flex;
+        flex-flow: row wrap;
+        gap: 1rem;
+    }
+}
+
+[class*="filter-buttons-"] {
+    display: flex;
+    flex-flow: row wrap;
+    gap: 1rem;
+}
+
+.list-fields {
+    margin-bottom: 6rem;
+}
+.field {
+    &-el {
+        width: 100%;
+        p {
+            margin-bottom: 0;
+        }
+        .btn-tertiary {
+            margin-top: 1rem;
+        }
+    }
+    
+    &-name {
+        margin: 0;
+        font-weight: 700;
+    }
+    
+    &-desc {
+        font-size: .875rem;
+        color: $secondary-color;
+    }
+    
+    &-address {
+        margin-top: .5rem;
+        line-height: 1.3em;
+    }
+}

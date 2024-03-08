@@ -1,0 +1,110 @@
+/*
+*
+* LOCATION: [pages]
+* FOLDER: [scss]
+* FILE NAME: [page-news.scss]
+* DESCRIPTION: Styling for the news pages
+*
+*/
+
+
+
+
+/******************************
+NEWS PAGE
+******************************/
+.pagination {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    
+    margin-top: 80px;
+    
+    .page-cta {
+        background-color: $secondary-color;
+        padding:8px 16px;
+        font-size:32px;
+        color: white;
+    }
+    
+    p {
+        padding: 0 16px;
+        span {
+            padding: 4px 8px;
+            &.active-page {
+                font-weight: 700;
+                color: $primary-color-dark;
+                border-bottom: 4px solid $primary-color-dark;
+            }
+        }
+    }
+}
+
+
+
+/*******************************
+News detail / Programme detail
+*******************************/
+.article-heading {
+    margin-bottom: 2rem;
+    display: grid;
+    grid-gap: 1rem;
+    
+    .article-info {
+        display: flex;
+        flex-flow: row nowrap;
+        align-items: center;
+        gap: .5rem;
+    }
+    
+    .article-title {
+        line-height: 1.3em;
+        margin-bottom: 0;
+        text-align: left;
+    }
+    
+}
+
+.article-featured-img {
+    margin-bottom: 1rem;
+    
+    @include mobile-max {
+        margin: 0 -#{$space-m} 1rem;
+    }
+    
+    img {
+        width: 100%;
+    }
+}
+
+.article-detail {
+    margin-top: 1.5rem;
+    @include tablet {
+        margin-top: 3rem;
+    }
+    
+    @import "../basics/text-content";
+    
+}
+
+.article-footer {
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 1.5rem;
+    
+    border-top: 1px solid #E6E6E6;
+    margin-top: 1.5rem;
+    padding-top: 1.5rem;
+    @include tablet {
+        flex-direction: row;
+        justify-content: flex-end;
+        padding-top: 2rem;
+        margin-top: 2rem;
+    }
+    
+    .btn-tertiary {
+        margin: .875rem 0;
+        padding: 0;
+    }
+}

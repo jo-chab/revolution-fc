@@ -13,45 +13,6 @@
 MAIN CSS
 *******************************************************/
 
-
-/***********************
-Lists
-***********************/
-
-.list-jobs {
-	margin-block: $space-m;
-	position: relative;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	gap: 3rem;
-	
-	.job-el {
-		display: grid;
-		align-items: center;
-		grid-template-columns: 1fr;
-		grid-gap: 1.5rem;
-		width: 100%;
-		max-width: 800px;
-		
-		padding: 2rem;
-		@include border-radius-uniform(1rem);
-		background-color: white;
-		border: 1px solid $secondary-color-lighter;
-		
-		@include tablet {
-			grid-gap: 2.5rem;
-			grid-template-columns: 1fr auto;
-		}
-	}
-	.job-infos {
-		p {
-			@include font-style(300, 1rem, 1.3em, $secondary-color);
-			@include line-clamp(3);
-		}
-	}
-}
-
 .list-people {
 	@extend .web-layout;
 	margin-block: 3rem;
@@ -200,6 +161,40 @@ HOME PAGE
 .w-jobs {
 	border-top: 1px solid $web-grey-2;
 }
+.list-jobs {
+	margin-block: $space-m;
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	gap: 3rem;
+	
+	.job-el {
+		display: grid;
+		align-items: center;
+		grid-template-columns: 1fr;
+		grid-gap: 1.5rem;
+		width: 100%;
+		max-width: 800px;
+		
+		padding: 2rem;
+		@include border-radius-uniform(1rem);
+		background-color: white;
+		border: 1px solid $secondary-color-lighter;
+		
+		@include tablet {
+			grid-gap: 2.5rem;
+			grid-template-columns: 1fr auto;
+		}
+	}
+	.job-infos {
+		p {
+			@include font-style(300, 1rem, 1.3em, $secondary-color);
+			@include line-clamp(3);
+		}
+	}
+}
+
 
 .hp-contact-info {
 	display: grid;
@@ -213,108 +208,16 @@ HOME PAGE
 
 
 
+
+
+
+
+
+
+
 /******************************
-NEWS PAGE
+News PAGE
 ******************************/
-.pagination {
-	display: flex;
-	flex-flow: row nowrap;
-	justify-content: center;
-	align-items: center;
-	
-	margin-top: 80px;
-	
-	.page-cta {
-		background-color: $secondary-color;
-		padding:8px 16px;
-		font-size:32px;
-		color: white;
-	}
-	
-	p {
-		padding: 0 16px;
-		span {
-			padding: 4px 8px;
-			&.active-page {
-				font-weight: 700;
-				color: $primary-color-dark;
-				border-bottom: 4px solid $primary-color-dark;
-			}
-		}
-	}
-}
-
-
-
-/*******************************
-News detail / Programme detail
-*******************************/
-.article-heading {
-	margin-bottom: 2rem;
-	display: grid;
-	grid-gap: 1rem;
-	
-	.article-info {
-		display: flex;
-		flex-flow: row nowrap;
-		align-items: center;
-		gap: .5rem;
-	}
-	
-	.article-title {
-		line-height: 1.3em;
-		margin-bottom: 0;
-		text-align: left;
-	}
-	
-}
-
-.article-featured-img {
-	margin-bottom: 1rem;
-	
-	@include mobile-max {
-		margin: 0 -#{$space-m} 1rem;
-	}
-	
-	img {
-		width: 100%;
-	}
-}
-
-.article-detail {
-	margin-top: 1.5rem;
-	@include tablet {
-		margin-top: 3rem;
-	}
-	
-	@import "basics/text-content";
-	
-}
-
-.article-footer {
-	display: flex;
-	flex-direction: column-reverse;
-	gap: 1.5rem;
-	
-	border-top: 1px solid #E6E6E6;
-	margin-top: 1.5rem;
-	padding-top: 1.5rem;
-	@include tablet {
-		flex-direction: row;
-		justify-content: flex-end;
-		padding-top: 2rem;
-		margin-top: 2rem;
-	}
-	
-	.btn-tertiary {
-		margin: .875rem 0;
-		padding: 0;
-	}
-}
-
-
-
-
 
 
 
@@ -328,13 +231,9 @@ CLUB PAGE
 
 
 
-
-
 /******************************
 PROGRAMMES
 ******************************/
-
-
 
 
 
@@ -361,141 +260,266 @@ DOCUMENTS
 /******************************
 FIELDS
 ******************************/
-.fields li {
-	width: 100%;
-}
-
-.filter-select {
-	display: grid;
-	grid-template-columns: 1fr;
-	gap: .5rem;
-	justify-content: center;
-	align-items: baseline;
-	
-	@include tablet {
-		grid-template-columns: auto 1fr;
-		gap: 1rem;
-	}
-	
-	.btn-filter-select {
-		display: flex;
-		flex-flow: row wrap;
-		gap: 1rem;
-	}
-}
-
-[class*="filter-buttons-"] {
-	display: flex;
-	flex-flow: row wrap;
-	gap: 1rem;
-}
-
-.list-fields {
-	margin-bottom: 6rem;
-}
-.field {
-	&-el {
-		width: 100%;
-		p {
-			margin-bottom: 0;
-		}
-		.btn-tertiary {
-			margin-top: 1rem;
-		}
-	}
-	
-	&-name {
-		margin: 0;
-		font-weight: 700;
-	}
-	
-	&-desc {
-		font-size: .875rem;
-		color: $secondary-color;
-	}
-	
-	&-address {
-		margin-top: .5rem;
-		line-height: 1.3em;
-	}
-}
-
-
 
 
 
 
 
 /******************************
-TOURNOIS
+Tournament page
 ******************************/
-.tournoi-tarifs {
-	display: flex;
-	flex-flow: row wrap;
-	gap: 1.5rem;
-	margin: 3rem auto;
-	justify-content: center;
-}
 
-.tournament {
-	&-img {
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		margin-bottom: 1rem;
-		@include tablet {
-			margin-bottom: 2rem;
-		}
-		img {
-			height: 100%;
-			max-height: 480px;
-			width: auto;
-			max-width: 100%;;
+
+
+
+
+/******************************
+Events
+******************************/
+
+
+
+
+
+.table-event {
+	border-collapse: collapse;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	
+	thead {
+		background-color: $primary-color-lighter;
+		@include mobile-max {
+			display: none;
 		}
 	}
-	&-desc {
-		@import "basics/text-content";
+	
+	th {
+		padding: 1rem 1.5rem;
+		@include font-family-reading();
+		@include font-style(700, 1rem, 1em, $secondary-color-darker);
+		text-align: left;
+		
+		&:nth-child(1) {
+			width: 20%;
+		}
+		
+		&:nth-child(2) {
+			width: 50%;
+		}
+		
+		&:nth-child(3) {
+			width: 20%;
+		}
+		
+		&:nth-child(4) {
+			width: 10%;
+		}
+	}
+	
+	tr {
+		display: table;
+		position: relative;
+		width: 100%;
+		transition: all .3s ease;
+		
+		@include mobile-max {
+			display: block;
+			padding: 1.5rem 0;
+		}
+		
+		&:nth-of-type(even) {
+			background: $web-grey-1;
+		}
+		
+		&:hover td {
+			color: $primary-color;
+			
+			.i-long-arrow-table {
+				transform: translateX(8px);
+			}
+		}
+	}
+	
+	td {
+		padding: 2rem 1.5rem;
+		@include font-family-reading();
+		@include font-style(500, 1rem, 1.3em, $secondary-color-darker);
+		text-align: left;
+		transition: all .3s ease;
+		
+		@include mobile-max {
+			display: block;
+			padding: .25rem 2rem;
+		}
+		
+		&:nth-child(1) {
+			width: 20%;
+		}
+		
+		&:nth-child(2) {
+			width: 50%;
+		}
+		
+		&:nth-child(3) {
+			width: 20%;
+		}
+		
+		&:nth-child(4) {
+			width: 10%;
+		}
+		
+		@include mobile-max {
+			&:nth-child(1),
+			&:nth-child(2),
+			&:nth-child(3),
+			&:nth-child(4) {
+				width: 100%;
+			}
+		}
+		
+		&.table-list-title {
+			@include font-family-heading();
+			@include font-style(700, 1.25rem, 1.3em, $secondary-color-darker);
+			@include tablet {
+				font-size: 2rem
+			}
+		}
+	}
+	
+	.btn-table {
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		height: 100%;
+		width: 100%;
+		display: block;
+	}
+	
+	.i-long-arrow-table {
+		transform: translateX(0);
+		transition: transform .3s ease;
 	}
 }
 
-.t-card {
+
+// EVENT Header
+.event-header {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	gap: 24px;
-	width: calc(50% - 12px);
-	@include mobile-max {
-		width: 100%;
+	padding: 2rem 0;
+	@include tablet {
+		padding: 3rem 0;
 	}
-	padding: 24px;
-	background: white;
-	box-shadow: 0 8px 20px 0 #e2e2e2;
-	border: 1px solid #d3d3d3;
-	@include border-radius-uniform(8px);
-	@include transition(all, .3s);
-
-	&:hover {
-		@include translate-y(-8px);
-		@include transition(all, .3s);
+	@include desktop {
+		padding: 4rem 0;
 	}
-
-	> * {
+	
+	* {
 		text-align: center;
 	}
+}
 
-	&-type {
-		@include font-family-heading;
-		@include font-style(700, 2rem, 1em, $secondary-color);
+.event-title {
+	line-height: 1.3em;
+	font-weight: 600;
+	text-transform: capitalize;
+	
+	.card-events & {
+		color: $secondary-color;
+		margin-bottom: .25rem;
+		font-size: 1.5rem;
+		
+		&:hover {
+			color: $primary-color;
+		}
 	}
-	&-category {
-		@include font-family-reading;
-		@include font-style(700, 1.25rem, 1em, $secondary-color);
+	
+	.event-header & {
+		font-weight: 700;
+		color: $primary-color;
+		margin-bottom: 2.5rem;
 	}
-	&-price {
-		@include font-family-reading;
-		@include font-style(700, 3rem, 1em, $secondary-color);
-		span {
-			@include font-style(400, .3em, 1em, $primary-color);
+}
+
+.event-venue {
+	.card-events & {
+		font-weight: 700;
+		color: $secondary-color-darker;
+		//text-transform: uppercase;
+		//letter-spacing: 2px;
+	}
+}
+
+.event-date {
+	font-weight: 700;
+	
+	.card-events & {
+		margin-bottom: 1rem;
+		color: $primary-color;
+		font-size: .75rem;
+		@include mobile-max {
+			margin-bottom: .25rem;
+		}
+	}
+	
+	.event-header & {
+		font-size: 1rem;
+	}
+}
+
+.event-content {
+	display: grid;
+	align-items: baseline;
+	
+	width: 100%;
+	padding: 4rem 0;
+	
+	border-top: 1px solid $secondary-color-lighter;
+	
+	/* For subgrid only*/
+	//grid-column: 1 / 12;
+	//grid-template-columns: subgrid;
+	
+	/* For fallback */
+	gap: 1rem;
+	@include tablet {
+		grid-template-columns: 200px 1fr;
+	}
+	
+	h4 {
+		color: $secondary-color-light;
+		/* For subgrid only*/
+		//grid-column: 1 / 3;
+	}
+	
+	.event-detail {
+		/* For subgrid only*/
+		//grid-column: 4 / 12;
+		//display: grid;
+		//grid-template-columns: subgrid;
+		
+		/* For fallback */
+		display: grid;
+		gap: 2rem;
+		@include tablet {
+			gap: 2rem;
+			grid-template-columns: repeat(3, 1fr);
+		}
+		
+		
+		&-label {
+			@include font-family-reading();
+			@include font-style(700, .875rem, 1em, $secondary-color-light);
+			margin-bottom: .5rem;
+		}
+		
+		&-text {
+			@include font-family-reading();
+			@include font-style(700, 1.25rem, 1.3em, $secondary-color-dark);
 		}
 	}
 }
@@ -581,12 +605,4 @@ RESSOURCES ENTRAINEURS
 }
 
 
-
-
-
-
-/******************************
-Events
-******************************/
-@import 'modules/events';
 

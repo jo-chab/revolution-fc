@@ -201,12 +201,11 @@ article {
             }
             
             &.bg-img-content {
-                justify-content: center;
-                height: 80dvh;
+                justify-content: flex-end;
+                height: 50dvh;
                 @include tablet {
                     min-height: 520px;
                     max-height: 70dvh;
-                    justify-content: flex-end;
                 }
                 @include desktop-large {
                     height: 70dvh;

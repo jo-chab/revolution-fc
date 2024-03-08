@@ -858,12 +858,16 @@ Lists
         @include tablet {
             gap: 3rem;
         }
+        [class*='btn-'] {
+            width: fit-content;
+        }
     }
     
     span.docs-title {
         @include font-family-heading();
         @include font-style(400, 1rem, 1.5em, $reading-text);
         flex-grow: 1;
+        flex-basis: 100%;
     }
 }
 
