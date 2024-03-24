@@ -1,0 +1,171 @@
+/*
+*
+* LOCATION: [pages]
+* FOLDER: [scss]
+* FILE NAME: [home.scss]
+* DESCRIPTION: Styling for the home pages
+*
+*/
+
+
+
+
+.w-hero {
+    position: relative;
+    
+    .hero-overlay-gradient {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: $z-home-hero-overlay;
+        
+        width: 100%;
+        height: 100%;
+        
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+        
+        background-color: $secondary-color;
+        background: -webkit-linear-gradient(top, rgba($secondary-color, 0), rgba($secondary-color, 1));
+        background: linear-gradient(to bottom, rgba($secondary-color, 0), rgba($secondary-color, 1));
+    }
+    
+    .hero-overlay-content {
+        z-index: $z-home-hero-content;
+        @extend .web-layout;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+        margin-bottom: 4rem;
+        
+        @include tablet {
+            gap: 3rem;
+        }
+        
+        h1 {
+            color: white;
+            margin-bottom: 0;
+        }
+    }
+    
+}
+
+
+.w-news {
+    margin: 2rem auto;
+    gap: 2rem;
+    
+    @include tablet {
+        margin: 3rem auto;
+    }
+}
+
+
+.w-events {
+    border-top: 1px solid $web-grey-2;
+    .wrapper {
+        gap: 1rem;
+        @include tablet {
+            gap: 0;
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+    }
+    
+    .w-btn {
+        display: flex;
+        justify-content: center;
+        margin-top: 2rem;
+        flex: 1;
+        @include tablet {
+            margin-top: 3rem;
+        }
+    }
+    
+    h3 {
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        font-weight: 700;
+        font-size: 1.25rem;
+        @include mobile-max {
+            text-align: center;
+        }
+        @include tablet {
+            width: 25%;
+            margin-bottom: 0;
+            padding-right: 2rem;
+        }
+    }
+    
+    .w-cards {
+        display: grid;
+        gap: 1rem;
+        width: 100%;
+        @include tablet {
+            width: 75%;
+            gap: 2rem;
+            grid-template-columns: repeat(3, 1fr);
+            padding-left: 2rem;
+            border-left: 1px solid $web-grey-2;
+        }
+        @include desktop {
+            gap: 3rem;
+        }
+        
+        #title-no-event {
+            margin: 0;
+            @include tablet {
+                grid-column: span 3;
+            }
+        }
+    }
+}
+
+/* JOBS SECTION */
+.w-jobs {
+    border-top: 1px solid $web-grey-2;
+}
+.list-jobs {
+    margin-block: $space-m;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 3rem;
+    
+    .job-el {
+        display: grid;
+        align-items: center;
+        grid-template-columns: 1fr;
+        grid-gap: 1.5rem;
+        width: 100%;
+        max-width: 800px;
+        
+        padding: 2rem;
+        @include border-radius-uniform(1rem);
+        background-color: white;
+        border: 1px solid $secondary-color-lighter;
+        
+        @include tablet {
+            grid-gap: 2.5rem;
+            grid-template-columns: 1fr auto;
+        }
+    }
+    .job-infos {
+        p {
+            @include font-style(300, 1rem, 1.3em, $secondary-color);
+            @include line-clamp(3);
+        }
+    }
+}
+
+
+.hp-contact-info {
+    display: grid;
+    grid-gap: 1.5rem;
+}
+
+
+/* Sponsors SECTION*/

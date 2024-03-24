@@ -218,7 +218,7 @@ ANIMATIONS -
 }
 /*
 *
-* LOCATION: [core]
+* LOCATION: [modules]
 * FOLDER: [assets/scss]
 * FILE NAME: [fonts.scss]
 * DESCRIPTION: fonts styling elements
@@ -477,7 +477,7 @@ p:has(+ p) {
 
 /*
 *
-* LOCATION: [core]
+* LOCATION: [modules]
 * FOLDER: [assets/scss]
 * FILE NAME: [fonts.scss]
 * DESCRIPTION: icons elements
@@ -1847,26 +1847,25 @@ Lists
   justify-content: center;
 }
 .list-sponsors .sponsors-logo {
-  padding: 16px;
-  flex: 1 1 auto;
-  max-width: 20%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  flex: 1 1 100%;
+  max-width: 40%;
+}
+@media (min-width: 768px) {
+  .list-sponsors .sponsors-logo {
+    max-width: 20%;
+  }
 }
 .list-sponsors .sponsors-logo img {
   max-width: 100%;
-}
-@media (min-width: 768px) {
-  .list-sponsors .sponsors-logo img {
-    filter: grayscale(1);
-    opacity: 0.7;
-    transform: scale(0.9);
-    transition: all 0.3s ease;
-  }
-  .list-sponsors .sponsors-logo img:hover {
-    filter: grayscale(0);
-    opacity: 1;
-    transform: scale(1);
-    transition: all 0.3s ease;
-  }
+  max-height: 100%;
+  object-fit: contain;
+  width: auto;
+  height: auto;
 }
 .list-sponsors.sponsors-tournament {
   margin-bottom: 2rem;
@@ -1878,11 +1877,6 @@ Lists
   .list-sponsors.sponsors-tournament .sponsors-logo {
     max-width: 30%;
   }
-}
-.list-sponsors.sponsors-tournament .sponsors-logo img {
-  transform: scale(1);
-  opacity: 1;
-  filter: none;
 }
 
 /*

@@ -1,13 +1,13 @@
 // Website layout dependencies SCSS
-@import "basics/variables";
 @import "basics/reset";
-@import "basics/mixins";
 @import "basics/media-queries";
+@import "basics/variables";
 @import "basics/animations";
+@import "basics/mixins";
 
 
-@import "basics/fonts";
-@import "basics/icons";
+@import "modules/fonts";
+@import "modules/icons";
 @import "modules/design-system";
 @import "layout";
 @import "modules/header";
@@ -15,11 +15,3 @@
 @import "main";
 
 
-
-/******************************
-PAGES
-******************************/
-@import "pages/page-news";
-@import "pages/page-fields";
-@import "pages/page-tournament";
-@import 'pages/page-events';

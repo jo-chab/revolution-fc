@@ -12,7 +12,6 @@
 /*******************************************************
 MAIN CSS
 *******************************************************/
-
 .list-people {
 	@extend .web-layout;
 	margin-block: 3rem;
@@ -44,183 +43,15 @@ MAIN CSS
 /******************************
 HOME PAGE
 ******************************/
-.w-hero {
-	position: relative;
-	
-	.hero-overlay-gradient {
-		position: absolute;
-		top: 0;
-		left: 0;
-		z-index: $z-home-hero-overlay;
-		
-		width: 100%;
-		height: 100%;
-		
-		display: flex;
-		align-items: flex-end;
-		justify-content: center;
-		
-		background-color: $secondary-color;
-		background: -webkit-linear-gradient(top, rgba($secondary-color, 0), rgba($secondary-color, 1));
-		background: linear-gradient(to bottom, rgba($secondary-color, 0), rgba($secondary-color, 1));
-	}
-	
-	.hero-overlay-content {
-		z-index: $z-home-hero-content;
-		@extend .web-layout;
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		gap: 2rem;
-		margin-bottom: 4rem;
-		
-		@include tablet {
-			gap: 3rem;
-		}
-		
-		h1 {
-			color: white;
-			margin-bottom: 0;
-		}
-	}
-	
+.w-home {
+	@import "pages/page-home";
 }
-
-
-.w-news {
-	margin: 2rem auto;
-	gap: 2rem;
-	
-	@include tablet {
-		margin: 3rem auto;
-	}
-}
-
-
-.w-events {
-	border-top: 1px solid $web-grey-2;
-	.wrapper {
-		gap: 1rem;
-		@include tablet {
-			gap: 0;
-			flex-direction: row;
-			flex-wrap: wrap;
-		}
-	}
-	
-	.w-btn {
-		display: flex;
-		justify-content: center;
-		margin-top: 2rem;
-		flex: 1;
-		@include tablet {
-			margin-top: 3rem;
-		}
-	}
-	
-	h3 {
-		text-transform: uppercase;
-		letter-spacing: 2px;
-		font-weight: 700;
-		font-size: 1.25rem;
-		@include mobile-max {
-			text-align: center;
-		}
-		@include tablet {
-			width: 25%;
-			margin-bottom: 0;
-			padding-right: 2rem;
-		}
-	}
-	
-	.w-cards {
-		display: grid;
-		gap: 1rem;
-		width: 100%;
-		@include tablet {
-			width: 75%;
-			gap: 2rem;
-			grid-template-columns: repeat(3, 1fr);
-			padding-left: 2rem;
-			border-left: 1px solid $web-grey-2;
-		}
-		@include desktop {
-			gap: 3rem;
-		}
-		
-		#title-no-event {
-			margin: 0;
-			@include tablet {
-				grid-column: span 3;
-			}
-		}
-	}
-}
-
-/* JOBS SECTION */
-.w-jobs {
-	border-top: 1px solid $web-grey-2;
-}
-.list-jobs {
-	margin-block: $space-m;
-	position: relative;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	gap: 3rem;
-	
-	.job-el {
-		display: grid;
-		align-items: center;
-		grid-template-columns: 1fr;
-		grid-gap: 1.5rem;
-		width: 100%;
-		max-width: 800px;
-		
-		padding: 2rem;
-		@include border-radius-uniform(1rem);
-		background-color: white;
-		border: 1px solid $secondary-color-lighter;
-		
-		@include tablet {
-			grid-gap: 2.5rem;
-			grid-template-columns: 1fr auto;
-		}
-	}
-	.job-infos {
-		p {
-			@include font-style(300, 1rem, 1.3em, $secondary-color);
-			@include line-clamp(3);
-		}
-	}
-}
-
-
-.hp-contact-info {
-	display: grid;
-	grid-gap: 1.5rem;
-}
-
-
-/* Sponsors SECTION*/
-
-
-
-
-
-
-
-
-
-
 
 
 /******************************
 News PAGE
 ******************************/
-
-
-
+@import "pages/page-news";
 
 
 /******************************
@@ -228,15 +59,9 @@ CLUB PAGE
 ******************************/
 
 
-
-
-
 /******************************
 PROGRAMMES
 ******************************/
-
-
-
 
 
 /******************************
@@ -254,278 +79,22 @@ DOCUMENTS
 }
 
 
-
-
-
 /******************************
 FIELDS
 ******************************/
-
-
-
+@import "pages/page-fields";
 
 
 /******************************
 Tournament page
 ******************************/
-
-
-
+@import "pages/page-tournament";
 
 
 /******************************
 Events
 ******************************/
-
-
-
-
-
-.table-event {
-	border-collapse: collapse;
-	margin: 0;
-	padding: 0;
-	width: 100%;
-	
-	thead {
-		background-color: $primary-color-lighter;
-		@include mobile-max {
-			display: none;
-		}
-	}
-	
-	th {
-		padding: 1rem 1.5rem;
-		@include font-family-reading();
-		@include font-style(700, 1rem, 1em, $secondary-color-darker);
-		text-align: left;
-		
-		&:nth-child(1) {
-			width: 20%;
-		}
-		
-		&:nth-child(2) {
-			width: 50%;
-		}
-		
-		&:nth-child(3) {
-			width: 20%;
-		}
-		
-		&:nth-child(4) {
-			width: 10%;
-		}
-	}
-	
-	tr {
-		display: table;
-		position: relative;
-		width: 100%;
-		transition: all .3s ease;
-		
-		@include mobile-max {
-			display: block;
-			padding: 1.5rem 0;
-		}
-		
-		&:nth-of-type(even) {
-			background: $web-grey-1;
-		}
-		
-		&:hover td {
-			color: $primary-color;
-			
-			.i-long-arrow-table {
-				transform: translateX(8px);
-			}
-		}
-	}
-	
-	td {
-		padding: 2rem 1.5rem;
-		@include font-family-reading();
-		@include font-style(500, 1rem, 1.3em, $secondary-color-darker);
-		text-align: left;
-		transition: all .3s ease;
-		
-		@include mobile-max {
-			display: block;
-			padding: .25rem 2rem;
-		}
-		
-		&:nth-child(1) {
-			width: 20%;
-		}
-		
-		&:nth-child(2) {
-			width: 50%;
-		}
-		
-		&:nth-child(3) {
-			width: 20%;
-		}
-		
-		&:nth-child(4) {
-			width: 10%;
-		}
-		
-		@include mobile-max {
-			&:nth-child(1),
-			&:nth-child(2),
-			&:nth-child(3),
-			&:nth-child(4) {
-				width: 100%;
-			}
-		}
-		
-		&.table-list-title {
-			@include font-family-heading();
-			@include font-style(700, 1.25rem, 1.3em, $secondary-color-darker);
-			@include tablet {
-				font-size: 2rem
-			}
-		}
-	}
-	
-	.btn-table {
-		position: absolute;
-		top: 0;
-		right: 0;
-		bottom: 0;
-		left: 0;
-		height: 100%;
-		width: 100%;
-		display: block;
-	}
-	
-	.i-long-arrow-table {
-		transform: translateX(0);
-		transition: transform .3s ease;
-	}
-}
-
-
-// EVENT Header
-.event-header {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	padding: 2rem 0;
-	@include tablet {
-		padding: 3rem 0;
-	}
-	@include desktop {
-		padding: 4rem 0;
-	}
-	
-	* {
-		text-align: center;
-	}
-}
-
-.event-title {
-	line-height: 1.3em;
-	font-weight: 600;
-	text-transform: capitalize;
-	
-	.card-events & {
-		color: $secondary-color;
-		margin-bottom: .25rem;
-		font-size: 1.5rem;
-		
-		&:hover {
-			color: $primary-color;
-		}
-	}
-	
-	.event-header & {
-		font-weight: 700;
-		color: $primary-color;
-		margin-bottom: 2.5rem;
-	}
-}
-
-.event-venue {
-	.card-events & {
-		font-weight: 700;
-		color: $secondary-color-darker;
-		//text-transform: uppercase;
-		//letter-spacing: 2px;
-	}
-}
-
-.event-date {
-	font-weight: 700;
-	
-	.card-events & {
-		margin-bottom: 1rem;
-		color: $primary-color;
-		font-size: .75rem;
-		@include mobile-max {
-			margin-bottom: .25rem;
-		}
-	}
-	
-	.event-header & {
-		font-size: 1rem;
-	}
-}
-
-.event-content {
-	display: grid;
-	align-items: baseline;
-	
-	width: 100%;
-	padding: 4rem 0;
-	
-	border-top: 1px solid $secondary-color-lighter;
-	
-	/* For subgrid only*/
-	//grid-column: 1 / 12;
-	//grid-template-columns: subgrid;
-	
-	/* For fallback */
-	gap: 1rem;
-	@include tablet {
-		grid-template-columns: 200px 1fr;
-	}
-	
-	h4 {
-		color: $secondary-color-light;
-		/* For subgrid only*/
-		//grid-column: 1 / 3;
-	}
-	
-	.event-detail {
-		/* For subgrid only*/
-		//grid-column: 4 / 12;
-		//display: grid;
-		//grid-template-columns: subgrid;
-		
-		/* For fallback */
-		display: grid;
-		gap: 2rem;
-		@include tablet {
-			gap: 2rem;
-			grid-template-columns: repeat(3, 1fr);
-		}
-		
-		
-		&-label {
-			@include font-family-reading();
-			@include font-style(700, .875rem, 1em, $secondary-color-light);
-			margin-bottom: .5rem;
-		}
-		
-		&-text {
-			@include font-family-reading();
-			@include font-style(700, 1.25rem, 1.3em, $secondary-color-dark);
-		}
-	}
-}
-
-
-
+@import 'pages/page-events';
 
 
 /******************************

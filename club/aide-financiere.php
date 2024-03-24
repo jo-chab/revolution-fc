@@ -17,7 +17,11 @@ include("../_includes/_revolutionfc.inc");
 ?>
 
 <section>
-
+    
+    <article class='wrapper heading'>
+        <h1 class='main-heading'>Aide financière</h1>
+    </article>
+    
     <article class="wrapper-text doc-container">
 
         <h4 class="section-title" style="margin-bottom: 1.5rem;">Le Revolution FC fait partie des clubs reconnus par la fondation Bon départ de Canadian Tire. </h4>

@@ -925,25 +925,22 @@ Lists
     justify-content: center;
     
     .sponsors-logo {
-        padding: 16px;
-        flex: 1 1 auto;
-        max-width: 20%;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 1rem;
+        flex: 1 1 100%;
+        max-width: 40%;
+        @include tablet {
+            max-width: 20%
+        }
         img {
-            //max-height: 80px;
             max-width: 100%;
-            @include tablet {
-                //max-height: 120px;
-                filter: grayscale(1);
-                opacity: .7;
-                transform: scale(.9);
-                transition: all .3s ease;
-                &:hover {
-                    filter: grayscale(0);
-                    opacity: 1;
-                    transform: scale(1);
-                    transition: all .3s ease;
-                }
-            }
+            max-height: 100%;
+            object-fit: contain;
+            width: auto;
+            height: auto;
         }
     }
     
@@ -953,11 +950,6 @@ Lists
             max-width: 80%;
             @include tablet {
                 max-width: 30%
-            }
-            img {
-                transform: scale(1);
-                opacity: 1;
-                filter: none;
             }
         }
     }
