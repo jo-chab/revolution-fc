@@ -231,11 +231,11 @@ h1 {
   font-size: 2rem;
   line-height: 1.3em;
   color: #8d949b;
-  text-align: center;
   margin-bottom: 2rem;
 }
 @media (min-width: 768px) {
   h1 {
+    text-align: center;
     margin-bottom: 4rem;
   }
 }
@@ -266,7 +266,6 @@ h2 {
   text-transform: uppercase;
   letter-spacing: 2px;
   margin-bottom: 1rem;
-  text-align: center;
 }
 @media (min-width: 620px) {
   h2 {
@@ -275,14 +274,18 @@ h2 {
 }
 @media (min-width: 768px) {
   h2 {
-    text-align: unset;
     margin-bottom: 1.5rem;
   }
 }
 h2.section-title {
   color: #8d949b;
   margin-bottom: 2rem;
-  text-align: center;
+  text-align: unset;
+}
+@media (min-width: 768px) {
+  h2.section-title {
+    text-align: center;
+  }
 }
 h2.icon {
   align-items: baseline;
@@ -1577,8 +1580,8 @@ Lists
 .list-text {
   position: relative;
   margin-block: 1rem 2rem;
-  margin-inline-start: 2rem;
-  list-style: none;
+  margin-inline-start: 1rem;
+  list-style-position: inside;
 }
 .list-text li {
   font-family: "Source Sans 3", sans-serif;
@@ -1587,16 +1590,13 @@ Lists
   line-height: 1.5em;
   color: #52585f;
   margin-bottom: 0.25rem;
-  display: flex;
-  align-items: baseline;
-  gap: 0.5rem;
+  list-style-type: disc;
+}
+.list-text li li {
+  list-style-type: circle;
 }
 .list-text li:last-of-type {
   margin-bottom: 0;
-}
-.list-text li:before {
-  content: "•"; /* Unicode character for a bullet (circle) */
-  display: inline-flex;
 }
 
 .list-people .people-el {
