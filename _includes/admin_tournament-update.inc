@@ -50,7 +50,6 @@
                     <input id="zt_desc" name="zt_desc" type="text" maxlength="256" value="<?php echo $desc ?>">
                 </div>
                 
-                
                 <!-- Include TinyMCE library -->
                 <script src="https://cdn.tiny.cloud/1/ww9qtqggrif3pyqjvuxyx5ee7lwdmh1857eqzsvb3o2f1d3f/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
                 
@@ -88,7 +87,6 @@
                 
                 <div class="form-row column">
                     <label>Texte :</label>
-                    <?php include("text-panel-tournoi.inc"); ?>
                     <textarea id="ta_tournoi" name="ta_tournoi" required><?php echo $texte ?></textarea>
                 </div>
                 

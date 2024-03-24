@@ -49,9 +49,10 @@
     </li>
     
     <li class="admin-nav">
-        <div class="menu-element icon i-club-house">Club</div>
+        <div class="menu-element icon i-club-house"><span class="icon new-feature">Club</span></div>
         <ul class="sub-nav">
             <li class="sub-nav-item"><a class="sub-nav-item-el" href="?p=5">Informations générales</a></li>
+            <li class="sub-nav-item "><a class="sub-nav-item-el" href="?p=6"><span class="icon new-feature">Missions et valeurs</span></a></li>
             <li class="sub-nav-item"><a class="sub-nav-item-el" href="?p=301">Offres d'emplois</a></li>
             <li class="sub-nav-item"><a class="sub-nav-item-el" href="?p=61">Terrains</a></li>
             <li class="sub-nav-item"><a class="sub-nav-item-el" href="?p=31">Gérer les documents</a></li>
@@ -80,7 +81,7 @@
     </li>
     
     <li class="admin-nav">
-        <div class="menu-element icon i-tournament"><a class="icon new-feature" href="?p=81">Tournois</a></div>
+        <div class="menu-element icon i-tournament"><a class="" href="?p=81">Tournois</a></div>
     </li>
     
     <li class="admin-nav">
@@ -93,7 +94,7 @@
     </li>
     
     <li class="admin-nav">
-        <div class="menu-element icon i-sponsors"><span class="icon new-feature">Sponsors</span></div>
+        <div class="menu-element icon i-sponsors"><span class="">Sponsors</span></div>
         <ul class="sub-nav">
             <li class="sub-nav-item"><a class="sub-nav-item-el" href="?p=91">Gérer tous les sponsors</a></li>
             <li class="sub-nav-item"><a class="sub-nav-item-el" href="?p=93">Gérer la liste des sponsors club</a></li>
