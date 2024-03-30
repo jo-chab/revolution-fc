@@ -49,7 +49,7 @@
     </li>
     
     <li class="admin-nav">
-        <div class="menu-element icon i-club-house"><span class="icon new-feature">Club</span></div>
+        <div class="menu-element icon i-club-house"><span class="">Club</span></div>
         <ul class="sub-nav">
             <li class="sub-nav-item"><a class="sub-nav-item-el" href="?p=5">Informations générales</a></li>
             <li class="sub-nav-item "><a class="sub-nav-item-el" href="?p=6">Missions et valeurs</a></li>
