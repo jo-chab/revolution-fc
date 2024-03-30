@@ -27,10 +27,10 @@
         </ul>
         <ul class="footer-nav">
             <li class="list-header">Codes &amp; politiques</li>
-            <li><a href="/docs/reglements-generaux.pdf" target="_blank">Règlements généraux</a></li>
-            <li><a href="/docs/CodeEthique.pdf" target="_blank">Code éthique du joueur</a></li>
+            <li><a href="https://www.revolutionfc.ca/docs/ReglementsGeneraux-RevolutionFC.pdf" target="_blank">Règlements généraux</a></li>
+            <li><a href="https://www.revolutionfc.ca/docs/CodeEthique.pdf" target="_blank">Code éthique du joueur</a></li>
             <li><a href="/politique-confidentialite">Politique de confidentialité</a></li>
-            <li><a href="../docs/Politique-administrative-du-club.pdf" target="_blank">Remboursement</a></li>
+            <li><a href="https://www.revolutionfc.ca/docs/Politique-administrative-du-club.pdf" target="_blank">Remboursement</a></li>
         </ul>
 		<div class="footer-copy">
 			<p>&copy; <?php echo date("Y"); ?> R&eacute;volution FC - Tous droits réservés - Aucune reproduction partielle ou totale du site et de son contenu n'est autorisée.</p>
