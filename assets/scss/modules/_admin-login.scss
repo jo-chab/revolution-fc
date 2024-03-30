@@ -30,3 +30,15 @@ LOGIN PAGE
     @include font-family-reading;
     @include font-style(300, 1rem, 1.5em, $color-error);
 }
+
+.w-login-message {
+    width: 100%;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    @include font-family-reading;
+    @include font-style(300, 1rem, 1.5em, $color-error);
+    
+    background: $color-error-lighter;
+    border-radius: .5rem;
+    border: 1px solid $color-error-darker;
+}

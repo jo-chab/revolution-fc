@@ -63,6 +63,7 @@ DESIGN SYSTEM – Alert message box
             background-color: $color-warning-lighter;
             border-color: $color-warning-dark;
             color: $color-warning;
+            
             p {
                 color: $color-warning;
             }
@@ -72,6 +73,7 @@ DESIGN SYSTEM – Alert message box
             background-color: $color-success-lighter;
             border-color: $color-success-darker;
             color: $color-success-dark;
+            
             p {
                 color: $color-success-dark;
             }
@@ -81,6 +83,7 @@ DESIGN SYSTEM – Alert message box
             background-color: $color-error-lighter;
             border-color: $color-error-darker;
             color: $color-error;
+            
             p {
                 color: $color-error;
             }
@@ -95,17 +98,13 @@ DESIGN SYSTEM – Alert message box
         grid-column: span 2;
         cursor: pointer;
         text-decoration: underline;
+        
         &:hover {
             opacity: .8;
         }
     }
     
 }
-
-
-
-
-
 
 
 /***********************
@@ -188,9 +187,6 @@ DESIGN SYSTEM – CARDS
         }
     }
 }
-
-
-
 
 
 /***********************
@@ -276,6 +272,7 @@ DESIGN SYSTEM – Buttons
             }
         }
     }
+    
     &.btn-confirm,
     &.btn-validate {
         background-color: $color-success;
@@ -327,6 +324,7 @@ DESIGN SYSTEM – Buttons
                 background-color: $color-warning-dark;
             }
         }
+        
         &:before {
             font: var(--fa-font-sharp-regular);
             content: '\f344';
@@ -340,6 +338,7 @@ DESIGN SYSTEM – Buttons
         }
     }
 }
+
 .btn-secondary {
     @extend .button;
     
@@ -363,6 +362,7 @@ DESIGN SYSTEM – Buttons
         font-size: .75rem;
         padding: .75rem 1.25rem;
     }
+    
     &.large {
         font-size: 1.25rem;
     }
@@ -376,6 +376,7 @@ DESIGN SYSTEM – Buttons
             color: $primary-color-darker;
         }
     }
+    
     &.ghost-brand {
         border-color: $primary-color;
         color: $primary-color;
@@ -386,6 +387,7 @@ DESIGN SYSTEM – Buttons
             color: white;
         }
     }
+    
     &.ghost-white {
         color: white;
         border-color: white;
@@ -399,6 +401,7 @@ DESIGN SYSTEM – Buttons
     &.btn-add {
         border-color: $color-success;
         color: $color-success;
+        
         &:hover {
             border-color: $color-success-darker;
             color: $color-success-darker;
@@ -412,6 +415,7 @@ DESIGN SYSTEM – Buttons
     &.btn-revert {
         border-color: $secondary-color;
         color: $secondary-color;
+        
         &:hover {
             border-color: $color-error;
             color: $color-error;
@@ -421,22 +425,27 @@ DESIGN SYSTEM – Buttons
     .alert-message.alert-error & {
         color: $color-error;
         border-color: $color-error;
+        
         &:hover {
             background-color: $color-error;
             color: white;
         }
     }
+    
     .alert-message.alert-info & {
         color: $color-warning;
         border-color: $color-warning;
+        
         &:hover {
             background-color: $color-warning;
             color: $web-grey-6;
         }
     }
+    
     .alert-message.alert-correct & {
         color: $color-success;
         border-color: $color-success;
+        
         &:hover {
             background-color: $color-success;
             color: $color-success-darker;
@@ -444,12 +453,14 @@ DESIGN SYSTEM – Buttons
     }
     
 }
+
 .btn-tertiary {
     @extend .button;
     
     @include font-style(400, 1.25em, 1em, $secondary-color);
     margin: 1.5rem 0;
     border-radius: 0;
+    
     &:hover {
         color: $primary-color-dark;
     }
@@ -464,6 +475,7 @@ DESIGN SYSTEM – Buttons
         justify-content: flex-start;
         color: $reading-text;
     }
+    
     &.btn-light {
         color: white;
     }
@@ -474,6 +486,7 @@ DESIGN SYSTEM – Buttons
     
     &.btn-add {
         color: $color-success-light;
+        
         &:hover {
             color: $color-success;
         }
@@ -485,9 +498,11 @@ DESIGN SYSTEM – Buttons
     &.btn-activate,
     &.btn-revert {
         color: $web-grey-3;
+        
         &:hover {
             color: $color-error;
         }
+        
         @include mobile-max {
             &:hover {
                 color: unset;
@@ -497,6 +512,7 @@ DESIGN SYSTEM – Buttons
     
     &.btn-update {
         color: $admin-primary-light;
+        
         &:hover {
             color: $admin-primary;
         }
@@ -510,12 +526,14 @@ DESIGN SYSTEM – Buttons
     
     @include font-style(400, .875rem, 1em, $primary-color);
     padding: 0;
+    
     .btn-filter-select & {
         color: $primary-color;
         text-transform: uppercase;
         
         &.is-inactive {
             color: $tertiary-color-1;
+            
             &:hover {
                 color: $primary-color;
             }
@@ -525,6 +543,7 @@ DESIGN SYSTEM – Buttons
     &.is-inactive {
         opacity: .5;
         color: $tertiary-color-1;
+        
         &:hover {
             opacity: 1;
             color: $primary-color;
@@ -549,22 +568,17 @@ DESIGN SYSTEM – Buttons
 
 .is-inactive > * {
     opacity: 0.2;
+    
     &:after {
         .menu & {
             content: " (pas encore disponible)";
         }
     }
+    
     h4:after {
         content: " (pas encore disponible)";
     }
 }
-
-
-
-
-
-
-
 
 
 /***** DROPDOWN *****/
@@ -635,9 +649,6 @@ select {
 }
 
 
-
-
-
 /************************************
 FORMS ELEMENT - block, labels, input & cta
 ************************************/
@@ -650,9 +661,11 @@ FORMS ELEMENT - block, labels, input & cta
         width: fit-content;
         margin: 0 auto;
     }
+    
     .btn-primary {
         margin: 2rem auto 0;
     }
+    
     .contact & {
         width: 100%;
         max-width: 700px;
@@ -684,7 +697,7 @@ label {
 }
 
 input {
-    width:100%;
+    width: 100%;
     padding: .75rem 1.5rem;
     
     @include font-family-reading;
@@ -694,16 +707,20 @@ input {
     border: 1px solid $web-grey-2;
     border-radius: .5rem;
     outline: none;
+    
     &:hover {
         border-color: $web-grey-5;
     }
+    
     &:focus {
         color: $web-grey-5;
         border-color: $primary-color;
     }
+    
     &::placeholder {
         color: $web-grey-2;
     }
+    
     &.prefilled {
         color: $web-grey-3;
         background: #f2f2f2;
@@ -711,9 +728,10 @@ input {
     
     &[type="submit"] {
         min-width: 320px;
-        margin:2rem auto;
-        cursor:pointer;
+        margin: 2rem auto;
+        cursor: pointer;
         background-color: $primary-color;
+        
         &:focus {
             color: white;
             border: none;
@@ -726,10 +744,11 @@ input {
 }
 
 textarea {
-    background-color:white;
+    background-color: white;
     outline: none;
-    height:250px;
-    width:100%; max-width:100%;
+    height: 250px;
+    width: 100%;
+    max-width: 100%;
     padding: 1rem;
     @include font-family-reading;
     @include font-style(400, 1rem, 1.5em, $web-grey-5);
@@ -744,10 +763,12 @@ textarea {
     &:hover {
         border-color: $web-grey-5;
     }
+    
     &:focus {
         color: $web-grey-5;
         border-color: $primary-color;
     }
+    
     &.prefilled {
         color: $web-grey-3;
         background: #f2f2f2;
@@ -755,16 +776,8 @@ textarea {
 }
 
 .recaptcha div {
-    margin:0 auto;
+    margin: 0 auto;
 }
-
-
-
-
-
-
-
-
 
 
 /***********************
@@ -781,6 +794,7 @@ Lists
         @include font-style(400, 1.125rem, 1.5em, $reading-text);
         margin-bottom: .25rem;
         list-style-type: disc;
+        
         li {
             list-style-type: circle;
         }
@@ -853,6 +867,7 @@ Lists
         @include tablet {
             gap: 3rem;
         }
+        
         [class*='btn-'] {
             width: fit-content;
         }
@@ -875,6 +890,7 @@ Lists
         position: relative;
         opacity: 1;
         transition: opacity .3s ease;
+        
         &:hover {
             opacity: .8;
         }
@@ -883,7 +899,7 @@ Lists
             //text-transform: unset;
             font-size: 1.5rem;
             letter-spacing: 0;
-            margin-bottom :.5rem;
+            margin-bottom: .5rem;
             line-height: 1.3em;
             text-align: unset;
             color: $secondary-color;
@@ -930,6 +946,7 @@ Lists
         @include tablet {
             max-width: 20%
         }
+        
         img {
             max-width: 100%;
             max-height: 100%;
@@ -941,6 +958,7 @@ Lists
     
     &.sponsors-tournament {
         margin-bottom: 2rem;
+        
         .sponsors-logo {
             max-width: 80%;
             @include tablet {

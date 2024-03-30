@@ -15,7 +15,7 @@ FORMS LAYOUT
 form.popup {
     width: 100%;
     max-width: $popup-width-large;
-    padding: 2rem;
+    padding: 1rem;
     box-sizing: border-box;
     
     background: white;
@@ -23,7 +23,7 @@ form.popup {
     border-radius: 1rem;
     
     @include tablet {
-        padding: 4rem;
+        padding: 3rem;
     }
     
     .popup-title {
