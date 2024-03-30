@@ -137,11 +137,6 @@ HEADER CSS -
             letter-spacing: unset;
             flex-direction: column;
             
-            &.store:before {
-                    font: var(--fa-font-sharp-light);
-                    content: "\f54e";
-            }
-            
             &.coach-corner {
                 text-transform: none;
                 letter-spacing: unset;

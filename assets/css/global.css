@@ -482,6 +482,162 @@ p:has(+ p) {
 *
 * LOCATION: [modules]
 * FOLDER: [assets/scss]
+* FILE NAME: [_text-content.scss]
+* DESCRIPTION: text content formatting
+*
+*/
+.text-content {
+  margin-bottom: 2rem;
+}
+@media (min-width: 1024px) {
+  .text-content {
+    margin-bottom: 4rem;
+  }
+}
+.text-content:last-child {
+  margin-bottom: 0;
+}
+.text-content .article-intro {
+  font-weight: 600;
+  color: #52585f;
+  margin-bottom: 2rem;
+}
+.text-content h2 {
+  color: #141a1f;
+  margin-bottom: 1.5rem;
+  text-transform: none;
+  letter-spacing: unset;
+}
+.text-content h3 {
+  color: #d5c392;
+  margin-bottom: 1.25rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+.text-content h4 {
+  font-weight: 600;
+  font-size: 1.125rem;
+  line-height: 1.5em;
+  color: #8d949b;
+  margin-bottom: 0.25rem;
+}
+.text-content blockquote {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 2rem;
+  margin: 2.5rem;
+}
+.text-content blockquote:before {
+  display: inline-block;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  font: var(--fa-font-sharp-solid);
+  content: "\f10d";
+  color: #D0D3D4;
+  font-size: 3em;
+  align-self: flex-start;
+}
+.text-content blockquote:after {
+  display: inline-block;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  font: var(--fa-font-sharp-solid);
+  content: "\f10e";
+  color: #D0D3D4;
+  font-size: 3em;
+  align-self: flex-end;
+}
+.text-content blockquote p {
+  font-family: "Source Sans 3", sans-serif;
+  font-weight: 500;
+  font-size: 1.5rem;
+  line-height: 1.7em;
+  color: #d5c392;
+  font-style: italic;
+  padding: 2rem 1rem;
+  margin: 0;
+}
+.text-content blockquote p:before, .text-content blockquote p:after {
+  content: " – ";
+}
+.text-content a {
+  color: #d5c392;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+.text-content a:hover {
+  color: #a8956c;
+}
+.text-content strong {
+  font-weight: 700;
+}
+.text-content ul, .text-content ol {
+  margin-inline: 2rem;
+  margin-block-end: 1.5rem;
+}
+@media (min-width: 768px) {
+  .text-content ul, .text-content ol {
+    margin-inline: 3rem;
+  }
+}
+.text-content ul li, .text-content ol li {
+  font-family: "Source Sans 3", sans-serif;
+  font-weight: 400;
+  font-size: 1.125rem;
+  line-height: 1.5em;
+  color: #52585f;
+  margin-bottom: 0.25rem;
+}
+.text-content ul li:last-of-type, .text-content ol li:last-of-type {
+  margin-bottom: 0;
+}
+.text-content ul li {
+  list-style-type: disc;
+}
+.text-content ul li li {
+  list-style: circle;
+}
+.text-content ol li {
+  list-style-type: decimal;
+}
+.text-content ol li li {
+  list-style: lower-alpha;
+}
+.text-content table {
+  margin-bottom: 1.5rem;
+}
+.text-content table thead {
+  background: #f6e9d5;
+}
+.text-content table tr:nth-child(even) {
+  background: #f2f2f2;
+}
+.text-content table th {
+  padding: 1rem;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-size: 0.875rem;
+  line-height: 1.5em;
+  color: #141a1f;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-align: left;
+  vertical-align: top;
+}
+.text-content table td {
+  padding: 1rem;
+  font-family: "Source Sans 3", sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.5em;
+  color: #52585f;
+}
+
+/*
+*
+* LOCATION: [modules]
+* FOLDER: [assets/scss]
 * FILE NAME: [fonts.scss]
 * DESCRIPTION: icons elements
 *
@@ -605,6 +761,11 @@ p:has(+ p) {
 .i-instagram:before {
   font: var(--fa-font-brands);
   content: "\f16d";
+}
+
+.i-store:before {
+  font: var(--fa-font-regular);
+  content: "\f54e";
 }
 
 .i-send:after {
@@ -1044,19 +1205,41 @@ DESIGN SYSTEM – CARDS
   text-transform: uppercase;
 }
 
+.card-events:not(.event-el) {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 30%;
+  flex-grow: 1;
+  min-width: 320px;
+  max-width: calc(50% - 2rem);
+  padding: 2rem;
+  border: 1px solid #f2f2f2;
+  border-radius: 0.5rem;
+}
 @media (min-width: 768px) {
-  .card-events {
-    transform: translateY(0);
-    transition: transform 0.5s ease;
+  .card-events:not(.event-el) {
+    padding: 3rem;
   }
-  .card-events:hover {
-    transform: translateY(-1rem);
-  }
+}
+.card-events [class*=btn-] {
+  flex-grow: 1;
 }
 
 /***********************
 DESIGN SYSTEM – Buttons
 ***********************/
+.w-btn {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+  flex: 1;
+}
+@media (min-width: 768px) {
+  .w-btn {
+    margin-top: 3rem;
+  }
+}
+
 .button, .btn-download, .btn-filter, .btn-tertiary, .btn-secondary, .btn-primary {
   display: flex;
   width: fit-content;
@@ -1300,6 +1483,9 @@ DESIGN SYSTEM – Buttons
   margin: 0;
   justify-content: flex-start;
   color: #52585f;
+}
+.btn-tertiary.btn-text:hover {
+  color: #a8956c;
 }
 .btn-tertiary.btn-light {
   color: white;
@@ -2013,6 +2199,15 @@ article.wrapper-text {
   background: #ff1540;
 }
 
+.w-img {
+  margin-bottom: 1rem;
+}
+@media (min-width: 1024px) {
+  .w-img {
+    margin-bottom: 2rem;
+  }
+}
+
 figure {
   margin-bottom: 2rem;
 }
@@ -2212,10 +2407,6 @@ HEADER CSS -
   text-transform: none;
   letter-spacing: unset;
   flex-direction: column;
-}
-.top-header .nav-item .icon.store:before {
-  font: var(--fa-font-sharp-light);
-  content: "\f54e";
 }
 .top-header .nav-item .icon.coach-corner {
   text-transform: none;
@@ -2611,12 +2802,12 @@ HOME PAGE
   margin-bottom: 0;
 }
 .w-home .w-news {
-  margin: 2rem auto;
+  margin: 2rem auto 0;
   gap: 2rem;
 }
 @media (min-width: 768px) {
   .w-home .w-news {
-    margin: 3rem auto;
+    margin: 3rem auto 0;
   }
 }
 .w-home .w-events {
@@ -2630,17 +2821,6 @@ HOME PAGE
     gap: 0;
     flex-direction: row;
     flex-wrap: wrap;
-  }
-}
-.w-home .w-events .w-btn {
-  display: flex;
-  justify-content: center;
-  margin-top: 2rem;
-  flex: 1;
-}
-@media (min-width: 768px) {
-  .w-home .w-events .w-btn {
-    margin-top: 3rem;
   }
 }
 .w-home .w-events h3 {
@@ -2686,6 +2866,15 @@ HOME PAGE
 @media (min-width: 768px) {
   .w-home .w-events .w-cards #title-no-event {
     grid-column: span 3;
+  }
+}
+@media (min-width: 768px) {
+  .w-home .w-events .event-el {
+    transform: translateY(0);
+    transition: transform 0.5s ease;
+  }
+  .w-home .w-events .event-el:hover {
+    transform: translateY(-1rem);
   }
 }
 .w-home .w-jobs {
@@ -2822,38 +3011,49 @@ News detail / Programme detail
     margin-top: 3rem;
   }
 }
-.article-detail .article-intro {
+.article-detail .text-content {
+  margin-bottom: 2rem;
+}
+@media (min-width: 1024px) {
+  .article-detail .text-content {
+    margin-bottom: 4rem;
+  }
+}
+.article-detail .text-content:last-child {
+  margin-bottom: 0;
+}
+.article-detail .text-content .article-intro {
   font-weight: 600;
   color: #52585f;
   margin-bottom: 2rem;
 }
-.article-detail h2 {
+.article-detail .text-content h2 {
   color: #141a1f;
   margin-bottom: 1.5rem;
   text-transform: none;
   letter-spacing: unset;
 }
-.article-detail h3 {
+.article-detail .text-content h3 {
   color: #d5c392;
   margin-bottom: 1.25rem;
   text-transform: uppercase;
   letter-spacing: 2px;
 }
-.article-detail h4 {
+.article-detail .text-content h4 {
   font-weight: 600;
   font-size: 1.125rem;
   line-height: 1.5em;
   color: #8d949b;
   margin-bottom: 0.25rem;
 }
-.article-detail blockquote {
+.article-detail .text-content blockquote {
   display: flex;
   align-items: center;
   justify-content: flex-start;
   gap: 2rem;
   margin: 2.5rem;
 }
-.article-detail blockquote:before {
+.article-detail .text-content blockquote:before {
   display: inline-block;
   text-rendering: auto;
   -webkit-font-smoothing: antialiased;
@@ -2863,7 +3063,7 @@ News detail / Programme detail
   font-size: 3em;
   align-self: flex-start;
 }
-.article-detail blockquote:after {
+.article-detail .text-content blockquote:after {
   display: inline-block;
   text-rendering: auto;
   -webkit-font-smoothing: antialiased;
@@ -2873,7 +3073,7 @@ News detail / Programme detail
   font-size: 3em;
   align-self: flex-end;
 }
-.article-detail blockquote p {
+.article-detail .text-content blockquote p {
   font-family: "Source Sans 3", sans-serif;
   font-weight: 500;
   font-size: 1.5rem;
@@ -2883,33 +3083,30 @@ News detail / Programme detail
   padding: 2rem 1rem;
   margin: 0;
 }
-.article-detail blockquote p:before, .article-detail blockquote p:after {
+.article-detail .text-content blockquote p:before, .article-detail .text-content blockquote p:after {
   content: " – ";
 }
-.article-detail p {
-  margin-bottom: 1.5rem;
-}
-.article-detail a {
+.article-detail .text-content a {
   color: #d5c392;
   font-weight: 600;
   transition: all 0.3s ease;
 }
-.article-detail a:hover {
+.article-detail .text-content a:hover {
   color: #a8956c;
 }
-.article-detail strong {
+.article-detail .text-content strong {
   font-weight: 700;
 }
-.article-detail ul, .article-detail ol {
+.article-detail .text-content ul, .article-detail .text-content ol {
   margin-inline: 2rem;
   margin-block-end: 1.5rem;
 }
 @media (min-width: 768px) {
-  .article-detail ul, .article-detail ol {
+  .article-detail .text-content ul, .article-detail .text-content ol {
     margin-inline: 3rem;
   }
 }
-.article-detail ul li, .article-detail ol li {
+.article-detail .text-content ul li, .article-detail .text-content ol li {
   font-family: "Source Sans 3", sans-serif;
   font-weight: 400;
   font-size: 1.125rem;
@@ -2917,31 +3114,31 @@ News detail / Programme detail
   color: #52585f;
   margin-bottom: 0.25rem;
 }
-.article-detail ul li:last-of-type, .article-detail ol li:last-of-type {
+.article-detail .text-content ul li:last-of-type, .article-detail .text-content ol li:last-of-type {
   margin-bottom: 0;
 }
-.article-detail ul li {
+.article-detail .text-content ul li {
   list-style-type: disc;
 }
-.article-detail ul li li {
+.article-detail .text-content ul li li {
   list-style: circle;
 }
-.article-detail ol li {
+.article-detail .text-content ol li {
   list-style-type: decimal;
 }
-.article-detail ol li li {
+.article-detail .text-content ol li li {
   list-style: lower-alpha;
 }
-.article-detail table {
+.article-detail .text-content table {
   margin-bottom: 1.5rem;
 }
-.article-detail table thead {
+.article-detail .text-content table thead {
   background: #f6e9d5;
 }
-.article-detail table tr:nth-child(even) {
+.article-detail .text-content table tr:nth-child(even) {
   background: #f2f2f2;
 }
-.article-detail table th {
+.article-detail .text-content table th {
   padding: 1rem;
   font-family: "Poppins", sans-serif;
   font-weight: 700;
@@ -2953,7 +3150,7 @@ News detail / Programme detail
   text-align: left;
   vertical-align: top;
 }
-.article-detail table td {
+.article-detail .text-content table td {
   padding: 1rem;
   font-family: "Source Sans 3", sans-serif;
   font-weight: 400;
@@ -3113,38 +3310,49 @@ Tournament page
   *
   */
 }
-.tournament-desc .article-intro {
+.tournament-desc .text-content {
+  margin-bottom: 2rem;
+}
+@media (min-width: 1024px) {
+  .tournament-desc .text-content {
+    margin-bottom: 4rem;
+  }
+}
+.tournament-desc .text-content:last-child {
+  margin-bottom: 0;
+}
+.tournament-desc .text-content .article-intro {
   font-weight: 600;
   color: #52585f;
   margin-bottom: 2rem;
 }
-.tournament-desc h2 {
+.tournament-desc .text-content h2 {
   color: #141a1f;
   margin-bottom: 1.5rem;
   text-transform: none;
   letter-spacing: unset;
 }
-.tournament-desc h3 {
+.tournament-desc .text-content h3 {
   color: #d5c392;
   margin-bottom: 1.25rem;
   text-transform: uppercase;
   letter-spacing: 2px;
 }
-.tournament-desc h4 {
+.tournament-desc .text-content h4 {
   font-weight: 600;
   font-size: 1.125rem;
   line-height: 1.5em;
   color: #8d949b;
   margin-bottom: 0.25rem;
 }
-.tournament-desc blockquote {
+.tournament-desc .text-content blockquote {
   display: flex;
   align-items: center;
   justify-content: flex-start;
   gap: 2rem;
   margin: 2.5rem;
 }
-.tournament-desc blockquote:before {
+.tournament-desc .text-content blockquote:before {
   display: inline-block;
   text-rendering: auto;
   -webkit-font-smoothing: antialiased;
@@ -3154,7 +3362,7 @@ Tournament page
   font-size: 3em;
   align-self: flex-start;
 }
-.tournament-desc blockquote:after {
+.tournament-desc .text-content blockquote:after {
   display: inline-block;
   text-rendering: auto;
   -webkit-font-smoothing: antialiased;
@@ -3164,7 +3372,7 @@ Tournament page
   font-size: 3em;
   align-self: flex-end;
 }
-.tournament-desc blockquote p {
+.tournament-desc .text-content blockquote p {
   font-family: "Source Sans 3", sans-serif;
   font-weight: 500;
   font-size: 1.5rem;
@@ -3174,33 +3382,30 @@ Tournament page
   padding: 2rem 1rem;
   margin: 0;
 }
-.tournament-desc blockquote p:before, .tournament-desc blockquote p:after {
+.tournament-desc .text-content blockquote p:before, .tournament-desc .text-content blockquote p:after {
   content: " – ";
 }
-.tournament-desc p {
-  margin-bottom: 1.5rem;
-}
-.tournament-desc a {
+.tournament-desc .text-content a {
   color: #d5c392;
   font-weight: 600;
   transition: all 0.3s ease;
 }
-.tournament-desc a:hover {
+.tournament-desc .text-content a:hover {
   color: #a8956c;
 }
-.tournament-desc strong {
+.tournament-desc .text-content strong {
   font-weight: 700;
 }
-.tournament-desc ul, .tournament-desc ol {
+.tournament-desc .text-content ul, .tournament-desc .text-content ol {
   margin-inline: 2rem;
   margin-block-end: 1.5rem;
 }
 @media (min-width: 768px) {
-  .tournament-desc ul, .tournament-desc ol {
+  .tournament-desc .text-content ul, .tournament-desc .text-content ol {
     margin-inline: 3rem;
   }
 }
-.tournament-desc ul li, .tournament-desc ol li {
+.tournament-desc .text-content ul li, .tournament-desc .text-content ol li {
   font-family: "Source Sans 3", sans-serif;
   font-weight: 400;
   font-size: 1.125rem;
@@ -3208,31 +3413,31 @@ Tournament page
   color: #52585f;
   margin-bottom: 0.25rem;
 }
-.tournament-desc ul li:last-of-type, .tournament-desc ol li:last-of-type {
+.tournament-desc .text-content ul li:last-of-type, .tournament-desc .text-content ol li:last-of-type {
   margin-bottom: 0;
 }
-.tournament-desc ul li {
+.tournament-desc .text-content ul li {
   list-style-type: disc;
 }
-.tournament-desc ul li li {
+.tournament-desc .text-content ul li li {
   list-style: circle;
 }
-.tournament-desc ol li {
+.tournament-desc .text-content ol li {
   list-style-type: decimal;
 }
-.tournament-desc ol li li {
+.tournament-desc .text-content ol li li {
   list-style: lower-alpha;
 }
-.tournament-desc table {
+.tournament-desc .text-content table {
   margin-bottom: 1.5rem;
 }
-.tournament-desc table thead {
+.tournament-desc .text-content table thead {
   background: #f6e9d5;
 }
-.tournament-desc table tr:nth-child(even) {
+.tournament-desc .text-content table tr:nth-child(even) {
   background: #f2f2f2;
 }
-.tournament-desc table th {
+.tournament-desc .text-content table th {
   padding: 1rem;
   font-family: "Poppins", sans-serif;
   font-weight: 700;
@@ -3244,7 +3449,7 @@ Tournament page
   text-align: left;
   vertical-align: top;
 }
-.tournament-desc table td {
+.tournament-desc .text-content table td {
   padding: 1rem;
   font-family: "Source Sans 3", sans-serif;
   font-weight: 400;
@@ -3376,7 +3581,7 @@ Events
   background: #f2f2f2;
 }
 .table-event tr:hover td {
-  color: #d5c392;
+  opacity: 0.6;
 }
 .table-event tr:hover td .i-long-arrow-table {
   transform: translateX(8px);
@@ -3419,7 +3624,7 @@ Events
   font-weight: 700;
   font-size: 1.25rem;
   line-height: 1.3em;
-  color: #141a1f;
+  color: #8d949b;
 }
 @media (min-width: 768px) {
   .table-event td.table-list-title {
@@ -3467,7 +3672,7 @@ Events
   text-transform: capitalize;
 }
 .card-events .event-title {
-  color: #8d949b;
+  color: #141a1f;
   margin-bottom: 0.25rem;
   font-size: 1.5rem;
 }
@@ -3482,7 +3687,7 @@ Events
 
 .card-events .event-venue {
   font-weight: 700;
-  color: #141a1f;
+  color: #8d949b;
 }
 
 .event-date {
@@ -3518,7 +3723,7 @@ Events
   }
 }
 .event-content h4 {
-  color: #D0D3D4;
+  color: #d5c392;
   /* For subgrid only*/
 }
 .event-content .event-detail {
@@ -3547,6 +3752,32 @@ Events
   font-size: 1.25rem;
   line-height: 1.3em;
   color: #52585f;
+}
+
+/******************************
+Volunteer pages
+******************************/
+/*
+*
+* LOCATION: [pages]
+* FOLDER: [scss]
+* FILE NAME: [page-volunteer.scss]
+* DESCRIPTION: Styling for the volunteer pages
+*
+*/
+.p-volunteer .w-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem 2rem;
+  justify-content: center;
+  margin-top: 2rem;
+  width: 100%;
+}
+@media (min-width: 1024px) {
+  .p-volunteer .w-cards {
+    margin-top: 3rem;
+    gap: 2rem 4rem;
+  }
 }
 
 /******************************

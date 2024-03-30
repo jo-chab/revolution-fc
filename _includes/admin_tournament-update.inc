@@ -93,7 +93,7 @@
                 <div class="form-row column">
                     <label>Photo actuelle</label>
                     <?php
-                        echo "<div class='actu-img-upload'><img src='$tournament_img' alt='$name' /></div>";
+                        echo "<div class='actu-img-upload'><img src='/$tournament_img' alt='$name' /></div>";
                     ?>
                 </div>
                 

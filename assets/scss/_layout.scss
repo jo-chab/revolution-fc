@@ -246,6 +246,13 @@ article {
     }
 }
 
+
+.w-img {
+    margin-bottom: 1rem;
+    @include desktop {
+        margin-bottom: 2rem;
+    }
+}
 figure {
     margin-bottom: 2rem;
     

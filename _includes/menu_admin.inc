@@ -52,7 +52,7 @@
         <div class="menu-element icon i-club-house"><span class="icon new-feature">Club</span></div>
         <ul class="sub-nav">
             <li class="sub-nav-item"><a class="sub-nav-item-el" href="?p=5">Informations générales</a></li>
-            <li class="sub-nav-item "><a class="sub-nav-item-el" href="?p=6"><span class="icon new-feature">Missions et valeurs</span></a></li>
+            <li class="sub-nav-item "><a class="sub-nav-item-el" href="?p=6">Missions et valeurs</a></li>
             <li class="sub-nav-item"><a class="sub-nav-item-el" href="?p=301">Offres d'emplois</a></li>
             <li class="sub-nav-item"><a class="sub-nav-item-el" href="?p=61">Terrains</a></li>
             <li class="sub-nav-item"><a class="sub-nav-item-el" href="?p=31">Gérer les documents</a></li>
@@ -77,6 +77,13 @@
             <li class="sub-nav-item"><a class="sub-nav-item-el" href="?p=35">Documents technique</a></li>
             <li class="sub-nav-item"><a class="sub-nav-item-el" href="?p=37">Gérer les catégories technique</a></li>
             <li class="sub-nav-item"><a class="sub-nav-item-el" href="?p=38">Gérer les sous-catégories technique</a></li>
+        </ul>
+    </li>
+    
+    <li class="admin-nav">
+        <div class="menu-element icon i-soccer-1"><span class="icon new-feature">Page Bénévoles</span></div>
+        <ul class="sub-nav">
+            <li class="sub-nav-item"><a class="sub-nav-item-el" href="?p=27">Devenir bénévole</a></li>
         </ul>
     </li>
     

@@ -607,6 +607,11 @@ p:has(+ p) {
   content: "\f16d";
 }
 
+.i-store:before {
+  font: var(--fa-font-regular);
+  content: "\f54e";
+}
+
 .i-send:after {
   font: var(--fa-font-light);
   content: "\f1d8";
@@ -1161,19 +1166,41 @@ DESIGN SYSTEM – CARDS
   text-transform: uppercase;
 }
 
+.card-events:not(.event-el) {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 30%;
+  flex-grow: 1;
+  min-width: 320px;
+  max-width: calc(50% - 2rem);
+  padding: 2rem;
+  border: 1px solid #f2f2f2;
+  border-radius: 0.5rem;
+}
 @media (min-width: 768px) {
-  .card-events {
-    transform: translateY(0);
-    transition: transform 0.5s ease;
+  .card-events:not(.event-el) {
+    padding: 3rem;
   }
-  .card-events:hover {
-    transform: translateY(-1rem);
-  }
+}
+.card-events [class*=btn-] {
+  flex-grow: 1;
 }
 
 /***********************
 DESIGN SYSTEM – Buttons
 ***********************/
+.w-btn {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+  flex: 1;
+}
+@media (min-width: 768px) {
+  .w-btn {
+    margin-top: 3rem;
+  }
+}
+
 .button, .filter-label, .inputfile + label, .btn-download, .btn-filter, .btn-tertiary, .btn-secondary, .btn-primary {
   display: flex;
   width: fit-content;
@@ -1417,6 +1444,9 @@ DESIGN SYSTEM – Buttons
   margin: 0;
   justify-content: flex-start;
   color: #52585f;
+}
+.btn-tertiary.btn-text:hover {
+  color: #a8956c;
 }
 .btn-tertiary.btn-light {
   color: white;
@@ -1926,6 +1956,10 @@ LOGIN PAGE
   background: #ffdfe6;
   border-radius: 0.5rem;
   border: 1px solid #c80004;
+}
+.w-login-message span,
+.w-login-message a {
+  font-weight: 700;
 }
 
 /*
@@ -2548,30 +2582,33 @@ form.switch-status {
 .switch-container {
   display: inline-block;
   position: relative;
-  width: 56px;
-  height: 32px;
-  background-color: #dafce4; /* Default background color */
+  margin-top: 0.25rem;
+  width: 64px;
+  height: 24px;
+  background-color: #d3d3d3; /* Default background color */
   border-radius: 16px;
   cursor: pointer;
+  transition: background-color 0.3s;
 }
 .switch-container:has(.switch-checkbox:checked) {
-  background-color: #00bd60;
+  background-color: #69F0AE;
 }
 
 /* Style the switch knob */
 .switch-knob {
   position: absolute;
-  top: 3px;
-  left: 3px;
-  width: 26px;
-  height: 26px;
-  background-color: #fff;
+  top: -0.25rem;
+  left: 0;
+  width: 32px;
+  height: 32px;
+  background-color: #f2f2f2;
   border-radius: 50%;
   transition: transform 0.3s, background-color 0.3s;
 }
 
 .switch-checkbox:checked + .switch-knob {
-  transform: translateX(23px);
+  transform: translateX(32px);
+  background-color: #00bd60;
 }
 
 /************************************

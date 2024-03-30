@@ -62,7 +62,7 @@
         }
         
         &:hover td {
-            color: $primary-color;
+            opacity: .6;
             
             .i-long-arrow-table {
                 transform: translateX(8px);
@@ -109,7 +109,7 @@
         
         &.table-list-title {
             @include font-family-heading();
-            @include font-style(700, 1.25rem, 1.3em, $secondary-color-darker);
+            @include font-style(700, 1.25rem, 1.3em, $secondary-color);
             @include tablet {
                 font-size: 2rem
             }
@@ -158,7 +158,7 @@
     text-transform: capitalize;
     
     .card-events & {
-        color: $secondary-color;
+        color: $secondary-color-darker;
         margin-bottom: .25rem;
         font-size: 1.5rem;
         
@@ -177,9 +177,7 @@
 .event-venue {
     .card-events & {
         font-weight: 700;
-        color: $secondary-color-darker;
-        //text-transform: uppercase;
-        //letter-spacing: 2px;
+        color: $secondary-color;
     }
 }
 
@@ -220,7 +218,7 @@
     }
     
     h4 {
-        color: $secondary-color-light;
+        color: $primary-color;
         /* For subgrid only*/
         //grid-column: 1 / 3;
     }

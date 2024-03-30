@@ -1,0 +1,25 @@
+/*
+*
+* LOCATION: [pages]
+* FOLDER: [scss]
+* FILE NAME: [page-volunteer.scss]
+* DESCRIPTION: Styling for the volunteer pages
+*
+*/
+
+
+.w-cards {
+    .p-volunteer & {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem 2rem;
+        justify-content: center;
+        margin-top: 2rem;
+        width: 100%;
+        
+        @include desktop {
+            margin-top: 3rem;
+            gap: 2rem 4rem;
+        }
+    }
+}

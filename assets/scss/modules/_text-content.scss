@@ -8,151 +8,158 @@
 */
 
 
-.article-intro {
-    font-weight: 600;
-    color: $secondary-color-dark;
+.text-content {
     margin-bottom: 2rem;
-}
-
-h2 {
-    color: $secondary-color-darker;
-    margin-bottom: 1.5rem;
-    text-transform: none;
-    letter-spacing: unset;
-}
-
-h3 {
-    color: $primary-color;
-    margin-bottom: 1.25rem;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-}
-
-h4 {
-    @include font-style(600, 1.125rem, 1.5em, $secondary-color);
-    margin-bottom: .25rem;
-}
-
-blockquote {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    gap: 2rem;
-    margin: 2.5rem;
-    
-    &:before {
-        display: inline-block;
-        text-rendering: auto;
-        -webkit-font-smoothing: antialiased;
-        font: var(--fa-font-sharp-solid);
-        content: '\f10d';
-        color: $secondary-color-light;
-        font-size: 3em;
-        align-self: flex-start;
+    @include desktop {
+        margin-bottom: 4rem;
+    }
+    &:last-child {
+        margin-bottom: 0;
     }
     
-    &:after {
-        display: inline-block;
-        text-rendering: auto;
-        -webkit-font-smoothing: antialiased;
-        font: var(--fa-font-sharp-solid);
-        content: '\f10e';
-        color: $secondary-color-light;
-        font-size: 3em;
-        align-self: flex-end;
+    .article-intro {
+        font-weight: 600;
+        color: $secondary-color-dark;
+        margin-bottom: 2rem;
     }
     
-    p {
-        @include font-family-reading();
-        @include font-style(500, 1.5rem, 1.7em, $primary-color);
-        font-style: italic;
-        padding: 2rem 1rem;
-        margin: 0;
-        
-        &:before,
-        &:after {
-            content: ' – ';
-        }
-    }
-}
-
-p {
-    margin-bottom: 1.5rem;
-}
-
-a {
-    color: $primary-color;
-    font-weight: 600;
-    transition: all .3s ease;
-    
-    &:hover {
-        color: $primary-color-dark;
-    }
-}
-
-strong {
-    font-weight: 700;
-}
-
-ul, ol {
-    margin-inline: 2rem;
-    margin-block-end: 1.5rem;
-    @include tablet {
-        margin-inline: 3rem;
+    h2 {
+        color: $secondary-color-darker;
+        margin-bottom: 1.5rem;
+        text-transform: none;
+        letter-spacing: unset;
     }
     
-    li {
-        @include font-family-reading;
-        @include font-style(400, 1.125rem, 1.5em, $reading-text);
-        margin-bottom: .25rem;
-        
-        &:last-of-type {
-            margin-bottom: 0;
-        }
-    }
-}
-
-ul li {
-    list-style-type: disc;
-    li {
-        list-style: circle;
-    }
-}
-
-ol li {
-    list-style-type: decimal;
-    li {
-        list-style: lower-alpha;
-    }
-}
-
-table {
-    margin-bottom: 1.5rem;
-    
-    thead {
-        background: $primary-color-lighter;
-    }
-    
-    tr, td, th {
-        //border: 1px solid #B4BABE;
-    }
-    tr:nth-child(even) {
-        background: $web-grey-1;
-    }
-    
-    th {
-        padding: 1rem;
-        @include font-family-heading;
-        @include font-style(700, .875rem, 1.5em, $secondary-color-darker);
+    h3 {
+        color: $primary-color;
+        margin-bottom: 1.25rem;
         text-transform: uppercase;
         letter-spacing: 2px;
-        text-align: left;
-        vertical-align: top;
     }
     
-    td {
-        padding: 1rem;
-        @include font-family-reading;
-        @include font-style(400, 1rem, 1.5em, $secondary-color-dark);
+    h4 {
+        @include font-style(600, 1.125rem, 1.5em, $secondary-color);
+        margin-bottom: .25rem;
     }
+    
+    blockquote {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 2rem;
+        margin: 2.5rem;
+        
+        &:before {
+            display: inline-block;
+            text-rendering: auto;
+            -webkit-font-smoothing: antialiased;
+            font: var(--fa-font-sharp-solid);
+            content: '\f10d';
+            color: $secondary-color-light;
+            font-size: 3em;
+            align-self: flex-start;
+        }
+        
+        &:after {
+            display: inline-block;
+            text-rendering: auto;
+            -webkit-font-smoothing: antialiased;
+            font: var(--fa-font-sharp-solid);
+            content: '\f10e';
+            color: $secondary-color-light;
+            font-size: 3em;
+            align-self: flex-end;
+        }
+        
+        p {
+            @include font-family-reading();
+            @include font-style(500, 1.5rem, 1.7em, $primary-color);
+            font-style: italic;
+            padding: 2rem 1rem;
+            margin: 0;
+            
+            &:before,
+            &:after {
+                content: ' – ';
+            }
+        }
+    }
+    
+    a {
+        color: $primary-color;
+        font-weight: 600;
+        transition: all .3s ease;
+        
+        &:hover {
+            color: $primary-color-dark;
+        }
+    }
+    
+    strong {
+        font-weight: 700;
+    }
+    
+    ul, ol {
+        margin-inline: 2rem;
+        margin-block-end: 1.5rem;
+        @include tablet {
+            margin-inline: 3rem;
+        }
+        
+        li {
+            @include font-family-reading;
+            @include font-style(400, 1.125rem, 1.5em, $reading-text);
+            margin-bottom: .25rem;
+            
+            &:last-of-type {
+                margin-bottom: 0;
+            }
+        }
+    }
+    
+    ul li {
+        list-style-type: disc;
+        li {
+            list-style: circle;
+        }
+    }
+    
+    ol li {
+        list-style-type: decimal;
+        li {
+            list-style: lower-alpha;
+        }
+    }
+    
+    table {
+        margin-bottom: 1.5rem;
+        
+        thead {
+            background: $primary-color-lighter;
+        }
+        
+        tr, td, th {
+            //border: 1px solid #B4BABE;
+        }
+        tr:nth-child(even) {
+            background: $web-grey-1;
+        }
+        
+        th {
+            padding: 1rem;
+            @include font-family-heading;
+            @include font-style(700, .875rem, 1.5em, $secondary-color-darker);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            text-align: left;
+            vertical-align: top;
+        }
+        
+        td {
+            padding: 1rem;
+            @include font-family-reading;
+            @include font-style(400, 1rem, 1.5em, $secondary-color-dark);
+        }
+    }
+    
 }

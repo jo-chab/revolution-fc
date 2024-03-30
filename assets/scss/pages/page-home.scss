@@ -8,8 +8,6 @@
 */
 
 
-
-
 .w-hero {
     position: relative;
     
@@ -54,33 +52,24 @@
 
 
 .w-news {
-    margin: 2rem auto;
+    margin: 2rem auto 0;
     gap: 2rem;
     
     @include tablet {
-        margin: 3rem auto;
+        margin: 3rem auto 0;
     }
 }
 
 
 .w-events {
     border-top: 1px solid $web-grey-2;
+    
     .wrapper {
         gap: 1rem;
         @include tablet {
             gap: 0;
             flex-direction: row;
             flex-wrap: wrap;
-        }
-    }
-    
-    .w-btn {
-        display: flex;
-        justify-content: center;
-        margin-top: 2rem;
-        flex: 1;
-        @include tablet {
-            margin-top: 3rem;
         }
     }
     
@@ -121,12 +110,23 @@
             }
         }
     }
+    
+    .event-el {
+        @include tablet {
+            transform: translateY(0);
+            transition: transform .5s ease;
+            &:hover {
+                transform: translateY(-1rem);
+            }
+        }
+    }
 }
 
 /* JOBS SECTION */
 .w-jobs {
     border-top: 1px solid $web-grey-2;
 }
+
 .list-jobs {
     margin-block: $space-m;
     position: relative;
@@ -153,6 +153,7 @@
             grid-template-columns: 1fr auto;
         }
     }
+    
     .job-infos {
         p {
             @include font-style(300, 1rem, 1.3em, $secondary-color);

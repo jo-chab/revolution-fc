@@ -179,19 +179,51 @@ DESIGN SYSTEM – CARDS
 }
 
 .card-events {
-    @include tablet {
-        transform: translateY(0);
-        transition: transform .5s ease;
-        &:hover {
-            transform: translateY(-1rem);
+    
+    &:not(.event-el) {
+        display: flex;
+        flex-direction: column;
+        flex-basis: 30%;
+        flex-grow: 1;
+        min-width: 320px;
+        max-width: calc(50% - 2rem);
+        padding: 2rem;
+        
+        border: 1px solid $web-grey-1;
+        border-radius: .5rem;
+        
+        @include tablet {
+            padding: 3rem;
         }
     }
+    .event-date {
+    
+    }
+    .event-title {
+    
+    }
+    .event-venue {
+    
+    }
+    [class*='btn-'] {
+        flex-grow: 1;
+    }
+    
 }
 
 
 /***********************
 DESIGN SYSTEM – Buttons
 ***********************/
+.w-btn {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+    flex: 1;
+    @include tablet {
+        margin-top: 3rem;
+    }
+}
 .button {
     display: flex;
     width: fit-content;
@@ -474,6 +506,10 @@ DESIGN SYSTEM – Buttons
         margin: 0;
         justify-content: flex-start;
         color: $reading-text;
+        
+        &:hover {
+            color: $primary-color-dark;
+        }
     }
     
     &.btn-light {

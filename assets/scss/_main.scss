@@ -8,43 +8,41 @@
 */
 
 
-
 /*******************************************************
 MAIN CSS
 *******************************************************/
 .list-people {
-	@extend .web-layout;
-	margin-block: 3rem;
-	
-	&.col-2 {
-		.list-people-header {
-			@include tablet {
-				grid-column: span 2;
-			}
-		}
-	}
-	
-	&.col-3 {
-		gap: 4rem 2rem;
-		.list-people-header {
-			@include tablet {
-				grid-column: span 2;
-			}
-			@include desktop {
-				grid-column: span 3;
-			}
-		}
-	}
+    @extend .web-layout;
+    margin-block: 3rem;
+    
+    &.col-2 {
+        .list-people-header {
+            @include tablet {
+                grid-column: span 2;
+            }
+        }
+    }
+    
+    &.col-3 {
+        gap: 4rem 2rem;
+        
+        .list-people-header {
+            @include tablet {
+                grid-column: span 2;
+            }
+            @include desktop {
+                grid-column: span 3;
+            }
+        }
+    }
 }
-
-
 
 
 /******************************
 HOME PAGE
 ******************************/
 .w-home {
-	@import "pages/page-home";
+    @import "pages/page-home";
 }
 
 
@@ -68,14 +66,14 @@ PROGRAMMES
 DOCUMENTS
 ******************************/
 .w-list-docs {
-	position: relative;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	
-	width: 100%;
-	margin: 3rem 0;
-	
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+    width: 100%;
+    margin: 3rem 0;
+    
 }
 
 
@@ -98,79 +96,85 @@ Events
 
 
 /******************************
+Volunteer pages
+******************************/
+@import 'pages/page-volunteer';
+
+
+/******************************
 RESSOURCES ENTRAINEURS
 ******************************/
 .list-category {
-	margin-block: 3rem;
-	
-	.category-element {
-		display: inline-grid;
-		align-items: center;
-		justify-content: center;
-		padding: 2rem;
-		
-		@include font-family-heading;
-		@include font-style(600, 1.25rem, 1.3em, $secondary-color);
-		text-transform: uppercase;
-		letter-spacing: 1px;
-		text-align: center;
-		
-		background: #f2f2f2;
-		border: 1px solid $primary-color;
-		@include border-radius-uniform(1rem);
-		
-		transition: all .1s ease;
-		
-		&:hover {
-			cursor: pointer;
-			background: $primary-color;
-			color: white;
-			transition: all .3s ease;
-		}
-		
-		&.is-active {
-			background: $primary-color;
-			color: white
-		}
-	}
+    margin-block: 3rem;
+    
+    .category-element {
+        display: inline-grid;
+        align-items: center;
+        justify-content: center;
+        padding: 2rem;
+        
+        @include font-family-heading;
+        @include font-style(600, 1.25rem, 1.3em, $secondary-color);
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        text-align: center;
+        
+        background: #f2f2f2;
+        border: 1px solid $primary-color;
+        @include border-radius-uniform(1rem);
+        
+        transition: all .1s ease;
+        
+        &:hover {
+            cursor: pointer;
+            background: $primary-color;
+            color: white;
+            transition: all .3s ease;
+        }
+        
+        &.is-active {
+            background: $primary-color;
+            color: white
+        }
+    }
 }
 
 .list-subcategory {
-	
-	li {
-		display: inline-grid;
-	}
-	
-	.subcategory-element {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		justify-content: center;
-		padding: 1rem;
-		
-		@include font-family-heading;
-		@include font-style(600, 1rem, 1.3em, white);
-		text-transform: uppercase;
-		letter-spacing: 1px;
-		text-align: center;
-		
-		background: $secondary-color-light;
-		border: 1px solid $secondary-color;
-		@include border-radius-uniform(1rem);
-		
-		transition: all .1s ease;
-		
-		&:hover {
-			cursor: pointer;
-			background: $secondary-color;
-			transition: all .3s ease;
-		}
-		
-		&.is-active {
-			background: $primary-color;
-		}
-		
-	}
+    
+    li {
+        display: inline-grid;
+    }
+    
+    .subcategory-element {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 1rem;
+        
+        @include font-family-heading;
+        @include font-style(600, 1rem, 1.3em, white);
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        text-align: center;
+        
+        background: $secondary-color-light;
+        border: 1px solid $secondary-color;
+        @include border-radius-uniform(1rem);
+        
+        transition: all .1s ease;
+        
+        &:hover {
+            cursor: pointer;
+            background: $secondary-color;
+            transition: all .3s ease;
+        }
+        
+        &.is-active {
+            background: $primary-color;
+        }
+        
+    }
 }
 
 

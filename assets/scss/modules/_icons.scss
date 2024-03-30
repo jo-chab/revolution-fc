@@ -159,10 +159,16 @@
     font: var(--fa-font-brands);
     content: '\f39e';
 }
-
 .i-instagram:before {
     font: var(--fa-font-brands);
     content: '\f16d';
+}
+
+
+
+.i-store:before {
+    font: var(--fa-font-regular);
+    content: "\f54e";
 }
 
 .i-send:after {
