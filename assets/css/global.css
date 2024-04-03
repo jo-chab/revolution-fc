@@ -228,7 +228,7 @@ MIXINS -
 h1 {
   font-family: "Poppins", sans-serif;
   font-weight: 700;
-  font-size: 2rem;
+  font-size: 2.5rem;
   line-height: 1.3em;
   color: #8d949b;
   margin-bottom: 2rem;
@@ -241,11 +241,10 @@ h1 {
 }
 @media (min-width: 620px) {
   h1 {
-    font-size: 4rem;
+    font-size: 4.5rem;
   }
 }
 h1.article-title {
-  font-family: "Source Sans 3", sans-serif;
   color: #141a1f;
 }
 @media (min-width: 620px) {
@@ -260,7 +259,7 @@ h1:has(+ h3, + h4) {
 h2 {
   font-family: "Poppins", sans-serif;
   font-weight: 700;
-  font-size: 1.5rem;
+  font-size: 2rem;
   line-height: 1.5em;
   color: #d5c392;
   text-transform: uppercase;
@@ -269,7 +268,7 @@ h2 {
 }
 @media (min-width: 620px) {
   h2 {
-    font-size: 2rem;
+    font-size: 3rem;
   }
 }
 @media (min-width: 768px) {
@@ -301,14 +300,14 @@ h2:has(+ p) {
 h3 {
   font-family: "Poppins", sans-serif;
   font-weight: 600;
-  font-size: 1.25rem;
+  font-size: 1.5rem;
   line-height: 1.3em;
   color: #52585f;
   margin-bottom: 1rem;
 }
 @media (min-width: 620px) {
   h3 {
-    font-size: 1.5rem;
+    font-size: 1.875rem;
   }
 }
 h3.news-card-headline {
@@ -371,11 +370,6 @@ h5 {
   font-size: 0.875rem;
   line-height: 1.5em;
   color: #52585f;
-}
-@media (min-width: 620px) {
-  h5 {
-    font-size: 1rem;
-  }
 }
 
 h6 {
