@@ -38,20 +38,22 @@
     <li class="admin-nav">
         <div class="menu-element icon i-config">Configuration</div>
         <ul class="sub-nav">
-            <li class="sub-nav-item"><a class="sub-nav-item-el" href="?p=2">Config ADMIN – Jonathan</a></li>
-            <li class="sub-nav-item"><a class="sub-nav-item-el" href="?p=3">Config Liens du site</a></li>
-            <li class="sub-nav-item"><a class="sub-nav-item-el" href="?p=4">Configuration page d'accueil</a></li>
+            <?php if (isset($_SESSION['auth']) && $_SESSION['type'] == 6): ?>
+            <li class="sub-nav-item"><a class="sub-nav-item-el" href="?p=2">ADMIN – Jonathan</a></li>
+            <?php endif ?>
+            <li class="sub-nav-item"><a class="sub-nav-item-el" href="?p=3">Liens du site</a></li>
+            <li class="sub-nav-item"><a class="sub-nav-item-el" href="?p=4">Page d'accueil</a></li>
+            <li class="sub-nav-item"><a class="sub-nav-item-el" href="?p=5">Informations générales</a></li>
         </ul>
     </li>
     
     <li class="admin-nav">
-        <div class="menu-element icon i-news"><a href="index.php?p=11">Actualités</a></div>
+        <div class="menu-element icon i-news"><a href="?p=11">Actualités</a></div>
     </li>
     
     <li class="admin-nav">
         <div class="menu-element icon i-club-house"><span class="">Club</span></div>
         <ul class="sub-nav">
-            <li class="sub-nav-item"><a class="sub-nav-item-el" href="?p=5">Informations générales</a></li>
             <li class="sub-nav-item "><a class="sub-nav-item-el" href="?p=6">Missions et valeurs</a></li>
             <li class="sub-nav-item"><a class="sub-nav-item-el" href="?p=301">Offres d'emplois</a></li>
             <li class="sub-nav-item"><a class="sub-nav-item-el" href="?p=61">Terrains</a></li>
