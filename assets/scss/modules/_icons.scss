@@ -207,6 +207,19 @@
     background: linear-gradient($admin-secondary, $color-warning);
 }
 
+.i-xp-1:before {
+    font: var(--fa-font-light);
+    content: '\f460';
+}
+.i-xp-2:before {
+    font-family: "Font Awesome Kit";
+    content: '\e006';
+}
+.i-xp-3:before {
+    font: var(--fa-font-light);
+    content: '\f091';
+}
+
 
 /******************************************
 ADMIN ICONS

@@ -472,6 +472,10 @@ p:has(+ p) {
   cursor: pointer;
 }
 
+.text-center {
+  text-align: center;
+}
+
 /*
 *
 * LOCATION: [modules]
@@ -796,6 +800,21 @@ p:has(+ p) {
 .i-summer.i-winter:before {
   content: "\f111";
   background: linear-gradient(#03dac4, #ffbe2e);
+}
+
+.i-xp-1:before {
+  font: var(--fa-font-light);
+  content: "\f460";
+}
+
+.i-xp-2:before {
+  font-family: "Font Awesome Kit";
+  content: "\e006";
+}
+
+.i-xp-3:before {
+  font: var(--fa-font-light);
+  content: "\f091";
 }
 
 /******************************************
@@ -2626,13 +2645,13 @@ nav.desktop .menu .arrowed.selected:after {
 FOOTER
 *******************************************************/
 footer {
-  padding: 32px 24px 120px;
+  padding: 2rem 2rem 120px;
   background-color: #141a1f;
   box-sizing: border-box;
 }
 @media (min-width: 768px) {
   footer {
-    padding: 32px;
+    padding: 2rem;
   }
 }
 footer article {
@@ -2747,7 +2766,89 @@ MAIN CSS
 }
 
 /******************************
-HOME PAGE
+DOCUMENTS
+******************************/
+.w-list-docs {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  margin: 3rem 0;
+}
+
+/******************************
+RESSOURCES ENTRAINEURS
+******************************/
+.list-category {
+  margin-block: 3rem;
+}
+.list-category .category-element {
+  display: inline-grid;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-size: 1.25rem;
+  line-height: 1.3em;
+  color: #8d949b;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-align: center;
+  background: #f2f2f2;
+  border: 1px solid #d5c392;
+  -webkit-border-radius: 1rem;
+  -moz-border-radius: 1rem;
+  border-radius: 1rem;
+  transition: all 0.1s ease;
+}
+.list-category .category-element:hover {
+  cursor: pointer;
+  background: #d5c392;
+  color: white;
+  transition: all 0.3s ease;
+}
+.list-category .category-element.is-active {
+  background: #d5c392;
+  color: white;
+}
+
+.list-subcategory li {
+  display: inline-grid;
+}
+.list-subcategory .subcategory-element {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-size: 1rem;
+  line-height: 1.3em;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-align: center;
+  background: #D0D3D4;
+  border: 1px solid #8d949b;
+  -webkit-border-radius: 1rem;
+  -moz-border-radius: 1rem;
+  border-radius: 1rem;
+  transition: all 0.1s ease;
+}
+.list-subcategory .subcategory-element:hover {
+  cursor: pointer;
+  background: #8d949b;
+  transition: all 0.3s ease;
+}
+.list-subcategory .subcategory-element.is-active {
+  background: #d5c392;
+}
+
+/******************************
+PAGES
 ******************************/
 .w-home {
   /*
@@ -2918,9 +3019,6 @@ HOME PAGE
   grid-gap: 1.5rem;
 }
 
-/******************************
-News PAGE
-******************************/
 /*
 *
 * LOCATION: [pages]
@@ -3174,27 +3272,6 @@ News detail / Programme detail
   padding: 0;
 }
 
-/******************************
-CLUB PAGE
-******************************/
-/******************************
-PROGRAMMES
-******************************/
-/******************************
-DOCUMENTS
-******************************/
-.w-list-docs {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  width: 100%;
-  margin: 3rem 0;
-}
-
-/******************************
-FIELDS
-******************************/
 /*
 *
 * LOCATION: [pages]
@@ -3258,9 +3335,6 @@ FIELDS
   line-height: 1.3em;
 }
 
-/******************************
-Tournament page
-******************************/
 /*
 *
 * LOCATION: [pages]
@@ -3513,9 +3587,6 @@ Tournament page
   color: #d5c392;
 }
 
-/******************************
-Events
-******************************/
 /*
 *
 * LOCATION: [pages]
@@ -3748,9 +3819,6 @@ Events
   color: #52585f;
 }
 
-/******************************
-Volunteer pages
-******************************/
 /*
 *
 * LOCATION: [pages]
@@ -3774,74 +3842,164 @@ Volunteer pages
   }
 }
 
-/******************************
-RESSOURCES ENTRAINEURS
-******************************/
-.list-category {
-  margin-block: 3rem;
+.w-hotm {
+  display: grid;
 }
-.list-category .category-element {
-  display: inline-grid;
-  align-items: center;
-  justify-content: center;
-  padding: 2rem;
-  font-family: "Poppins", sans-serif;
-  font-weight: 600;
-  font-size: 1.25rem;
-  line-height: 1.3em;
-  color: #8d949b;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  text-align: center;
-  background: #f2f2f2;
-  border: 1px solid #d5c392;
-  -webkit-border-radius: 1rem;
-  -moz-border-radius: 1rem;
-  border-radius: 1rem;
-  transition: all 0.1s ease;
-}
-.list-category .category-element:hover {
-  cursor: pointer;
-  background: #d5c392;
-  color: white;
-  transition: all 0.3s ease;
-}
-.list-category .category-element.is-active {
-  background: #d5c392;
-  color: white;
+@media (min-width: 768px) {
+  .w-hotm {
+    grid-template-columns: 2fr 3fr;
+    gap: 2rem;
+  }
 }
 
-.list-subcategory li {
-  display: inline-grid;
-}
-.list-subcategory .subcategory-element {
+.hotm-img {
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 1rem;
-  font-family: "Poppins", sans-serif;
-  font-weight: 600;
-  font-size: 1rem;
-  line-height: 1.3em;
-  color: white;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  text-align: center;
-  background: #D0D3D4;
-  border: 1px solid #8d949b;
-  -webkit-border-radius: 1rem;
-  -moz-border-radius: 1rem;
-  border-radius: 1rem;
-  transition: all 0.1s ease;
+  aspect-ratio: 1;
+  overflow: hidden;
+  margin-left: -2rem;
+  margin-right: -2rem;
 }
-.list-subcategory .subcategory-element:hover {
-  cursor: pointer;
-  background: #8d949b;
-  transition: all 0.3s ease;
+@media (min-width: 768px) {
+  .hotm-img {
+    margin-left: 0;
+    margin-right: 0;
+  }
 }
-.list-subcategory .subcategory-element.is-active {
+.hotm-img img {
+  width: unset;
+  height: 100%;
+}
+
+.hotm-content {
+  display: grid;
+  grid-template-rows: auto 1fr;
+  gap: 2rem;
+}
+
+.hotm-banner {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+  margin: -3rem 0 0 0;
+  flex-direction: column;
+}
+@media (min-width: 768px) {
+  .hotm-banner {
+    align-items: baseline;
+    margin: 2rem 0 0 -6rem;
+    flex-direction: row;
+  }
+}
+.hotm-banner h3 {
+  background: #f2f2f2;
+  padding: 0.5rem 1rem 1.5rem;
+  color: #141a1f;
+  margin: 0;
+}
+@media (min-width: 768px) {
+  .hotm-banner h3 {
+    padding: 1rem;
+  }
+}
+.hotm-banner h1 {
   background: #d5c392;
+  padding: 0.5rem 1.5rem;
+  color: white;
+  margin: -1rem 0 0;
+}
+@media (min-width: 768px) {
+  .hotm-banner h1 {
+    margin: 0;
+    padding: 1rem 2rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .hotm-info {
+    align-self: flex-end;
+  }
+}
+.hotm-info h2 {
+  margin-bottom: 0.5rem;
+  text-transform: none;
+}
+.hotm-info h4 {
+  color: #8d949b;
+  margin-bottom: 1.5rem;
+}
+@media (min-width: 768px) {
+  .hotm-info p.hotm-desc {
+    margin-left: 2rem;
+  }
+}
+
+.xp-com {
+  margin-block: 2rem 0;
+  display: grid;
+  gap: 2.5rem;
+}
+@media (min-width: 768px) {
+  .xp-com {
+    margin-block: 4rem 0;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+.xp-com h4 {
+  color: #d5c392;
+  margin-bottom: 0.5rem;
+}
+.xp-com .icon {
+  font-size: 4rem;
+  color: #8d949b;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.w-xp-testimony {
+  display: flex;
+  gap: 4rem;
+  flex-direction: column;
+}
+.w-xp-testimony .xp-testimony {
+  flex-grow: 1;
+  max-width: 80%;
+  margin: 0 auto;
+}
+.w-xp-testimony .xp-testimony {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  z-index: 2;
+}
+.w-xp-testimony .xp-testimony .icon.quote {
+  position: absolute;
+  left: -2rem;
+  z-index: -1;
+}
+.w-xp-testimony .xp-testimony .icon.quote:before {
+  color: #ebf2fa;
+  font: var(--fa-font-solid);
+  content: "\f10d";
+  font-size: 4rem;
+}
+.w-xp-testimony .xp-testimony blockquote {
+  font-family: "Source Sans 3", sans-serif;
+  font-weight: 400;
+  font-size: 1.5rem;
+  line-height: 1.5em;
+  color: #8d949b;
+  font-style: italic;
+  margin-bottom: 1rem;
+}
+.w-xp-testimony .xp-testimony h4 {
+  color: #d5c392;
+  font-weight: 700;
+}
+.w-xp-testimony .xp-testimony h5 {
+  color: #D0D3D4;
 }
 
 /*# sourceMappingURL=global.css.map */

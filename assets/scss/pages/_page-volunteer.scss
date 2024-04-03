@@ -1,0 +1,175 @@
+/*
+*
+* LOCATION: [pages]
+* FOLDER: [scss]
+* FILE NAME: [page-volunteer.scss]
+* DESCRIPTION: Styling for the volunteer pages
+*
+*/
+
+
+.w-cards {
+    .p-volunteer & {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem 2rem;
+        justify-content: center;
+        margin-top: 2rem;
+        width: 100%;
+        
+        @include desktop {
+            margin-top: 3rem;
+            gap: 2rem 4rem;
+        }
+    }
+}
+
+.w-hotm {
+    display: grid;
+    @include tablet {
+        grid-template-columns: 2fr 3fr;
+        gap: 2rem;
+    }
+}
+
+.hotm-img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    aspect-ratio: 1;
+    overflow: hidden;
+    margin-left: -$space-m;
+    margin-right: -$space-m;
+    @include tablet {
+        margin-left: 0;
+        margin-right: 0;
+    }
+    img {
+        width: unset;
+        height: 100%;
+    }
+}
+
+.hotm-content {
+    display: grid;
+    grid-template-rows: auto 1fr;
+    gap: 2rem;
+}
+.hotm-banner {
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-start;
+    margin: -3rem 0 0 0;
+    flex-direction: column;
+    
+    @include tablet {
+        align-items: baseline;
+        margin: 2rem 0 0 -6rem;
+        flex-direction: row;
+    }
+    
+    h3 {
+        background: $web-grey-1;
+        padding: .5rem 1rem 1.5rem;
+        color: $secondary-color-darker;
+        margin: 0;
+        @include tablet {
+            padding: 1rem;
+        }
+    }
+    
+    h1 {
+        background: $primary-color;
+        padding: .5rem 1.5rem;
+        color: white;
+        margin: -1rem 0 0;
+        @include tablet {
+            margin: 0;
+            padding: 1rem 2rem;
+        }
+    }
+}
+.hotm-info {
+    @include tablet {
+        align-self: flex-end;
+    }
+    h2 {
+        margin-bottom: .5rem;
+        text-transform: none;
+    }
+    h4 {
+        color: $secondary-color;
+        margin-bottom: 1.5rem;
+    }
+    p.hotm-desc {
+        @include tablet {
+            margin-left: 2rem;
+        }
+    }
+}
+
+.xp-com {
+    margin-block: 2rem 0;
+    display: grid;
+    gap: 2.5rem;
+    @include tablet {
+        margin-block: 4rem 0;
+        grid-template-columns: repeat(3, 1fr);
+    }
+    h4 {
+        color: $primary-color;
+        margin-bottom: .5rem;
+    }
+    .icon {
+        font-size: 4rem;
+        color: $secondary-color;
+        justify-content: center;
+        margin-bottom: 2rem;
+    }
+}
+
+.w-xp-testimony {
+    display: flex;
+    gap: 4rem;
+    flex-direction: column;
+    .xp-testimony {
+        flex-grow: 1;
+        max-width: 80%;
+        margin: 0 auto;
+        
+        //padding: 2rem;
+        //background: $web-grey-1;
+    }
+    .xp-testimony {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        z-index: 2;
+        .icon.quote {
+            position: absolute;
+            left: -2rem;
+            z-index: -1;
+            &:before {
+                color: $secondary-color-lighter;
+                font: var(--fa-font-solid);
+                content: '\f10d';
+                font-size: 4rem;
+            }
+        }
+        blockquote {
+            @include font-family-reading();
+            @include font-style(400, 1.5rem, 1.5em, $secondary-color);
+            font-style: italic;
+            margin-bottom: 1rem;
+        }
+        h4 {
+            color: $primary-color;
+            font-weight: 700;
+        }
+        h5 {
+            color: $secondary-color-light;
+        }
+    }
+}
+

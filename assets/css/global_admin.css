@@ -472,6 +472,10 @@ p:has(+ p) {
   cursor: pointer;
 }
 
+.text-center {
+  text-align: center;
+}
+
 /*
 *
 * LOCATION: [modules]
@@ -640,6 +644,21 @@ p:has(+ p) {
 .i-summer.i-winter:before {
   content: "\f111";
   background: linear-gradient(#03dac4, #ffbe2e);
+}
+
+.i-xp-1:before {
+  font: var(--fa-font-light);
+  content: "\f460";
+}
+
+.i-xp-2:before {
+  font-family: "Font Awesome Kit";
+  content: "\e006";
+}
+
+.i-xp-3:before {
+  font: var(--fa-font-light);
+  content: "\f091";
 }
 
 /******************************************

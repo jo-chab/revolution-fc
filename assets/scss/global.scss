@@ -16,3 +16,18 @@
 @import "main";
 
 
+
+
+/******************************
+PAGES
+******************************/
+.w-home {
+    @import "pages/page-home";
+}
+@import "pages/page-news";
+@import "pages/page-fields";
+@import "pages/page-tournament";
+@import 'pages/page-events';
+@import 'pages/page-volunteer';
+
+
