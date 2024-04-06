@@ -632,9 +632,8 @@ select {
     
     background-color: white;
     padding: .75rem 1rem;
-    //padding: .75rem 2.5rem .75rem 1rem;
     border: 1px solid #d3d3d3;
-    border-radius: .5rem 0 0 .5rem;
+    border-radius: .5rem;
     @include font-family-reading;
     @include font-style(400, 1rem, 1.3em, $web-grey-6);
 }

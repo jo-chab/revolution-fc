@@ -35,7 +35,7 @@
         grid-template-columns: repeat(4, 1fr);
         grid-template-areas:
         "hotm-img hotm-img hotm-img ."
-        ". hotm-content hotm-content hotm-content";
+        "hotm-content hotm-content hotm-content hotm-content";
     }
 }
 
@@ -57,21 +57,30 @@
     grid-area: hotm-content;
     display: grid;
     grid-template-rows: auto 1fr;
+    grid-template-areas:
+        "banner"
+        "hotm-info";
     gap: .5rem;
     margin-top: -2rem;
     @include tablet {
         gap: 2rem;
         margin-top: -6rem;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-areas:
+            "banner banner banner ."
+            ". hotm-info hotm-info hotm-info";
     }
 }
 
 .hotm-banner {
+    grid-area: banner;
     display: flex;
     align-items: center;
     justify-content: flex-start;
     flex-direction: column;
     @include tablet {
         flex-direction: row;
+        margin-left: -2rem;
     }
     
     h3 {
@@ -83,20 +92,10 @@
             padding: 1rem 2rem;
         }
     }
-    
-    h1 {
-        background: $primary-color;
-        padding: .5rem 1.5rem;
-        color: white;
-        margin: -1rem 0 0;
-        @include tablet {
-            margin: 0;
-            padding: 1rem 2rem;
-        }
-    }
 }
 
 .hotm-info {
+    grid-area: hotm-info;
     h2 {
         margin-bottom: .5rem;
         text-transform: none;

@@ -1608,7 +1608,7 @@ select {
   background-color: white;
   padding: 0.75rem 1rem;
   border: 1px solid #d3d3d3;
-  border-radius: 0.5rem 0 0 0.5rem;
+  border-radius: 0.5rem;
   font-family: "Source Sans 3", sans-serif;
   font-weight: 400;
   font-size: 1rem;
@@ -3864,7 +3864,7 @@ News detail / Programme detail
 @media (min-width: 768px) {
   .w-hotm {
     grid-template-columns: repeat(4, 1fr);
-    grid-template-areas: "hotm-img hotm-img hotm-img ." ". hotm-content hotm-content hotm-content";
+    grid-template-areas: "hotm-img hotm-img hotm-img ." "hotm-content hotm-content hotm-content hotm-content";
   }
 }
 
@@ -3888,6 +3888,7 @@ News detail / Programme detail
   grid-area: hotm-content;
   display: grid;
   grid-template-rows: auto 1fr;
+  grid-template-areas: "banner" "hotm-info";
   gap: 0.5rem;
   margin-top: -2rem;
 }
@@ -3895,10 +3896,13 @@ News detail / Programme detail
   .hotm-content {
     gap: 2rem;
     margin-top: -6rem;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas: "banner banner banner ." ". hotm-info hotm-info hotm-info";
   }
 }
 
 .hotm-banner {
+  grid-area: banner;
   display: flex;
   align-items: center;
   justify-content: flex-start;
@@ -3907,6 +3911,7 @@ News detail / Programme detail
 @media (min-width: 768px) {
   .hotm-banner {
     flex-direction: row;
+    margin-left: -2rem;
   }
 }
 .hotm-banner h3 {
@@ -3920,19 +3925,10 @@ News detail / Programme detail
     padding: 1rem 2rem;
   }
 }
-.hotm-banner h1 {
-  background: #d5c392;
-  padding: 0.5rem 1.5rem;
-  color: white;
-  margin: -1rem 0 0;
-}
-@media (min-width: 768px) {
-  .hotm-banner h1 {
-    margin: 0;
-    padding: 1rem 2rem;
-  }
-}
 
+.hotm-info {
+  grid-area: hotm-info;
+}
 .hotm-info h2 {
   margin-bottom: 0.5rem;
   text-transform: none;

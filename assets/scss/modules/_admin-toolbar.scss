@@ -80,3 +80,20 @@
     text-transform: uppercase;
     letter-spacing: 1px;
 }
+
+
+
+.w-tooltips {
+    position: relative;
+    padding: 1rem;
+    background: $admin-primary-lighter;
+    border-radius: .5rem;
+    border: 1px solid $admin-primary-darker;
+    margin: 0 0 1rem;
+    @include font-family-reading;
+    @include font-style(400, .75rem, 1em, $admin-primary);
+    
+    .close-btn {
+    
+    }
+}
