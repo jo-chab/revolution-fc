@@ -24,14 +24,14 @@
     
     <div class="dashboard-content">
         
-        <form method="post" action="action_become_volunteer_update" enctype="multipart/form-data">
+        <form method="post" action="action_volunteer_update" enctype="multipart/form-data">
             <div class="d-form-wrapper">
                 
                 <input name="element" type="hidden" value="1">
                 
                 <div class="form-row column">
-                    <label>Nom du tournoi (max : 40 caractères) - ceci sera affiché dans le menu</label>
-                    <input id="zt_name" name="zt_name" type="text" maxlength="40" value="<?php echo $title ?>"
+                    <label>Nom du tournoi (max : 120 caractères) - ceci sera affiché dans le menu</label>
+                    <input id="zt_name" name="zt_name" type="text" maxlength="120" value="<?php echo $title ?>"
                            required>
                 </div>
                 

@@ -196,15 +196,19 @@ DESIGN SYSTEM – CARDS
             padding: 3rem;
         }
     }
+    
     .event-date {
     
     }
+    
     .event-title {
     
     }
+    
     .event-venue {
     
     }
+    
     [class*='btn-'] {
         flex-grow: 1;
     }
@@ -224,6 +228,7 @@ DESIGN SYSTEM – Buttons
         margin-top: 3rem;
     }
 }
+
 .button {
     display: flex;
     width: fit-content;
@@ -560,31 +565,32 @@ DESIGN SYSTEM – Buttons
     @extend .button;
     gap: .5rem;
     
-    @include font-style(400, .875rem, 1em, $primary-color);
     padding: 0;
     
-    .btn-filter-select & {
+    @include font-style(400, 1.125rem, 1em, $secondary-color-light);
+    
+    &:hover {
         color: $primary-color;
-        text-transform: uppercase;
+    }
+    
+    &.is-active {
+        color: $primary-color-dark;
         
-        &.is-inactive {
-            color: $tertiary-color-1;
-            
-            &:hover {
-                color: $primary-color;
-            }
+        &:hover {
+            color: $primary-color;
+        }
+        
+        &:before {
+            font: var(--fa-font-sharp-regular);
+            content: '\f00d';
+            font-size: 1em;
         }
     }
     
-    &.is-inactive {
-        opacity: .5;
-        color: $tertiary-color-1;
-        
-        &:hover {
-            opacity: 1;
-            color: $primary-color;
-        }
+    .btn-filter-select & {
+        text-transform: uppercase;
     }
+    
 }
 
 .btn-download {

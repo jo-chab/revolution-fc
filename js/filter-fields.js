@@ -51,14 +51,6 @@
                 }
             });
 
-    //        filterButtonsCity.forEach(btnCity => {
-    //        if (btnCity === buttonCity) {
-    //            btnCity.classList.remove("is-inactive");
-    //        }
-    //        else {
-    //            btnCity.classList.add("is-inactive");
-    //        });
-
         });
     });
 

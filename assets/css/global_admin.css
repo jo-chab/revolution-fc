@@ -647,18 +647,33 @@ p:has(+ p) {
 }
 
 .i-xp-1:before {
-  font: var(--fa-font-light);
-  content: "\f460";
+  font-family: "Font Awesome Kit";
+  content: "\e006";
 }
 
 .i-xp-2:before {
-  font-family: "Font Awesome Kit";
-  content: "\e006";
+  font: var(--fa-font-light);
+  content: "\f328";
 }
 
 .i-xp-3:before {
   font: var(--fa-font-light);
   content: "\f091";
+}
+
+.i-xp-4:before {
+  font: var(--fa-font-light);
+  content: "\e643";
+}
+
+.i-xp-5:before {
+  font: var(--fa-font-light);
+  content: "\e3ab";
+}
+
+.i-xp-6:before {
+  font: var(--fa-font-light);
+  content: "\f460";
 }
 
 /******************************************
@@ -1493,29 +1508,28 @@ DESIGN SYSTEM – Buttons
 
 .btn-filter {
   gap: 0.5rem;
-  font-weight: 400;
-  font-size: 0.875rem;
-  line-height: 1em;
-  color: #d5c392;
   padding: 0;
+  font-weight: 400;
+  font-size: 1.125rem;
+  line-height: 1em;
+  color: #D0D3D4;
+}
+.btn-filter:hover {
+  color: #d5c392;
+}
+.btn-filter.is-active {
+  color: #a8956c;
+}
+.btn-filter.is-active:hover {
+  color: #d5c392;
+}
+.btn-filter.is-active:before {
+  font: var(--fa-font-sharp-regular);
+  content: "\f00d";
+  font-size: 1em;
 }
 .btn-filter-select .btn-filter {
-  color: #d5c392;
   text-transform: uppercase;
-}
-.btn-filter-select .btn-filter.is-inactive {
-  color: #d7d4d3;
-}
-.btn-filter-select .btn-filter.is-inactive:hover {
-  color: #d5c392;
-}
-.btn-filter.is-inactive {
-  opacity: 0.5;
-  color: #d7d4d3;
-}
-.btn-filter.is-inactive:hover {
-  opacity: 1;
-  color: #d5c392;
 }
 
 .btn-download {
@@ -2315,6 +2329,7 @@ input[type=date] {
 .w-toolbar {
   display: grid;
   gap: 1rem;
+  grid-template-columns: 1fr 1fr;
   padding-bottom: 2rem;
   border-bottom: 2px solid #D0D3D4;
   margin-bottom: 2rem;

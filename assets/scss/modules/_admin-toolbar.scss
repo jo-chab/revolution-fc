@@ -10,7 +10,8 @@
 
 .w-toolbar {
     display: grid;
-    gap: 1rem
+    gap: 1rem;
+    grid-template-columns: 1fr 1fr;
 ;
     padding-bottom: 2rem;
     border-bottom: 2px solid $secondary-color-light;

@@ -208,16 +208,28 @@
 }
 
 .i-xp-1:before {
-    font: var(--fa-font-light);
-    content: '\f460';
-}
-.i-xp-2:before {
     font-family: "Font Awesome Kit";
     content: '\e006';
+}
+.i-xp-2:before {
+    font: var(--fa-font-light);
+    content: '\f328';
 }
 .i-xp-3:before {
     font: var(--fa-font-light);
     content: '\f091';
+}
+.i-xp-4:before {
+    font: var(--fa-font-light);
+    content: '\e643';
+}
+.i-xp-5:before {
+    font: var(--fa-font-light);
+    content: '\e3ab';
+}
+.i-xp-6:before {
+    font: var(--fa-font-light);
+    content: '\f460';
 }
 
 

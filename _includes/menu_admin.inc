@@ -86,6 +86,8 @@
         <div class="menu-element icon i-soccer-1"><span class="icon new-feature">Page Bénévoles</span></div>
         <ul class="sub-nav">
             <li class="sub-nav-item"><a class="sub-nav-item-el" href="?p=27">Devenir bénévole</a></li>
+            <li class="sub-nav-item"><a class="sub-nav-item-el" href="?p=28">Experience communautaire</a></li>
+            <li class="sub-nav-item"><a class="sub-nav-item-el is-inactive" href="?p=29">Bénévoles du mois</a></li>
         </ul>
     </li>
     
